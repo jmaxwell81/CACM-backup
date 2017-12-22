@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Instruction H Import" max_length="40" name="u_instruction_h_import" type="collection">
+        <element attributes="import_attribute_name=CHANGE_REASON_TXT,edge_encryption_enabled=true" label="CHANGE_REASON_TXT" max_length="40" name="u_change_reason_txt" type="string"/>
+        <element attributes="import_attribute_name=CREATE_ROW_TS,edge_encryption_enabled=true" label="CREATE_ROW_TS" max_length="40" name="u_create_row_ts" type="string"/>
+        <element attributes="import_attribute_name=CREATE_ROW_USER_ID,edge_encryption_enabled=true" label="CREATE_ROW_USER_ID" max_length="40" name="u_create_row_user_id" type="string"/>
+        <element attributes="import_attribute_name=EFFECTIVE_TS,edge_encryption_enabled=true" label="EFFECTIVE_TS" max_length="40" name="u_effective_ts" type="string"/>
+        <element attributes="import_attribute_name=END_EFFECTIVE_TS,edge_encryption_enabled=true" label="END_EFFECTIVE_TS" max_length="40" name="u_end_effective_ts" type="string"/>
+        <element attributes="import_attribute_name=INSTRUCT_ID,edge_encryption_enabled=true" label="INSTRUCT_ID" max_length="40" name="u_instruct_id" type="string"/>
+        <element attributes="import_attribute_name=INSTRUCT_TXT,edge_encryption_enabled=true" label="INSTRUCT_TXT" max_length="501" name="u_instruct_txt" type="string"/>
+        <element attributes="import_attribute_name=UPDATE_ROW_TS,edge_encryption_enabled=true" label="UPDATE_ROW_TS" max_length="40" name="u_update_row_ts" type="string"/>
+        <element attributes="import_attribute_name=UPDATE_ROW_USER_ID,edge_encryption_enabled=true" label="UPDATE_ROW_USER_ID" max_length="40" name="u_update_row_user_id" type="string"/>
+    </element>
+</database>

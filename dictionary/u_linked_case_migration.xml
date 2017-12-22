@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*03.1 - Linked Case Migration" max_length="40" name="u_linked_case_migration" sizeclass="9138" type="collection">
+        <element attributes="import_attribute_name=COMPLAINT_ID,edge_encryption_enabled=true" label="COMPLAINT_ID" max_length="40" name="u_complaint_id" type="string"/>
+        <element attributes="import_attribute_name=LINKED_COMPLAINT_ID,edge_encryption_enabled=true" label="LINKED_COMPLAINT_ID" max_length="40" name="u_linked_complaint_id" type="string"/>
+        <element attributes="import_attribute_name=LINK_ID,edge_encryption_enabled=true" label="LINK_ID" max_length="40" name="u_link_id" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Referent" max_length="40" name="x_amfai_cacmdba_referent" type="collection">
+        <element label="Address" max_length="40" name="address" type="string"/>
+        <element label="AFI User" max_length="32" name="afi_user" reference="sys_user" type="reference"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="DM ID" max_length="40" name="dm_id" type="string"/>
+        <element label="Email Address" max_length="60" name="email_address" type="string"/>
+        <element label="Fax" max_length="40" name="fax" type="string"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Middle Initial" max_length="1" name="middle_initial" type="string"/>
+        <element label="Person ID" max_length="40" name="person_id" type="string"/>
+        <element label="Preferred Routing" max_length="40" name="preferred_routing" type="string"/>
+        <element label="Referent User ID" max_length="40" name="referent_user_id" type="string"/>
+        <element label="State" max_length="32" name="state_code" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="Status" max_length="40" name="status" type="string"/>
+        <element label="Work Extension" max_length="40" name="work_extension" type="string"/>
+        <element label="Work Phone" max_length="40" name="work_phone" type="string"/>
+        <element label="Zip Code" max_length="40" name="zip_code" type="string"/>
+        <index name="index">
+            <element name="afi_user"/>
+        </index>
+        <index name="index2">
+            <element name="state_code"/>
+        </index>
+        <index name="index3">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

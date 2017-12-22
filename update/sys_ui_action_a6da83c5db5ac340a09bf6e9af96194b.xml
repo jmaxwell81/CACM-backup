@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>add_instuctions</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition>new instCondition().checkReferral(current.sys_id) &amp;&amp; current.add_instructions == false</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Add Instructions</name>
+        <onclick/>
+        <order>-1100</order>
+        <script><![CDATA[var a = current.sys_id;
+var gr = new GlideRecord('x_amfai_cacmdba_case_referral');
+gr.addQuery('event_id', a);
+gr.query();
+var test = '<table style="height: 38px; border-color: #000000;" border="1" width="592"><tbody><tr><td style="text-align: center;"><strong>Referents</strong></td><td style="text-align: center;"><strong>Issues</strong></td><td style="text-align: center;"><strong>Handling Instructions</strong></td></tr>';
+var test2 = '';
+var test3 = '';
+while (gr.next()){
+	//gs.addInfoMessage(gr.referent.getDisplayValue());
+	test2 = '<tr><td style="text-align: Left;">'+gr.referent.getDisplayValue()+'</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>';
+	
+	test3 = test3.concat(test2);
+}
+current.issues_and_handling_instruction = test.concat(test3);
+action.setRedirectURL(current);
+current.add_instructions = 'true';
+current.update();]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-06 16:20:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a6da83c5db5ac340a09bf6e9af96194b</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>Add Instructions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_action_a6da83c5db5ac340a09bf6e9af96194b</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-28 14:38:33</sys_updated_on>
+        <table>x_amfai_cacmdba_case_event</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

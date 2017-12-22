@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[//Called when the 'OK' button gets clicked
+function continueOK(){
+	//Get the selected values from the right slushbucket
+	var values = slush.getValues(slush.getRightSelect());
+	//alert(values);
+	
+	//close Dialog Window and add selected options to field
+	GlideDialogWindow.get().destroy();
+	g_form.setValue('case_company_list', values);
+}
+
+//Called when the 'Cancel' button gets clicked
+function continueCancel(){
+	//Close the dialog window
+	GlideDialogWindow.get().destroy();
+}
+
+//Called when the form loads
+addLoadEvent(function(){
+	//alert('UI page addLoadEvent');
+	//Load the groups when the form loads
+	slush.clear();
+	var selectedCompanies = g_form.getValue('case_company_list');
+	var state = g_form.getValue('complaint_state');
+	var instType = g_form.getValue('instruction_type');
+	
+	var ajax = new GlideAjax('getCompanies');
+	ajax.addParam('sysparm_name', 'getBucketContents');
+	ajax.addParam('sysparm_selectedCompanies', selectedCompanies);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ajax.getXML(loadResponse);
+	return false;
+});
+
+//Called when we get a response from the 'addLoadEvent' function
+function loadResponse(response){
+	//Process the return XML document and add groups to the left select
+	var xml = response.responseXML;
+	var e = xml.documentElement;
+	
+	var items = xml.getElementsByTagName("item");
+	if(items.length == 0)
+		return;
+	
+	//Loop through item elements and add each item to left slushbucket
+	for (var i = 0; i < items.length; i++) {
+		var item = items[i];
+		if(item.getAttribute('side') == 'right'){
+			var opt = cel('option');
+			opt.value = item.getAttribute('value');
+			opt.text = item.getAttribute('text');
+			slush.getRightSelect().options.add(opt);
+		}
+		else
+			slush.addLeftChoice(item.getAttribute('value'), item.getAttribute('text'));
+	}
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_amfai_cacmdba_select_companies.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<TABLE Style = "width :650px" Border = "0">
+	<TR>
+         <TD>
+            You can select one or many companies'
+         </TD>
+      </TR>
+      <TR>
+         <TD>
+            <!-- Include the 'ui_slushbucket' UI macro -->
+            <g:ui_slushbucket/>
+         </TD>
+      </TR>
+      <TR>
+         <TD align="right">
+            <!-- Include the 'dialog_buttons_ok_cancel' UI macro -->
+            <g:dialog_buttons_ok_cancel ok="return continueOK()" cancel="return continueCancel()" ok_type="button" cancel_type="button"/>
+         </TD>
+      </TR>
+	</TABLE>
+</j:jelly>]]></html>
+        <name>select_companies</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-17 15:12:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>cdc86b6cdb2603004d70734aaf9619ef</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>select_companies</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_page_cdc86b6cdb2603004d70734aaf9619ef</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-17 15:22:06</sys_updated_on>
+    </sys_ui_page>
+</record_update>

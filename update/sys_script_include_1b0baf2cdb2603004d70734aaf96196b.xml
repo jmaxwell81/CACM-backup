@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.getCompanies</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>getCompanies</name>
+        <script><![CDATA[var getCompanies = Class.create();
+getCompanies.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getBucketContents: function(){
+		//gs.addInfoMessage('ScriptInclude');
+		//gs.addInfoMessage(this.getParameter('sysparm_state'));
+		var gr = new GlideRecord('x_amfai_cacmdba_company');
+		gr.addNotNullQuery('company_nm');
+		gr.orderBy('company_nm');
+		//gr.addQuery('instruct_type_id', this.getParameter('sysparm_instType'));
+		//gr.addQuery('active', 'true');
+		gr.query();
+		var selectedCompanies = this.getParameter('sysparm_selectedCompanies');
+		while(gr.next()){
+			//gs.addInfoMessage('SI While');
+			var item = this.newItem();
+			item.setAttribute('value', gr.getValue('sys_id'));
+			item.setAttribute('text', gr.getDisplayValue('company_nm'));
+			if(selectedCompanies.indexOf(gr.getValue('sys_id')) >= 0){
+				item.setAttribute('side', 'right');
+			}
+			else
+				item.setAttribute('side', 'left');
+		}
+	},
+	type: 'getCompanies'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-17 15:21:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1b0baf2cdb2603004d70734aaf96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getCompanies</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_1b0baf2cdb2603004d70734aaf96196b</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-17 15:21:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

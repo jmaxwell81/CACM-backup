@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Template Instruction" max_length="40" name="u_template_instruction" sizeclass="22685" type="collection">
+        <element attributes="import_attribute_name=ACTIVE,edge_encryption_enabled=true" label="ACTIVE" max_length="40" name="u_active" type="string"/>
+        <element attributes="import_attribute_name=CHANGE_REASON_TXT,edge_encryption_enabled=true" label="CHANGE_REASON_TXT" max_length="4000" name="u_change_reason_txt" type="string"/>
+        <element attributes="import_attribute_name=CREATE_ROW_TS" label="CREATE_ROW_TS" max_length="40" name="u_create_row_ts" type="datetime"/>
+        <element attributes="import_attribute_name=CREATE_ROW_USER_ID,edge_encryption_enabled=true" label="CREATE_ROW_USER_ID" max_length="40" name="u_create_row_user_id" type="string"/>
+        <element attributes="import_attribute_name=DEFAULT_INSTRUCT_IND,edge_encryption_enabled=true" label="DEFAULT_INSTRUCT_IND" max_length="40" name="u_default_instruct_ind" type="string"/>
+        <element attributes="import_attribute_name=EFFECTIVE_TS" label="EFFECTIVE_TS" max_length="40" name="u_effective_ts" type="datetime"/>
+        <element attributes="import_attribute_name=END_EFFECTIVE_TS" label="END_EFFECTIVE_TS" max_length="40" name="u_end_effective_ts" type="datetime"/>
+        <element attributes="import_attribute_name=INSTRUCT_ID,edge_encryption_enabled=true" label="INSTRUCT_ID" max_length="40" name="u_instruct_id" type="string"/>
+        <element attributes="import_attribute_name=INSTRUCT_TYPE_ID,edge_encryption_enabled=true" label="INSTRUCT_TYPE_ID" max_length="40" name="u_instruct_type_id" type="string"/>
+        <element attributes="import_attribute_name=STATE_CODE,edge_encryption_enabled=true" label="STATE_CODE" max_length="40" name="u_state_code" type="string"/>
+        <element attributes="import_attribute_name=TEMPLATE_ID,edge_encryption_enabled=true" label="TEMPLATE_ID" max_length="40" name="u_template_id" type="string"/>
+        <element attributes="import_attribute_name=TEMPLATE_INSTRUCT_ID,edge_encryption_enabled=true" label="TEMPLATE_INSTRUCT_ID" max_length="40" name="u_template_instruct_id" type="string"/>
+        <element attributes="import_attribute_name=UPDATE_ROW_TS" label="UPDATE_ROW_TS" max_length="40" name="u_update_row_ts" type="datetime"/>
+        <element attributes="import_attribute_name=UPDATE_ROW_USER_ID,edge_encryption_enabled=true" label="UPDATE_ROW_USER_ID" max_length="40" name="u_update_row_user_id" type="string"/>
+    </element>
+</database>

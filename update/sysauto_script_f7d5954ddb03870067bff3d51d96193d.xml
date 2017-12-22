@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Test</name>
+        <run_as display_value="Pratik Madhikar">bd01729adbc80784f827fb16bf96196d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-12-13 14:11:18</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var currentDate = new GlideDate();
+//currentDate.setDisplayValue("12-05-2027");
+//gs.addInfoMessage('set date- ' + currentDate);
+
+var purgeDate = new GlideDateTime(currentDate.toString());
+//gs.addInfoMessage('set date time- ' + currentDate1);
+
+purgeDate.addYearsLocalTime(-10);
+//gs.addInfoMessage('added years open- ' + currentDate1);
+
+var cacmCase = new GlideRecord('x_amfai_cacmdba_case');// setting up person table
+//cacmCase.addQuery('number','IN', '0000486, 0000125475');
+
+cacmCase.addQuery('case_identifier', 'case');// selecting all potential callers
+cacmCase.addQuery('case_open_timestamp','<=', purgeDate);// selecting all that have exceded expiration date
+cacmCase.query();// run query against person table with all above filters
+
+
+var count = 0;// variable to collect parent records ("person records")
+//var count1 = 0;// variable to collect child records (" child to person- phone email address")
+var closeDate = '';
+var openedDate = '';
+var detailsDate = '';
+var eventDate = '';
+
+
+while(cacmCase.next()){// iterate thrugh queried records
+	
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-12-13 15:42:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f7d5954ddb03870067bff3d51d96193d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Test</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sysauto_script_f7d5954ddb03870067bff3d51d96193d</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-14 14:33:25</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

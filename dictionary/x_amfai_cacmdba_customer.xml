@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Customer" max_length="40" name="x_amfai_cacmdba_customer" sizeclass="51971" type="collection">
+        <element label="Business Name" max_length="40" name="business_name" type="string"/>
+        <element choice="1" label="Customer Type" max_length="40" name="customer_type" type="choice">
+            <choice>
+                <element label="Business" value="business"/>
+                <element label="Individual" value="individual"/>
+            </choice>
+        </element>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element calculation="if (current.first_name.nil() &amp;&amp; current.last_name.nil() &amp;&amp; current.middle_initial.nil() &amp;&amp; !current.full_name.nil()) {&#13;&#10;&#9;var names = current.full_name.toString().split(&quot; &quot;);&#13;&#10;&#9;if (names.length &gt; 1) {&#13;&#10;&#9;&#9;current.first_name = names[0];&#13;&#10;&#9;&#9;names.shift();&#13;&#10;&#9;&#9;current.last_name = names.join(&quot; &quot;);&#13;&#10;&#9;} else&#13;&#10;&#9;current.last_name = names[0];&#13;&#10;}&#13;&#10;&#13;&#10;if(current.first_name.nil()) {&#13;&#10;&#9;current.last_name;&#13;&#10;} else {&#13;&#10;&#9;current.first_name + ' ' + current.middle_initial + ' '  + current.last_name;&#13;&#10;}" display="true" label="Full Name" max_length="150" name="full_name" type="string" virtual="true"/>
+        <element choice="1" label="Gender" max_length="40" name="gender" type="choice">
+            <choice>
+                <element label="Female" value="F"/>
+                <element label="Male" value="M"/>
+                <element label="Unknown" value="unknown"/>
+            </choice>
+        </element>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Middle Initial" max_length="1" name="middle_initial" type="string"/>
+        <element label="Person ID" max_length="40" name="person_id" type="string"/>
+        <element label="Potential Caller" max_length="40" name="potential_caller" type="boolean"/>
+        <element label="Comments" max_length="4000" name="potential_caller_comments" type="string"/>
+        <element label="Expiration Date" max_length="40" name="potential_expire_date" type="glide_date"/>
+        <element label="Received Date" max_length="40" name="potential_received_date" type="glide_date"/>
+        <element choice="1" label="Preferred Routing" max_length="40" name="preferred_routing" type="choice">
+            <choice>
+                <element label="Email" value="E"/>
+                <element label="Fax" value="F"/>
+                <element label="Mail" value="M"/>
+                <element label="Phone" value="P"/>
+            </choice>
+        </element>
+        <element label="Title" max_length="32" name="title" reference="x_amfai_cacmdba_title_prefix" type="reference"/>
+        <index name="index">
+            <element name="title"/>
+        </index>
+        <index name="index2">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

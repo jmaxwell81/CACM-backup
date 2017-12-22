@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>dfoss@amfam.com</sys_created_by>
+        <sys_created_on>2017-12-21 21:47:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>030b48fbdb4f430067bff3d51d9619ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_amfai_cacmdba_bd_complaint.x_amfai_cacmdba.bd_complaint_user</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_security_acl display_value="x_amfai_cacmdba_bd_complaint">cb0b48fbdb4f430067bff3d51d9619ea</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_030b48fbdb4f430067bff3d51d9619ee</sys_update_name>
+        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-21 21:47:42</sys_updated_on>
+        <sys_user_role display_value="x_amfai_cacmdba.bd_complaint_user" name="x_amfai_cacmdba.bd_complaint_user">8b0b88b3db4f430067bff3d51d9619e6</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

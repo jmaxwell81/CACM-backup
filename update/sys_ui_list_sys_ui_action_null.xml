@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sys_ui_action" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>2ba8a659db958b804d70734aaf961962</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>table</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>afa8a659db958b804d70734aaf961962</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>comments</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>23a8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>form_action</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>a3a8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>list_action</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>27a8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>active</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>a7a8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>order</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>2ba8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>condition</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>aba8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>2fa8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>afa8a659db958b804d70734aaf961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_by</element>
+            <list_id display_value="sys_ui_action" element="NULL" name="sys_ui_action" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">afa8a659db958b804d70734aaf961961</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>pritish.g@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2017-09-18 15:01:43</sys_created_on>
+            <sys_id>23a8a659db958b804d70734aaf961964</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pritish.g@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2017-09-18 15:01:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_ui_action</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-21 16:11:23</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ac1e3aafdb4b430067bff3d51d9619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package/>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-21 16:11:23</sys_updated_on>
+            <sys_user display_value="Pratik Madhikar">bd01729adbc80784f827fb16bf96196d</sys_user>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

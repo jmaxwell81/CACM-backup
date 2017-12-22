@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>person_id</col_name_string>
+        <index_col_name element="person_id" name="x_amfai_cacmdba_person">eab5f53cdbb98704a09bf6e9af961957</index_col_name>
+        <logical_table_name>x_amfai_cacmdba_person</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-10-30 19:42:19</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e3ab737adb0ec700a09bf6e9af9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_amfai_cacmdba_person</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_index_x_amfai_cacmdba_person_person_id</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-10-30 19:42:19</sys_updated_on>
+        <table display_value="--Person" name="x_amfai_cacmdba_person">3e0859f4db398704a09bf6e9af9619ef</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

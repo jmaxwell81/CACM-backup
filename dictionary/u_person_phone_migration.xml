@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*01.3 - Person Phone Migration" max_length="40" name="u_person_phone_migration" sizeclass="48582" type="collection">
+        <element attributes="import_attribute_name=PERSON_ID,edge_encryption_enabled=true" label="PERSON_ID" max_length="40" name="u_person_id" type="string"/>
+        <element attributes="import_attribute_name=PHONE_NUMBER,edge_encryption_enabled=true" label="PHONE_NUMBER" max_length="40" name="u_phone_number" type="string"/>
+        <element attributes="import_attribute_name=PHONE_TYPE,edge_encryption_enabled=true" label="PHONE_TYPE" max_length="40" name="u_phone_type" type="string"/>
+        <element attributes="import_attribute_name=TIMES_AVAILABLE,edge_encryption_enabled=true" label="TIMES_AVAILABLE" max_length="50" name="u_times_available" type="string"/>
+        <element attributes="import_attribute_name=WORK_EXTENSION,edge_encryption_enabled=true" label="WORK_EXTENSION" max_length="40" name="u_work_extension" type="string"/>
+    </element>
+</database>

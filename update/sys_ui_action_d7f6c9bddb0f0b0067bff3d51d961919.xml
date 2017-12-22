@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>attachment_save</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition/>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Attachment Save</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[//if(current.advoc2dp_save_type == 'doc'){
+	//gs.addInfoMessage('Run');
+	
+	
+	var targetTable= new GlideRecord('x_amfai_cacmdba_document');
+	targetTable.addQuery('sys_id', current.sys_id);
+	targetTable.query();
+	if(targetTable.next()){
+		var sa = new GlideSysAttachment();
+		var filename = current.select_template.getDisplayValue() + ".doc";
+		gs.addInfoMessage (filename);
+		//var binData = gs.base64Decode(current.advoc2dp_letter_text);
+		sa.write(current, filename, "application/msword",current.letter_text);
+		
+		
+		action.setRedirectURL(current);
+		//var binData = gs.base64Decode(current.advoc2dp_letter_text);
+		//new CreateAttachment(current,"ADVOC2DP.doc","application/msword",binData);
+	}
+//}
+
+// if(current.advoc2dp_save_type == 'pdf'){
+// 	 	//gs.addInfoMessage('Run');
+// 		var htmlText = current.advoc2dp_letter_text;
+// 		var tableName = current.getTableName();
+// 		//gs.addInfoMessage(htmlText);
+// 		var sysId = current.sys_id;
+// 		var attName = "ADVOC2DP.pdf";
+// 		var pdf = new x_amfai_cacmdba.CreateAttachment();
+// 		pdf.createPDF(htmlText, tableName, sysId, attName);
+// 		action.setRedirectURL(current);
+// // 	var dialog = new GlideDialogWindow('x_amfai_cacmdba_save_ADVOC2DP');
+// // 	dialog.setTitle("Saving ADVOC2DP Letter");
+// // 	dialog.render();
+// }
+
+
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-12-15 21:07:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d7f6c9bddb0f0b0067bff3d51d961919</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>Attachment Save</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_action_d7f6c9bddb0f0b0067bff3d51d961919</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-21 20:27:41</sys_updated_on>
+        <table>x_amfai_cacmdba_document</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

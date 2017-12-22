@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Unified Complaint Log (UCL)">c8ebf7a5dbd90380a09bf6e9af9619bf</catalog_item>
+        <catalog_variable>IO:feda2079dbdd0380a09bf6e9af961916</catalog_variable>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-20 15:16:52</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e34ff082db918f804d70734aaf9619d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>case_req_disposition</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_e34ff082db918f804d70734aaf9619d1</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-20 15:16:52</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Mandatory Fields">99acfc8edb518f804d70734aaf96195e</ui_policy>
+        <variable>case_req_disposition</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+</record_update>

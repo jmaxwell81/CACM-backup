@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>WorkerServiceV3.0.3</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-10-03 21:07:54</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7c2c4992db6907044d70734aaf96198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WorkerServiceV3.0.3</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_7c2c4992db6907044d70734aaf96198c</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-10-03 21:07:54</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl>http://devbq25/worker3/services/worker?wsdl</wsdl>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8" ?> 
+- <wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://wsdl.amfam.com/wsdl/workerService/v3" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://wsdl.amfam.com/workerService/ping" name="WorkerService" targetNamespace="http://wsdl.amfam.com/wsdl/workerService/v3">
+- <wsdl:types>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/party/worker/v1" xmlns:ns7="http://www.amfam.com/xsd/marketing/agent/salesOrganizationalHierarchy/v1" xmlns:ns6="http://www.amfam.com/xsd/humanResourceOrganizationalHierarchy/v1" xmlns:ns5="http://www.amfam.com/xsd/party/employee/v1" xmlns:ns4="http://www.amfam.com/xsd/marketing/agent/v1" xmlns:ns3="http://www.amfam.com/xsd/enterpriseType/v1" xmlns:ns2="http://www.amfam.com/xsd/party/address/v1" xmlns:ns1="http://www.amfam.com/xsd/party/person/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/party/worker/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/party/person/v1" /> 
+  <xs:import namespace="http://www.amfam.com/xsd/party/address/v1" /> 
+  <xs:import namespace="http://www.amfam.com/xsd/enterpriseType/v1" /> 
+  <xs:import namespace="http://www.amfam.com/xsd/marketing/agent/v1" /> 
+  <xs:import namespace="http://www.amfam.com/xsd/party/employee/v1" /> 
+  <xs:import namespace="http://www.amfam.com/xsd/humanResourceOrganizationalHierarchy/v1" /> 
+  <xs:import namespace="http://www.amfam.com/xsd/marketing/agent/salesOrganizationalHierarchy/v1" /> 
+  <xs:element name="EnterpriseWorker" type="tns:EnterpriseWorkerType" /> 
+- <xs:complexType name="EnterpriseWorkerType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="WorkerDetail" type="tns:WorkerDetailType" /> 
+  <xs:element minOccurs="0" name="Person" type="ns1:EnterprisePersonType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Address" type="ns2:EnterpriseAddressType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="PhoneNumber" type="ns3:PhoneType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="EmailAddress" type="ns3:EmailType" /> 
+  <xs:element minOccurs="0" name="Agent" type="ns4:EnterpriseAgentType" /> 
+  <xs:element minOccurs="0" name="Employee" type="ns5:EnterpriseEmployeeType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="WorkerDetailType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="userIdentifierCreateDate" type="xs:date" /> 
+  <xs:element minOccurs="0" name="producerId" type="xs:string" /> 
+  <xs:element minOccurs="0" name="afiExternalUserId" type="xs:string" /> 
+  <xs:element minOccurs="0" name="userIdentifierExpireDate" type="xs:date" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="AdjusterIdentifier" type="xs:string" /> 
+  <xs:element minOccurs="0" name="userIdentifier" type="xs:string" /> 
+  <xs:element minOccurs="0" name="WorkerType" type="tns:WorkerTypeType" /> 
+  <xs:element name="WorkerStatus" type="tns:WorkerStatusType" /> 
+  <xs:element minOccurs="0" name="userTypeDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="jobTitleShortDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="jobTitleLongDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="globalNickName" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="WorkSite" type="tns:WorkSiteType" /> 
+  <xs:element minOccurs="0" name="Manager" type="tns:ManagerType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="HumanResourceOrganizationalInformation" type="ns6:EnterpriseHumanResourceOrganizationalHierarchyType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="SalesOrganizationalInformation" type="ns7:EnterpriseSalesOrganizationalHierarchyType" /> 
+  <xs:element minOccurs="0" name="primaryAgentIdentifier" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="secondaryAgentIdentifier" nillable="true" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="WorkSiteType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="siteIdentifier" type="xs:string" /> 
+  <xs:element minOccurs="0" name="SiteTypeCode" type="ns3:CodeType" /> 
+  <xs:element minOccurs="0" name="PlatformTypeCode" type="ns3:CodeType" /> 
+  <xs:element minOccurs="0" name="WorkSiteBuildingCode" type="ns3:CodeType" /> 
+  <xs:element minOccurs="0" name="workSiteMailDropLocationDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="workSiteDeskLocationDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="fieldEmployeeIndicator" type="xs:boolean" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="WorkSiteOfficeHour" type="tns:WorkSiteOfficeHourType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="WorkSiteOfficeHourType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="day" type="xs:string" /> 
+  <xs:element minOccurs="0" name="openingTime" type="xs:string" /> 
+  <xs:element minOccurs="0" name="closingTime" type="xs:string" /> 
+  <xs:element minOccurs="0" name="displayIndicator" type="xs:boolean" /> 
+  <xs:element minOccurs="0" name="displayOrder" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ManagerType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="ManagerName" type="ns1:EnterprisePersonType" /> 
+  <xs:element minOccurs="0" name="managerEmployeeIdentifier" type="xs:string" /> 
+  <xs:element minOccurs="0" name="managerUserIdentifier" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:simpleType name="WorkerStatusType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="Active" /> 
+  <xs:enumeration value="OnLeave" /> 
+  <xs:enumeration value="Terminated" /> 
+  <xs:enumeration value="FutureHire" /> 
+  </xs:restriction>
+  </xs:simpleType>
+- <xs:simpleType name="WorkerTypeType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="Agent" /> 
+  <xs:enumeration value="Employee" /> 
+  <xs:enumeration value="Non-Employee" /> 
+  </xs:restriction>
+  </xs:simpleType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/party/person/v1" xmlns:ns1="http://www.amfam.com/xsd/party/person/license/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/party/person/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/party/person/license/v1" /> 
+  <xs:element name="EnterprisePerson" type="tns:EnterprisePersonType" /> 
+- <xs:complexType name="EnterprisePersonType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="partyIdentifier" type="xs:int" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Name" type="tns:NameType" /> 
+  <xs:element minOccurs="0" name="deceasedIndicator" type="xs:boolean" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Photo" type="tns:PhotoType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" ref="ns1:EnterpriseLicense" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="NameType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="prefixName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="suffixName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="firstName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="middleName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="lastName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="fullName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="personNameType" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="PhotoType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="photoQualityType" type="xs:string" /> 
+  <xs:element minOccurs="0" name="photoURIValue" type="xs:string" /> 
+  <xs:element minOccurs="0" name="photoDisplayIndicator" type="xs:boolean" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/party/person/license/v1" xmlns:ns1="http://www.amfam.com/xsd/enterpriseType/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/party/person/license/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/enterpriseType/v1" /> 
+  <xs:element name="EnterpriseLicense" type="tns:EnterpriseLicenseType" /> 
+- <xs:complexType name="EnterpriseLicenseType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="licenseType" type="xs:string" /> 
+  <xs:element minOccurs="0" name="licenseIdentifier" type="xs:string" /> 
+  <xs:element minOccurs="0" name="licenseNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="originalLicenseDay" type="xs:string" /> 
+  <xs:element minOccurs="0" name="originalLicenseMonth" type="xs:string" /> 
+  <xs:element minOccurs="0" name="originalLicenseYear" type="xs:string" /> 
+  <xs:element minOccurs="0" name="LicenseStateCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="originalLicenseState" type="xs:string" /> 
+  <xs:element minOccurs="0" name="IncorporatedTypeCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="incorporatedLicenseNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="fidelityBondNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="CasualtyAppointCompanyCode" type="ns1:CodeType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Indicator" type="tns:IndicatorType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Date" type="ns1:DateType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="LineOfLicenseDetail" type="tns:LineOfLicenseDetailType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="IndicatorType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="indicatorName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="indicatorValue" type="xs:boolean" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="LineOfLicenseDetailType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="LineOfLicenseCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="lineOfLicenseNumber" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Date" type="ns1:DateType" /> 
+  <xs:element minOccurs="0" name="InOutOfficeCode" type="ns1:CodeType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="LineOfLicenseStatus" type="tns:LineOfLicenseStatusType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="LineOfLicenseStatusType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="StatusCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="statusEffectiveDate" type="ns1:DateType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/party/employee/v1" xmlns:ns1="http://www.amfam.com/xsd/enterpriseType/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/party/employee/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/enterpriseType/v1" /> 
+  <xs:element name="EnterpriseEmployee" type="tns:EnterpriseEmployeeType" /> 
+- <xs:complexType name="EnterpriseEmployeeType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="employeeIdentifier" type="xs:string" /> 
+  <xs:element minOccurs="0" name="EmployeeClassCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="EmployeeStatusCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="ManagerLevelCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="jobCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="jobClassShortDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="jobClassLongDescription" type="xs:string" /> 
+  <xs:element minOccurs="0" name="shortTermDisabilityLongTermDisabilityCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="fullTimePartTimeIndicator" type="xs:string" /> 
+  <xs:element minOccurs="0" name="fullTimeEquivAmt" type="xs:decimal" /> 
+  <xs:element minOccurs="0" name="jobEntryDate" type="xs:date" /> 
+  <xs:element minOccurs="0" name="origHireDate" type="xs:date" /> 
+  <xs:element minOccurs="0" name="lastHireDate" type="xs:date" /> 
+  <xs:element minOccurs="0" name="terminationDate" type="xs:date" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/party/address/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/party/address/v1" version="1.0">
+  <xs:element name="EnterpriseAddress" type="tns:EnterpriseAddressType" /> 
+- <xs:complexType name="EnterpriseAddressType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="addressTypeType" type="xs:string" /> 
+  <xs:element minOccurs="0" name="addressLine1Text" type="xs:string" /> 
+  <xs:element minOccurs="0" name="addressLine2Text" type="xs:string" /> 
+  <xs:element minOccurs="0" name="cityName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="stateCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="zip5Code" type="xs:string" /> 
+  <xs:element minOccurs="0" name="zip4Code" type="xs:string" /> 
+  <xs:element minOccurs="0" name="zip2Code" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/marketing/agent/v1" xmlns:ns1="http://www.amfam.com/xsd/enterpriseType/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/marketing/agent/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/enterpriseType/v1" /> 
+  <xs:element name="EnterpriseAgent" type="tns:EnterpriseAgentType" /> 
+- <xs:complexType name="EnterpriseAgentType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="agentIdentifier" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="AgentDistrictCode" type="tns:AgentDistrictCodeType" /> 
+  <xs:element minOccurs="0" name="AgentInTraining" type="tns:AgentInTrainingType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Date" type="ns1:DateType" /> 
+  <xs:element minOccurs="0" name="agencyIncorporatedName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="agencyIncorporatedIndicator" type="xs:boolean" /> 
+  <xs:element minOccurs="0" name="agencyLicensedName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="ContractTypeCode" type="ns1:CodeType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="ContractStatusHistory" type="tns:ContractStatusHistoryType" /> 
+  <xs:element minOccurs="0" name="AgentTypeCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="CentralRegistrationDepository" type="tns:CentralRegistrationDepositoryType" /> 
+  <xs:element minOccurs="0" name="federalNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="LifeCompensationCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="sellVariableIndicator" type="xs:boolean" /> 
+  <xs:element minOccurs="0" name="TaxFormCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="CurrentContractStatus" type="ns1:CodeType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="AgentDistrictCodeType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="agentDistrictCodeTypeType" type="xs:string" /> 
+  <xs:element minOccurs="0" name="agentCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="districtCode" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="AgentInTrainingType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="agentInTrainingIndicator" type="xs:boolean" /> 
+  <xs:element minOccurs="0" name="mentorAgentName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="mentorAgentIdentifier" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="AgentInTrainingDate" type="ns1:DateType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ContractStatusHistoryType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="ContractStatusHistoryCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="contractStatusHistoryDate" type="xs:date" /> 
+  <xs:element minOccurs="0" name="AgentDistrictCode" type="tns:AgentDistrictCodeType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="CentralRegistrationDepositoryType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="centralRegistrationDepositoryNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="CentralRegistrationDepositoryStatusCode" type="ns1:CodeType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="CentralRegistrationDepositoryDate" type="ns1:DateType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/marketing/agent/salesOrganizationalHierarchy/v1" xmlns:ns1="http://www.amfam.com/xsd/enterpriseType/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/marketing/agent/salesOrganizationalHierarchy/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/enterpriseType/v1" /> 
+  <xs:element name="EnterpriseSalesOrganizationalHierarchy" type="tns:EnterpriseSalesOrganizationalHierarchyType" /> 
+- <xs:complexType name="EnterpriseSalesOrganizationalHierarchyType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="SalesHierarchyTypeCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="SalesRegionCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="SalesStateCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="salesRegionShortName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="salesRegionLongName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="salesStateShortName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="salesStateLongName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="SalesDistrictCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="salesStateNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="memberOfIndicator" type="xs:boolean" /> 
+  <xs:element minOccurs="0" name="managerOfIndicator" type="xs:boolean" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/humanResourceOrganizationalHierarchy/v1" xmlns:ns1="http://www.amfam.com/xsd/enterpriseType/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/humanResourceOrganizationalHierarchy/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/enterpriseType/v1" /> 
+  <xs:element name="EnterpriseHumanResourceOrganizationalHierarchy" type="tns:EnterpriseHumanResourceOrganizationalHierarchyType" /> 
+- <xs:complexType name="EnterpriseHumanResourceOrganizationalHierarchyType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="HumanResourceDepartmentFunctionCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="HumanResourceDepartmentCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="HumanResourceDivisionCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="HumanResourceRegionCode" type="ns1:CodeType" /> 
+  <xs:element minOccurs="0" name="costCenterNumber" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.amfam.com/xsd/enterpriseType/v1" elementFormDefault="qualified" targetNamespace="http://www.amfam.com/xsd/enterpriseType/v1" version="1.0">
+- <xs:complexType name="CodeType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="code" type="xs:string" /> 
+  <xs:element minOccurs="0" name="description" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="DateType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="dateName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="dateValue" type="xs:date" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="PhoneType">
+- <xs:sequence>
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="phoneTypeType" nillable="true" type="xs:string" /> 
+  <xs:element minOccurs="0" name="countryCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="areaCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="phoneNumber" type="xs:string" /> 
+  <xs:element minOccurs="0" name="extension" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="EmailType">
+- <xs:sequence>
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="emailTypeType" nillable="true" type="xs:string" /> 
+  <xs:element minOccurs="0" name="emailAddressText" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ReferenceType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="sourceName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="referenceName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="referenceValue" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ProcessingInformationType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="NewBusinessRatingProcess" type="tns:RatingProcessType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="NameValueType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="elementCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="elementName" type="xs:string" /> 
+  <xs:element minOccurs="0" name="elementValue" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ProductDescriptionCategoryType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="descriptionText" type="xs:string" /> 
+  <xs:element minOccurs="0" name="ProductDescriptionCategoryOption" type="tns:ProductDescriptionCategoryOptionType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ProductTypeType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="productTypeCode" type="xs:string" /> 
+  <xs:element minOccurs="0" name="ProductSubTypeCode" type="tns:ProductSubTypeType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="ProductDescriptionCategory" type="tns:ProductDescriptionCategoryType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:simpleType name="RatingProcessType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="RPM" /> 
+  <xs:enumeration value="Default" /> 
+  </xs:restriction>
+  </xs:simpleType>
+- <xs:simpleType name="ProductDescriptionCategoryOptionType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="FRCOVCODE" /> 
+  <xs:enumeration value="FRCOVDESC" /> 
+  <xs:enumeration value="MARKETINGCSS" /> 
+  <xs:enumeration value="PRINTDEC" /> 
+  <xs:enumeration value="SISBROKLTCOV" /> 
+  <xs:enumeration value="SISFRMLTCOV" /> 
+  <xs:enumeration value="SISHLTHLTCOV" /> 
+  <xs:enumeration value="SISLIFEPLAN" /> 
+  <xs:enumeration value="SISLIFEPRODTYPE" /> 
+  <xs:enumeration value="SISLIFEPLANTYPE" /> 
+  <xs:enumeration value="SISPROPLTCOV" /> 
+  <xs:enumeration value="SISPROPFORM" /> 
+  <xs:enumeration value="SISPROPDS" /> 
+  <xs:enumeration value="SISAUTOLTCOV" /> 
+  <xs:enumeration value="SISAUTODS" /> 
+  <xs:enumeration value="CLCOVCODE" /> 
+  <xs:enumeration value="CLCOVDESC" /> 
+  <xs:enumeration value="AUTOSUMMARY" /> 
+  <xs:enumeration value="PRINTDECDS" /> 
+  </xs:restriction>
+  </xs:simpleType>
+- <xs:simpleType name="ProductSubTypeType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="camper" /> 
+  <xs:enumeration value="nonowned" /> 
+  </xs:restriction>
+  </xs:simpleType>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schema.amfam.com/automation/workerService/searchOption/v1" elementFormDefault="qualified" targetNamespace="http://wsdl.amfam.com/wsdl/workerService/v3" version="1.0">
+  <xs:import namespace="http://schema.amfam.com/automation/workerService/searchOption/v1" /> 
+- <xs:element name="retrieveWorker">
+- <xs:complexType>
+- <xs:sequence>
+  <xs:element name="SearchOption" type="ns1:RetrieveKeyType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+- <xs:element name="retrieveWorkerResponse">
+- <xs:complexType>
+- <xs:sequence>
+  <xs:element name="WorkerServiceResponse" type="ns1:RetrieveResponseType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+- <xs:element name="searchWorker">
+- <xs:complexType>
+- <xs:sequence>
+  <xs:element name="SearchOption" type="ns1:SearchKeyType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+- <xs:element name="searchWorkerResponse">
+- <xs:complexType>
+- <xs:sequence>
+  <xs:element name="WorkerServiceResponse" type="ns1:SearchResponseType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+- <xs:element name="workerServiceFault">
+- <xs:complexType>
+- <xs:sequence>
+  <xs:element name="errorCode" nillable="true" type="xs:anyType" /> 
+  <xs:element name="errorMessage" nillable="true" type="xs:anyType" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://wsdl.amfam.com/workerService/ping" elementFormDefault="qualified" targetNamespace="http://wsdl.amfam.com/workerService/ping" version="1.0">
+  <xs:element name="PingInput" type="tns:PingInputType" /> 
+  <xs:element name="PingResult" type="tns:PingResultType" /> 
+  <xs:element name="ping" type="tns:PingType" /> 
+  <xs:element name="pingResponse" type="tns:PingResponseType" /> 
+- <xs:complexType name="PingType">
+- <xs:sequence>
+  <xs:element name="PingInput" type="tns:PingInputType" /> 
+  </xs:sequence>
+  <xs:attribute ref="tns:serviceSourceTool" use="required" /> 
+  <xs:attribute ref="tns:serviceProject" use="required" /> 
+  <xs:attribute ref="tns:serviceVersion" use="required" /> 
+  <xs:attribute ref="tns:automationSchemaSourceTool" use="required" /> 
+  <xs:attribute ref="tns:automationSchemaProject" use="required" /> 
+  <xs:attribute ref="tns:automationSchemaVersion" use="required" /> 
+  </xs:complexType>
+- <xs:complexType name="PingInputType">
+- <xs:sequence>
+  <xs:element name="pingLevel" type="tns:PingLevelType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="PingResponseType">
+- <xs:sequence>
+  <xs:element name="PingResult" type="tns:PingResultType" /> 
+  </xs:sequence>
+  <xs:attribute ref="tns:serviceSourceTool" use="required" /> 
+  <xs:attribute ref="tns:serviceProject" use="required" /> 
+  <xs:attribute ref="tns:serviceVersion" use="required" /> 
+  <xs:attribute ref="tns:automationSchemaSourceTool" use="required" /> 
+  <xs:attribute ref="tns:automationSchemaProject" use="required" /> 
+  <xs:attribute ref="tns:automationSchemaVersion" use="required" /> 
+  </xs:complexType>
+- <xs:complexType name="PingResultType">
+- <xs:sequence>
+  <xs:element name="status" type="tns:StatusType" /> 
+  <xs:element name="message" nillable="true" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Verification" type="tns:VerificationType" /> 
+  <xs:element name="timeTakenForPing" nillable="true" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="VerificationType">
+- <xs:sequence>
+  <xs:element name="componentName" type="xs:string" /> 
+  <xs:element name="Status" type="tns:StatusType" /> 
+  <xs:element name="message" nillable="true" type="xs:string" /> 
+  <xs:element name="timeTakenForComponentVerification" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:simpleType name="PingLevelType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="None" /> 
+  <xs:enumeration value="Component" /> 
+  </xs:restriction>
+  </xs:simpleType>
+- <xs:simpleType name="StatusType">
+- <xs:restriction base="xs:string">
+  <xs:enumeration value="Success" /> 
+  <xs:enumeration value="Failure" /> 
+  </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="automationSchemaProject" type="xs:string" /> 
+  <xs:attribute name="automationSchemaSourceTool" type="xs:string" /> 
+  <xs:attribute name="automationSchemaVersion" type="xs:string" /> 
+  <xs:attribute name="serviceProject" type="xs:string" /> 
+  <xs:attribute name="serviceSourceTool" type="xs:string" /> 
+  <xs:attribute name="serviceVersion" type="xs:string" /> 
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schema.amfam.com/automation/workerService/searchOption/v1" xmlns:ns2="http://schema.amfam.com/automation/workerService/message/v1" xmlns:ns1="http://www.amfam.com/xsd/party/worker/v1" elementFormDefault="qualified" targetNamespace="http://schema.amfam.com/automation/workerService/searchOption/v1" version="1.0">
+  <xs:import namespace="http://www.amfam.com/xsd/party/worker/v1" /> 
+  <xs:import namespace="http://schema.amfam.com/automation/workerService/message/v1" /> 
+  <xs:element name="RetrieveKey" type="tns:RetrieveKeyType" /> 
+  <xs:element name="RetrieveResponse" type="tns:RetrieveResponseType" /> 
+  <xs:element name="SearchKey" type="tns:SearchKeyType" /> 
+  <xs:element name="SearchResponse" type="tns:SearchResponseType" /> 
+- <xs:complexType name="SearchKeyType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="dept_Id" type="xs:string" /> 
+  <xs:element minOccurs="0" name="job_Code" type="xs:string" /> 
+  <xs:element minOccurs="0" name="mgr_User_Id" type="xs:string" /> 
+  <xs:element minOccurs="0" name="name" type="tns:NameType" /> 
+  <xs:element minOccurs="0" name="name_Contains_FirstLast" type="tns:NameType" /> 
+  <xs:element minOccurs="0" name="key_Option" type="tns:KeyOptionType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="NameType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="last_Name" type="xs:string" /> 
+  <xs:element minOccurs="0" name="first_Name" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="KeyOptionType">
+- <xs:sequence>
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="worker_Status" type="ns1:WorkerStatusType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="worker_Type" type="ns1:WorkerTypeType" /> 
+  <xs:element minOccurs="0" name="name" type="tns:NameType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="SearchResponseType">
+- <xs:sequence>
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Worker" type="ns1:EnterpriseWorkerType" /> 
+  <xs:element name="SearchOption" type="tns:SearchKeyType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Message" type="ns2:MessageType" /> 
+  </xs:sequence>
+  <xs:attribute ref="tns:schemaVersion" use="required" /> 
+  </xs:complexType>
+- <xs:complexType name="RetrieveKeyType">
+- <xs:sequence>
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="user_Id" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="empl_Id" type="xs:string" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="agt_Dst_Cd" type="tns:AgtDstCodeType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="agt_Id" type="xs:string" /> 
+  <xs:element minOccurs="0" name="additionalRetrieval_Option" type="tns:OptionalRetrievalInfoType" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="AgtDstCodeType">
+- <xs:sequence>
+  <xs:element name="agt_Cd" type="xs:string" /> 
+  <xs:element name="dst_Cd" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="OptionalRetrievalInfoType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="returnLicensingInfo" type="xs:boolean" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="RetrieveResponseType">
+- <xs:sequence>
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Worker" type="ns1:EnterpriseWorkerType" /> 
+  <xs:element name="SearchOption" type="tns:RetrieveKeyType" /> 
+  <xs:element maxOccurs="unbounded" minOccurs="0" name="Message" type="ns2:MessageType" /> 
+  </xs:sequence>
+  <xs:attribute ref="tns:schemaVersion" use="required" /> 
+  </xs:complexType>
+  <xs:attribute name="schemaVersion" type="xs:string" /> 
+  </xs:schema>
+- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schema.amfam.com/automation/workerService/message/v1" elementFormDefault="qualified" targetNamespace="http://schema.amfam.com/automation/workerService/message/v1" version="1.0">
+  <xs:element name="Message" type="tns:MessageType" /> 
+- <xs:complexType name="MessageType">
+- <xs:sequence>
+  <xs:element minOccurs="0" name="messageId" type="xs:int" /> 
+  <xs:element minOccurs="0" name="messageDesc" type="xs:string" /> 
+  <xs:element minOccurs="0" name="messageSeverityCd" type="xs:string" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+  </wsdl:types>
+- <wsdl:message name="retrieveWorkerResponse">
+  <wsdl:part element="tns:retrieveWorkerResponse" name="parameters" /> 
+  </wsdl:message>
+- <wsdl:message name="searchWorkerResponse">
+  <wsdl:part element="tns:searchWorkerResponse" name="parameters" /> 
+  </wsdl:message>
+- <wsdl:message name="pingResponse">
+  <wsdl:part element="ns1:pingResponse" name="pingResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="ping">
+  <wsdl:part element="ns1:ping" name="ping" /> 
+  </wsdl:message>
+- <wsdl:message name="WorkerServiceFault_Exception">
+  <wsdl:part element="tns:workerServiceFault" name="WorkerServiceFault_Exception" /> 
+  </wsdl:message>
+- <wsdl:message name="retrieveWorker">
+  <wsdl:part element="tns:retrieveWorker" name="parameters" /> 
+  </wsdl:message>
+- <wsdl:message name="searchWorker">
+  <wsdl:part element="tns:searchWorker" name="parameters" /> 
+  </wsdl:message>
+- <wsdl:portType name="WorkerService">
+- <wsdl:operation name="searchWorker">
+  <wsdl:input message="tns:searchWorker" name="searchWorker" /> 
+  <wsdl:output message="tns:searchWorkerResponse" name="searchWorkerResponse" /> 
+  <wsdl:fault message="tns:WorkerServiceFault_Exception" name="WorkerServiceFault_Exception" /> 
+  </wsdl:operation>
+- <wsdl:operation name="retrieveWorker">
+  <wsdl:input message="tns:retrieveWorker" name="retrieveWorker" /> 
+  <wsdl:output message="tns:retrieveWorkerResponse" name="retrieveWorkerResponse" /> 
+  <wsdl:fault message="tns:WorkerServiceFault_Exception" name="WorkerServiceFault_Exception" /> 
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <wsdl:input message="tns:ping" name="ping" /> 
+  <wsdl:output message="tns:pingResponse" name="pingResponse" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+- <wsdl:binding name="WorkerServiceSoapBinding" type="tns:WorkerService">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+- <wsdl:operation name="searchWorker">
+  <soap:operation soapAction="http://www.amfam.com/wsdl/workerService/v3/searchWorker" style="document" /> 
+- <wsdl:input name="searchWorker">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="searchWorkerResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="WorkerServiceFault_Exception">
+  <soap:fault name="WorkerServiceFault_Exception" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <soap:operation soapAction="http://www.amfam.com/wsdl/workerService/v3/ping" style="document" /> 
+- <wsdl:input name="ping">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="pingResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+- <wsdl:operation name="retrieveWorker">
+  <soap:operation soapAction="http://www.amfam.com/wsdl/workerService/v3/retrieveWorker" style="document" /> 
+- <wsdl:input name="retrieveWorker">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="retrieveWorkerResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="WorkerServiceFault_Exception">
+  <soap:fault name="WorkerServiceFault_Exception" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+  </wsdl:binding>
+- <wsdl:service name="WorkerService">
+- <wsdl:port binding="tns:WorkerServiceSoapBinding" name="WorkerServiceImplPort">
+  <soap:address location="http://devbq25/worker3/services/worker" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

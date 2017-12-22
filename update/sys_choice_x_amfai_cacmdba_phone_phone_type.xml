@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="phone_type" table="x_amfai_cacmdba_phone" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Business</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:11:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6416e876dbc74700bf14f9961d961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:11:58</sys_updated_on>
+            <value>business</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cell</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:11:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>34062076dbc74700bf14f9961d961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:11:42</sys_updated_on>
+            <value>cell</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Emergency</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:11:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>abe5e876dbc74700bf14f9961d961909</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:11:25</sys_updated_on>
+            <value>emergency</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fax</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:11:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9bd56076dbc74700bf14f9961d96197c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:11:03</sys_updated_on>
+            <value>fax</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Home</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:10:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>73c56476dbc74700bf14f9961d961942</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:10:47</sys_updated_on>
+            <value>home</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:10:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dfb52076dbc74700bf14f9961d9619b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:10:30</sys_updated_on>
+            <value>other</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pager</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:10:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83a5a876dbc74700bf14f9961d96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:10:14</sys_updated_on>
+            <value>pager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Phone for the deaf</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:09:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>78556476dbc74700bf14f9961d96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:09:59</sys_updated_on>
+            <value>phone for the deaf</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Seasonal</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:08:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a335a036dbc74700bf14f9961d961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:08:24</sys_updated_on>
+            <value>seasonal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Temporary</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:08:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a725e076dbc74700bf14f9961d96199c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:08:06</sys_updated_on>
+            <value>temporary</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Work</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_phone</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:07:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2e15e076dbc74700bf14f9961d9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:07:47</sys_updated_on>
+            <value>work</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>phone_type</element>
+            <name>x_amfai_cacmdba_phone</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 21:07:47</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>99252476dbc74700bf14f9961d961936</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>phone_type</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_phone_phone_type</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 21:07:47</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_amfai_cacmdba_case_referral" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Created</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>0</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:32:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>549371e5db4587404d70734aaf9619ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-06 19:32:47</sys_updated_on>
+            <value>created</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sent</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>1</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:33:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eea33da5db4587404d70734aaf961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-06 19:33:01</sys_updated_on>
+            <value>sent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Work in Progress</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>2</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:33:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>42b339e5db4587404d70734aaf96194f</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-11-14 19:57:39</sys_updated_on>
+            <value>work_in_progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Pending</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>3</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:33:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>abc379e5db4587404d70734aaf961985</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-06 19:33:39</sys_updated_on>
+            <value>pending</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Accepted</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>4</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:34:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ee335e5db4587404d70734aaf9619be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-06 19:34:10</sys_updated_on>
+            <value>accepted</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Rejected</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>5</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:34:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>76f3f1e5db4587404d70734aaf9619fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-06 19:34:24</sys_updated_on>
+            <value>rejected</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence>6</sequence>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:34:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d20479e5db4587404d70734aaf96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-06 19:34:37</sys_updated_on>
+            <value>closed</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-06 19:32:47</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>15a375e5db4587404d70734aaf961932</sys_id>
+            <sys_mod_count>9</sys_mod_count>
+            <sys_name>status</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_case_referral_status</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-11-14 19:57:39</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

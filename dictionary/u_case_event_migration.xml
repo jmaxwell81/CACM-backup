@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*04 - Case Event Migration" max_length="40" name="u_case_event_migration" sizeclass="473336" type="collection">
+        <element attributes="import_attribute_name=COMMENTS" label="COMMENTS" max_length="657" name="u_comments" type="UNKNOWN"/>
+        <element attributes="import_attribute_name=COMPLAINT_ID,edge_encryption_enabled=true" label="COMPLAINT_ID" max_length="40" name="u_complaint_id" type="string"/>
+        <element attributes="import_attribute_name=CREATE_DATE" label="CREATE_DATE" max_length="40" name="u_create_date" type="datetime"/>
+        <element attributes="import_attribute_name=CREATE_USER_ID,edge_encryption_enabled=true" label="CREATE_USER_ID" max_length="40" name="u_create_user_id" type="string"/>
+        <element attributes="import_attribute_name=EVENT_DATE" label="EVENT_DATE" max_length="40" name="u_event_date" type="datetime"/>
+        <element attributes="import_attribute_name=EVENT_ID,edge_encryption_enabled=true" label="EVENT_ID" max_length="40" name="u_event_id" type="string"/>
+        <element attributes="import_attribute_name=METHOD_ID,edge_encryption_enabled=true" label="METHOD_ID" max_length="40" name="u_method_id" type="string"/>
+        <element attributes="import_attribute_name=POTENTIAL_CALLER_ID,edge_encryption_enabled=true" label="POTENTIAL_CALLER_ID" max_length="40" name="u_potential_caller_id" type="string"/>
+        <element attributes="import_attribute_name=ROUTING_ID,edge_encryption_enabled=true" label="ROUTING_ID" max_length="40" name="u_routing_id" type="string"/>
+        <element attributes="import_attribute_name=UPDATE_DATE" label="UPDATE_DATE" max_length="40" name="u_update_date" type="datetime"/>
+        <element attributes="import_attribute_name=UPDATE_USER_ID,edge_encryption_enabled=true" label="UPDATE_USER_ID" max_length="40" name="u_update_user_id" type="string"/>
+        <element attributes="import_attribute_name=USER_ID,edge_encryption_enabled=true" label="USER_ID" max_length="40" name="u_user_id" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="address_usage" table="x_amfai_cacmdba_address" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>address_usage</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Business</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_address</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 18:46:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>48b488bedb074700bf14f9961d961975</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 18:46:06</sys_updated_on>
+            <value>business</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>address_usage</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mailing</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_address</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 18:45:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c9a48cbedb074700bf14f9961d96190b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 18:45:53</sys_updated_on>
+            <value>mailing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>address_usage</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Residence</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_address</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 18:45:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5f8448bedb074700bf14f9961d961935</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 18:45:35</sys_updated_on>
+            <value>residence</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>address_usage</element>
+            <name>x_amfai_cacmdba_address</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-18 18:45:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>82940cbedb074700bf14f9961d9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>address_usage</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_address_address_usage</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-18 18:45:35</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

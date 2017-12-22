@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Email" max_length="40" name="x_amfai_cacmdba_email" sizeclass="25941" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Email Address" max_length="60" name="email_address" type="string"/>
+        <element choice="1" label="Email Address Usage" max_length="40" name="email_address_usage" type="choice">
+            <choice>
+                <element label="Business" value="business"/>
+                <element label="Home" value="home"/>
+                <element label="Other" value="other"/>
+                <element label="School" value="school"/>
+                <element label="Work" value="work"/>
+            </choice>
+        </element>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_customer" type="reference"/>
+        <index name="index">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

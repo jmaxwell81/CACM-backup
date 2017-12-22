@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Case" max_length="40" name="x_amfai_cacmdba_case" sizeclass="52709" type="collection">
+        <element label="Advocate" max_length="32" name="advocate" reference="x_amfai_cacmdba_advocate" reference_qual="javascript: USER_ID= + current.x_amfai_cacmdba_case.advocate_user_id;" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Case Actual Delete Date" max_length="40" name="case_actual_delete_date" type="glide_date"/>
+        <element attributes="ref_qual_elements=case_name,max_ref_dropdown=50" choice="1" dependent="case_name" dependent_on_field="case_name" label="Customer Address" max_length="32" name="case_address" reference="x_amfai_cacmdba_address" reference_qual="javascript: 'person_id=' + current.person_id.person_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element label="Address" max_length="250" name="case_amfam_address" type="string"/>
+        <element label="City" max_length="100" name="case_amfam_city" type="string"/>
+        <element label="Email" max_length="50" name="case_amfam_email" type="string"/>
+        <element label="First Name" max_length="150" name="case_amfam_first_name" type="string"/>
+        <element label="Insured same as above" max_length="40" name="case_amfam_insured_same_as_above" type="boolean"/>
+        <element label="Address" max_length="250" name="case_amfam_ins_address" type="string"/>
+        <element label="Agent Name" max_length="150" name="case_amfam_ins_agent_name" type="string"/>
+        <element label="City" max_length="50" name="case_amfam_ins_city" type="string"/>
+        <element label="Claim Adjuster Name" max_length="150" name="case_amfam_ins_claim_adjuster_name" type="string"/>
+        <element label="Claim Number" max_length="150" name="case_amfam_ins_claim_number" type="string"/>
+        <element label="Comments/Concerns" max_length="4000" name="case_amfam_ins_comments_concerns" type="string"/>
+        <element label="First Name" max_length="150" name="case_amfam_ins_first_name" type="string"/>
+        <element label="Last Name" max_length="150" name="case_amfam_ins_last_name" type="string"/>
+        <element label="Phone" max_length="10" name="case_amfam_ins_phone" type="string"/>
+        <element label="Policy Number" max_length="150" name="case_amfam_ins_policy_number" type="string"/>
+        <element label="Requested Resolution" max_length="4000" name="case_amfam_ins_requested_resolution" type="string"/>
+        <element label="State/Province" max_length="32" name="case_amfam_ins_state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="Zip Code" max_length="10" name="case_amfam_ins_zip_code" type="string"/>
+        <element label="Last Name" max_length="150" name="case_amfam_last_name" type="string"/>
+        <element label="Phone" max_length="10" name="case_amfam_phone" type="string"/>
+        <element label="State/Province" max_length="32" name="case_amfam_state_province" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="Zip Code" max_length="10" name="case_amfam_zip_code" type="string"/>
+        <element label="Business Name" max_length="50" name="case_business_name" read_only="true" type="string"/>
+        <element label="Claim Number" max_length="32" name="case_claim_number" reference="x_amfai_cacmdba_claim" type="reference"/>
+        <element attributes="max_ref_dropdown=100" choice="1" label="Claim Office" max_length="10" name="case_claim_office" reference="x_amfai_cacmdba_claim_office" type="reference">
+            <choice/>
+        </element>
+        <element label="Initial Closed Date" max_length="40" name="case_close_timestamp" type="glide_date"/>
+        <element label="Company" max_length="4000" name="case_company_list" reference="x_amfai_cacmdba_company" type="glide_list"/>
+        <element label="First Name" max_length="40" name="case_complainant_first_name" type="string"/>
+        <element label="Last Name" max_length="40" name="case_complainant_last_name" type="string"/>
+        <element label="Middle Initial" max_length="1" name="case_complainant_middle_initial" type="string"/>
+        <element label="Residence State" max_length="32" name="case_complainant_residence_state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element choice="3" default="request" label="Identifier" max_length="40" name="case_identifier" read_only="true" type="choice">
+            <choice>
+                <element label="Request" sequence="0" value="request"/>
+                <element label="Case" sequence="1" value="case"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="First Name" max_length="40" name="case_insured_first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="40" name="case_insured_last_name" type="string"/>
+        <element label="Middle Initial" max_length="1" name="case_insured_middle_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Policy Number" max_length="40" name="case_insured_policy_number" type="string"/>
+        <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Sales State" max_length="32" name="case_insured_sales_state" reference="x_amfai_cacmdba_sales_state" type="reference">
+            <choice/>
+        </element>
+        <element label="Insured Same as Complainant" max_length="40" name="case_insured_same_as_complainant" read_only="true" type="boolean"/>
+        <element label="Line" max_length="32" name="case_line" reference="x_amfai_cacmdba_line_type" type="reference"/>
+        <element label="NAIC #" max_length="100" name="case_naic_number" type="string"/>
+        <element label="Customer Name" max_length="32" name="case_name" reference="x_amfai_cacmdba_customer" type="reference"/>
+        <element label="Case Opened Date" max_length="40" name="case_open_timestamp" type="glide_date"/>
+        <element label="Policy Number" max_length="32" name="case_policy_number" reference="x_amfai_cacmdba_policy" type="reference"/>
+        <element choice="1" label="Privacy" max_length="40" name="case_privacy" type="choice">
+            <choice>
+                <element label="Adverse" sequence="0" value="adverse"/>
+                <element label="General" sequence="1" value="general"/>
+            </choice>
+        </element>
+        <element label="Department" max_length="40" name="case_reportedby_department" read_only="true" type="string"/>
+        <element label="Email" max_length="40" name="case_reportedby_email" read_only="true" type="string"/>
+        <element label="First Name" max_length="40" name="case_reportedby_first_name" read_only="true" type="string"/>
+        <element label="Last name" max_length="40" name="case_reportedby_last_name" read_only="true" type="string"/>
+        <element label="Phone" max_length="40" name="case_reportedby_phone" read_only="true" type="string"/>
+        <element label="Title" max_length="40" name="case_reportedby_title" read_only="true" type="string"/>
+        <element choice="1" default="written" label="Request Type" max_length="40" name="case_request_type" type="choice">
+            <choice>
+                <element label="Regulator" sequence="0" value="regulator"/>
+                <element label="Written" sequence="1" value="written"/>
+                <element label="Phone" sequence="2" value="phone"/>
+                <element label="UCL" sequence="3" value="ucl"/>
+                <element label="AmFam.com" sequence="4" value="amfam"/>
+            </choice>
+        </element>
+        <element active="false" label="Comments" max_length="4000" name="case_req_comments" type="string"/>
+        <element label="Complaint Answer Date" max_length="40" name="case_req_complaint_answer_date" type="glide_date"/>
+        <element label="Complaint Recieved Date" max_length="40" name="case_req_complaint_recieved_date" type="glide_date"/>
+        <element default="javascript:  var gdt = new GlideDate();gdt.getDisplayValue();" label="Request Received Date" max_length="40" name="case_req_date_recieved" read_only="true" type="glide_date"/>
+        <element label="Disposition" max_length="32" name="case_req_disposition" reference="x_amfai_cacmdba_disposition" type="reference"/>
+        <element label="Reason" max_length="32" name="case_req_reason" reference="x_amfai_cacmdba_reason" type="reference"/>
+        <element label="Sub Disposition" max_length="32" name="case_req_sub_disposition" reference="x_amfai_cacmdba_sub_disposition" type="reference"/>
+        <element label="Sub Reason" max_length="32" name="case_req_sub_reason" reference="x_amfai_cacmdba_sub_reason" type="reference"/>
+        <element choice="3" default="11" dependent="case_identifier" dependent_on_field="case_identifier" label="Status" max_length="40" name="case_status" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="case" label="Open" sequence="0" value="1"/>
+                <element dependent_value="case" label="Re-opened" sequence="1" value="2"/>
+                <element dependent_value="case" label="Closed" sequence="2" value="3"/>
+                <element dependent_value="case" label="Marked to be Purged" sequence="3" value="4"/>
+                <element dependent_value="request" hint="Request Status" label="Open" sequence="4" value="11"/>
+                <element dependent_value="request" hint="Request Status" label="Purge" sequence="5" value="12"/>
+            </choice>
+        </element>
+        <element label="Case Ten Years Purge Date" max_length="40" name="case_ten_years_purge_date" type="glide_date"/>
+        <element choice="1" label="Case Type" max_length="40" name="case_type" type="choice">
+            <choice>
+                <element label="Inquiry" sequence="0" value="inquiry"/>
+                <element label="Regulator Inquiry" sequence="1" value="regulator_inquiry"/>
+                <element label="Complaint" sequence="2" value="complaint"/>
+                <element label="Customer Privacy" sequence="3" value="customer_privacy"/>
+            </choice>
+        </element>
+        <element label="Latest Closed Date" max_length="40" name="latest_closed_date" type="glide_date"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="CACM ID" max_length="40" name="number" read_only="true" type="string"/>
+        <index name="index">
+            <element name="case_name"/>
+        </index>
+        <index name="index2">
+            <element name="case_policy_number"/>
+        </index>
+        <index name="index3">
+            <element name="case_amfam_ins_state"/>
+        </index>
+        <index name="index4">
+            <element name="advocate"/>
+        </index>
+        <index name="index5">
+            <element name="case_insured_sales_state"/>
+        </index>
+        <index name="index6">
+            <element name="case_req_sub_reason"/>
+        </index>
+        <index name="index7">
+            <element name="case_amfam_state_province"/>
+        </index>
+        <index name="index8">
+            <element name="number"/>
+        </index>
+        <index name="index9">
+            <element name="case_req_disposition"/>
+        </index>
+        <index name="index10">
+            <element name="case_req_reason"/>
+        </index>
+        <index name="index11">
+            <element name="case_claim_number"/>
+        </index>
+        <index name="index12">
+            <element name="case_address"/>
+        </index>
+        <index name="index13">
+            <element name="case_req_sub_disposition"/>
+        </index>
+        <index name="index14">
+            <element name="case_line"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Phone" max_length="40" name="x_amfai_cacmdba_phone" sizeclass="48582" type="collection">
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_customer" type="reference"/>
+        <element label="Phone Availability" max_length="80" name="phone_availability" type="string"/>
+        <element label="Phone Extension" max_length="10" name="phone_extension" type="string"/>
+        <element label="Phone Number" max_length="15" name="phone_number" type="string"/>
+        <element choice="1" label="Phone Type" max_length="40" name="phone_type" type="choice">
+            <choice>
+                <element label="Business" value="business"/>
+                <element label="Cell" value="cell"/>
+                <element label="Emergency" value="emergency"/>
+                <element label="Fax" value="fax"/>
+                <element label="Home" value="home"/>
+                <element label="Other" value="other"/>
+                <element label="Pager" value="pager"/>
+                <element label="Phone for the deaf" value="phone for the deaf"/>
+                <element label="Seasonal" value="seasonal"/>
+                <element label="Temporary" value="temporary"/>
+                <element label="Work" value="work"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

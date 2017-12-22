@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="x_amfai_cacmdba_case" relationship="" sys_domain="global" table="x_amfai_cacmdba_producer" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>first_name</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>1394463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>last_name</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>9394463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_id</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>1794463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>classic_dst_cd</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>9794463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_dst_nm</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>1b94463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_end_dt</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>9b94463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_job_title_nm</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>1f94463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_nick_nm</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>9f94463ddbc5c7404d70734aaf961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_regn_nm</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>1394463ddbc5c7404d70734aaf961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_role_nm</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>9394463ddbc5c7404d70734aaf961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>producer_start_dt</element>
+            <list_id display_value="x_amfai_cacmdba_producer" element="NULL" name="x_amfai_cacmdba_producer" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">9b94463ddbc5c7404d70734aaf961971</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_id>1794463ddbc5c7404d70734aaf961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_amfai_cacmdba_producer</name>
+            <parent>x_amfai_cacmdba_case</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-07 15:25:24</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b94463ddbc5c7404d70734aaf961971</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_producer</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_list_x_amfai_cacmdba_producer_x_amfai_cacmdba_case_null</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-07 15:25:24</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

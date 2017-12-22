@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Sub Reason [ct]" max_length="40" name="x_amfai_cacmdba_sub_reason" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="AF Reason Code" mandatory="true" max_length="3" name="af_reason_code" type="string"/>
+        <element label="Effective Date" mandatory="true" max_length="40" name="begin_eff_date" type="glide_date"/>
+        <element label="End Effective Date" max_length="40" name="end_eff_date" type="glide_date"/>
+        <element label="Sub Code" mandatory="true" max_length="3" name="sub_reason_code" type="string"/>
+        <element display="true" label="Description" mandatory="true" max_length="50" name="sub_reason_description" type="string"/>
+        <index name="index">
+            <element name="af_reason_code"/>
+            <element name="sub_reason_code"/>
+        </index>
+    </element>
+</database>

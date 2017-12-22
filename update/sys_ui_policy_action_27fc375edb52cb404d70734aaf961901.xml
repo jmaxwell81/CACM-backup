@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>data_populated_from_integration</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-10 16:46:55</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>27fc375edb52cb404d70734aaf961901</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_populated_from_integration</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_27fc375edb52cb404d70734aaf961901</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-10 16:46:55</sys_updated_on>
+        <table>x_amfai_cacmdba_policy</table>
+        <ui_policy display_value="Make Fields Read only when data is prepopulated from Migration">dfc1eb46dbd24b40a09bf6e9af9619cb</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

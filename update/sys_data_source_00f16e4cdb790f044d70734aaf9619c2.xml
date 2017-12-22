@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <category/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:oracle:thin:@ORAP0103:1521:mp10g0p</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <database_name/>
+        <database_port/>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>oracle.jdbc.OracleDriver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Case Migration</import_set_table_label>
+        <import_set_table_name>u_case_migration</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>GTd+7lQfg217MaSa+EyjGA==</jdbc_password>
+        <jdbc_server>ORAP0103</jdbc_server>
+        <jdbc_user_name>DLF004</jdbc_user_name>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field>CREATE_DATE</last_run_database_field>
+        <last_run_datetime>to_date('2017-12-14','yyyy-mm-dd')</last_run_datetime>
+        <ldap_target/>
+        <maximum_rows/>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
+        <name>03 - Case Migration</name>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>mp10g0p</oracle_sid>
+        <properties/>
+        <query>Specific SQL</query>
+        <query_timeout>0</query_timeout>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement>Select&#13;
+complaint_id as CACM_ID,&#13;
+'case' as Identifier,&#13;
+'complaint' as Case_type,&#13;
+CASE WHEN closed_date IS NOT NULL THEN '3'&#13;
+     ELSE '1' END as Status,&#13;
+open_date as Date_Opened,&#13;
+closed_date as Closed_Date,&#13;
+person_id as Person_ID,&#13;
+user_id as Advocate,&#13;
+claim_office_code as Claim_Office,&#13;
+update_date as Create_Date,&#13;
+update_user_id as Create_User_ID,&#13;
+company_code as Company&#13;
+From cacmdba.complaint</sql_statement>
+        <ssh_keyfile_path/>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>dfoss@amfam.com</sys_created_by>
+        <sys_created_on>2017-10-09 13:54:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>00f16e4cdb790f044d70734aaf9619c2</sys_id>
+        <sys_mod_count>75</sys_mod_count>
+        <sys_name>03 - Case Migration</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_data_source_00f16e4cdb790f044d70734aaf9619c2</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-12-14 22:30:48</sys_updated_on>
+        <table_name/>
+        <type>JDBC</type>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>true</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

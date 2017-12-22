@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.generate_letter</api_name>
+        <client_callable>true</client_callable>
+        <description>used in ui action "add instruction" on case event</description>
+        <name>generate_letter</name>
+        <script><![CDATA[var generate_letter = Class.create();
+generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	dateGenerator: function(){
+		//gs.addInfoMessage('date run');
+	var date = new GlideDate();
+		var month;
+		//gs.addInfoMessage(date.getMonthNoTZ());
+		switch (date.getMonthNoTZ()) {
+			case 1:
+			month = "January";
+			break;
+			case 2:
+			month = "February";
+			break;
+			case 3:
+			month = "March";
+			break;
+			case 4:
+			month = "April";
+			break;
+			case 5:
+			month = "May";
+			break;
+			case 6:
+			month = "June";
+			break;
+			case 7:
+			month = "July";
+			break;
+			case 8:
+			month = "August";
+			break;
+			case 9:
+			month = "September";
+			break;
+			case 10:
+			month = "October";
+			break;
+			case 11:
+			month = "November";
+			break;
+			case 12:
+			month = "December";
+		}
+		var day = date.getDayOfMonthNoTZ();
+		var year = date.getYearNoTZ();
+		var dateString = month + " " + day + " " + year;
+		return dateString;
+	},
+	
+	generateADVOC2DP: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", has asked me to review your situation. I have asked the appropriate department to research your concerns. American Family's policy is to have a response to you within ten business days from the date of this letter. However, if our company receives a formal complaint from the Insurance Department, our response will be sent directly to the Department and you may not receive a reply from our company.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	generateADVOCAT2: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", has asked me to review your situation.  I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVOCATE: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVOCDPT: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.  However, if our company receives a formal complaint from the Insurance Department, our response will be sent directly to the Department and you may not receive a reply from our company.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVOCSPE: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for completing the survey recently sent to you.  On the survey you expressed concerns that deserve our attention.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVOCSUR: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for completing the survey recently sent to you.  On the survey you expressed concerns that deserve our attention.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVPRMCL: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for completing the survey sent to you.  On the survey you expressed concerns that deserve our attention. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>Under the 'Agent Notification' section of the survey, you did not grant permission to share your name or specific responses with your agent and/or claim adjuster.  In order to address your concerns properly, we need to contact your agent and/or claim adjuster regarding the situation.  May we have your permission to do so?<br/><br/>If we do not receive your permission to contact your agent and/or claim adjuster, we will not be able to investigate this matter and provide a response to your concerns.<br/><br/>Please indicate your choice below and return this letter in the enclosed postage paid envelope.<br/><br/>_______Yes, you have my permission to contact my agent and/or claim adjuster providing my name and specific concerns expressed on the enclosed survey.<br/><br/>_______No, do not share my name or specific concerns with my agent and/or claim adjuster.  I understand I will not receive a response to my comments on the attached survey.<br/><br/>Thank you for taking the time to respond to this request.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVPRMFL: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>We received your response granting us permission to contact your agent and/or claim adjuster regarding your survey comments.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to assist you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	
+	
+	generateADVPRMSL: function(){
+		//gs.addInfoMessage('run');
+		var returnedDate = this.dateGenerator();
+		var caseID = this.getParameter('sysparm_currentCaseID');
+		var EventID = this.getParameter('sysparm_currentEventID');
+		var executive = this.getParameter('sysparm_currentExecutive');
+		
+		var grCase = new GlideRecord('x_amfai_cacmdba_case');
+		grCase.get(caseID);
+		var company = grCase.case_company_list.getDisplayValue();
+		var advocate = grCase.advocate;
+		var comp = grCase.case_name;
+		var compTitle = grCase.case_name.customer_title.getDisplayValue();
+		var compName = grCase.case_name.customer_full_name;
+		
+		var grPerson = new GlideRecord('x_amfai_cacmdba_person_address');
+		grPerson.get('person_id', comp);
+		var addr1 = grPerson.primary_address_line_1;
+		var addr2 = grPerson.primary_address_line_2;
+		var city = grPerson.primary_city;
+		var state = grPerson.primary_state.getDisplayValue();
+		var zip = grPerson.primary_zip_postal_code;
+		
+		var grExec = new GlideRecord('x_amfai_cacmdba_executive');
+		grExec.get(executive);
+		var execName = grExec.name;
+		var execTitle = grExec.title;
+		
+		var grAdvocate = new GlideRecord('x_amfai_cacmdba_advocate');
+		grAdvocate.get(advocate);
+		var advocateName = grAdvocate.name;
+		var advocateTitle = grAdvocate.title;
+		
+		var letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + compName + ":<br/><br/>Thank you for completing the survey sent to you.  On the survey you expressed concerns that deserve our attention. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>Under the 'Agent Notification' section of the survey, you did not grant permission to share your name or specific responses with your agent.  In order to address your concerns properly, we need to contact your agent regarding the situation.  May we have your permission to do so?<br/><br/>If we do not receive your permission to contact your agent, we will not be able to investigate this matter and provide a response to your concerns.<br/><br/>Please indicate your choice below and return this letter in the enclosed postage paid envelope.<br/><br/>_______Yes, you have my permission to contact my agent providing my name and specific concerns expressed on the enclosed survey.<br/><br/>_______No, do not share my name or specific concerns with my agent.  I understand I will not receive a response to my comments on the attached survey.<br/><br/>Thank you for taking the time to respond to this request.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+		//gs.addInfoMessage(letter);
+		return letter;
+		
+	},
+	type: 'generate_letter'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-12-15 15:26:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>675a3f61db878300bf14f9961d961922</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>generate_letter</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_675a3f61db878300bf14f9961d961922</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-21 18:23:17</sys_updated_on>
+    </sys_script_include>
+</record_update>

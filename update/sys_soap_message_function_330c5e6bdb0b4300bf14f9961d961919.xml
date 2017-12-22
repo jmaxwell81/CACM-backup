@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Pre-Prod">aee4c876dbe336c44d70734aaf9619e1</basic_auth_profile>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://service.amfam.com/partysearchservice">
+   <soapenv:Header>
+      <AppAuthzHeader>
+         <userId>cdhtp1</userId>
+      </AppAuthzHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <par:retrieveParty par:automationSchemaSourceTool="CVS" par:automationSchemaProject="PartyServiceCXFGenerator" par:automationSchemaVersion="v4" par:serviceSourceTool="CVS" par:serviceProject="PartySearchService" par:serviceVersion="4.0.279">
+         <par:RetrieveRequest>
+            <par:RetrieveCriteria>
+               <par:partyIdentifier>${partyIdentifier}</par:partyIdentifier>
+               <par:LevelOfDetail>DEMOGRAPHIC_INFORMATION</par:LevelOfDetail>
+               <par:LevelOfDetail>ADDITIONAL_INFORMATION</par:LevelOfDetail>
+               <par:LevelOfDetail>IDENTITY_INFORMATION</par:LevelOfDetail>
+               <par:LevelOfDetail>ADDRESSES</par:LevelOfDetail>
+               <par:LevelOfDetail>EMPLOYMENT</par:LevelOfDetail>
+               <par:LevelOfDetail>PHONES</par:LevelOfDetail>
+               <par:LevelOfDetail>EMAILS</par:LevelOfDetail>
+               <par:LevelOfDetail>PARTY_RELATIONSHIPS</par:LevelOfDetail>
+               <par:LevelOfDetail>PRINCIPAL_RELATIONSHIPS</par:LevelOfDetail>
+               <par:LevelOfDetail>LIFE_EVENTS</par:LevelOfDetail>
+               <par:LevelOfDetail>HOBBIES</par:LevelOfDetail>
+               <par:LevelOfDetail>ALTERNATE_NAMES</par:LevelOfDetail>
+               <par:LevelOfDetail>TPI_INFORMATION</par:LevelOfDetail>
+               <par:LevelOfDetail>PRIVACY_OPTOUT</par:LevelOfDetail>
+               <par:LevelOfDetail>SOCIAL_MEDIA</par:LevelOfDetail>
+               <par:LevelOfDetail>AFFINITY_GROUP</par:LevelOfDetail>
+            </par:RetrieveCriteria>
+            <par:consumer></par:consumer>
+         </par:RetrieveRequest>
+      </par:retrieveParty>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></envelope>
+        <function_name>retrieveParty_Party</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>PartySearchServiceV7 [ retrieveParty_Party ]</qualified_name>
+        <soap_action>http://service.amfam.com/partysearchservice/v7/retrieveParty</soap_action>
+        <soap_endpoint>https://accesb.amfam.com/ccx/cc-router/PartySearchService/07sit</soap_endpoint>
+        <soap_message display_value="PartySearchServiceV7">1ace07b1dbd44f004d70734aaf961939</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-12-21 13:46:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>330c5e6bdb0b4300bf14f9961d961919</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>retrieveParty_Party</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_function_330c5e6bdb0b4300bf14f9961d961919</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-12-21 13:52:49</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

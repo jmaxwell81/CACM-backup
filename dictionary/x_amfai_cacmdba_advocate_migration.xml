@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Advocate" max_length="40" name="x_amfai_cacmdba_advocate_migration" type="collection">
+        <element attributes="import_attribute_name=E_MAIL_ADDRESS,edge_encryption_enabled=true" label="E_MAIL_ADDRESS" max_length="40" name="u_e_mail_address" type="string"/>
+        <element attributes="import_attribute_name=FAX,edge_encryption_enabled=true" label="FAX" max_length="40" name="u_fax" type="string"/>
+        <element attributes="import_attribute_name=LOCATION,edge_encryption_enabled=true" label="LOCATION" max_length="50" name="u_location" type="string"/>
+        <element attributes="import_attribute_name=NAME,edge_encryption_enabled=true" label="NAME" max_length="50" name="u_name" type="string"/>
+        <element attributes="import_attribute_name=PHONE,edge_encryption_enabled=true" label="PHONE" max_length="40" name="u_phone" type="string"/>
+        <element attributes="import_attribute_name=SECURITY_BUFFER,edge_encryption_enabled=true" label="SECURITY_BUFFER" max_length="255" name="u_security_buffer" type="string"/>
+        <element attributes="import_attribute_name=SECURITY_LEVEL" label="SECURITY_LEVEL" max_length="15" name="u_security_level" type="decimal"/>
+        <element attributes="import_attribute_name=STATUS,edge_encryption_enabled=true" label="STATUS" max_length="40" name="u_status" type="string"/>
+        <element attributes="import_attribute_name=TITLE,edge_encryption_enabled=true" label="TITLE" max_length="50" name="u_title" type="string"/>
+        <element attributes="import_attribute_name=USER_ID,edge_encryption_enabled=true" label="USER_ID" max_length="40" name="u_user_id" type="string"/>
+        <element attributes="import_attribute_name=VOICE_MAIL,edge_encryption_enabled=true" label="VOICE_MAIL" max_length="40" name="u_voice_mail" type="string"/>
+    </element>
+</database>

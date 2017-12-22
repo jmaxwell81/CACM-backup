@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Title " max_length="40" name="u_title" type="collection">
+        <element attributes="import_attribute_name=TITLE,edge_encryption_enabled=true" label="TITLE" max_length="40" name="u_title" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Instructions" section_id="58fcfe8cdb6ac3804d70734aaf9619bb" sys_domain="global" table="x_amfai_cacmdba_case_referral" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>issues_and_handling_instructions</element>
+            <position>0</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-11-15 22:36:28</sys_created_on>
+            <sys_id>aafc764cdb6ac3804d70734aaf961960</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructions" display_value="Instructions" name="x_amfai_cacmdba_case_referral" sys_domain="global" view="Default view">58fcfe8cdb6ac3804d70734aaf9619bb</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-11-15 22:36:28</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>special_instructions</element>
+            <position>1</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-11-15 22:36:28</sys_created_on>
+            <sys_id>2efc764cdb6ac3804d70734aaf961960</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Instructions" display_value="Instructions" name="x_amfai_cacmdba_case_referral" sys_domain="global" view="Default view">58fcfe8cdb6ac3804d70734aaf9619bb</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-11-15 22:36:28</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Instructions</caption>
+            <header>false</header>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-11-15 22:36:18</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58fcfe8cdb6ac3804d70734aaf9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Instructions</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_section_58fcfe8cdb6ac3804d70734aaf9619bb</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-11-15 22:36:18</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

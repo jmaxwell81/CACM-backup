@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Pre-Prod">aee4c876dbe336c44d70734aaf9619e1</basic_auth_profile>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v5="http://service.amfam.com/message/producerservice/v5" xmlns:v51="http://service.amfam.com/automation/producerservice/v5">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v5:retrieveProducerDetail v5:automationSchemaSourceTool="GIT" v5:automationSchemaProject="producerservice" v5:automationSchemaVersion="3.0" v5:serviceSourceTool="GIT" v5:serviceProject="producerservice" v5:serviceVersion="3.0">
+         <v51:RetrieveProducerDetailInput>
+            <!--You have a CHOICE of the next 4 items at this level-->
+            <!--1 to 100 repetitions:-->
+            <v51:producerId>${producerId}</v51:producerId>
+    	   <v51:LevelOfDetail>HIERARCHY</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>APPOINTMENT</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>CONTRACT</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>IDENTIFYING</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>RELATIONSHIP</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>ENDORSEMENT</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>STAFF_AGREEMENT</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>PRACTICE_LIABILITY</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>CONTINUING_EDUCATION</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>PROFFESIONAL_DESIGNATION</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>URL</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>DATE</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>BACKGROUND</v51:LevelOfDetail>
+	       <v51:LevelOfDetail>OFFICE_HOUR</v51:LevelOfDetail>
+            <v51:Audit>
+               <v51:userId>${userId}</v51:userId>
+               <v51:systemName>${systemName}</v51:systemName>
+            </v51:Audit>
+         </v51:RetrieveProducerDetailInput>
+      </v5:retrieveProducerDetail>
+   </soapenv:Body>
+</soapenv:Envelope>]]></envelope>
+        <function_name>retrieveProducerDetail</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>ProducerServiceV5 [ retrieveProducerDetail ]</qualified_name>
+        <soap_action>http://service.amfam.com/producerservice/retrieveProducerDetail</soap_action>
+        <soap_endpoint>https://accesb.amfam.com/ccx/cc-router/ProducerServiceV5/02</soap_endpoint>
+        <soap_message display_value="ProducerServiceV5">0bca53d0db344740a09bf6e9af96192f</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-08-30 15:45:55</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>00fb385bdbf8cb004d70734aaf9619d7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>retrieveProducerDetail</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_function_00fb385bdbf8cb004d70734aaf9619d7</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-12-12 20:45:40</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

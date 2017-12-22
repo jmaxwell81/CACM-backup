@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BD Complaint" max_length="40" name="x_amfai_cacmdba_bd_complaint" type="collection">
+        <element label="CASE_CNT" max_length="15" name="case_cnt" type="decimal"/>
+        <element label="COMPLNT_FIRST_NM" max_length="40" name="complnt_first_nm" type="string"/>
+        <element label="COMPLNT_LAST_NM" max_length="40" name="complnt_last_nm" type="string"/>
+        <element label="COMPLNT_MIDD_NM" max_length="3" name="complnt_midd_nm" type="string"/>
+        <element label="COMPLNT_NUM" max_length="12" name="complnt_num" type="string"/>
+        <element label="COMPLNT_REC_DT" max_length="40" name="complnt_rec_dt" type="glide_date_time"/>
+        <element label="COMPLNT_RESLV_DT" max_length="40" name="complnt_reslv_dt" type="glide_date_time"/>
+        <element label="COMPLNT_TYP_CD_1" max_length="3" name="complnt_typ_cd_1" type="string"/>
+        <element label="EVENT_CNT" max_length="15" name="event_cnt" type="decimal"/>
+        <element label="ROW_EFF_DT" max_length="40" name="row_eff_dt" type="glide_date_time"/>
+        <element label="ROW_TYP_CD" max_length="3" name="row_typ_cd" type="string"/>
+    </element>
+</database>

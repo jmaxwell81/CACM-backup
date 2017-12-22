@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Relationship" max_length="40" name="u_relationship" type="collection">
+        <element attributes="import_attribute_name=DESCRIPTION,edge_encryption_enabled=true" label="DESCRIPTION" max_length="50" name="u_description" type="string"/>
+        <element attributes="import_attribute_name=RELATIONSHIP_ID,edge_encryption_enabled=true" label="RELATIONSHIP_ID" max_length="40" name="u_relationship_id" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>selectCompanies</name>
+        <scoped_name>x_amfai_cacmdba_selectCompanies</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-17 15:24:52</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>92dceb20db6603004d70734aaf96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>selectCompanies</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_macro_92dceb20db6603004d70734aaf96192f</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-17 15:24:52</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:dialog_button title = "Use this button to add Companies" onClick = "select_comp()" name = "select_comp" id = "comp_button" type = "button">Select Companies'</g:dialog_button>
+	<script>
+		function select_comp(){
+			//alert('Running Script from UI Macro');
+			var dialog = new GlideDialogWindow('x_amfai_cacmdba_select_companies');
+			dialog.setTitle("Select Companies'");
+			dialog.render();
+		}
+	</script>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

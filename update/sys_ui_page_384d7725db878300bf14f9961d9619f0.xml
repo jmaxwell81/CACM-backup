@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[addLoadEvent(function(){
+	//alert('UI page addLoadEvent');
+	//Load the groups when the form loads
+	var template = g_form.getDisplayBox('select_template').value;
+	//alert(template);
+	if (template == 'ADVOC2DP'){
+		//alert('run');
+	var ADVOC2DPCaseID = g_form.getValue('case_id');
+	var ADVOC2DPEventID = g_form.getValue('event_id');
+	var ADVOC2DPExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVOC2DPajax = new GlideAjax('generate_letter');
+	ADVOC2DPajax.addParam('sysparm_name', 'generateADVOC2DP');
+	ADVOC2DPajax.addParam('sysparm_currentCaseID', ADVOC2DPCaseID);
+	ADVOC2DPajax.addParam('sysparm_currentEventID', ADVOC2DPEventID);
+	ADVOC2DPajax.addParam('sysparm_currentExecutive', ADVOC2DPExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVOC2DPajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	else if (template == 'ADVOCAT2'){
+		//alert('run');
+	var ADVOCAT2CaseID = g_form.getValue('case_id');
+	var ADVOCAT2EventID = g_form.getValue('event_id');
+	var ADVOCAT2Executive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVOCAT2ajax = new GlideAjax('generate_letter');
+	ADVOCAT2ajax.addParam('sysparm_name', 'generateADVOCAT2');
+	ADVOCAT2ajax.addParam('sysparm_currentCaseID', ADVOCAT2CaseID);
+	ADVOCAT2ajax.addParam('sysparm_currentEventID', ADVOCAT2EventID);
+	ADVOCAT2ajax.addParam('sysparm_currentExecutive', ADVOCAT2Executive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVOCAT2ajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	else if (template == 'ADVOCATE'){
+		//alert('run');
+	var ADVOCATECaseID = g_form.getValue('case_id');
+	var ADVOCATEEventID = g_form.getValue('event_id');
+	var ADVOCATEExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVOCATEajax = new GlideAjax('generate_letter');
+	ADVOCATEajax.addParam('sysparm_name', 'generateADVOCATE');
+	ADVOCATEajax.addParam('sysparm_currentCaseID', ADVOCATECaseID);
+	ADVOCATEajax.addParam('sysparm_currentEventID', ADVOCATEEventID);
+	ADVOCATEajax.addParam('sysparm_currentExecutive', ADVOCATEExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVOCATEajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	else if (template == 'ADVOCDPT'){
+		//alert('run');
+	var ADVOCDPTCaseID = g_form.getValue('case_id');
+	var ADVOCDPTEventID = g_form.getValue('event_id');
+	var ADVOCDPTExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVOCDPTajax = new GlideAjax('generate_letter');
+	ADVOCDPTajax.addParam('sysparm_name', 'generateADVOCDPT');
+	ADVOCDPTajax.addParam('sysparm_currentCaseID', ADVOCDPTCaseID);
+	ADVOCDPTajax.addParam('sysparm_currentEventID', ADVOCDPTEventID);
+	ADVOCDPTajax.addParam('sysparm_currentExecutive', ADVOCDPTExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVOCDPTajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	else if (template == 'ADVOCSPE'){
+		//alert('run');
+	var ADVOCSPECaseID = g_form.getValue('case_id');
+	var ADVOCSPEEventID = g_form.getValue('event_id');
+	var ADVOCSPEExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVOCSPEajax = new GlideAjax('generate_letter');
+	ADVOCSPEajax.addParam('sysparm_name', 'generateADVOCSPE');
+	ADVOCSPEajax.addParam('sysparm_currentCaseID', ADVOCSPECaseID);
+	ADVOCSPEajax.addParam('sysparm_currentEventID', ADVOCSPEEventID);
+	ADVOCSPEajax.addParam('sysparm_currentExecutive', ADVOCSPEExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVOCSPEajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	
+	else if (template == 'ADVOCSUR'){
+		//alert('run');
+	var ADVOCSURCaseID = g_form.getValue('case_id');
+	var ADVOCSUREventID = g_form.getValue('event_id');
+	var ADVOCSURExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVOCSURajax = new GlideAjax('generate_letter');
+	ADVOCSURajax.addParam('sysparm_name', 'generateADVOCSUR');
+	ADVOCSURajax.addParam('sysparm_currentCaseID', ADVOCSURCaseID);
+	ADVOCSURajax.addParam('sysparm_currentEventID', ADVOCSUREventID);
+	ADVOCSURajax.addParam('sysparm_currentExecutive', ADVOCSURExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVOCSURajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	
+	else if (template == 'ADVPRMCL'){
+		//alert('run');
+	var ADVPRMCLCaseID = g_form.getValue('case_id');
+	var ADVPRMCLEventID = g_form.getValue('event_id');
+	var ADVPRMCLExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVPRMCLajax = new GlideAjax('generate_letter');
+	ADVPRMCLajax.addParam('sysparm_name', 'generateADVPRMCL');
+	ADVPRMCLajax.addParam('sysparm_currentCaseID', ADVPRMCLCaseID);
+	ADVPRMCLajax.addParam('sysparm_currentEventID', ADVPRMCLEventID);
+	ADVPRMCLajax.addParam('sysparm_currentExecutive', ADVPRMCLExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVPRMCLajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	
+	else if (template == 'ADVPRMFL'){
+		//alert('run');
+	var ADVPRMFLCaseID = g_form.getValue('case_id');
+	var ADVPRMFLEventID = g_form.getValue('event_id');
+	var ADVPRMFLExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVPRMFLajax = new GlideAjax('generate_letter');
+	ADVPRMFLajax.addParam('sysparm_name', 'generateADVPRMFL');
+	ADVPRMFLajax.addParam('sysparm_currentCaseID', ADVPRMFLCaseID);
+	ADVPRMFLajax.addParam('sysparm_currentEventID', ADVPRMFLEventID);
+	ADVPRMFLajax.addParam('sysparm_currentExecutive', ADVPRMFLExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVPRMFLajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+	
+	else if (template == 'ADVPRMSL'){
+		//alert('run');
+	var ADVPRMSLCaseID = g_form.getValue('case_id');
+	var ADVPRMSLEventID = g_form.getValue('event_id');
+	var ADVPRMSLExecutive = g_form.getValue('select_executive');
+	//var state = g_form.getValue('complaint_state');
+	//var instType = g_form.getValue('instruction_type');
+	
+	var ADVPRMSLajax = new GlideAjax('generate_letter');
+	ADVPRMSLajax.addParam('sysparm_name', 'generateADVPRMSL');
+	ADVPRMSLajax.addParam('sysparm_currentCaseID', ADVPRMSLCaseID);
+	ADVPRMSLajax.addParam('sysparm_currentEventID', ADVPRMSLEventID);
+	ADVPRMSLajax.addParam('sysparm_currentExecutive', ADVPRMSLExecutive);
+	//ajax.addParam('sysparm_state', state);
+	//ajax.addParam('sysparm_instType', instType);
+	ADVPRMSLajax.getXML(loadResponse);
+	GlideDialogWindow.get().destroy();
+	}
+});
+
+//Called when we get a response from the 'addLoadEvent' function
+function loadResponse(response){
+	//Process the return XML document and add groups to the left select
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	g_form.setValue('letter_text', answer);
+	
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_amfai_cacmdba_generate_letter.do</endpoint>
+        <html/>
+        <name>generate_letter</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-12-15 15:39:37</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>384d7725db878300bf14f9961d9619f0</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>generate_letter</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_page_384d7725db878300bf14f9961d9619f0</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-21 18:20:22</sys_updated_on>
+    </sys_ui_page>
+</record_update>

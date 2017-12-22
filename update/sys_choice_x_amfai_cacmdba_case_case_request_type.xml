@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="case_request_type" table="x_amfai_cacmdba_case" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>case_request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Regulator</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case</name>
+            <sequence>0</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-25 19:48:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c614087ddbbc83004d70734aaf9619ec</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-08-25 19:48:41</sys_updated_on>
+            <value>regulator</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>case_request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Written</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case</name>
+            <sequence>1</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-25 19:48:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3824ccb1dbfc83004d70734aaf961908</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-08-25 19:49:00</sys_updated_on>
+            <value>written</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>case_request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Phone</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case</name>
+            <sequence>2</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-25 19:49:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e33408f1dbfc83004d70734aaf96193e</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-08-25 19:49:17</sys_updated_on>
+            <value>phone</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>case_request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UCL</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case</name>
+            <sequence>3</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-25 19:49:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b7444c31dbfc83004d70734aaf9619f4</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-08-25 19:49:43</sys_updated_on>
+            <value>ucl</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>case_request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AmFam.com</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case</name>
+            <sequence>4</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-25 19:49:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>026488f1dbfc83004d70734aaf96198d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-08-25 19:50:01</sys_updated_on>
+            <value>amfam</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>case_request_type</element>
+            <name>x_amfai_cacmdba_case</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-25 19:48:23</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>7024c4f1dbfc83004d70734aaf9619c3</sys_id>
+            <sys_mod_count>17</sys_mod_count>
+            <sys_name>case_request_type</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_case_case_request_type</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-11-13 16:59:12</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

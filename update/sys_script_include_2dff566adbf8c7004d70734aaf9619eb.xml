@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.fetch_reportedby_details</api_name>
+        <client_callable>true</client_callable>
+        <description>used on case table to get reported by details when form loads</description>
+        <name>fetch_reportedby_details</name>
+        <script><![CDATA[var fetch_reportedby_details = Class.create();
+fetch_reportedby_details.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	fetchDetails: function() {
+		//gs.addInfoMessage('SI');
+		var gr = new GlideRecord('sys_user');
+		gr.addQuery('sys_id', this.getParameter('sysparm_comp'));
+		gr.query();
+		var obj = {};
+		if (gr.next()){
+			//gs.addInfoMessage('SI GR');
+			obj.var1 = gr.first_name.toString();
+			obj.var2 = gr.last_name.toString();
+			obj.var3 = gr.title.toString();
+			obj.var4 = gr.department.getDisplayValue().toString();
+			obj.var5 = gr.email.toString();
+			obj.var6 = gr.phone.toString();
+		}
+		var json = new global.JSON();
+		//gs.addInfoMessage(json);
+		var data = json.encode(obj);
+		//gs.addInfoMessage(data);
+		return data;
+	},
+	type: 'fetch_reportedby_details'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-08-28 15:04:38</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2dff566adbf8c7004d70734aaf9619eb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>fetch_reportedby_details</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_2dff566adbf8c7004d70734aaf9619eb</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-08-28 15:44:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

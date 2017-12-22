@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <category/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:oracle:thin:@ORAP0103:1521:mp10g0p</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <database_name/>
+        <database_port/>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>oracle.jdbc.OracleDriver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Claim Migration</import_set_table_label>
+        <import_set_table_name>u_claim_migration</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>KZcavGq0TpF7MaSa+EyjGA==</jdbc_password>
+        <jdbc_server>ORAP0103</jdbc_server>
+        <jdbc_user_name>DIRECTDATA_AMITFORMS1_RO</jdbc_user_name>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field>UPDATE_DATE</last_run_database_field>
+        <last_run_datetime>to_date('2017-11-16','yyyy-mm-dd')</last_run_datetime>
+        <ldap_target/>
+        <maximum_rows/>
+        <mid_server display_value="">eff7ffdbdbc13a404d70734aaf9619e1</mid_server>
+        <name>08 - Claim Migration</name>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>mp10g0p</oracle_sid>
+        <properties/>
+        <query>Specific SQL</query>
+        <query_timeout>0</query_timeout>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement>select&#13;
+cc.COMPLAINT_ID,&#13;
+cc.PERSON_ID,&#13;
+cc.CLAIM_NUMBER,&#13;
+c.CREATE_DATE,&#13;
+c.CREATE_USER_ID,&#13;
+c.UPDATE_DATE,&#13;
+c.UPDATE_USER_ID,&#13;
+'No' as integration&#13;
+from CACMDBA.COMPLAINT_CLAIM cc&#13;
+left join CACMDBA.CLAIM c&#13;
+on cc.person_id = c.person_id&#13;
+and cc.claim_number = c.claim_number</sql_statement>
+        <ssh_keyfile_path/>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-11-09 13:52:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>584b8a4edb9a0b40a09bf6e9af961920</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>08 - Claim Migration</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_data_source_584b8a4edb9a0b40a09bf6e9af961920</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-11-16 20:36:25</sys_updated_on>
+        <table_name/>
+        <type>JDBC</type>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>true</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

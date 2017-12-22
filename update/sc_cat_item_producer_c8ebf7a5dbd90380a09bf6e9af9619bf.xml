@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p>Consumer Affairs: URL-Complainant</p>
+<p>State statutes require that all written complaints be maintained in a log. In order to comply with these statutes, this form must be completed for all written complaints received by our companies and sent to Consumer Affairs. The definition of a complaint for purposes of completing this form is &#34;Any written communication primarily expressing a grievance.&#34; (This form is not required for Customer Privacy Inquiries.)</p>
+<p>All areas of the form require a response unless stated otherwise. <span class="GreenText" style="color: green;">If you are logging an insurance department, division or commerce department complaint please stop now! Instead, send a copy of the complaint letter received from the division or department and a copy of your reply letter to Consumer Affairs at NHQ (mail Stop Q11R). </span><a title="Instructions" href="http://compass2/conaffrs/ucl_instructions.htm#Instructions" target="_top" rel="nofollow">Instructions</a> on how to complete this form are available online.</p>
+<p><span style="color: #ff0000;">After you have completed the UCL form online, forward a copy of the original complaint and your response to the Consumer Affairs Department at NHQ (Mailstop Q11R).</span></p>
+<p><span style="color: #ff0000;"><span style="color: #000000;">The </span><a href="http://compass2/conaffrs/QuestnsMain_Nav.htm" target="_top" rel="nofollow">Complaint Handling Manual</a><span style="color: #000000;"> can provide additional help.</span></span></p>
+<p> </p>
+<style type="text/css"><!--
+.BoldNavyText
+		  {
+			color: navy;
+			font-size: medium;
+			font-weight: bold;
+		  }
+		  	
+		.GreenText
+		  {
+			color: green;
+		  }
+		  	
+		.BoldRedText
+		  {
+			color: red;
+			font-weight: bold;
+		  }
+
+		.BoldMaroonText
+		  {
+			color: maroon;
+			font-size: medium;
+			font-weight: bold;
+		  }
+--></style>
+<p> </p>
+<form action="../ASPs/url-insured.asp" method="post" name="frmComplainant"></form>]]></description>
+        <entitlement_script/>
+        <group/>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Unified Complaint Log (UCL)</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=c8ebf7a5dbd90380a09bf6e9af9619bf&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <redirect_url/>
+        <roles/>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <script><![CDATA[current.case_request_type = 'ucl';
+var id = gs.getUserID();
+var user = new GlideRecord('sys_user');
+user.addQuery('sys_id', id);
+user.query();
+if ( user.next() ) {
+	current.case_reportedby_first_name = user.first_name;
+	current.case_reportedby_last_name = user.last_name;
+	current.case_reportedby_title = user.title;
+	current.case_reportedby_department = user.department.name;
+	current.case_reportedby_email = user.email;
+	current.case_reportedby_phone = user.phone;
+}
+
+
+producer.redirect="/cacm?id=cacm_thank_you";
+
+
+
+
+]]></script>
+        <short_description>Unified Complaint Log </short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-19 15:46:16</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c8ebf7a5dbd90380a09bf6e9af9619bf</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Unified Complaint Log (UCL)</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sc_cat_item_producer_c8ebf7a5dbd90380a09bf6e9af9619bf</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-12 14:31:36</sys_updated_on>
+        <table_name>x_amfai_cacmdba_case</table_name>
+        <template/>
+        <type>item</type>
+        <u_approving_group_01/>
+        <u_approving_group_03/>
+        <u_approving_group_1/>
+        <u_approving_group_2/>
+        <u_approving_group_3/>
+        <u_approving_group_4/>
+        <u_assetized>false</u_assetized>
+        <u_end_user_installed>false</u_end_user_installed>
+        <u_fulfillment_group_2/>
+        <u_fulfillment_group_3/>
+        <u_fulfillment_group_4/>
+        <u_hardware_software/>
+        <u_html_1_limitations/>
+        <u_item_business_unit/>
+        <u_manager_approval>false</u_manager_approval>
+        <u_mandatory_flag>0</u_mandatory_flag>
+        <u_no_submit_button>false</u_no_submit_button>
+        <u_peoplesoft_stock/>
+        <u_shipto_id/>
+        <u_supplier_cost_center/>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=c8ebf7a5dbd90380a09bf6e9af9619bf"/>
+    <fx_price action="delete_multiple" query="id=c8ebf7a5dbd90380a09bf6e9af9619bf"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>c8ebf7a5dbd90380a09bf6e9af9619bf</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-19 15:46:16</sys_created_on>
+        <sys_id>f97cf7a5dbd90380a09bf6e9af9619c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-19 15:46:16</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>c8ebf7a5dbd90380a09bf6e9af9619bf</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-19 15:46:16</sys_created_on>
+        <sys_id>027cf7a5dbd90380a09bf6e9af9619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-19 15:46:16</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

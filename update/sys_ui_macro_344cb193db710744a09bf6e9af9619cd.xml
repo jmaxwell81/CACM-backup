@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>Used on UCL tab on Request/ Case</description>
+        <media_type/>
+        <name>insured_info_heading</name>
+        <scoped_name>x_amfai_cacmdba_insured_info_heading</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-10-19 13:28:54</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>344cb193db710744a09bf6e9af9619cd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>insured_info_heading</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_macro_344cb193db710744a09bf6e9af9619cd</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-10-19 13:41:49</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<p><b>Insured Information:</b></p>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

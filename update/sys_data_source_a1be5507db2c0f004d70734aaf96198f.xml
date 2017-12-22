@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <category/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:oracle:thin:@ORAP0103:1521:mp10g0p</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <database_name/>
+        <database_port/>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>oracle.jdbc.OracleDriver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Template Instruction</import_set_table_label>
+        <import_set_table_name>u_template_instruction</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>GTd+7lQfg217MaSa+EyjGA==</jdbc_password>
+        <jdbc_server>ORAP0103</jdbc_server>
+        <jdbc_user_name>DLF004</jdbc_user_name>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field>CREATE_ROW_TS</last_run_database_field>
+        <last_run_datetime>to_date('2017-11-09','yyyy-mm-dd')</last_run_datetime>
+        <ldap_target/>
+        <maximum_rows/>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
+        <name>*Template Instruction</name>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>mp10g0p</oracle_sid>
+        <properties/>
+        <query>Specific SQL</query>
+        <query_timeout>0</query_timeout>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement>select&#13;
+TEMPLATE_INSTRUCT_ID,&#13;
+TEMPLATE_ID,&#13;
+INSTRUCT_ID,&#13;
+STATE_CODE,&#13;
+INSTRUCT_TYPE_ID,&#13;
+DEFAULT_INSTRUCT_IND,&#13;
+EFFECTIVE_TS,&#13;
+CASE&#13;
+WHEN END_EFFECTIVE_TS &gt;= current_date then null&#13;
+        else END_EFFECTIVE_TS end as END_EFFECTIVE_TS,&#13;
+CHANGE_REASON_TXT,&#13;
+CASE&#13;
+WHEN UPDATE_ROW_TS &gt;= CREATE_ROW_TS then UPDATE_ROW_TS&#13;
+        else CREATE_ROW_TS end as CREATE_ROW_TS,&#13;
+CREATE_ROW_USER_ID,&#13;
+'true' as Active&#13;
+from cacmdba.template_instruction&#13;
+UNION ALL&#13;
+select&#13;
+TEMPLATE_INSTRUCT_ID,&#13;
+TEMPLATE_ID,&#13;
+INSTRUCT_ID,&#13;
+STATE_CODE,&#13;
+INSTRUCT_TYPE_ID,&#13;
+DEFAULT_INSTRUCT_IND,&#13;
+EFFECTIVE_TS,&#13;
+CASE&#13;
+WHEN END_EFFECTIVE_TS &gt;= current_date then null&#13;
+        else END_EFFECTIVE_TS end as END_EFFECTIVE_TS,&#13;
+CHANGE_REASON_TXT,&#13;
+CASE&#13;
+WHEN UPDATE_ROW_TS &gt;= CREATE_ROW_TS then UPDATE_ROW_TS&#13;
+WHEN CREATE_ROW_TS &lt;= EFFECTIVE_TS then EFFECTIVE_TS&#13;
+        else CREATE_ROW_TS end as CREATE_ROW_TS,&#13;
+CREATE_ROW_USER_ID,&#13;
+'false' as Active&#13;
+from cacmdba.template_instruction_h</sql_statement>
+        <ssh_keyfile_path/>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>dfoss@amfam.com</sys_created_by>
+        <sys_created_on>2017-08-17 13:22:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a1be5507db2c0f004d70734aaf96198f</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>*Template Instruction</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_data_source_a1be5507db2c0f004d70734aaf96198f</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-12-11 18:58:27</sys_updated_on>
+        <table_name/>
+        <type>JDBC</type>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>true</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

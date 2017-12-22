@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Instruction Type [ct]" max_length="40" name="x_amfai_cacmdba_instruction_type" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Effective Date" mandatory="true" max_length="40" name="begin_eff_date" type="glide_date"/>
+        <element label="End Effective Date" max_length="40" name="end_eff_date" type="glide_date"/>
+        <element label="Instruction Type Description" mandatory="true" max_length="40" name="instruct_type_desc" type="string"/>
+        <element display="true" label="Instruction Type ID" mandatory="true" max_length="40" name="instruct_type_id" type="string"/>
+        <index name="index">
+            <element name="instruct_type_id"/>
+        </index>
+        <index name="index2">
+            <element name="instruct_type_desc"/>
+        </index>
+    </element>
+</database>

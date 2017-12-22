@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <category/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:oracle:thin:@ORAP0103:1521:mp10g0p</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <database_name/>
+        <database_port/>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>oracle.jdbc.OracleDriver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Case Root Cause Party Instruction</import_set_table_label>
+        <import_set_table_name>u_case_root_cause_party_instruction</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>GTd+7lQfg217MaSa+EyjGA==</jdbc_password>
+        <jdbc_server>ORAP0103</jdbc_server>
+        <jdbc_user_name>dlf004</jdbc_user_name>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field>EFFECTIVE_TS</last_run_database_field>
+        <last_run_datetime>to_date('2016-10-26','yyyy-mm-dd')</last_run_datetime>
+        <ldap_target/>
+        <maximum_rows/>
+        <mid_server display_value="">229477d3db89f240a09bf6e9af9619bc</mid_server>
+        <name>*Case Root Cause Party Instruction</name>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>mp10g0p</oracle_sid>
+        <properties/>
+        <query>Specific SQL</query>
+        <query_timeout>0</query_timeout>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement>select&#13;
+SUBROOT_CAUSE_PRTY_INSTRUCT_ID,&#13;
+SUB_ROOT_CAUSE_INSTRUCT_TXT,&#13;
+EFFECTIVE_TS,&#13;
+CASE&#13;
+WHEN END_EFFECTIVE_TS &gt;= current_date then null&#13;
+        else END_EFFECTIVE_TS end as END_EFFECTIVE_TS,&#13;
+CREATE_ROW_TS,&#13;
+CREATE_ROW_USER_ID,&#13;
+CASE&#13;
+WHEN END_EFFECTIVE_TS &gt;= current_date then 'true'&#13;
+        else 'false' end as active&#13;
+FROM CACMDBA.SUB_ROOT_CAUSE_PRTY_INSTRUCT</sql_statement>
+        <ssh_keyfile_path/>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-10-04 21:25:19</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d8399eeedb2187044d70734aaf96196b</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>*Case Root Cause Party Instruction</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_data_source_d8399eeedb2187044d70734aaf96196b</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-11-29 19:25:55</sys_updated_on>
+        <table_name/>
+        <type>JDBC</type>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>true</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>send_third_request</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition>current.second_request_sent == true &amp;&amp; current.third_request_sent == false</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Send Third Request</name>
+        <onclick/>
+        <order>-1600</order>
+        <script><![CDATA[if(current.past_due_third_request == true){
+	gs.eventQueue('x_amfai_cacmdba.cacm_referral_third_requ', current);
+	current.third_request_sent = 'true';
+	current.update();
+	action.setRedirectURL(current);
+}
+else{
+	gs.addInfoMessage('Select "Past Due Third Notification" check box and add notification text in "Past Due Third Request" tab');
+	action.setRedirectURL(current);
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-16 15:07:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38bfda9cdb224780a09bf6e9af96197d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Send Third Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_action_38bfda9cdb224780a09bf6e9af96197d</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-28 16:16:17</sys_updated_on>
+        <table>x_amfai_cacmdba_case_referral</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

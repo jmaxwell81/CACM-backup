@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Insured" max_length="40" name="x_amfai_cacmdba_insd_cust" type="collection">
+        <element label="Birth Date" max_length="40" name="birth_date" type="string"/>
+        <element label="Case ID" max_length="32" name="case_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Customer ID" max_length="40" name="customer_id" type="string"/>
+        <element label="Data Populated from Integration" max_length="40" name="data_populated_from_integration" type="string"/>
+        <element label="Deceased Indicator" max_length="40" name="deceased_indicator" type="string"/>
+        <element label="Drivers License Number" max_length="40" name="drivers_license_number" type="string"/>
+        <element label="Drivers License State" max_length="40" name="drivers_license_state" type="string"/>
+        <element label="Family Suffix" max_length="40" name="family_suffix" type="string"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element label="Insured Type" max_length="40" name="insured_type" type="string"/>
+        <element label="Integration Suite" max_length="40" name="integration_suite" type="string"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Address Line1" max_length="40" name="line1" type="string"/>
+        <element label="Middle Name" max_length="40" name="middle_name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Insured Identifier" max_length="40" name="number" type="string"/>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_person" type="reference"/>
+        <element label="Relationship" max_length="32" name="relationship_code" reference="x_amfai_cacmdba_relationship" type="reference"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <element label="Zip5" max_length="40" name="zip5" type="string"/>
+        <index name="index">
+            <element name="case_id"/>
+        </index>
+        <index name="index2">
+            <element name="relationship_code"/>
+        </index>
+        <index name="index3">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

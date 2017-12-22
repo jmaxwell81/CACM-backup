@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Case Referral" max_length="40" name="x_amfai_cacmdba_case_referral" sizeclass="142354" type="collection">
+        <element hint="DATE DATE DATE" label="Acknowledge Before" max_length="40" name="acknowledge_before" type="glide_date"/>
+        <element label="Add Instructions" max_length="40" name="add_instructions" type="boolean"/>
+        <element label="CACM ID" max_length="32" name="cacm_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Current Request" max_length="2" name="current_request" type="integer"/>
+        <element choice="1" default="referral date" label="Day Source" max_length="40" name="day_source" type="choice">
+            <choice>
+                <element label="Referral Date" sequence="0" value="referral date"/>
+                <element label="Insurance Date" sequence="1" value="insurance date"/>
+            </choice>
+        </element>
+        <element choice="1" default="business days" label="Day Type" max_length="40" name="day_type" type="choice">
+            <choice>
+                <element label="Business Days" sequence="0" value="business days"/>
+                <element label="Calendar Days" sequence="1" value="calendar days"/>
+            </choice>
+        </element>
+        <element label="Event ID" max_length="32" name="event_id" read_only="true" reference="x_amfai_cacmdba_case_event" reference_floats="true" type="reference"/>
+        <element label="High Priority" max_length="40" name="high_priority" type="boolean"/>
+        <element label="Issues and Handling Instructions" max_length="8000" name="issues_and_handling_instructions" read_only="true" type="html"/>
+        <element label="Notes" max_length="4000" name="notes" type="string"/>
+        <element label="Not Yet Acknowledged" max_length="40" name="not_yet_acknowledged" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Referral ID" max_length="40" name="number" read_only="true" type="string"/>
+        <element default="0" label="Number of Days" max_length="3" name="number_of_days" type="integer"/>
+        <element label="Past Due Second Request" max_length="40" name="past_due_second_request" type="boolean"/>
+        <element label="Past Due Third Request" max_length="40" name="past_due_third_request" type="boolean"/>
+        <element label="Referent" max_length="32" name="referent" reference="x_amfai_cacmdba_person" reference_qual="referent=T^EQ" reference_qual_condition="referent=T^EQ" type="reference"/>
+        <element label="Referent Email" max_length="150" name="referent_email" type="string"/>
+        <element label="Referent Type" max_length="1" name="referent_type" type="string"/>
+        <element label="Referral Description" max_length="256" name="referral_description" type="string"/>
+        <element choice="1" default="action required" label="Referral Type" max_length="40" name="referral_type" type="choice">
+            <choice>
+                <element label="Action Required" value="action required"/>
+                <element label="FYI" value="FYI"/>
+                <element label="Phone" value="Phone"/>
+                <element label="Written" value="Written"/>
+            </choice>
+        </element>
+        <element label="Referred Date" max_length="40" name="referred_date" type="glide_date"/>
+        <element label="Response Date" max_length="40" name="response_date" read_only="true" type="glide_date"/>
+        <element default="SECOND REQUEST:  You did not take a required action on  a Consumer Affairs case  referred to you.  You must click here (link) to access the case and take the required action." label="Past Due-Second Request Notification" max_length="8000" name="second_request_notification" type="html"/>
+        <element label="Second Request Sent" max_length="40" name="second_request_sent" type="boolean"/>
+        <element label="Special Instructions" max_length="8000" name="special_instructions" read_only="true" type="html"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element label="Created" sequence="0" value="created"/>
+                <element label="Sent" sequence="1" value="sent"/>
+                <element label="Work in Progress" sequence="2" value="work_in_progress"/>
+                <element label="Pending" sequence="3" value="pending"/>
+                <element label="Accepted" sequence="4" value="accepted"/>
+                <element label="Rejected" sequence="5" value="rejected"/>
+                <element label="Closed" sequence="6" value="closed"/>
+            </choice>
+        </element>
+        <element label="Suspense Date" max_length="40" name="suspense_date" type="glide_date"/>
+        <element label="Suspense Date Reminder" max_length="40" name="suspense_date_reminder" type="boolean"/>
+        <element default="THIRD REQUEST:  You did not take a required action on  a Consumer Affairs case sent to you.  You must click here (link) to access the case and take the required action.  A copy of  this notification has been sent to your manager." label="Past Due-Third Request Notification" max_length="8000" name="third_request_notification" type="html"/>
+        <element label="Third Request Sent" max_length="40" name="third_request_sent" type="boolean"/>
+        <index name="index">
+            <element name="number"/>
+        </index>
+        <index name="index2">
+            <element name="event_id"/>
+        </index>
+        <index name="index3">
+            <element name="referent"/>
+        </index>
+        <index name="index4">
+            <element name="cacm_id"/>
+        </index>
+    </element>
+</database>

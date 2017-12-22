@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description>Siteminder enabled.</description>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>ProducerServiceV5</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-08-21 19:35:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0bca53d0db344740a09bf6e9af96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ProducerServiceV5</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_0bca53d0db344740a09bf6e9af96192f</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-08-21 19:35:53</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl/>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8" ?> 
+- <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.amfam.com/producerservice/v5" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:message="http://service.amfam.com/message/producerservice/v5" xmlns:ping="http://schema.amfam.com/ping" name="ProducerService" targetNamespace="http://service.amfam.com/producerservice/v5">
+- <!-- 
+		dcmVersion=2015
+		gitCommit=aab3742c84956e7e4e227a51e93a54e0c9e7db17
+		gitBranch=origin/master
+		buildId=2017-05-01_11-31-42
+		buildNumber=22
+		projectVersion=3.9-SNAPSHOT
+		projectProfiles=[Profile {id: config.qa.02, source: pom}, Profile {id: ci.profile, source: settings.xml}]
+		tier=qa
+		pillar=02
+	
+
+  --> 
+- <wsdl:types>
+- <xsd:schema targetNamespace="http://service.amfam.com/producerservice/v5" xmlns:tns="http://service.amfam.com/producerservice/v5">
+  <xsd:import schemaLocation="schema/Message_ProducerService.xsd" namespace="http://service.amfam.com/message/producerservice/v5" /> 
+  <xsd:import schemaLocation="schema/Message_Ping.xsd" namespace="http://schema.amfam.com/ping" /> 
+  </xsd:schema>
+  </wsdl:types>
+- <wsdl:message name="searchProducerRequest">
+  <wsdl:part name="searchProducer" element="message:searchProducer" /> 
+  </wsdl:message>
+- <wsdl:message name="searchProducerResponse">
+  <wsdl:part name="searchProducerResponse" element="message:searchProducerResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="retrieveProducerDetailRequest">
+  <wsdl:part name="retrieveProducerDetail" element="message:retrieveProducerDetail" /> 
+  </wsdl:message>
+- <wsdl:message name="retrieveProducerDetailResponse">
+  <wsdl:part name="retrieveProducerDetailResponse" element="message:retrieveProducerDetailResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="hasCredentialsRequest">
+  <wsdl:part name="hasCredentials" element="message:hasCredentials" /> 
+  </wsdl:message>
+- <wsdl:message name="hasCredentialsResponse">
+  <wsdl:part name="hasCredentialsResponse" element="message:hasCredentialsResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="retrieveCredentialsRequest">
+  <wsdl:part name="retrieveCredentials" element="message:retrieveCredentials" /> 
+  </wsdl:message>
+- <wsdl:message name="retrieveCredentialsResponse">
+  <wsdl:part name="retrieveCredentialsResponse" element="message:retrieveCredentialsResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="ProducerServiceFault">
+  <wsdl:part name="producerServiceFault" element="message:producerServiceFault" /> 
+  </wsdl:message>
+- <wsdl:message name="pingRequest">
+  <wsdl:part name="ping" element="ping:ping" /> 
+  </wsdl:message>
+- <wsdl:message name="pingResponse">
+  <wsdl:part name="pingResponse" element="ping:pingResponse" /> 
+  </wsdl:message>
+- <wsdl:portType name="ProducerServicePort">
+- <wsdl:operation name="searchProducer">
+  <wsdl:input name="searchProducerRequest" message="tns:searchProducerRequest" /> 
+  <wsdl:output name="searchProducerResponse" message="tns:searchProducerResponse" /> 
+  <wsdl:fault name="ProducerServiceFault" message="tns:ProducerServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="retrieveProducerDetail">
+  <wsdl:input name="retrieveProducerDetailRequest" message="tns:retrieveProducerDetailRequest" /> 
+  <wsdl:output name="retrieveProducerDetailResponse" message="tns:retrieveProducerDetailResponse" /> 
+  <wsdl:fault name="ProducerServiceFault" message="tns:ProducerServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="hasCredentials">
+  <wsdl:input name="hasCredentialsRequest" message="tns:hasCredentialsRequest" /> 
+  <wsdl:output name="hasCredentialsResponse" message="tns:hasCredentialsResponse" /> 
+  <wsdl:fault name="ProducerServiceFault" message="tns:ProducerServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="retrieveCredentials">
+  <wsdl:input name="retrieveCredentialsRequest" message="tns:retrieveCredentialsRequest" /> 
+  <wsdl:output name="retrieveCredentialsResponse" message="tns:retrieveCredentialsResponse" /> 
+  <wsdl:fault name="ProducerServiceFault" message="tns:ProducerServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <wsdl:input name="pingRequest" message="tns:pingRequest" /> 
+  <wsdl:output name="pingResponse" message="tns:pingResponse" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+- <wsdl:binding name="ProducerServiceHttpBinding" type="tns:ProducerServicePort">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+- <wsdl:operation name="searchProducer">
+  <soap:operation soapAction="http://service.amfam.com/producerservice/searchProducer" /> 
+- <wsdl:input name="searchProducerRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="searchProducerResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="ProducerServiceFault">
+  <soap:fault name="ProducerServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="retrieveProducerDetail">
+  <soap:operation soapAction="http://service.amfam.com/producerservice/retrieveProducerDetail" /> 
+- <wsdl:input name="retrieveProducerDetailRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="retrieveProducerDetailResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="ProducerServiceFault">
+  <soap:fault name="ProducerServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="hasCredentials">
+  <soap:operation soapAction="http://service.amfam.com/producerservice/hasCredentials" /> 
+- <wsdl:input name="hasCredentialsRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="hasCredentialsResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="ProducerServiceFault">
+  <soap:fault name="ProducerServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="retrieveCredentials">
+  <soap:operation soapAction="http://service.amfam.com/producerservice/retrieveCredentials" /> 
+- <wsdl:input name="retrieveCredentialsRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="retrieveCredentialsResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="ProducerServiceFault">
+  <soap:fault name="ProducerServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <soap:operation soapAction="http://service.amfam.com/producerservice/ping" /> 
+- <wsdl:input name="pingRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="pingResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+- <wsdl:service name="ProducerService">
+- <wsdl:port name="ProducerServiceHttpPort" binding="tns:ProducerServiceHttpBinding">
+  <soap:address location="https://accesb.amfam.com/ccx/cc-router/ProducerServiceV5/02" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

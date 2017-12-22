@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>CACM Case activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_amfai_cacmdba_cacm_case_activity.fields</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>sumukh.sharma</sys_created_by>
+        <sys_created_on>2017-05-30 13:54:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8fc0f2a5dbc336804d70734aaf9619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.ui.x_amfai_cacmdba_cacm_case_activity.fields</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_properties_8fc0f2a5dbc336804d70734aaf9619aa</sys_update_name>
+        <sys_updated_by>sumukh.sharma</sys_updated_by>
+        <sys_updated_on>2017-05-30 13:54:23</sys_updated_on>
+        <type>string</type>
+        <value>number,first_name,middle_initial,last_name,phone_number,email,sys_updated_on,sys_updated_by,*Email*</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=8fc0f2a5dbc336804d70734aaf9619aa"/>
+</record_update>

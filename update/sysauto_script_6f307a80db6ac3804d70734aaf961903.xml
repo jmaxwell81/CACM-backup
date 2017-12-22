@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>CACM Referral not Acknowledged</name>
+        <run_as display_value="Pratik Madhikar">bd01729adbc80784f827fb16bf96196d</run_as>
+        <run_as_tz>US/Central</run_as_tz>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>3</run_dayofweek>
+        <run_period/>
+        <run_start>2017-11-15 21:40:50</run_start>
+        <run_time>1970-01-01 12:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var gr = new GlideRecord('x_amfai_cacmdba_case_referral');
+gr.addQuery('status', 'sent');
+gr.query();
+var currentDate = new GlideDate();
+gs.addInfoMessage(currentDate);
+var currentDateTimeVar = new GlideDateTime(currentDate.toString());
+gs.addInfoMessage(currentDateTimeVar);
+while(gr.next()){
+	var ackDate = new GlideDateTime(gr.acknowledge_before);
+	gs.addInfoMessage(ackDate);
+	var dateDiff = GlideDateTime.subtract(ackDate, currentDateTimeVar);
+	gs.addInfoMessage(dateDiff.getDisplayValue());
+	if (dateDiff.getDisplayValue() >= '1'){
+		gs.addInfoMessage('if');
+		gr.setValue('not_yet_acknowledged', true);
+		gr.update();
+	}
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-15 22:10:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6f307a80db6ac3804d70734aaf961903</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>CACM Referral not Acknowledged</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sysauto_script_6f307a80db6ac3804d70734aaf961903</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-17 21:40:56</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

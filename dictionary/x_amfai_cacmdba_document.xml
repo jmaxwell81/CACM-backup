@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Document" max_length="40" name="x_amfai_cacmdba_document" type="collection">
+        <element choice="1" label="Save Type" max_length="40" name="advoc2dp_save_type" type="choice">
+            <choice>
+                <element label="MS Word" sequence="0" value="doc"/>
+                <element label="PDF" sequence="1" value="pdf"/>
+            </choice>
+        </element>
+        <element label="Case Id" max_length="32" name="case_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Event Id" max_length="32" name="event_id" read_only="true" reference="x_amfai_cacmdba_case_event" type="reference"/>
+        <element label="Letter Text" max_length="8000" name="letter_text" type="html"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Select Executive" max_length="32" name="select_executive" reference="x_amfai_cacmdba_executive" type="reference">
+            <choice/>
+        </element>
+        <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Select Template" max_length="32" name="select_template" reference="x_amfai_cacmdba_template" reference_qual="in_use=true^EQ" reference_qual_condition="in_use=true^EQ" type="reference">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="event_id"/>
+        </index>
+        <index name="index2">
+            <element name="case_id"/>
+        </index>
+        <index name="index3">
+            <element name="select_template"/>
+        </index>
+        <index name="index4">
+            <element name="select_executive"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="customer_gender" table="x_amfai_cacmdba_person" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>customer_gender</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Female</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_person</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-10-11 16:37:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>960b1df8db398704a09bf6e9af961951</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-10-11 20:12:50</sys_updated_on>
+            <value>F</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>customer_gender</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Male</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_person</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-10-11 16:37:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0a1b113cdb398704a09bf6e9af961939</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-10-11 20:12:55</sys_updated_on>
+            <value>M</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>customer_gender</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unknown</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_person</name>
+            <sequence/>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-10-11 16:37:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>732b9df8db398704a09bf6e9af961927</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-10-11 16:37:47</sys_updated_on>
+            <value>unknown</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>customer_gender</element>
+            <name>x_amfai_cacmdba_person</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-10-11 16:37:10</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>461b513cdb398704a09bf6e9af961905</sys_id>
+            <sys_mod_count>12</sys_mod_count>
+            <sys_name>customer_gender</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_person_customer_gender</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-10-11 20:13:02</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

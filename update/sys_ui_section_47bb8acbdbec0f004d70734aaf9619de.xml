@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="47bb8acbdbec0f004d70734aaf9619de" sys_domain="global" table="x_amfai_cacmdba_root_cause" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>case_id</element>
+            <position>0</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 21:14:17</sys_created_on>
+            <sys_id>333d1c00dbf2cf004d70734aaf9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 21:14:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>bus_area_type_id</element>
+            <position>1</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 21:14:17</sys_created_on>
+            <sys_id>b73d1c00dbf2cf004d70734aaf9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 21:14:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>case_root_cause_category_id</element>
+            <position>2</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 21:14:17</sys_created_on>
+            <sys_id>3b3d1c00dbf2cf004d70734aaf9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 21:14:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>case_root_cause_id</element>
+            <position>3</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 21:14:17</sys_created_on>
+            <sys_id>bb3d1c00dbf2cf004d70734aaf9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 21:14:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>case_sub_root_cause_id</element>
+            <position>4</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 21:14:17</sys_created_on>
+            <sys_id>3f3d1c00dbf2cf004d70734aaf9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 21:14:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>party_instruction</element>
+            <position>5</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 21:14:17</sys_created_on>
+            <sys_id>bf3d1c00dbf2cf004d70734aaf9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 21:14:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_amfai_cacmdba_root_cause</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-08-17 16:37:31</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>47bb8acbdbec0f004d70734aaf9619de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_root_cause</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_section_47bb8acbdbec0f004d70734aaf9619de</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-08-17 16:37:31</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

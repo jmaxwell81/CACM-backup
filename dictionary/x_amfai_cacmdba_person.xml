@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="--Person" max_length="40" name="x_amfai_cacmdba_person" sizeclass="126907" type="collection">
+        <element label="Business Name" max_length="40" name="customer_business_name" type="string"/>
+        <element label="First Name" max_length="40" name="customer_first_name" type="string"/>
+        <element calculation="if (current.customer_first_name.nil() &amp;&amp; current.customer_last_name.nil()&amp;&amp; current.customer_middle_initial.nil() &amp;&amp; !current.customer_full_name.nil()) {&#13;&#10;  var names = current.customer_full_name.toString().split(&quot; &quot;);&#13;&#10;  if (names.length &gt; 1) {&#13;&#10;    current.customer_first_name = names[0];&#13;&#10;    names.shift();&#13;&#10;    current.customer_last_name = names.join(&quot; &quot;);&#13;&#10;  } else &#13;&#10;    current.customer_last_name = names[0];&#13;&#10;}  &#13;&#10;&#13;&#10;if(current.customer_first_name.nil()) { &#13;&#10;    current.customer_last_name; &#13;&#10;  } else { &#13;&#10;    current.customer_first_name + ' ' + current.customer_middle_initial + ' '  + current.customer_last_name;&#13;&#10;  }" display="true" label="Full Name" max_length="150" name="customer_full_name" read_only="true" type="string" virtual="true"/>
+        <element choice="1" label="Gender" max_length="40" name="customer_gender" type="choice">
+            <choice>
+                <element label="Female" value="F"/>
+                <element label="Male" value="M"/>
+                <element label="Unknown" value="unknown"/>
+            </choice>
+        </element>
+        <element label="Last Name" max_length="40" name="customer_last_name" type="string"/>
+        <element label="Middle Initial" max_length="1" name="customer_middle_initial" type="string"/>
+        <element choice="1" label="Title" max_length="32" name="customer_title" reference="x_amfai_cacmdba_title_prefix" type="reference">
+            <choice/>
+        </element>
+        <element choice="1" label="Customer Type" max_length="40" name="customer_type" type="choice">
+            <choice>
+                <element label="Business" sequence="0" value="business"/>
+                <element label="Individual" sequence="1" value="individual"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Person Id" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Person ID" max_length="40" name="person_id" type="string"/>
+        <element label="Potential Caller" max_length="40" name="potential_caller" type="boolean"/>
+        <element label="Comments" max_length="4000" name="potential_caller_comments" type="string"/>
+        <element label="Expiration Date" max_length="40" name="potential_expire_date" type="glide_date"/>
+        <element label="Received Date" max_length="40" name="potential_received_date" type="glide_date"/>
+        <element choice="1" label="Preferred Routing" max_length="3" name="preferred_routing" type="choice">
+            <choice>
+                <element label="Email" sequence="1" value="E"/>
+                <element label="Fax" sequence="2" value="F"/>
+                <element label="Mail" sequence="3" value="M"/>
+                <element label="Phone" sequence="4" value="P"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="customer_title"/>
+        </index>
+        <index name="index2">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

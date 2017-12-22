@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Advocate [ct]" max_length="40" name="x_amfai_cacmdba_advocate" type="collection">
+        <element attributes="ref_ac_columns=u_afi_user_id,ref_ac_columns_search=true" label="AFI User ID" max_length="100" name="afi_user_id" reference="sys_user" type="reference"/>
+        <element label="Email Address" max_length="40" name="e_mail_address" type="string"/>
+        <element label="Fax" max_length="20" name="fax" type="string"/>
+        <element label="Location" max_length="50" name="location" type="string"/>
+        <element label="Name" max_length="50" name="name" type="string"/>
+        <element label="Phone" max_length="20" name="phone" type="string"/>
+        <element label="Security Buffer" max_length="255" name="security_buffer" type="string"/>
+        <element label="Security Level" max_length="15" name="security_level" type="decimal"/>
+        <element choice="1" label="Status" max_length="1" name="status" type="choice">
+            <choice/>
+        </element>
+        <element label="Title" max_length="50" name="title" type="string"/>
+        <element label="User ID" max_length="32" name="user_id" type="string"/>
+        <element label="Voice mail" max_length="20" name="voice_mail" type="string"/>
+        <index name="index">
+            <element name="afi_user_id"/>
+        </index>
+        <index name="index2">
+            <element name="user_id"/>
+        </index>
+    </element>
+</database>

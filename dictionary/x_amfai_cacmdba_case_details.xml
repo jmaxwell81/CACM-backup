@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Case Details" max_length="40" name="x_amfai_cacmdba_case_details" sizeclass="53766" type="collection">
+        <element label="Case Id" max_length="32" name="cacm_case" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Case Detail Identifier" max_length="40" name="case_detail_id" type="string"/>
+        <element choice="1" label="Complaint State" mandatory="true" max_length="32" name="complaint_state" reference="x_amfai_cacmdba_state" type="reference">
+            <choice/>
+        </element>
+        <element label="Create Date" max_length="40" name="create_date" type="glide_date_time"/>
+        <element label="Create User ID" max_length="10" name="create_user_id" type="string"/>
+        <element attributes="ref_qual_elements=complaint_state,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="complaint_state" dependent_on_field="complaint_state" label="Disposition" max_length="32" name="disposition_code" reference="x_amfai_cacmdba_disposition" reference_qual="javascript: 'postal_state_identifier=' + current.complaint_state.complaint_state;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element label="Insurance Department Case ID" max_length="40" name="ins_dep_case_id" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:  var gdt = new GlideDate();gdt.getDisplayValue();" label="Open Date" max_length="40" name="open_date" type="glide_date"/>
+        <element attributes="ref_qual_elements=complaint_state,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="complaint_state" dependent_on_field="complaint_state" label="Reason" max_length="32" name="reason_code" reference="x_amfai_cacmdba_reason" reference_qual="javascript: 'postal_state_identifier=' + current.complaint_state.complaint_state;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="ref_qual_elements=disposition_code,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="disposition_code" dependent_on_field="disposition_code" label="Sub Disposition" mandatory="true" max_length="32" name="sub_disposition_code" reference="x_amfai_cacmdba_sub_disposition" reference_qual="javascript: 'af_disposition_code=' + current.disposition_code.disposition_code;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="ref_qual_elements=reason_code,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="reason_code" dependent_on_field="reason_code" label="Sub Reason" mandatory="true" max_length="32" name="sub_reason_code" reference="x_amfai_cacmdba_sub_reason" reference_qual="javascript: 'af_reason_code=' + current.reason_code.reason_code;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element label="Update Date" max_length="40" name="update_date" type="glide_date_time"/>
+        <element label="Update User ID" max_length="10" name="update_user_id" type="string"/>
+        <index name="index">
+            <element name="reason_code"/>
+        </index>
+        <index name="index2">
+            <element name="case_detail_id"/>
+        </index>
+        <index name="index3">
+            <element name="sub_reason_code"/>
+        </index>
+        <index name="index4">
+            <element name="sub_disposition_code"/>
+        </index>
+        <index name="index5">
+            <element name="disposition_code"/>
+        </index>
+        <index name="index6">
+            <element name="cacm_case"/>
+        </index>
+        <index name="index7">
+            <element name="complaint_state"/>
+        </index>
+    </element>
+</database>

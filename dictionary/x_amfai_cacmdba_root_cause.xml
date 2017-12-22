@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Root Cause" max_length="40" name="x_amfai_cacmdba_root_cause" sizeclass="46381" type="collection">
+        <element label="Advocate" max_length="32" name="advocate" reference="x_amfai_cacmdba_advocate" type="reference"/>
+        <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Business Area" mandatory="true" max_length="32" name="bus_area_type_id" reference="x_amfai_cacmdba_bus_area_type" type="reference">
+            <choice/>
+        </element>
+        <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element attributes="ref_qual_elements=bus_area_type_id,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="bus_area_type_id" dependent_on_field="bus_area_type_id" label="Root Cause Category" mandatory="true" max_length="32" name="case_root_cause_category_id" reference="x_amfai_cacmdba_case_root_cause_category" reference_qual="javascript: 'bus_area_type_id=' + current.bus_area_type_id.bus_area_type_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="ref_qual_elements=case_root_cause_category_id,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="case_root_cause_category_id" dependent_on_field="case_root_cause_category_id" label="Root Cause" mandatory="true" max_length="32" name="case_root_cause_id" reference="x_amfai_cacmdba_case_root_cause" reference_qual="javascript: 'case_root_cause_category_id=' + current.case_root_cause_category_id.case_root_cause_category_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="ref_qual_elements=case_root_cause_id,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="case_root_cause_id" dependent_on_field="case_root_cause_id" label="Sub Root Cause" mandatory="true" max_length="32" name="case_sub_root_cause_id" reference="x_amfai_cacmdba_case_sub_root_cause" reference_qual="javascript: 'case_root_cause_id=' + current.case_root_cause_id.case_root_cause_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element label="Party Instruction" max_length="500" name="party_instruction" type="string"/>
+        <element label="Agent ID" max_length="40" name="prty_agent_id" type="string"/>
+        <element label="Agent Code" max_length="40" name="prty_agt_cd" type="string"/>
+        <element label="Create Row Timestamp" max_length="40" name="prty_create_row_ts" type="glide_date_time"/>
+        <element label="Create Row User ID" max_length="40" name="prty_create_row_user_id" type="string"/>
+        <element label="Department" max_length="40" name="prty_dept_nm" type="string"/>
+        <element label="Division" max_length="40" name="prty_division_nm" type="string"/>
+        <element label="District Code" max_length="40" name="prty_dst_cd" type="string"/>
+        <element label="First Name" max_length="40" name="prty_first_nm" type="string"/>
+        <element label="Job Title" max_length="40" name="prty_job_title_desc" type="string"/>
+        <element label="Last Name" max_length="40" name="prty_last_nm" type="string"/>
+        <element label="Location" max_length="40" name="prty_loc_desc" type="string"/>
+        <element label="Middle Initial" max_length="40" name="prty_middle_initial" type="string"/>
+        <element label="Status" max_length="40" name="prty_status_cd" type="string"/>
+        <element label="Update Row Timestamp" max_length="40" name="prty_update_row_ts" type="glide_date_time"/>
+        <element label="Update Row User ID" max_length="40" name="prty_update_row_user_id" type="string"/>
+        <element label="User ID" max_length="40" name="prty_user_id" type="string"/>
+        <index name="index">
+            <element name="case_root_cause_id"/>
+        </index>
+        <index name="index2">
+            <element name="case_sub_root_cause_id"/>
+        </index>
+        <index name="index3">
+            <element name="case_id"/>
+        </index>
+        <index name="index4">
+            <element name="bus_area_type_id"/>
+        </index>
+        <index name="index5">
+            <element name="case_root_cause_category_id"/>
+        </index>
+        <index name="index6">
+            <element name="advocate"/>
+        </index>
+    </element>
+</database>

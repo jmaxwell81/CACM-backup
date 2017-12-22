@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*01.1 - Person Email Migration" max_length="40" name="u_person_email_migration" sizeclass="51881" type="collection">
+        <element attributes="import_attribute_name=ACTIVE" label="ACTIVE" max_length="40" name="u_active" type="char"/>
+        <element attributes="import_attribute_name=E_MAIL_ADDRESS,edge_encryption_enabled=true" label="E_MAIL_ADDRESS" max_length="60" name="u_e_mail_address" type="string"/>
+        <element attributes="import_attribute_name=PERSON_ID,edge_encryption_enabled=true" label="PERSON_ID" max_length="40" name="u_person_id" type="string"/>
+    </element>
+</database>

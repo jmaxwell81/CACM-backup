@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>x_amfai_cacmdba.cacm_referral_second_req</event_name>
+        <fired_by>Past Due Second Request Notification</fired_by>
+        <queue/>
+        <suffix>cacm_referral_second_request</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-16 14:43:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>041a1a9cdbee0780a09bf6e9af9619e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_amfai_cacmdba.cacm_referral_second_req</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sysevent_register_041a1a9cdbee0780a09bf6e9af9619e9</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-16 14:43:18</sys_updated_on>
+        <table>x_amfai_cacmdba_case_referral</table>
+    </sysevent_register>
+</record_update>

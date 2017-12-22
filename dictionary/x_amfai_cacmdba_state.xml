@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="State [ct]" max_length="40" name="x_amfai_cacmdba_state" type="collection">
+        <element label="Asic Code" max_length="15" name="asic_code" type="decimal"/>
+        <element label="Contract State Status" max_length="3" name="contract_state_status" type="string"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Provide File Number" max_length="3" name="prov_file_num" type="string"/>
+        <element label="Security List Status" max_length="3" name="security_list_status" type="string"/>
+        <element display="true" label="State Code" max_length="3" name="state_code" type="string"/>
+        <index name="index">
+            <element name="state_code"/>
+        </index>
+    </element>
+</database>

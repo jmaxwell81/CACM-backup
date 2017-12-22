@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Case Attachments" max_length="40" name="x_amfai_cacmdba_cacm_attachments" type="collection">
+        <element label="Approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <element label="Attachment Link" max_length="32" name="attachment_link" read_only="true" reference="sys_attachment" type="reference"/>
+        <element label="Case ID" max_length="32" name="case_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Created by" max_length="100" name="created_by" read_only="true" type="string"/>
+        <element label="Date Created" max_length="40" name="date_created" read_only="true" type="string"/>
+        <element choice="1" label="Document Status" max_length="40" name="document_status" type="choice">
+            <choice>
+                <element label="Draft" sequence="0" value="draft"/>
+                <element label="Rejected" sequence="1" value="rejected"/>
+                <element label="Approved" sequence="2" value="approved"/>
+            </choice>
+        </element>
+        <element choice="1" label="Document type" max_length="40" name="document_type" type="choice">
+            <choice>
+                <element label="Draft" sequence="0" value="draft"/>
+                <element label="Complaint" sequence="1" value="complaint"/>
+                <element label="Response" sequence="2" value="response"/>
+                <element label="Acknowledgement Letter" sequence="3" value="acknowledgement_letter"/>
+                <element label="Supporting Documentation" sequence="4" value="supporting_documentation"/>
+                <element label="Returned Draft" sequence="5" value="returned_draft"/>
+                <element label="Response Attachment" sequence="6" value="response_attachment"/>
+                <element label="Additional Regulator Correspondence" sequence="7" value="additional_regulator_correspondence"/>
+                <element label="Additional Complaint Correspondence" sequence="8" value="additional_complaint_correspondence"/>
+                <element label="Additional Response" sequence="9" value="additional_response"/>
+                <element label="File Documentation" sequence="10" value="file_documentation"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Read Only" max_length="40" name="read_only" type="boolean"/>
+        <element label="Referral Id" max_length="32" name="referral_id" read_only="true" reference="x_amfai_cacmdba_case_referral" type="reference"/>
+        <index name="index">
+            <element name="approver"/>
+        </index>
+        <index name="index2">
+            <element name="case_id"/>
+        </index>
+        <index name="index3">
+            <element name="attachment_link"/>
+        </index>
+        <index name="index4">
+            <element name="referral_id"/>
+        </index>
+        <index name="index5">
+            <element name="created_by"/>
+        </index>
+    </element>
+</database>

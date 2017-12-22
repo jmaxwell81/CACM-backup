@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="normalizedobject_db_mapping">
+    <normalizedobject_db_mapping action="INSERT_OR_UPDATE">
+        <normalized_property>resourceId</normalized_property>
+        <resource_type display_value="Stack">f949a7999f332100fbf01f80a57fcf4b</resource_type>
+        <script/>
+        <sys_class_name>normalizedobject_db_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-22 00:08:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>883b68bbdbcf430067bff3d51d961907</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>normalizedobject_db_mapping_883b68bbdbcf430067bff3d51d961907</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-22 00:08:07</sys_updated_on>
+        <target_field display_value="Resource ID" element="resource_id" name="cmdb_ci_aws_resource">af4bd403db313200e6e2fb16bf96199f</target_field>
+        <target_table display_value="" name="cmdb_ci_aws_resource">cmdb_ci_aws_resource</target_table>
+        <use_script>false</use_script>
+        <used_to_correlate>true</used_to_correlate>
+    </normalizedobject_db_mapping>
+</record_update>

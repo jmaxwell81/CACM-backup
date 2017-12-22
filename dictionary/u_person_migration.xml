@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*01 - Person Migration" max_length="40" name="u_person_migration" sizeclass="122806" type="collection">
+        <element attributes="import_attribute_name=BUSINESS,edge_encryption_enabled=true" label="BUSINESS" max_length="40" name="u_business" type="string"/>
+        <element attributes="import_attribute_name=CREATE_DATE" label="CREATE_DATE" max_length="40" name="u_create_date" type="datetime"/>
+        <element attributes="import_attribute_name=CREATE_USER_ID,edge_encryption_enabled=true" label="CREATE_USER_ID" max_length="40" name="u_create_user_id" type="string"/>
+        <element attributes="import_attribute_name=CUSTOMER_TYPE,edge_encryption_enabled=true" label="CUSTOMER_TYPE" max_length="40" name="u_customer_type" type="string"/>
+        <element attributes="import_attribute_name=DM_ID,edge_encryption_enabled=true" label="DM_ID" max_length="40" name="u_dm_id" type="string"/>
+        <element attributes="import_attribute_name=FIRST_NAME,edge_encryption_enabled=true" label="FIRST_NAME" max_length="40" name="u_first_name" type="string"/>
+        <element attributes="import_attribute_name=GENDER,edge_encryption_enabled=true" label="GENDER" max_length="40" name="u_gender" type="string"/>
+        <element attributes="import_attribute_name=LAST_NAME,edge_encryption_enabled=true" label="LAST_NAME" max_length="40" name="u_last_name" type="string"/>
+        <element attributes="import_attribute_name=MIDDLE_INITIAL,edge_encryption_enabled=true" label="MIDDLE_INITIAL" max_length="40" name="u_middle_initial" type="string"/>
+        <element attributes="import_attribute_name=PERSON_ID,edge_encryption_enabled=true" label="PERSON_ID" max_length="40" name="u_person_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="PERSON_TYPE" max_length="40" name="u_person_type" type="string"/>
+        <element attributes="import_attribute_name=PREFERRED_ROUTING,edge_encryption_enabled=true" label="PREFERRED_ROUTING" max_length="40" name="u_preferred_routing" type="string"/>
+        <element attributes="import_attribute_name=REFERENT,edge_encryption_enabled=true" label="REFERENT" max_length="40" name="u_referent" type="string"/>
+        <element attributes="import_attribute_name=REFERENTID,edge_encryption_enabled=true" label="REFERENTID" max_length="40" name="u_referentid" type="string"/>
+        <element attributes="import_attribute_name=REF_CREATE_DATE" label="REF_CREATE_DATE" max_length="40" name="u_ref_create_date" type="datetime"/>
+        <element attributes="import_attribute_name=REF_CREATE_USER_ID,edge_encryption_enabled=true" label="REF_CREATE_USER_ID" max_length="40" name="u_ref_create_user_id" type="string"/>
+        <element attributes="import_attribute_name=REF_UPDATE_DATE" label="REF_UPDATE_DATE" max_length="40" name="u_ref_update_date" type="datetime"/>
+        <element attributes="import_attribute_name=REF_UPDATE_USER_ID,edge_encryption_enabled=true" label="REF_UPDATE_USER_ID" max_length="40" name="u_ref_update_user_id" type="string"/>
+        <element attributes="import_attribute_name=STATUS,edge_encryption_enabled=true" label="STATUS" max_length="40" name="u_status" type="string"/>
+        <element attributes="import_attribute_name=TITLE,edge_encryption_enabled=true" label="TITLE" max_length="40" name="u_title" type="string"/>
+        <element attributes="import_attribute_name=UPDATE_DATE" label="UPDATE_DATE" max_length="40" name="u_update_date" type="datetime"/>
+        <element attributes="import_attribute_name=UPDATE_USER_ID,edge_encryption_enabled=true" label="UPDATE_USER_ID" max_length="40" name="u_update_user_id" type="string"/>
+    </element>
+</database>

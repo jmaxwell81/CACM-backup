@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="case_req_reason" label="Reason" language="en" table="x_amfai_cacmdba_case">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>case_req_reason</element>
+            <help/>
+            <hint/>
+            <label>Reason</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case</name>
+            <plural>Reasons</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-10-16 20:44:25</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a8a3c46edb390b444d70734aaf961999</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Reason</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_documentation_x_amfai_cacmdba_case_case_req_reason_en</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-10-16 20:44:25</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

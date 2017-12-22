@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Party Information" section_id="0fa2cc00db72cf004d70734aaf961989" sys_domain="global" table="x_amfai_cacmdba_root_cause" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>96384c84db72cf004d70734aaf961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>advocate</element>
+            <position>1</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>1a384c84db72cf004d70734aaf961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>9a384c84db72cf004d70734aaf961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>1e384c84db72cf004d70734aaf961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>4</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>9e384c84db72cf004d70734aaf961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_user_id</element>
+            <position>5</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>12384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>92384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_agent_id</element>
+            <position>7</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>16384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>8</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>96384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>9</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>1a384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_first_nm</element>
+            <position>10</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>9a384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_middle_initial</element>
+            <position>11</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>1e384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_last_nm</element>
+            <position>12</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>9e384c84db72cf004d70734aaf961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_job_title_desc</element>
+            <position>13</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>12384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_dept_nm</element>
+            <position>14</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>92384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_loc_desc</element>
+            <position>15</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>16384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_division_nm</element>
+            <position>16</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>96384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>17</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>1a384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_agt_cd</element>
+            <position>18</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>9a384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_dst_cd</element>
+            <position>19</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>1e384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>prty_status_cd</element>
+            <position>20</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>9e384c84db72cf004d70734aaf961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>21</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:42:26</sys_created_on>
+            <sys_id>12384c84db72cf004d70734aaf961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:42:26</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Party Information</caption>
+            <header>false</header>
+            <name>x_amfai_cacmdba_root_cause</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:18:11</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0fa2cc00db72cf004d70734aaf961989</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Party Information</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_section_0fa2cc00db72cf004d70734aaf961989</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:18:11</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.fetch_customer_details</api_name>
+        <client_callable>true</client_callable>
+        <description>used on case table to get customer details by selecting first name</description>
+        <name>fetch_customer_details</name>
+        <script><![CDATA[var fetch_customer_details = Class.create();
+fetch_customer_details.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	fetchDetails: function() {
+		//gs.addInfoMessage('SI');
+		var gr = new GlideRecord('x_amfai_cacmdba_person');
+		gr.addQuery('sys_id', this.getParameter('sysparm_comp'));
+		gr.query();
+		var obj = {};
+		if (gr.next()){
+			//gs.addInfoMessage('SI GR');
+			obj.var3 = gr.customer_business_name.toString();
+			obj.var4 = gr.customer_type.toString();
+		}
+		var json = new global.JSON();
+		//gs.addInfoMessage(json);
+		var data = json.encode(obj);
+		//gs.addInfoMessage(data);
+		return data;
+	},
+	type: 'fetch_customer_details'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-08-22 18:30:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5c1150b4db7c8740a09bf6e9af9619c5</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>fetch_customer_details</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_5c1150b4db7c8740a09bf6e9af9619c5</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-10-24 15:51:47</sys_updated_on>
+    </sys_script_include>
+</record_update>

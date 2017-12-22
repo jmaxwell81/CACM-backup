@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>number_of_days</field>
+        <global>true</global>
+        <messages/>
+        <name>Validate Referral Number of Days</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+   //Validate that number of days is 0 or greater, and 90 or less
+	var validateNumOfDays = g_form.getValue('number_of_days');
+		if (validateNumOfDays < 0 || validateNumOfDays > 90) {
+		g_form.showFieldMsg('number_of_days','Number of Days must be 0 or greater, and 90 or less','error');
+		return false;
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>dfoss@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-19 14:54:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cc303fe5db990380a09bf6e9af961941</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Validate Referral Number of Days</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_client_cc303fe5db990380a09bf6e9af961941</sys_update_name>
+        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-19 16:27:50</sys_updated_on>
+        <table>x_amfai_cacmdba_case_referral</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

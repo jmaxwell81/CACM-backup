@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Routing [ct]" max_length="40" name="x_amfai_cacmdba_routing" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Effective Date" mandatory="true" max_length="40" name="begin_eff_date" type="glide_date"/>
+        <element label="End Effective Date" max_length="40" name="end_eff_date" type="glide_date"/>
+        <element label="Routing ID" mandatory="true" max_length="40" name="routing_identifier" type="string"/>
+        <element display="true" label="Description" mandatory="true" max_length="50" name="routing_name" type="string"/>
+        <index name="index">
+            <element name="routing_identifier"/>
+        </index>
+    </element>
+</database>

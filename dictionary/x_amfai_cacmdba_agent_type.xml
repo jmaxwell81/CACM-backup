@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Agent Type [ct]" max_length="40" name="x_amfai_cacmdba_agent_type" type="collection">
+        <element display="true" label="Agent Type" max_length="40" name="agent_type" type="string"/>
+        <element label="Description" max_length="80" name="description" type="string"/>
+        <index name="index">
+            <element name="agent_type"/>
+        </index>
+    </element>
+</database>

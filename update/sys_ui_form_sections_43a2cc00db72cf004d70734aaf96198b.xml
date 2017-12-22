@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="43a2cc00db72cf004d70734aaf96198b" sys_domain="global" table="x_amfai_cacmdba_root_cause" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:18:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8fa2cc00db72cf004d70734aaf96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_amfai_cacmdba_root_cause" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">43a2cc00db72cf004d70734aaf96198b</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">47bb8acbdbec0f004d70734aaf9619de</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:18:11</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:18:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8ba2cc00db72cf004d70734aaf96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_amfai_cacmdba_root_cause" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">43a2cc00db72cf004d70734aaf96198b</sys_ui_form>
+            <sys_ui_section caption="Party Information" display_value="Party Information" name="x_amfai_cacmdba_root_cause" sys_domain="global" view="Default view">0fa2cc00db72cf004d70734aaf961989</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:18:12</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_amfai_cacmdba_root_cause</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-27 19:18:11</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43a2cc00db72cf004d70734aaf96198b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_root_cause</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_form_sections_43a2cc00db72cf004d70734aaf96198b</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-27 19:18:11</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

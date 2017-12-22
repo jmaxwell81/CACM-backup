@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Title Prefix [ct]" max_length="40" name="x_amfai_cacmdba_title_prefix" type="collection">
+        <element display="true" label="Title Prefix Name" max_length="40" name="title_prefix_nm" type="string"/>
+        <index name="index">
+            <element name="title_prefix_nm"/>
+        </index>
+    </element>
+</database>

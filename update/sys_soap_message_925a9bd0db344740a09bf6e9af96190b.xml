@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description>Siteminder enabled.</description>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>ClaimInfoServiceV5</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-08-21 19:34:12</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>925a9bd0db344740a09bf6e9af96190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ClaimInfoServiceV5</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_925a9bd0db344740a09bf6e9af96190b</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-08-21 19:34:12</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl/>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8" ?> 
+- <wsdl:definitions name="ClaimInfoService" targetNamespace="http://service.amfam.com/claiminfoservice" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://service.amfam.com/claiminfoservice/message" xmlns:ping="http://schema.amfam.com/ping" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.amfam.com/claiminfoservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+- <wsdl:types>
+- <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://service.amfam.com/claiminfoservice/message" xmlns:ping="http://schema.amfam.com/ping" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.amfam.com/claiminfoservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <import namespace="http://service.amfam.com/claiminfoservice/message" schemaLocation="https://devbq23n.amfam.com/claiminfoservicev5/services/ClaimInfoService?xsd=schema/Message_ClaimInfoService.xsd" /> 
+  <import namespace="http://schema.amfam.com/ping" schemaLocation="https://devbq23n.amfam.com/claiminfoservicev5/services/ClaimInfoService?xsd=schema/Message_Ping.xsd" /> 
+  </schema>
+  </wsdl:types>
+- <wsdl:message name="validationFault">
+  <wsdl:part element="msg:validationFault" name="validationFault" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByNameRequest">
+  <wsdl:part element="msg:getClaimsByName" name="getClaimsByName" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByNameResponse">
+  <wsdl:part element="msg:getClaimsByNameResponse" name="getClaimsByNameResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimByClaimNumberResponse">
+  <wsdl:part element="msg:getClaimByClaimNumberResponse" name="getClaimByClaimNumberResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByPolicyRequest">
+  <wsdl:part element="msg:getClaimsByPolicy" name="getClaimsByPolicy" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimByClaimNumberRequest">
+  <wsdl:part element="msg:getClaimByClaimNumber" name="getClaimByClaimNumber" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByPolicyNoFileHandlerRequest">
+  <wsdl:part element="msg:getClaimsByPolicyNoFileHandler" name="getClaimsByPolicyNoFileHandler" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByBarCodeRequest">
+  <wsdl:part element="msg:getClaimsByBarCodeRequest" name="getClaimsByBarCodeRequest" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByPolicyNoFileHandlerResponse">
+  <wsdl:part element="msg:getClaimsByPolicyNoFileHandlerResponse" name="getClaimsByPolicyNoFileHandlerResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="getClaimsByPolicyResponse">
+  <wsdl:part element="msg:getClaimsByPolicyResponse" name="getClaimsByPolicyResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="pingRequest">
+  <wsdl:part element="ping:ping" name="ping" /> 
+  </wsdl:message>
+- <wsdl:message name="pingResponse">
+  <wsdl:part element="ping:pingResponse" name="pingResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="claimInfoServiceFault">
+  <wsdl:part element="msg:claimInfoServiceFault" name="claimInfoServiceFault" /> 
+  </wsdl:message>
+- <wsdl:portType name="ClaimInfoService">
+- <wsdl:operation name="getClaimsByPolicy">
+  <wsdl:documentation>This operation gets Claims for a single Policy Number</wsdl:documentation> 
+  <wsdl:input message="tns:getClaimsByPolicyRequest" name="getClaimsByPolicyRequest" /> 
+  <wsdl:output message="tns:getClaimsByPolicyResponse" name="getClaimsByPolicyResponse" /> 
+  <wsdl:fault message="tns:validationFault" name="validationFault" /> 
+  <wsdl:fault message="tns:claimInfoServiceFault" name="claimInfoServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="getClaimByClaimNumber">
+  <wsdl:documentation>This operation gets a Claim for a Claim Number</wsdl:documentation> 
+  <wsdl:input message="tns:getClaimByClaimNumberRequest" name="getClaimByClaimNumberRequest" /> 
+  <wsdl:output message="tns:getClaimByClaimNumberResponse" name="getClaimByClaimNumberResponse" /> 
+  <wsdl:fault message="tns:validationFault" name="validationFault" /> 
+  <wsdl:fault message="tns:claimInfoServiceFault" name="claimInfoServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="getClaimsByPolicyNoFileHandler">
+  <wsdl:documentation>This operation gets Claims without File Handlers for a single Policy Number</wsdl:documentation> 
+  <wsdl:input message="tns:getClaimsByPolicyNoFileHandlerRequest" name="getClaimsByPolicyNoFileHandlerRequest" /> 
+  <wsdl:output message="tns:getClaimsByPolicyNoFileHandlerResponse" name="getClaimsByPolicyNoFileHandlerResponse" /> 
+  <wsdl:fault message="tns:validationFault" name="validationFault" /> 
+  <wsdl:fault message="tns:claimInfoServiceFault" name="claimInfoServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="getClaimsByName">
+  <wsdl:documentation>This operation gets Claims for a Organization or a Person Number</wsdl:documentation> 
+  <wsdl:input message="tns:getClaimsByNameRequest" name="getClaimsByNameRequest" /> 
+  <wsdl:output message="tns:getClaimsByNameResponse" name="getClaimsByNameResponse" /> 
+  <wsdl:fault message="tns:validationFault" name="validationFault" /> 
+  <wsdl:fault message="tns:claimInfoServiceFault" name="claimInfoServiceFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <wsdl:input message="tns:pingRequest" name="pingRequest" /> 
+  <wsdl:output message="tns:pingResponse" name="pingResponse" /> 
+  </wsdl:operation>
+- <wsdl:operation name="getClaimByBarCodeRequest">
+  <wsdl:input message="tns:getClaimsByBarCodeRequest" name="getClaimsByBarCodeRequest" /> 
+  <wsdl:output message="tns:getClaimByClaimNumberResponse" name="getClaimByClaimNumberResponse" /> 
+  <wsdl:fault message="tns:validationFault" name="validationFault" /> 
+  <wsdl:fault message="tns:claimInfoServiceFault" name="claimInfoServiceFault" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+- <wsdl:binding name="ClaimInfoServiceSOAP" type="tns:ClaimInfoService">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+- <wsdl:operation name="getClaimsByPolicy">
+  <soap:operation soapAction="ClaimInfoService/v1/getClaimsByPolicy" /> 
+- <wsdl:input name="getClaimsByPolicyRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="getClaimsByPolicyResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="validationFault">
+  <soap:fault name="validationFault" use="literal" /> 
+  </wsdl:fault>
+- <wsdl:fault name="claimInfoServiceFault">
+  <soap:fault name="claimInfoServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="getClaimByClaimNumber">
+  <soap:operation soapAction="ClaimInfoService/v1/getClaimByClaimNumber" /> 
+- <wsdl:input name="getClaimByClaimNumberRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="getClaimByClaimNumberResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="validationFault">
+  <soap:fault name="validationFault" use="literal" /> 
+  </wsdl:fault>
+- <wsdl:fault name="claimInfoServiceFault">
+  <soap:fault name="claimInfoServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="getClaimsByPolicyNoFileHandler">
+  <soap:operation soapAction="ClaimInfoService/v1/getClaimsByPolicyNoFileHandler" /> 
+- <wsdl:input name="getClaimsByPolicyNoFileHandlerRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="getClaimsByPolicyNoFileHandlerResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="validationFault">
+  <soap:fault name="validationFault" use="literal" /> 
+  </wsdl:fault>
+- <wsdl:fault name="claimInfoServiceFault">
+  <soap:fault name="claimInfoServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="getClaimsByName">
+  <soap:operation soapAction="ClaimInfoService/v1/getClaimsByName" /> 
+- <wsdl:input name="getClaimsByNameRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="getClaimsByNameResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="validationFault">
+  <soap:fault name="validationFault" use="literal" /> 
+  </wsdl:fault>
+- <wsdl:fault name="claimInfoServiceFault">
+  <soap:fault name="claimInfoServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <soap:operation soapAction="http://service.amfam.com/claiminfoservice" /> 
+- <wsdl:input name="pingRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="pingResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+- <wsdl:operation name="getClaimByBarCodeRequest">
+  <soap:operation soapAction="ClaimInfoService/v1/getClaimByBarCodeRequest" /> 
+- <wsdl:input name="getClaimsByBarCodeRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="getClaimByClaimNumberResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="validationFault">
+  <soap:fault name="validationFault" use="literal" /> 
+  </wsdl:fault>
+- <wsdl:fault name="claimInfoServiceFault">
+  <soap:fault name="claimInfoServiceFault" use="literal" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+  </wsdl:binding>
+- <wsdl:service name="ClaimInfoService">
+  <wsdl:documentation>Claim Info Service provides operations to Get a List of Claims for the first 10 bytes of a policy number</wsdl:documentation> 
+- <wsdl:port binding="tns:ClaimInfoServiceSOAP" name="ClaimInfoServiceSOAP">
+  <soap:address location="https://devbq23n.amfam.com/claiminfoservicev5/services/ClaimInfoService" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

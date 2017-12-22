@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_filter">
+    <sys_filter action="INSERT_OR_UPDATE">
+        <filter table="sys_dictionary">nameLIKEx_amfai_cacmdba^elementISNOTEMPTY<item endquery="false" field="name" goto="false" newquery="false" operator="LIKE" or="false" value="x_amfai_cacmdba"/>
+            <item endquery="false" field="element" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </filter>
+        <group/>
+        <last_used/>
+        <mobile>false</mobile>
+        <roles/>
+        <sys_class_name>sys_filter</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-11-21 15:29:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c3b4d0cedb6e47004d70734aaf96190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CACM table query</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_filter_c3b4d0cedb6e47004d70734aaf96190d</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-11-21 15:29:15</sys_updated_on>
+        <table>sys_dictionary</table>
+        <title>CACM table query</title>
+        <user display_value="Jeremy Wedekind">37db2a47db6cf200f827fb16bf961945</user>
+    </sys_filter>
+</record_update>

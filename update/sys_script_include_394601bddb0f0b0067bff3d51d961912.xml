@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.CreateAttachment</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CreateAttachment</name>
+        <script><![CDATA[var CreateAttachment = Class.create();
+CreateAttachment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	_document : null,
+	
+// 		genPDF : function (html_text, table_name, sys_ID, att_name){
+// 			var html = this.getParameter('sysparm_htmlText');
+// 			var table = this.getParameter('sysparm_tableName');
+// 			var sys_id = this.getParameter('sysparm_sysId');
+// 				this.createPDF('<p>Hello World!</p>',  //HTML to convert to PDF
+// 				table,  //Attach PDF to table
+// 				sys_id, //Attach PDF to record/sys_id
+// 				'myFile.pdf');  //attachment filename
+// 			},
+		
+		createPDF : function(html, table, sys_id, filename) {
+// 			var html = this.getParameter('sysparm_htmlText');
+// 			var table = this.getParameter('sysparm_tableName');
+// 			var sys_id = this.getParameter('sysparm_sysId');
+// 			var filename = this.getParameter('sysparm_attName');
+ 			gs.addInfoMessage('si run');
+// 			gs.addInfoMessage(html);
+// 			gs.addInfoMessage(table);
+// 			gs.addInfoMessage(sys_id);
+// 			gs.addInfoMessage(filename);
+			var pdfDoc = new global.CACM_PDF_Attachment.Document(null, null, null, null, null, null);
+			//gs.addInfoMessage(pdfDoc);
+			this._document = new global.CACM_PDF_Attachment(pdfDoc);
+			//gs.addInfoMessage(_document);
+			this._document.startHTMLParser();
+			this._document.addHTML(html);
+			this._document.stopHTMLParser();
+			var a = this._document.get();
+			gs.addInfoMessage('A = ' + a);
+			this._saveAs(table, sys_id, filename);
+		},
+		
+		_saveAs : function (table, sys_id, filename){
+			gs.addInfoMessage('si s2 run');
+			//gs.addInfoMessage(table);
+			//gs.addInfoMessage(sys_id);
+			//gs.addInfoMessage(filename);
+			var att = new global.CACM_PDF_Attachment.Attachment();
+			//gs.addInfoMessage(att);
+			att.setTableName(table);
+			att.setTableId(sys_id);
+			att.setName(filename);
+			att.setType('application/pdf');
+			gs.addInfoMessage(this._document.get());
+			att.setBody(this._document.get());
+			global.CACM_PDF_Attachment.attach(att);
+		},
+		
+		
+		type: 'CreateAttachment'
+	});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-12-15 21:01:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>394601bddb0f0b0067bff3d51d961912</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>CreateAttachment</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_394601bddb0f0b0067bff3d51d961912</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-12-20 18:13:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

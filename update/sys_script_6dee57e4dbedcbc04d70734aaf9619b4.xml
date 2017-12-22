@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_amfai_cacmdba_case</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_amfai_cacmdba_case">case_status=3^case_typeNOT INinquiry,customer_privacy^EQ<item endquery="false" field="case_status" goto="false" newquery="false" operator="=" or="false" value="3"/>
+            <item endquery="false" field="case_type" goto="false" newquery="false" operator="NOT IN" or="false" value="inquiry,customer_privacy"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Closing1- Check RootCause, Referral, Att</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var flag = 0;
+	var message = 'Action Aborted:';
+	var gr = new GlideAggregate('x_amfai_cacmdba_root_cause');
+	gr.addQuery('case_id', current.sys_id);
+	gr.addAggregate('COUNT');
+	gr.query();
+	var rootCause = 0;
+	if (gr.next()){
+		rootCause = gr.getAggregate('COUNT');
+		if (rootCause == 0){
+			flag = 1;
+			message = message + ' There should be at least one Root Cause;';
+			//current.setAbortAction(true);
+		}
+	}
+	
+	var gr2 = new GlideAggregate('x_amfai_cacmdba_case_referral');
+	gr2.addQuery('cacm_id', current.sys_id);
+	gr2.addQuery('status', 'closed');
+	gr2.addAggregate('COUNT');
+	gr2.query();
+	var referral = 0;
+	if (gr2.next()){
+		referral = gr2.getAggregate('COUNT');
+		if (referral == 0){
+			flag = 1;
+			message = message + ' There should be at least one Closed Referral;';
+			//current.setAbortAction(true);
+		}
+	}
+	
+	var gr3 = new GlideAggregate('x_amfai_cacmdba_cacm_attachments');
+	gr3.addQuery('case_id', current.sys_id);
+	gr3.addQuery('document_status', 'draft');
+	gr3.addAggregate('COUNT');
+	gr3.query();
+	var attachment = 0;
+	if (gr3.next()){
+		attachment = gr3.getAggregate('COUNT');
+		if (attachment != 0){
+			flag = 1;
+			message = message + ' One or More Attachments are in "Draft" State';
+			//current.setAbortAction(true);
+		}
+	}
+	
+	if (flag == 1){
+		gs.addErrorMessage(message);
+		current.setAbortAction(true);
+	}
+	
+	// Add your code here
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-28 21:33:24</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6dee57e4dbedcbc04d70734aaf9619b4</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Closing1- Check RootCause, Referral, Att</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_6dee57e4dbedcbc04d70734aaf9619b4</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-10-19 21:03:25</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6dee57e4dbedcbc04d70734aaf9619b4"/>
+</record_update>

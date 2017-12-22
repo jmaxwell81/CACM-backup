@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.load_NAIC_number_list</api_name>
+        <client_callable>true</client_callable>
+        <description>used on case table to get NAIC number by selecting company List</description>
+        <name>load_NAIC_number_list</name>
+        <script><![CDATA[var load_NAIC_number_list = Class.create();
+load_NAIC_number_list.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+fetchNAIC: function() {
+	//gs.addInfoMessage('2');
+	var list = this.getParameter('sysparm_comp');
+	var listArray = list.split(",");
+// 	gs.addInfoMessage(list);
+      var gr = new GlideRecord('x_amfai_cacmdba_company');
+	  gr.addQuery('sys_id', 'IN', list);
+	  gr.query();
+	  var temp = [];
+	  while (gr.next()){
+// 		  gs.addInfoMessage(gr.naic_num);
+		  temp.push(gr.naic_num.toString());
+	  }
+// 	gs.addInfoMessage(temp[0]);
+// 	gs.addInfoMessage(temp[1]);
+// 	gs.addInfoMessage(temp.join(", "));
+	return temp.join(", ");
+   },
+    type: 'load_NAIC_number_list'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-01 20:27:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f9295aa3db8ecb00a09bf6e9af961965</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>load_NAIC_number_list</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_f9295aa3db8ecb00a09bf6e9af961965</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-16 18:30:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

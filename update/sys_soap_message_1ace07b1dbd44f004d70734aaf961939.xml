@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Pre-Prod">aee4c876dbe336c44d70734aaf9619e1</basic_auth_profile>
+        <basic_auth_user/>
+        <description>Siteminder enabled.</description>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>PartySearchServiceV7</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-08-01 14:03:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1ace07b1dbd44f004d70734aaf961939</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>PartySearchServiceV7</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_1ace07b1dbd44f004d70734aaf961939</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-08-21 20:04:46</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl/>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8" ?> 
+- <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.amfam.com/partysearchservice/v7" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ping="http://schema.amfam.com/ping" xmlns:partysearchservice="http://service.amfam.com/partysearchservice" name="PartySearchService" targetNamespace="http://service.amfam.com/partysearchservice/v7">
+- <wsdl:types>
+- <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://service.amfam.com/partysearchservice/v7" version="1.0">
+  <xsd:import namespace="http://schema.amfam.com/ping" schemaLocation="schema/Message_Ping.xsd" /> 
+  <xsd:import namespace="http://service.amfam.com/partysearchservice" schemaLocation="schema/Message_PartySearchService.xsd" /> 
+  </xsd:schema>
+  </wsdl:types>
+- <wsdl:message name="searchPartyResponse">
+  <wsdl:part element="partysearchservice:searchPartyResponse" name="searchPartyResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="searchPartyRequest">
+  <wsdl:part element="partysearchservice:searchParty" name="searchParty" /> 
+  </wsdl:message>
+- <wsdl:message name="searchPartyFault">
+  <wsdl:part name="searchPartyFault" element="partysearchservice:searchPartyFault" /> 
+  </wsdl:message>
+- <wsdl:message name="retrievePartyResponse">
+  <wsdl:part element="partysearchservice:retrievePartyResponse" name="retrievePartyResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="retrievePartyRequest">
+  <wsdl:part element="partysearchservice:retrieveParty" name="retrieveParty" /> 
+  </wsdl:message>
+- <wsdl:message name="retrievePartyFault">
+  <wsdl:part name="retrievePartyFault" element="partysearchservice:retrievePartyFault" /> 
+  </wsdl:message>
+- <wsdl:message name="retrievePartyListResponse">
+  <wsdl:part element="partysearchservice:retrievePartyListResponse" name="retrievePartyListResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="retrievePartyListRequest">
+  <wsdl:part element="partysearchservice:retrievePartyList" name="retrievePartyList" /> 
+  </wsdl:message>
+- <wsdl:message name="retrievePartyListFault">
+  <wsdl:part name="retrievePartyListFault" element="partysearchservice:retrievePartyListFault" /> 
+  </wsdl:message>
+- <wsdl:message name="searchAcrossPartnersResponse">
+  <wsdl:part element="partysearchservice:searchAcrossPartnersResponse" name="searchAcrossPartnersResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="searchAcrossPartnersRequest">
+  <wsdl:part element="partysearchservice:searchAcrossPartners" name="searchAcrossPartners" /> 
+  </wsdl:message>
+- <wsdl:message name="searchAcrossPartnersFault">
+  <wsdl:part name="searchAcrossPartnersFault" element="partysearchservice:searchAcrossPartnersFault" /> 
+  </wsdl:message>
+- <wsdl:message name="pingResponse">
+  <wsdl:part element="ping:pingResponse" name="pingResponse" /> 
+  </wsdl:message>
+- <wsdl:message name="pingRequest">
+  <wsdl:part element="ping:ping" name="ping" /> 
+  </wsdl:message>
+- <wsdl:message name="pingFault">
+  <wsdl:part element="ping:pingFault" name="pingFault" /> 
+  </wsdl:message>
+- <wsdl:portType name="PartySearchService">
+- <wsdl:operation name="searchParty">
+  <wsdl:documentation>This operation retrieves the party summaries from Customer Data Hub based on the party search criteria input.</wsdl:documentation> 
+  <wsdl:input message="tns:searchPartyRequest" name="searchPartyRequest" /> 
+  <wsdl:output message="tns:searchPartyResponse" name="searchPartyResponse" /> 
+  <wsdl:fault name="searchPartyFault" message="tns:searchPartyFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="retrieveParty">
+  <wsdl:documentation>This operation retrieves the party information based on the partyIdentifier(hub identifier) and the levels of detail input.</wsdl:documentation> 
+  <wsdl:input message="tns:retrievePartyRequest" name="retrievePartyRequest" /> 
+  <wsdl:output message="tns:retrievePartyResponse" name="retrievePartyResponse" /> 
+  <wsdl:fault name="retrievePartyFault" message="tns:retrievePartyFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="retrievePartyList">
+  <wsdl:documentation>This operation retrieves the information for list of parties based on the partyIdentifier's(hub identifier's) and the levels of detail input.</wsdl:documentation> 
+  <wsdl:input message="tns:retrievePartyListRequest" name="retrievePartyListRequest" /> 
+  <wsdl:output message="tns:retrievePartyListResponse" name="retrievePartyListResponse" /> 
+  <wsdl:fault name="retrievePartyListFault" message="tns:retrievePartyListFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="searchAcrossPartners">
+  <wsdl:documentation>This operation retrieves the party summaries across all partners from Customer Data Hub based on the party search criteria input.</wsdl:documentation> 
+  <wsdl:input message="tns:searchAcrossPartnersRequest" name="searchAcrossPartnersRequest" /> 
+  <wsdl:output message="tns:searchAcrossPartnersResponse" name="searchAcrossPartnersResponse" /> 
+  <wsdl:fault name="searchAcrossPartnersFault" message="tns:searchAcrossPartnersFault" /> 
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <wsdl:documentation>This operation gets the service version and schema info which is some meta data about the service and also it is a way to check whether service is up and running.</wsdl:documentation> 
+  <wsdl:input message="tns:pingRequest" name="pingRequest" /> 
+  <wsdl:output message="tns:pingResponse" name="pingResponse" /> 
+  <wsdl:fault name="pingFault" message="tns:pingFault" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+- <wsdl:binding name="PartySearchServiceSOAP" type="tns:PartySearchService">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+- <wsdl:operation name="searchParty">
+  <soap:operation soapAction="http://service.amfam.com/partysearchservice/v7/searchParty" /> 
+- <wsdl:input name="searchPartyRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="searchPartyResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="searchPartyFault">
+  <soap:fault use="literal" name="searchPartyFault" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="retrieveParty">
+  <soap:operation soapAction="http://service.amfam.com/partysearchservice/v7/retrieveParty" /> 
+- <wsdl:input name="retrievePartyRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="retrievePartyResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="retrievePartyFault">
+  <soap:fault use="literal" name="retrievePartyFault" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="retrievePartyList">
+  <soap:operation soapAction="http://service.amfam.com/partysearchservice/v7/retrievePartyList" /> 
+- <wsdl:input name="retrievePartyListRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="retrievePartyListResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="retrievePartyListFault">
+  <soap:fault use="literal" name="retrievePartyListFault" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="searchAcrossPartners">
+  <soap:operation soapAction="http://service.amfam.com/partysearchservice/v7/searchAcrossPartners" /> 
+- <wsdl:input name="searchAcrossPartnersRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="searchAcrossPartnersResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="searchAcrossPartnersFault">
+  <soap:fault use="literal" name="searchAcrossPartnersFault" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+- <wsdl:operation name="ping">
+  <soap:operation soapAction="http://service.amfam.com/partysearchservice/v7/ping" /> 
+- <wsdl:input name="pingRequest">
+  <soap:body use="literal" /> 
+  </wsdl:input>
+- <wsdl:output name="pingResponse">
+  <soap:body use="literal" /> 
+  </wsdl:output>
+- <wsdl:fault name="pingFault">
+  <soap:fault use="literal" name="pingFault" /> 
+  </wsdl:fault>
+  </wsdl:operation>
+  </wsdl:binding>
+- <wsdl:service name="PartySearchService">
+  <wsdl:documentation>Party Search Service provides search and retrieve operations on the Customer Data Hub.</wsdl:documentation> 
+- <wsdl:port binding="tns:PartySearchServiceSOAP" name="PartySearchServiceSOAP">
+  <soap:address location="https://intesb.amfam.com/ccx/cc-router/PartySearchService/07ctp" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>

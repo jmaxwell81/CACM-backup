@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="potential_received_date" label="Received Date" language="en" table="x_amfai_cacmdba_person">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>potential_received_date</element>
+            <help/>
+            <hint/>
+            <label>Received Date</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_person</name>
+            <plural>Received Dates</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-13 16:09:19</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>0c311b97dbde8f40a09bf6e9af96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Received Date</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_documentation_x_amfai_cacmdba_person_potential_received_date_en</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-13 16:09:19</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

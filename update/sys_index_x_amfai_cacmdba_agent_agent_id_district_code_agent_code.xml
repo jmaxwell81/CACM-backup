@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>agent_id,district_code,agent_code</col_name_string>
+        <index_col_name>602e85ccdbae8380a09bf6e9af961974,af5dc1c4dbae8380a09bf6e9af96191d,639d8548dbae8380a09bf6e9af961970</index_col_name>
+        <logical_table_name>x_amfai_cacmdba_agent</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-11-15 14:49:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>10121948db22c380a09bf6e9af9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_amfai_cacmdba_agent</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_index_x_amfai_cacmdba_agent_agent_id_district_code_agent_code</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-11-15 14:49:22</sys_updated_on>
+        <table/>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message_function">
+    <sys_soap_message_function action="INSERT_OR_UPDATE">
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Pre-Prod">aee4c876dbe336c44d70734aaf9619e1</basic_auth_profile>
+        <basic_auth_user/>
+        <certificate/>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <envelope><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mes="http://service.amfam.com/claiminfoservice/message" xmlns:aut="http://service.amfam.com/claiminfoservice/automation">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mes:getClaimsByName mes:automationSchemaSourceTool="CVS" mes:automationSchemaProject="ClaimInfoService" mes:automationSchemaVersion="1.0.0" mes:serviceSourceTool="CVS" mes:serviceProject="ClaimInfoService" mes:serviceVersion="1.0.0">
+         <mes:ClaimsByNameRequest>
+            <aut:TransactionalData>
+               <aut:consumingSystemName>${consumingSystemName}</aut:consumingSystemName>
+               <!--Optional:
+               <aut:consumerTransactionID>${consumerTransactionID}</aut:consumerTransactionID>
+               
+               <aut:userId>${userId}</aut:userId>
+				-->
+            </aut:TransactionalData>
+            <aut:NameSearchCriteria>
+               <aut:MatchEnum>${MatchEnum}</aut:MatchEnum>
+               <aut:SearchEnum>${SearchEnum}</aut:SearchEnum>
+               <aut:firstName>${firstName}</aut:firstName>
+               <aut:lastName>${lastName}</aut:lastName>
+			   <aut:state1>${state1}</aut:state1>
+				
+			   <!--
+			   <aut:orgName>${orgName}</aut:orgName>
+               <aut:middleInitial>${middleInitial}</aut:middleInitial>
+               <aut:city>${city}</aut:city>
+               <aut:region>${region}</aut:region>
+               <aut:state2>${state2}</aut:state2>
+               <aut:claimOffices>${claimOffices}</aut:claimOffices
+			   -->
+            </aut:NameSearchCriteria>
+         </mes:ClaimsByNameRequest>
+      </mes:getClaimsByName>
+   </soapenv:Body>
+</soapenv:Envelope>]]></envelope>
+        <function_name>getClaimsByName</function_name>
+        <key_store/>
+        <key_store_alias/>
+        <key_store_password/>
+        <lock>false</lock>
+        <protocol_profile/>
+        <qualified_name>ClaimInfoServiceV5 [ getClaimsByName ]</qualified_name>
+        <soap_action>ClaimInfoService/v1/getClaimsByName</soap_action>
+        <soap_endpoint>https://accesb.amfam.com/ccx/cc-router/ClaimInfoService/v5/ac</soap_endpoint>
+        <soap_message display_value="ClaimInfoServiceV5">925a9bd0db344740a09bf6e9af96190b</soap_message>
+        <strip_whitespace>false</strip_whitespace>
+        <sys_class_name>sys_soap_message_function</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-08-21 19:42:34</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9a7bd354db344740a09bf6e9af96193a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>getClaimsByName</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_function_9a7bd354db344740a09bf6e9af96193a</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-12-12 20:40:32</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
+        <use_ws_security>false</use_ws_security>
+        <ws_security_type/>
+        <ws_security_username_profile/>
+        <ws_security_x509_profile/>
+    </sys_soap_message_function>
+</record_update>

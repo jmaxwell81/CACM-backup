@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.CACMIntegrationUtil2</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CACMIntegrationUtil2</name>
+        <script><![CDATA[var CACMIntegrationUtil2 = Class.create();
+CACMIntegrationUtil2.prototype = {
+	initialize: function() {
+		
+		this.isLogging = true;
+		this.namespace = "ns1:";
+		this.namespace_ns2 = "ns2:";
+		this.namespace_ns3 = "ns3";
+		//this.namespace_claim = "ns2:";
+	},
+	
+	getPolicyDetails: function(customerID, caseID){
+		//gs.addInfoMessage(customerID);
+		//gs.addInfoMessage(caseID);
+		this.triggerPolicySOAPCall(customerID, caseID);
+		
+	},
+	getClaimDetails: function(aCACMClaim){
+		
+		this.triggerClaimSOAPCall(aCACMClaim);
+		
+	},
+	
+	getPartySearchDetails: function(aInsuredGR){
+		
+		this.triggerPartySearchSOAPCall(aInsuredGR);
+		
+	},
+	getProducerDetails: function(producerID, caseID){
+		//gs.addInfoMessage(producerID);
+		//gs.addInfoMessage(caseID);
+	this.triggerProducerSOAPCall(producerID, caseID);
+		
+	},
+	
+	
+	triggerProducerSOAPCall: function(aProducerID, aCaseID){
+		//gs.addInfoMessage(aProducerID);
+		//gs.addInfoMessage(aCaseID);
+		try { 
+ var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ProducerServiceV5', 'retrieveProducerDetail');
+
+//override authentication profile 
+//authentication type ='basic'
+//r.setAuthentication(authentication type,profile name);
+
+ s.setStringParameterNoEscape('producerId', aProducerID);
+ s.setStringParameterNoEscape('systemName', 'cacm');
+ s.setStringParameterNoEscape('userId', 'jjw017');
+ var response = s.execute();
+			//gs.addInfoMessage(response);
+ var responseBody = response.getBody(); 
+ var status = response.getStatusCode();
+			var producerResponse = new XMLDocument2();
+			producerResponse.parseXML(responseBody);
+			var Code =  producerResponse.getNodeText("//code");
+			//gs.addInfoMessage(Code);
+			if(Code == 'NO_PRODUCER_FOUND' || status != '200'){
+				
+			var Current_date = new GlideDateTime();
+				gs.addErrorMessage("[" + Current_date + "] A issue was encountered while fetching Producer details for this record: "+producerResponse.getNodeText("//messageDescription"));
+				aProducer.update();
+			} else {
+			var node = producerResponse.getNode('//ns3:ProducerName');
+			node = node.toString();
+			var CR = new XMLDocument2();
+				CR.parseXML(node);
+			var node1 = producerResponse.getNode('//ns3:Address');
+			node1 = node1.toString();
+			var CR1 = new XMLDocument2();
+				CR1.parseXML(node1);
+			var node2 = producerResponse.getNode('//ns3:Status');
+			node2 = node2.toString();
+			var CR2 = new XMLDocument2();
+				CR2.parseXML(node2);
+		
+			//gs.addInfoMessage(responseBody+""+CR.getNodeText('//ns3:firstName'));
+			var producer = new GlideRecord('x_amfai_cacmdba_producer');
+			producer.initialize();
+			producer.setValue('case_id', aCaseID);
+			producer.setValue('producer_id', aProducerID);
+			producer.setValue("first_name",this.getNSResponseNodeText(CR, "firstName", "ns3:"));
+			producer.setValue("middle_name",this.getNSResponseNodeText(CR, "middleName", "ns3:"));
+			producer.setValue("last_name",this.getNSResponseNodeText(CR, "lastName", "ns3:"));
+			producer.setValue("producer_state_nm",this.getNSResponseNodeText(CR1, "state", "ns3:"));
+			producer.setValue("producer_status_nm",this.getNSResponseNodeText(CR2, "status", "ns3:"));
+			producer.setValue("producer_start_dt",this.getNSResponseNodeText(CR2, "startDate", "ns3:"));
+			producer.setValue("producer_end_dt",this.getNSResponseNodeText(CR2, "endDate", "ns3:"));
+			producer.setValue("user_id",this.getNSResponseNodeText(producerResponse, "userIdField", "ns3:"));
+		    producer.setValue("producer_state_nm",this.getNSResponseNodeText(producerResponse, "state", "ns3:"));
+			producer.setValue("producer_role_nm",this.getNSResponseNodeText(producerResponse, "positionType", "ns3:"));
+			producer.setValue("producer_nick_nm",this.getNSResponseNodeText(producerResponse, "nickName", "ns3:"));
+			producer.insert();
+				
+				
+			}
+}
+catch(ex) { 
+ var message = ex.getMessage();
+}
+	},
+	triggerClaimSOAPCall: function(aCACMClaim){
+		
+	try {
+		var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ClaimServiceV2', 'retrieveClaimSummary');
+		
+		//override authentication profile
+		//authentication type ='basic'
+		//r.setAuthentication(authentication type,profile name);
+		
+		s.setStringParameterNoEscape('userId', '');
+		s.setStringParameterNoEscape('policyNumber', '5045630701');
+		s.setStringParameterNoEscape('systemName', '');
+		s.setStringParameterNoEscape('claimNumber',aCACMClaim.claim_number);
+		s.setStringParameterNoEscape('consumerTransactionID', '');
+		s.setStringParameterNoEscape('barcodeId', '');
+		
+		var response = s.execute();
+		var responseBody = response.getBody();
+		var status = response.getStatusCode();
+		gs.addInfoMessage(status+""+responseBody);
+		
+		if(status == '200'){
+			//var node = cacmResponse.getNode('//ns1:policies['+i+']');
+			var claimResponse = new XMLDocument2();
+			claimResponse.parseXML(responseBody);
+			var Code =  claimResponse.getNodeText("//severity");
+			if(Code == 'ERROR'){
+				
+			var Current_date = new GlideDateTime();
+				gs.addErrorMessage("[" + Current_date + "] A issue was encountered while fetching Claim details for this record: "+claimResponse.getNodeText("//messageDescription"));
+				//aCACMClaim.update();
+			}
+			//gs.addInfoMessage(error);
+			//gs.addInfoMessage(responseBody);
+			else {
+			var node = claimResponse.getNode('//ns2:PrimaryFileHandler');
+			node = node.toString();
+			var CR = new XMLDocument2();
+				CR.parseXML(node);
+			//gs.addInfoMessage(CR.getNodeText('//ns3:address'));
+			var Primary_Name = CR.getNodeText('//ns3:name');
+			aCACMClaim.setValue("loss_incurred_date", this.getResponseNodeText_ns2(claimResponse, "lossDate"));
+			if(Primary_Name != 'null null null'){
+			aCACMClaim.setValue("primary_file_handler", CR.getNodeText('//ns3:name'));
+			}
+			aCACMClaim.setValue("secured_claim_indicator", this.getResponseNodeText_ns2(claimResponse, "securedClaim"));
+			aCACMClaim.setValue("catastrophe_claim_indicator", this.getResponseNodeText_ns2(claimResponse, "catIndicator"));
+			aCACMClaim.setValue("claim_description", this.getResponseNodeText_ns2(claimResponse, "causeDescription"));
+			aCACMClaim.setValue("claim_office_identifier", this.getResponseNodeText_ns2(claimResponse, "claimOfficeID"));
+			aCACMClaim.setValue("claim_region_identifier", this.getResponseNodeText_ns2(claimResponse, "claimRegionID"));
+		    aCACMClaim.setValue("data_populated_from_integration", 'Yes');
+			
+			}
+		}
+		aCACMClaim.update();
+	}
+	catch(ex) {
+		var message = ex.getMessage();
+	}},
+	
+	/*triggerSOAPCall_old: function(aCACMCase){
+		
+		try {
+			
+			var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ProductPortfolioServiceV5', 'RetrieveProductPortfolioRequest');
+			
+			// s.setStringParameterNoEscape('UserId', 'crusrvt');
+			s.setStringParameterNoEscape('ApplicationName', 'CP');
+			// s.setStringParameterNoEscape('customerIds', aCACMCase.customerid);
+			s.setStringParameterNoEscape('ProductExtractLevels', 'POLICIES');
+			s.setEccCorrelator("CACM-"+aCACMCase.policynumber);
+			
+			var response = s.execute();
+			var responseBody = response.getBody();
+			var status = response.getStatusCode();
+			
+			var cacmResponse = new XMLDocument2();
+			cacmResponse.parseXML(responseBody);
+			
+			var cacmCode = this.getPolicyResponseText(cacmResponse, "code");
+			//var policyNumber = this.getPolicyResponseText(cacmResponse, "policyNumber");
+			//var policy = new GlideRecord("x_amfai_cacmdba_policy_integration_test");
+			
+			if(cacmCode == "0"){
+				
+				aCACMCase.setValue("policynumber", this.getPolicyResponseText(cacmResponse, "policyNumber"));
+				aCACMCase.setValue("billaccountnumber", this.getPolicyResponseText(cacmResponse, "billAccountNumber"));
+				aCACMCase.setValue("companycode", this.getPolicyResponseText(cacmResponse, "companyCode"));
+				aCACMCase.setValue("company_legacyvalue", this.getPolicyResponseText(cacmResponse, "legacyValue"));
+				aCACMCase.setValue("createbyuserid", this.getPolicyResponseText(cacmResponse, "createByUserId"));
+				aCACMCase.setValue("modifiedbyuserid", this.getPolicyResponseText(cacmResponse, "modifiedByUserId"));
+				aCACMCase.setValue("effectivedate", this.getPolicyResponseText(cacmResponse, "effectiveDate"));
+				aCACMCase.setValue("expirationdate", this.getPolicyResponseText(cacmResponse, "expirationDate"));
+				aCACMCase.setValue("inceptiondate", this.getPolicyResponseText(cacmResponse, "inceptionDate"));
+				aCACMCase.setValue("accountinceptiondate", this.getPolicyResponseText(cacmResponse, "accountInceptionDate"));
+				aCACMCase.setValue("lastmodifieddate", this.getPolicyResponseText(cacmResponse, "lastModifiedDate"));
+				aCACMCase.setValue("originatingproducerid", this.getPolicyResponseText(cacmResponse, "originatingProducerId"));
+				aCACMCase.setValue("productcode", this.getPolicyResponseText(cacmResponse, "productCode"));
+				aCACMCase.setValue("policytypecode", this.getPolicyResponseText(cacmResponse, "policyTypeCode"));
+				aCACMCase.setValue("policytypedesc", this.getPolicyResponseText(cacmResponse, "policyTypeDesc"));
+				aCACMCase.setValue("priorservicingproducerid", this.getPolicyResponseText(cacmResponse, "priorServicingProducerId"));
+				aCACMCase.setValue("servicingproducerid", this.getPolicyResponseText(cacmResponse, "servicingProducerId"));
+				aCACMCase.setValue("premium", this.getPolicyResponseText(cacmResponse, "premium"));
+				aCACMCase.setValue("sourcesystem", this.getPolicyResponseText(cacmResponse, "sourceSystem"));
+				aCACMCase.setValue("statecode", this.getPolicyResponseText(cacmResponse, "stateCode"));
+				aCACMCase.setValue("status", this.getPolicyResponseText(cacmResponse, "status"));
+				aCACMCase.setValue("sourcesystemstatuscode", this.getPolicyResponseText(cacmResponse, "sourceSystemStatusCode"));
+				aCACMCase.setValue("transactioneffectivedate", this.getPolicyResponseText(cacmResponse, "transactionEffectiveDate"));
+				aCACMCase.setValue("riskid", this.getPolicyResponseText(cacmResponse, "riskId"));
+				aCACMCase.setValue("riskdescription", this.getPolicyResponseText(cacmResponse, "riskDescription"));
+				aCACMCase.setValue("rateclass", this.getPolicyResponseText(cacmResponse, "rateClass"));
+				//aCACMCase.setValue("customerid", this.getPolicyResponseText(cacmResponse, "customerId"));
+				aCACMCase.setValue("roledescription", this.getPolicyResponseText(cacmResponse, "roleDescription"));
+				
+				aCACMCase.update();
+			}else{
+				
+				aCACMCase.integration_notes = "A issue was encountered while fetching policy details for this record: "+this.getPolicyResponseText(cacmResponse, "message");
+				aCACMCase.update();
+			}
+			
+			
+			var node = xmlDoc.getNode('//one');
+			var iter= node.getChildNodeIterator();
+			gs.info(iter.hasNext());
+			
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+		}
+	},
+ 	*/
+	triggerPolicySOAPCall: function(aCustomerID, aCaseID){
+		//gs.addInfoMessage(aCustomerID);
+		//gs.addInfoMessage(aCaseID);
+		//gs.addInfoMessage(typeof aCustomerID);
+		try {
+			
+			var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ProductPortfolioServiceV5-CustomerID', 'RetrieveProductPortfolioRequest-CustomerID');
+			// s.setStringParameterNoEscape('UserId', 'crusrvt');
+			s.setStringParameterNoEscape('ApplicationName', 'CP');
+			s.setStringParameterNoEscape('CustomerIds', aCustomerID);
+			//s.setStringParameterNoEscape('ProductIds', aPolicyGR.policynumber);
+			s.setStringParameterNoEscape('ProductExtractLevels', 'POLICIES');
+			//s.setEccCorrelator("CACM-"+aPolicyGR.policynumber);
+			
+			var response = s.execute();
+			var responseBody = response.getBody();
+			var status = response.getStatusCode();
+			
+			var cacmResponse = new XMLDocument2();
+			cacmResponse.parseXML(responseBody);
+			//gs.addInfoMessage(cacmResponse);
+			
+			var cacmCode = this.getResponseNodeText(cacmResponse, "code");
+			
+			if(cacmCode == "0"){
+				
+				var j = 2;
+				
+				for (var i=1; i < j; i++) {
+					
+					try{
+						
+						var node = cacmResponse.getNode('//ns1:policies['+i+']');
+						
+						if(node.toString() == null || node.toString() == 'null'){
+							break;
+						}
+						
+						if(i == 1){
+							var policy = new GlideRecord("x_amfai_cacmdba_policy");
+							policy.initialize();
+							policy.setValue("cacm_case", aCaseID);
+							policy.insert();
+							this.updatePolicyDetailsFromResponse(policy, node.toString());
+						}else{
+							
+							var policy1 = new GlideRecord("x_amfai_cacmdba_policy");
+							policy1.initialize();
+							policy1.setValue("cacm_case", aCaseID);
+							policy1.insert();
+							
+							this.updatePolicyDetailsFromResponse(policy1, node.toString());
+						}
+						
+						j = i + 2;
+						
+					}catch(e){
+						j = i;
+						break;
+					}
+				}
+				
+			}else{
+				var Current_date = new GlideDateTime();
+				gs.addErrorMessage("[" + Current_date + "] A issue was encountered while fetching policy details for this record: "+this.getResponseNodeText(cacmResponse, "message") );
+				aPolicyGR.notes = "[" + Current_date + "] A issue was encountered while fetching policy details for this record: "+this.getResponseNodeText(cacmResponse, "message");
+				aPolicyGR.update();
+			}
+			
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+		}
+	},
+	
+	triggerPartySearchSOAPCall: function(aInsuredGR){
+		
+		try { 
+ var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.PartySearchServiceV7', 'searchParty');
+
+//override authentication profile 
+//authentication type ='basic'
+//r.setAuthentication(authentication type,profile name);
+
+ s.setStringParameterNoEscape('firstName', aInsuredGR.first_name);
+ s.setStringParameterNoEscape('AddressMatchBy', 'EXACT');
+ s.setStringParameterNoEscape('stateCode', aInsuredGR.state);
+ s.setStringParameterNoEscape('partnerIdentifier', 'AFI');
+ s.setStringParameterNoEscape('lastName', aInsuredGR.last_name);
+ 
+ var response = s.execute();
+ var responseBody = response.getBody(); 
+ var status = response.getStatusCode();
+
+	
+			var partySearchResponse = new XMLDocument2();
+			partySearchResponse.parseXML(responseBody);
+			
+			var partyIdentifier = this.getResponseNodeText(partySearchResponse, "partyIdentifier");
+			
+			if(partyIdentifier != null){
+				
+				var j = 2;
+				
+				for (var i=1; i < j; i++) {
+					
+					try{
+						
+						var node = partySearchResponse.getNode('//ns1:PartySearchResult['+i+']');
+						
+						if(node.toString() == null || node.toString() == 'null'){
+							break;
+						}
+						
+						if(i == 1){
+							this.updatePartySearchDetailsFromResponse(aInsuredGR, node.toString());
+						}else{
+							
+							var insureds = new GlideRecord("x_amfai_cacmdba_insd_cust");
+							insureds.initialize();
+							insureds.setValue("cacm_case", aInsuredGR.cacm_case);
+							insureds.insert();
+							
+							this.updatePartySearchDetailsFromResponse(insureds, node.toString());
+						}
+						
+						j = i + 2;
+						
+					}catch(e){
+						j = i;
+						break;
+					}
+				}
+				
+				var mes = "[" + new GlideDateTime().getValue() + "] "+ (i-1) +" search results returned.";
+				gs.addInfoMessage(mes);
+				aInsuredGR.update();
+				
+			}else{
+				var message = this.getNSResponseNodeText(partySearchResponse, "errorMessage", "ns2:");
+				if(message == null || message == 'null' || message == ""){
+					message = this.getNSResponseNodeText(partySearchResponse, "message", "ns2:");
+				}
+				
+				var error_message = "[" + new GlideDateTime().getValue() + "] A issue was encountered while performing this search for these parameters: " + message;
+			gs.addErrorMessage(error_message);
+				aInsuredGR.update();
+			}
+			
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+		}
+		
+	},
+	
+	updatePolicyDetailsFromResponse: function(aPolicyGR, aPolicyNodeString){
+		
+		var cacmResponse = new XMLDocument2();
+		cacmResponse.parseXML(aPolicyNodeString);
+		
+		aPolicyGR.setValue("policynumber", this.getResponseNodeText(cacmResponse, "policyNumber"));
+		//aPolicyGR.setValue("billaccountnumber", this.getResponseNodeText(cacmResponse, "billAccountNumber"));
+		aPolicyGR.setValue("company", this.getResponseNodeText(cacmResponse, "companyCode"));
+		//aPolicyGR.setValue("company_legacyvalue", this.getResponseNodeText(cacmResponse, "legacyValue"));
+		//aPolicyGR.setValue("createbyuserid", this.getResponseNodeText(cacmResponse, "createByUserId"));
+		//aPolicyGR.setValue("modifiedbyuserid", this.getResponseNodeText(cacmResponse, "modifiedByUserId"));
+		//aPolicyGR.setValue("effectivedate", this.getResponseNodeText(cacmResponse, "effectiveDate"));
+		//aPolicyGR.setValue("expirationdate", this.getResponseNodeText(cacmResponse, "expirationDate"));
+		//aPolicyGR.setValue("inceptiondate", this.getResponseNodeText(cacmResponse, "inceptionDate"));
+		//aPolicyGR.setValue("accountinceptiondate", this.getResponseNodeText(cacmResponse, "accountInceptionDate"));
+		//aPolicyGR.setValue("lastmodifieddate", this.getResponseNodeText(cacmResponse, "lastModifiedDate"));
+		//aPolicyGR.setValue("producer_id", '12345');
+		aPolicyGR.setValue("producer_id", this.getResponseNodeText(cacmResponse, "originatingProducerId"));
+		aPolicyGR.setValue("advance_product_cd", this.getResponseNodeText(cacmResponse, "productCode"));
+		aPolicyGR.setValue("classic_product_type_cd", this.getResponseNodeText(cacmResponse, "policyTypeCode"));
+		aPolicyGR.setValue("advance_product_type_code", this.getResponseNodeText(cacmResponse, "policyTypeDesc"));
+		//aPolicyGR.setValue("priorservicingproducerid", this.getResponseNodeText(cacmResponse, "priorServicingProducerId"));
+		//aPolicyGR.setValue("servicingproducerid", this.getResponseNodeText(cacmResponse, "servicingProducerId"));
+		//aPolicyGR.setValue("premium", this.getResponseNodeText(cacmResponse, "premium"));
+		aPolicyGR.setValue("sourcesystem", this.getResponseNodeText(cacmResponse, "sourceSystem"));
+		aPolicyGR.setValue("contract_state_cd", this.getResponseNodeText(cacmResponse, "stateCode"));
+		aPolicyGR.setValue("data_populated_from_integration", 'Yes');
+		//aPolicyGR.setValue("sourcesystemstatuscode", this.getResponseNodeText(cacmResponse, "sourceSystemStatusCode"));
+		//aPolicyGR.setValue("transactioneffectivedate", this.getResponseNodeText(cacmResponse, "transactionEffectiveDate"));
+		//aPolicyGR.setValue("riskid", this.getResponseNodeText(cacmResponse, "riskId"));
+		aPolicyGR.setValue("riskdescription", this.getResponseNodeText(cacmResponse, "riskDescription"));
+		//aPolicyGR.setValue("rateclass", this.getResponseNodeText(cacmResponse, "rateClass"));
+		aPolicyGR.setValue("insured_id", this.getResponseNodeText(cacmResponse, "customerId"));
+		aPolicyGR.setValue("roledescription", this.getResponseNodeText(cacmResponse, "roleDescription"));
+		
+		aPolicyGR.update();
+		
+	},
+	
+	updatePartySearchDetailsFromResponse: function(aInsuredGR, aPartySearchResultNodeString){
+		
+		var partySearchResponse = new XMLDocument2();
+		partySearchResponse.parseXML(aPartySearchResultNodeString);
+		
+		//aInsuredGR.setValue("partyidentifier", this.getResponseNodeText(partySearchResponse, "partyIdentifier"));
+		//aInsuredGR.setValue("partneridentifier", this.getResponseNodeText(partySearchResponse, "partnerIdentifier"));
+		aInsuredGR.setValue("insured_type", this.getResponseNodeText(partySearchResponse, "PartyType", "ns1:"));
+		//aInsuredGR.setValue("addrcountryidentifier", this.getNSResponseNodeText(partySearchResponse, "countryIdentifier", "ns2:"));
+		aInsuredGR.setValue("line1", this.getNSResponseNodeText(partySearchResponse, "addressLine1", "ns2:"));
+		aInsuredGR.setValue("city", this.getNSResponseNodeText(partySearchResponse, "city", "ns2:"));
+		aInsuredGR.setValue("state", this.getNSResponseNodeText(partySearchResponse, "stateCode", "ns2:"));
+		aInsuredGR.setValue("zip5", this.getNSResponseNodeText(partySearchResponse, "zip5Code", "ns2:"));
+		aInsuredGR.setValue("data_populated_from_integration", 'Yes');
+		aInsuredGR.setValue("integration_suite", 'Yes');
+		//aInsuredGR.setValue("addrzip2code", this.getNSResponseNodeText(partySearchResponse, "zip2Code", "ns2:"));
+		//aInsuredGR.setValue("addrlatitudenumber", this.getNSResponseNodeText(partySearchResponse, "latitudeNumber", "ns2:"));
+		//aInsuredGR.setValue("addrlongitudenumber", this.getNSResponseNodeText(partySearchResponse, "longitudeNumber", "ns2:"));
+		//aInsuredGR.setValue("addrgeomatchlevelcode", this.getNSResponseNodeText(partySearchResponse, "geoMatchLevelCode", "ns2:"));
+		//aInsuredGR.setValue("addrfipscountynumber", this.getNSResponseNodeText(partySearchResponse, "fipsCountyNumber", "ns2:"));
+		//aInsuredGR.setValue("addrfipsstatenumber", this.getNSResponseNodeText(partySearchResponse, "fipsStateNumber", "ns2:"));
+		//aInsuredGR.setValue("addrcensusblockgroup", this.getNSResponseNodeText(partySearchResponse, "censusBlockGroup", "ns2:"));
+		//aInsuredGR.setValue("addrcensusblockmd", this.getNSResponseNodeText(partySearchResponse, "censusBlockMD", "ns2:"));
+		//aInsuredGR.setValue("addrcensustractnumber", this.getNSResponseNodeText(partySearchResponse, "censusTractNumber", "ns2:"));
+		//aInsuredGR.setValue("addrcarrierroute", this.getNSResponseNodeText(partySearchResponse, "carrierRoute", "ns2:"));
+		//aInsuredGR.setValue("addrshortcity", this.getNSResponseNodeText(partySearchResponse, "shortCity", "ns2:"));
+		//aInsuredGR.setValue("addrdeliverypointvalidationmatchindicator", this.getNSResponseNodeText(partySearchResponse, "deliveryPointValidationMatchIndicator", "ns2:"));
+		//aInsuredGR.setValue("addrdeliverypointvalidationcommercialmailreceivingcode", this.getNSResponseNodeText(partySearchResponse, "deliveryPointValidationCommercialMailreceivingCode", "ns2:"));
+		//aInsuredGR.setValue("addrnolongervalidindicator", this.getResponseNodeText(partySearchResponse, "noLongerValidIndicator"));
+		aInsuredGR.setValue("first_name", this.getResponseNodeText(partySearchResponse, "firstName", "ns1:"));
+		
+		aInsuredGR.setValue("middle_name", this.getResponseNodeText(partySearchResponse, "middleName", "ns1:"));
+		aInsuredGR.setValue("last_name", this.getResponseNodeText(partySearchResponse, "lastName", "ns1:"));
+		aInsuredGR.setValue("family_suffix", this.getResponseNodeText(partySearchResponse, "FamilySuffix", "ns1:"));
+		aInsuredGR.setValue("deceased_indicator", this.getResponseNodeText(partySearchResponse, "DeceasedIndicator", "ns1:"));
+		aInsuredGR.setValue("birth_date", this.getResponseNodeText(partySearchResponse, "birthDate", "ns1:"));
+		aInsuredGR.setValue("drivers_license_number", this.getResponseNodeText(partySearchResponse, "licenseNumber", "ns1:"));
+		aInsuredGR.setValue("drivers_license_state", this.getResponseNodeText(partySearchResponse, "licenseState", "ns1:"));
+		aInsuredGR.setValue("customer_id", this.getResponseNodeText(partySearchResponse, "partyIdentifier", "ns1:"));
+		//aInsuredGR.setValue("customer_id", '15757');
+		
+		aInsuredGR.update();
+		
+	},
+	
+	getResponseNodeText: function(aXMLDoc, aNodeName){
+		
+		if(aNodeName == "")
+			return "";
+		
+		return aXMLDoc.getNodeText('//'+this.namespace+aNodeName);
+		
+	},
+	getResponseNodeText_ns2: function(aXMLDoc, aNodeName){
+		
+		if(aNodeName == "")
+			return "";
+		
+		return aXMLDoc.getNodeText('//'+this.namespace_ns2+aNodeName);
+		
+	},
+	getResponseNodeText_ns3: function(aXMLDoc, aNodeName){
+		
+		if(aNodeName == "")
+			return "";
+		
+		return aXMLDoc.getNodeText('//'+this.namespace_ns3+aNodeName);
+		
+	},
+	
+	getNSResponseNodeText: function(aXMLDoc, aNodeName, aNamespace){
+		
+		if(aNodeName == "")
+			return "";
+		
+		return aXMLDoc.getNodeText('//'+aNamespace+aNodeName);
+		
+	},
+	
+	processCACMResponse: function(aCACMECCResponse){
+		
+		gs.info("<<<<<<<processCACMResponse>>>>>"+aCACMECCResponse.payload);
+		var xmlDoc = new XMLDocument2();
+		xmlDoc.parseXML(aCACMECCResponse.payload);
+		gs.info("<<<<<<<processCACMResponse.PARSE>>>>>"+xmlDoc.getNodeText("//result/output"));
+		//var cacmQueryOutput = xmlDoc.getNodeText("//result/output");
+		var cacmQueryOutputXML = new XMLDocument2(xmlDoc.getNodeText("//result/output").replace(/\></g,'>\n<'));   //Convert the string to an XML Document
+		gs.info("<<<<<<<processCACMResponse.retrieveProductPortfolioResponse>>>>>"+cacmQueryOutputXML.getNodeText("/Envelope/Body/retrieveProductPortfolioResponse"));
+		var isetUtil = new global.ImportSetUtil();
+		isetUtil.loadFromXML("/Envelope/Body/retrieveProductPortfolioResponse", cacmQueryOutputXML, "x_amfai_cacmdba_cacm_policy_import");
+		
+		return true;
+		
+	},
+		
+		type: 'CACMIntegrationUtil2'
+	};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-08-31 14:53:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6049756fdbf04f004d70734aaf96198c</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>CACMIntegrationUtil2</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_6049756fdbf04f004d70734aaf96198c</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-11 14:07:02</sys_updated_on>
+    </sys_script_include>
+</record_update>

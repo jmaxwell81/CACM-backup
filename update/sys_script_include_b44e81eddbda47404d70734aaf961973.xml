@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.getSpecialInstructions</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>getSpecialInstructions</name>
+        <script><![CDATA[var getSpecialInstructions = Class.create();
+getSpecialInstructions.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getBucketContents: function(){
+		//gs.addInfoMessage('ScriptInclude');
+		//gs.addInfoMessage(this.getParameter('sysparm_state'));
+		var gr = new GlideRecord('x_amfai_cacmdba_template_instruction');
+		gr.addQuery('state_code', this.getParameter('sysparm_state'));
+		gr.addQuery('instruct_type_id', this.getParameter('sysparm_instType'));
+		gr.addQuery('active', 'true');
+		gr.query();
+		var selectedInstructions = this.getParameter('sysparm_selectedInstructions');
+		while(gr.next()){
+			//gs.addInfoMessage('SI While');
+			var item = this.newItem();
+			item.setAttribute('value', gr.getValue('instruct_id'));
+			item.setAttribute('text', gr.getDisplayValue('instruct_id'));
+			if(selectedInstructions.indexOf(gr.getValue('instruct_id')) >= 0){
+				item.setAttribute('side', 'right');
+			}
+			else if(gr.getValue('default_instruct_ind') == 'Y'){
+				item.setAttribute('side', 'right');
+			}
+			else
+				item.setAttribute('side', 'left');
+		}
+	},
+	
+	getHtmlString: function(){
+		var list = this.getParameter('sysparm_selectedValues');
+		var gr = new GlideRecord('x_amfai_cacmdba_instruction');
+		gr.addQuery('sys_id', 'IN', list);
+		gr.orderBy('instruction_id');
+		gr.query();
+		var string = '<ol>';
+		var i = 0;
+		while(gr.next()){
+			i++;
+			string = string + '<li>' + gr.getValue('instruction_txt') + '</li>';
+		}
+		return string;
+	},
+	
+	type: 'getSpecialInstructions'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-11-07 21:48:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>b44e81eddbda47404d70734aaf961973</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>getSpecialInstructions</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_b44e81eddbda47404d70734aaf961973</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-11-28 14:19:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

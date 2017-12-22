@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Case Link" max_length="40" name="x_amfai_cacmdba_case_link" sizeclass="9084" type="collection">
+        <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Linked Case ID" max_length="40" name="linked_case_id" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Linked ID" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="number"/>
+        </index>
+        <index name="index2">
+            <element name="case_id"/>
+        </index>
+    </element>
+</database>

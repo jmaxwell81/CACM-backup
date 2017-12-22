@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="84087520db68c3004d70734aaf9619be" sys_domain="global" table="x_amfai_cacmdba_company" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company_nm</element>
+            <position>0</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>52f2d5fedbf6470067bff3d51d961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company_code</element>
+            <position>1</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>d6f2d5fedbf6470067bff3d51d961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>5af2d5fedbf6470067bff3d51d961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>naic_num</element>
+            <position>3</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>daf2d5fedbf6470067bff3d51d961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>begin_eff_date</element>
+            <position>4</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>5ef2d5fedbf6470067bff3d51d961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>end_eff_date</element>
+            <position>5</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>def2d5fedbf6470067bff3d51d961973</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>6</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-12-06 14:12:19</sys_created_on>
+            <sys_id>52f2d5fedbf6470067bff3d51d961974</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_company" sys_domain="global" view="Default view">84087520db68c3004d70734aaf9619be</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-12-06 14:12:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_amfai_cacmdba_company</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-08-09 20:46:30</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>84087520db68c3004d70734aaf9619be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_company</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_section_84087520db68c3004d70734aaf9619be</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-08-09 20:46:30</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

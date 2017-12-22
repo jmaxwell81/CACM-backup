@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="--Address" max_length="40" name="x_amfai_cacmdba_person_address" sizeclass="129235" type="collection">
+        <element label="Address ID" max_length="40" name="address_id" type="string"/>
+        <element choice="1" label="Address Type" max_length="40" name="address_type" type="choice">
+            <choice>
+                <element label="Primary" sequence="0" value="primary"/>
+                <element label="Secondary" sequence="1" value="secondary"/>
+                <element label="Seasonal" sequence="2" value="seasonal"/>
+                <element label="Temporary" sequence="3" value="temporary"/>
+                <element label="Other" sequence="4" value="other"/>
+            </choice>
+        </element>
+        <element choice="1" label="Address Usage" max_length="40" name="address_usage" type="choice">
+            <choice>
+                <element label="Mailing" sequence="0" value="mailing"/>
+                <element label="Residence" sequence="1" value="residence"/>
+                <element label="Business" sequence="2" value="business"/>
+            </choice>
+        </element>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_person" type="reference"/>
+        <element label="Primary Address Line 1" max_length="60" name="primary_address_line_1" type="string"/>
+        <element label="Primary Address Line 2" max_length="60" name="primary_address_line_2" type="string"/>
+        <element label="Primary City" max_length="40" name="primary_city" type="string"/>
+        <element label="Primary State" max_length="32" name="primary_state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="Primary Zip/Postal Code" max_length="10" name="primary_zip_postal_code" type="string"/>
+        <index name="index">
+            <element name="address_id"/>
+        </index>
+        <index name="index2">
+            <element name="primary_state"/>
+        </index>
+        <index name="index3">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

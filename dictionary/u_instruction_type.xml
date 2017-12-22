@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Instruction Type" max_length="40" name="u_instruction_type" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="ACTIVE" max_length="40" name="u_active" type="string"/>
+        <element attributes="import_attribute_name=EFFECTIVE_TS" label="EFFECTIVE_TS" max_length="40" name="u_effective_ts" type="datetime"/>
+        <element attributes="import_attribute_name=END_EFFECTIVE_TS" label="END_EFFECTIVE_TS" max_length="40" name="u_end_effective_ts" type="datetime"/>
+        <element attributes="import_attribute_name=INSTRUCT_TYPE_DESC,edge_encryption_enabled=true" label="INSTRUCT_TYPE_DESC" max_length="40" name="u_instruct_type_desc" type="string"/>
+        <element attributes="import_attribute_name=INSTRUCT_TYPE_ID,edge_encryption_enabled=true" label="INSTRUCT_TYPE_ID" max_length="40" name="u_instruct_type_id" type="string"/>
+    </element>
+</database>

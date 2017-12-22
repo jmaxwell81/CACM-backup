@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_amfai_cacmdba_policy" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policynumber</element>
+            <list_id display_value="x_amfai_cacmdba_policy" element="NULL" name="x_amfai_cacmdba_policy" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f001f6f9db5ec740a09bf6e9af961964</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_id>7c01f6f9db5ec740a09bf6e9af961964</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>contract_state_cd</element>
+            <list_id display_value="x_amfai_cacmdba_policy" element="NULL" name="x_amfai_cacmdba_policy" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f001f6f9db5ec740a09bf6e9af961964</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_id>f001f6f9db5ec740a09bf6e9af961965</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>classic_product_type_cd</element>
+            <list_id display_value="x_amfai_cacmdba_policy" element="NULL" name="x_amfai_cacmdba_policy" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f001f6f9db5ec740a09bf6e9af961964</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_id>7401f6f9db5ec740a09bf6e9af961965</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>advance_product_cd</element>
+            <list_id display_value="x_amfai_cacmdba_policy" element="NULL" name="x_amfai_cacmdba_policy" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f001f6f9db5ec740a09bf6e9af961964</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_id>f401f6f9db5ec740a09bf6e9af961965</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>advance_product_type_code</element>
+            <list_id display_value="x_amfai_cacmdba_policy" element="NULL" name="x_amfai_cacmdba_policy" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f001f6f9db5ec740a09bf6e9af961964</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_id>7801f6f9db5ec740a09bf6e9af961965</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_amfai_cacmdba_policy" element="NULL" name="x_amfai_cacmdba_policy" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">f001f6f9db5ec740a09bf6e9af961964</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_id>f8017af9db5ec740a09bf6e9af9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_amfai_cacmdba_policy</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-08 21:57:51</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f001f6f9db5ec740a09bf6e9af961964</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_policy</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_list_x_amfai_cacmdba_policy_null</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-08 21:57:51</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

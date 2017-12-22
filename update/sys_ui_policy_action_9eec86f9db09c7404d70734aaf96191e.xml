@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>producer_regn_nm</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-07 16:02:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9eec86f9db09c7404d70734aaf96191e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>producer_regn_nm</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9eec86f9db09c7404d70734aaf96191e</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-07 16:04:51</sys_updated_on>
+        <table>x_amfai_cacmdba_producer</table>
+        <ui_policy display_value="Make Fields Read only when data is prepopulated from Amfam database ">b6d80a35db09c7404d70734aaf961992</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

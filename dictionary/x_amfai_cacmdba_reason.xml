@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Reason [ct]" max_length="40" name="x_amfai_cacmdba_reason" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Reason Code" mandatory="true" max_length="40" name="af_reason_code" type="string"/>
+        <element label="Effective Date" mandatory="true" max_length="40" name="begin_eff_date" type="glide_date"/>
+        <element label="Complaint State" mandatory="true" max_length="32" name="complaint_state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="End Effective Date" max_length="40" name="end_eff_date" type="glide_date"/>
+        <element display="true" label="Description" mandatory="true" max_length="60" name="reason_desc" type="string"/>
+        <element label="Function" mandatory="true" max_length="40" name="reason_function_desc" type="string"/>
+        <index name="index">
+            <element name="complaint_state"/>
+        </index>
+    </element>
+</database>

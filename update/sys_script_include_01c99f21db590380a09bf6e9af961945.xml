@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.calculate_referral_suspense_date</api_name>
+        <client_callable>true</client_callable>
+        <description>Used on the Case Referral table to calculate suspense date</description>
+        <name>calculate_referral_suspense_date</name>
+        <script><![CDATA[var calculate_referral_suspense_date = Class.create();
+calculate_referral_suspense_date.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+calcSuspDate: function() {
+	var currentDate = new GlideDate();
+	var suspenseDate = new GlideDateTime(currentDate.toString());
+	var numDays = this.getParameter('sysparm_numDays');
+	var dayType = this.getParameter('sysparm_dayType');
+	
+	if (dayType == 'calendar days') {
+		suspenseDate.addDaysLocalTime(numDays);		
+	}
+// For business days, query the system schedules
+	if (dayType == 'business days') {
+	gs.addInfoMessage("made it to Business Days 1");
+		var schedRec = new GlideRecord("cmn_schedule");
+  schedRec.get("name",'CACM');
+  //Get date/time in correct format for duration calculation
+  var startDateBeg = new GlideDateTime();
+	gs.addInfoMessage("made it to Business Days 2");	
+//gs.info(startDateBeg);
+  startDateBeg = startDateBeg.getLocalDate();
+gs.addInfoMessage(startDateBeg);
+  //gs.info(startDateBeg);  
+  //usrTZ = startDateBeg.getTimeZoneName();
+  //gs.info(usrTZ);  
+var daysForward = 10;
+gs.addInfoMessage("made it to Business Days 3");
+var dc = new DurationCalculator();
+gs.addInfoMessage("made it to Business Days 4");
+  //dc.setTimeZone(usrTZ);
+  dc.setSchedule(schedRec.sys_id);
+  daysForward++; // Add 1-Day to Offset startDate in Calculation
+  dc.setStartDateTime(startDateBeg);
+  dc.calcDuration(daysForward*8*3600);
+gs.addInfoMessage("made it to Business Days 5");	
+	gs.addInfoMessage(dc.getEndDateTime);
+//gs.info(dc.getEndDateTime().getLocalDate());
+
+	}
+	gs.addInfoMessage(suspenseDate);
+	return suspenseDate;
+},
+	type: 'calculate_referral_suspense_date'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dfoss@amfam.com</sys_created_by>
+        <sys_created_on>2017-09-19 13:22:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>01c99f21db590380a09bf6e9af961945</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>calculate_referral_suspense_date</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_01c99f21db590380a09bf6e9af961945</sys_update_name>
+        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+        <sys_updated_on>2017-09-25 20:56:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

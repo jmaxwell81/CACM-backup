@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*Claim Office" max_length="40" name="u_claim_office" type="collection">
+        <element attributes="import_attribute_name=ACTIVE_IND,edge_encryption_enabled=true" label="ACTIVE_IND" max_length="40" name="u_active_ind" type="string"/>
+        <element attributes="import_attribute_name=BEGIN_EFF_DATE" label="BEGIN_EFF_DATE" max_length="40" name="u_begin_eff_date" type="datetime"/>
+        <element attributes="import_attribute_name=CLAIM_OFFICE_CODE,edge_encryption_enabled=true" label="CLAIM_OFFICE_CODE" max_length="40" name="u_claim_office_code" type="string"/>
+        <element attributes="import_attribute_name=DESCRIPTION,edge_encryption_enabled=true" label="DESCRIPTION" max_length="40" name="u_description" type="string"/>
+        <element attributes="import_attribute_name=END_EFF_DATE" label="END_EFF_DATE" max_length="40" name="u_end_eff_date" type="datetime"/>
+    </element>
+</database>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>case_sub_root_cause_id</field>
+        <global>true</global>
+        <messages/>
+        <name>Party Instruction Auto populate</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	var temp = g_form.getValue('case_sub_root_cause_id');
+	var ga = new GlideAjax('x_amfai_cacmdba.calculated_party_insturction');
+	ga.addParam('sysparm_name','fetchDetails');
+	ga.addParam('sysparm_temp', temp);
+	ga.getXML(fetchNAICParse);
+	
+	function fetchNAICParse(response) {
+		//gs.addInfoMessage('asnwer');
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		g_form.setValue('party_instruction', answer);
+	}
+	//Type appropriate comment here, and begin script below
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2017-10-30 13:55:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>90d8667adb46c700a09bf6e9af9619ca</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Party Instruction Auto populate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_client_90d8667adb46c700a09bf6e9af9619ca</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-11-27 21:17:10</sys_updated_on>
+        <table>x_amfai_cacmdba_root_cause</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

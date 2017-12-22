@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="x_amfai_cacmdba_case" relationship="" sys_domain="global" table="x_amfai_cacmdba_claim" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>ac96bbcfdb858f404d70734aaf96190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>first_name</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>2496bbcfdb858f404d70734aaf96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>last_name</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>a496bbcfdb858f404d70734aaf96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>catastrophe_claim_indicator</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>2896bbcfdb858f404d70734aaf96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>claim_number</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>a896bbcfdb858f404d70734aaf96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>loss_incurred_date</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>2c96bbcfdb858f404d70734aaf96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>secured_claim_indicator</element>
+            <list_id display_value="x_amfai_cacmdba_claim" element="NULL" name="x_amfai_cacmdba_claim" parent="x_amfai_cacmdba_case" relationship="NULL" sys_domain="global" view="Default view">2496bbcfdb858f404d70734aaf96190c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-09-11 20:55:42</sys_created_on>
+            <sys_id>ac96bbcfdb858f404d70734aaf96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-09-11 20:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_amfai_cacmdba_claim</name>
+            <parent>x_amfai_cacmdba_case</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2017-11-09 14:48:31</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>59581a46db5e0b40a09bf6e9af96195c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_claim</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_list_x_amfai_cacmdba_claim_x_amfai_cacmdba_case_null</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2017-11-09 14:48:31</sys_updated_on>
+            <sys_user display_value="Jeremy Wedekind">37db2a47db6cf200f827fb16bf961945</sys_user>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

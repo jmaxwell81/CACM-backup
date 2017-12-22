@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Claim" max_length="40" name="x_amfai_cacmdba_claim" sizeclass="61298" type="collection">
+        <element label="Case Id" max_length="32" name="cacm_case" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Catastrophe Claim Indicator" max_length="40" name="catastrophe_claim_indicator" type="string"/>
+        <element label="Claim Description" max_length="1000" name="claim_description" type="string"/>
+        <element display="true" label="Claim Number" max_length="40" name="claim_number" type="string"/>
+        <element label="Claim Office Identifier" max_length="40" name="claim_office_identifier" type="string"/>
+        <element label="Claim Region Identifier" max_length="40" name="claim_region_identifier" type="string"/>
+        <element label="Data populated from Integration" max_length="40" name="data_populated_from_integration" type="string"/>
+        <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element label="Last Name" max_length="40" name="last_name" type="string"/>
+        <element label="Loss Incurred Date" max_length="40" name="loss_incurred_date" type="string"/>
+        <element label="Create Date" max_length="40" name="mig_create_date" type="glide_date_time"/>
+        <element label="Create User ID" max_length="40" name="mig_create_user_id" type="string"/>
+        <element label="Update Date" max_length="40" name="mig_update_date" type="glide_date_time"/>
+        <element label="Update User ID" max_length="40" name="mig_update_user_id" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Claim Identifier" max_length="40" name="number" type="string"/>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_person" type="reference"/>
+        <element label="Primary File Handler" max_length="40" name="primary_file_handler" type="string"/>
+        <element choice="1" label="Search By" max_length="40" name="search_by" type="choice">
+            <choice>
+                <element label="Customer Information" sequence="0" value="customer_information"/>
+                <element label="Claim Number" sequence="1" value="claim_number"/>
+            </choice>
+        </element>
+        <element label="Secured Claim Indicator" max_length="40" name="secured_claim_indicator" type="string"/>
+        <element label="Source Center" max_length="40" name="source_center" type="string"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <index name="index">
+            <element name="cacm_case"/>
+        </index>
+        <index name="index2">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

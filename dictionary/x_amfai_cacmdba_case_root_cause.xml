@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Case Root Cause [ct]" max_length="40" name="x_amfai_cacmdba_case_root_cause" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Effective Date" mandatory="true" max_length="40" name="begin_eff_date" type="glide_date"/>
+        <element label="Case Root Cause Category ID" mandatory="true" max_length="40" name="case_root_cause_category_id" reference_qual="javascript: 'bus_area_type_id.bus_area_type_id=' + current.bus_area_type_id.bus_area_type_id;" type="string" use_reference_qualifier="advanced"/>
+        <element display="true" label="Case Root Cause Description" mandatory="true" max_length="80" name="case_root_cause_desc" type="string"/>
+        <element label="Case Root Cause Identifier" mandatory="true" max_length="40" name="case_root_cause_id" type="integer"/>
+        <element label="End Effective Date" max_length="40" name="end_eff_date" type="glide_date"/>
+        <index name="index">
+            <element name="case_root_cause_id"/>
+        </index>
+    </element>
+</database>

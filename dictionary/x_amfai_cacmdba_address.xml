@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Address" max_length="40" name="x_amfai_cacmdba_address" sizeclass="53205" type="collection">
+        <element label="Address ID" max_length="40" name="address_id" type="string"/>
+        <element choice="1" label="Address Type" max_length="40" name="address_type" type="choice">
+            <choice>
+                <element label="Other" value="other"/>
+                <element label="Primary" value="primary"/>
+                <element label="Seasonal" value="seasonal"/>
+                <element label="Secondary" value="secondary"/>
+                <element label="Temporary" value="temporary"/>
+            </choice>
+        </element>
+        <element choice="1" label="Address Usage" max_length="40" name="address_usage" type="choice">
+            <choice>
+                <element label="Business" value="business"/>
+                <element label="Mailing" value="mailing"/>
+                <element label="Residence" value="residence"/>
+            </choice>
+        </element>
+        <element calculation="if (current.primary_address_line_1.nil() &amp;&amp; current.primary_city.nil() &amp;&amp; current.primary_state.nil() &amp;&amp; current.primary_zip_postal_code &amp;&amp; !current.customer_full_address.nil()) {&#13;&#10;&#9;var address = current.customer_full_address.toString().split(&quot; &quot;);&#13;&#10;&#9;if (address.length &gt; 1) {&#13;&#10;&#9;&#9;current.primary_address_line_1 = address[0];&#13;&#10;&#9;&#9;address.shift();&#13;&#10;&#9;&#9;current.primary_city = address.join(&quot; &quot;);&#13;&#10;&#9;&#9;address.shift();&#13;&#10;&#9;&#9;current.primary_state = address.join(&quot; &quot;);&#13;&#10;&#9;&#9;address.shift();&#13;&#10;&#9;&#9;current.primary_zip_postal_code = address.join(&quot; &quot;);&#13;&#10;&#9;} else&#13;&#10;&#9;&#9;current.primary_address_line_1 = address[0];&#13;&#10;}&#13;&#10;if(current.primary_address_line_1.nil()) {&#13;&#10;&#9;current.primary_city + ', ' + current.primary_state.state_code;&#13;&#10;} else {&#13;&#10;&#9;current.primary_address_line_1 + ', ' + current.primary_city + ', '  + current.primary_state.state_code + ' ' + current.primary_zip_postal_code;&#13;&#10;}" display="true" label="Address" max_length="150" name="customer_full_address" read_only="true" type="string" virtual="true"/>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_customer" type="reference"/>
+        <element label="Primary Address Line 1" max_length="60" name="primary_address_line_1" type="string"/>
+        <element label="Primary Address Line 2" max_length="60" name="primary_address_line_2" type="string"/>
+        <element label="Primary City" max_length="40" name="primary_city" type="string"/>
+        <element label="Primary State" max_length="32" name="primary_state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="Primary Zip/Postal Code" max_length="10" name="primary_zip_postal_code" type="string"/>
+        <index name="index">
+            <element name="address_id"/>
+        </index>
+        <index name="index2">
+            <element name="primary_state"/>
+        </index>
+        <index name="index3">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

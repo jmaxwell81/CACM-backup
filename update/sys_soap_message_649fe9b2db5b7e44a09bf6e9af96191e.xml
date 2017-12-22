@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_soap_message">
+    <sys_soap_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type/>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description>Siteminder enabled.</description>
+        <download_wsdl>false</download_wsdl>
+        <enable_mutual_auth>false</enable_mutual_auth>
+        <name>ClaimServiceV2</name>
+        <protocol_profile/>
+        <sys_class_name>sys_soap_message</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-06-15 16:39:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>649fe9b2db5b7e44a09bf6e9af96191e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ClaimServiceV2</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_soap_message_649fe9b2db5b7e44a09bf6e9af96191e</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-08-01 13:58:18</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <wsdl/>
+        <wsdl_xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:msg="http://schema.amfam.com/message/claimservice/v2"
+	xmlns:ping="http://schema.amfam.com/ping" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://service.amfam.com/claimservice/v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	name="ClaimService" targetNamespace="http://service.amfam.com/claimservice/v2">
+
+   <wsdl:types>
+		<schema xmlns:ping="http://schema.amfam.com/ping">
+			<import namespace="http://schema.amfam.com/message/claimservice/v2" schemaLocation="../schema/Message_ClaimService.xsd"/>
+			<import namespace="http://schema.amfam.com/ping" schemaLocation="../schema/Message_Ping.xsd"/>
+		</schema>
+    </wsdl:types>
+	
+	<wsdl:message name="claimServiceFault">
+		<wsdl:part element="msg:claimServiceFault" name="claimServiceFault" /> 
+	</wsdl:message>	
+
+	<wsdl:message name="retrievePointInTimeClaimsByPolicyNumberRequest">			
+		<wsdl:part element="msg:retrievePointInTimeClaimsByPolicyNumber" name="request" />
+	</wsdl:message>
+	
+	<wsdl:message name="retrievePointInTimeClaimsByPolicyNumberResponse">
+		<wsdl:part element="msg:retrievePointInTimeClaimsByPolicyNumberResponse" name="response" />
+	</wsdl:message>
+	
+	<wsdl:message name="checkClaimCenterRolloutStatusRequest">			
+		<wsdl:part element="msg:checkClaimCenterRolloutStatus" name="request" />
+	</wsdl:message>
+	
+	<wsdl:message name="checkClaimCenterRolloutStatusResponse">
+		<wsdl:part element="msg:checkClaimCenterRolloutStatusResponse" name="response" />
+	</wsdl:message>
+	
+	
+	<wsdl:message name="retrievePointInTimeClaimsByClaimNumberRequest">
+			<wsdl:part element="msg:retrievePointInTimeClaimsByClaimNumber" name="request" />
+	</wsdl:message>
+	
+	<wsdl:message name="retrievePointInTimeClaimsByClaimNumberResponse">
+		<wsdl:part element="msg:retrievePointInTimeClaimsByClaimNumberResponse" name="response" />
+	</wsdl:message>
+
+    <wsdl:message name="retrieveClaimSummaryRequest">
+        <wsdl:part element="msg:retrieveClaimSummary" name="request" />
+    </wsdl:message>
+
+    <wsdl:message name="retrieveClaimSummaryResponse">
+        <wsdl:part element="msg:retrieveClaimSummaryResponse" name="response" />
+    </wsdl:message>
+
+    <wsdl:message name="retrieveClaimDetailRequest">
+        <wsdl:part element="msg:retrieveClaimDetail" name="request" />
+    </wsdl:message>
+
+    <wsdl:message name="retrieveClaimDetailResponse">
+        <wsdl:part element="msg:retrieveClaimDetailResponse" name="response" />
+    </wsdl:message>
+    
+    <wsdl:message name="locateClaimSourceSystemRequest">
+        <wsdl:part element="msg:locateClaimSourceSystem" name="request" />
+    </wsdl:message>
+
+    <wsdl:message name="locateClaimSourceSystemResponse">
+        <wsdl:part element="msg:locateClaimSourceSystemResponse" name="response" />
+    </wsdl:message>
+    
+    <wsdl:message name="retrieveLOBMappingsRequest">
+        <wsdl:part element="msg:retrieveLOBMappings" name="request" />
+    </wsdl:message>
+
+    <wsdl:message name="retrieveLOBMappingsResponse">
+        <wsdl:part element="msg:retrieveLOBMappingsResponse" name="response" />
+    </wsdl:message>
+    	
+	<wsdl:message name="pingRequest">
+		<wsdl:part element="ping:ping" name="ping" />
+	</wsdl:message>
+	<wsdl:message name="pingResponse">
+		<wsdl:part element="ping:pingResponse" name="pingResponse" />
+	</wsdl:message>
+
+	<!-- Define WSDL Port Operations -->
+	<wsdl:portType name="ClaimService">
+		
+		<wsdl:operation name="retrievePointInTimeClaimsByPolicyNumber">
+			<documentation>This operation gets Point-in-time Claims for a  Policy
+				Number,it can take more than one policy number</documentation>
+			<wsdl:input message="tns:retrievePointInTimeClaimsByPolicyNumberRequest"
+				name="retrievePointInTimeClaimsByPolicyNumberRequest" />
+			<wsdl:output message="tns:retrievePointInTimeClaimsByPolicyNumberResponse"
+				name="retrievePointInTimeClaimsByPolicyNumberResponse" />
+			<wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+		</wsdl:operation>
+		
+		
+		<wsdl:operation name="retrievePointInTimeClaimsByClaimNumber">
+			<documentation>This operation gets Point-in-time Claims for a  Claim
+				Number</documentation>
+			<wsdl:input message="tns:retrievePointInTimeClaimsByClaimNumberRequest"
+				name="retrievePointInTimeClaimsByClaimNumberRequest" />
+			<wsdl:output message="tns:retrievePointInTimeClaimsByClaimNumberResponse"
+				name="retrievePointInTimeClaimsByClaimNumberResponse" />
+			<wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+		</wsdl:operation>
+
+        <wsdl:operation name="retrieveClaimSummary">
+            <documentation>This operation gets ClaimSummary for a  SearchCriteria (policy number/ claim number/ 
+            NameSerachCriteria/Customer Party Id)</documentation>
+            <wsdl:input message="tns:retrieveClaimSummaryRequest"
+                 name="retrieveClaimSummaryRequest" />
+            <wsdl:output message="tns:retrieveClaimSummaryResponse"
+                 name="retrieveClaimSummaryResponse" />
+            <wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+        </wsdl:operation>
+
+        <wsdl:operation name="retrieveClaimDetail">
+            <documentation>This operation gets ClaimDetails for a  SearchCriteria (policy number/ claim number)</documentation>
+            <wsdl:input message="tns:retrieveClaimDetailRequest"
+                name="retrieveClaimDetailRequest" />
+            <wsdl:output message="tns:retrieveClaimDetailResponse"
+                name="retrieveClaimDetailResponse" />
+            <wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+        </wsdl:operation>
+
+		 <wsdl:operation name="checkClaimCenterRolloutStatus">
+            <documentation>This operation validates if the product is rolled-out to ClaimCenter(ClaimCenter) 
+            </documentation>
+            <wsdl:input message="tns:checkClaimCenterRolloutStatusRequest"
+                name="checkClaimCenterRolloutStatusRequest" />
+            <wsdl:output message="tns:checkClaimCenterRolloutStatusResponse"
+                name="checkClaimCenterRolloutStatusResponse" />
+            <wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+        </wsdl:operation>
+        
+        
+		<wsdl:operation name="locateClaimSourceSystem">
+            <documentation>This operation gets Source system (ICS/Claim Center) of requested claim </documentation>
+            <wsdl:input message="tns:locateClaimSourceSystemRequest"
+                name="locateClaimSourceSystemRequest" />
+            <wsdl:output message="tns:locateClaimSourceSystemResponse"
+                name="locateClaimSourceSystemResponse" />
+            <wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+        </wsdl:operation>
+        
+        
+        <wsdl:operation name="retrieveLOBMappings">
+            <documentation>This operation returns the exposure to peril mappings</documentation>
+            <wsdl:input message="tns:retrieveLOBMappingsRequest"
+                name="retrieveLOBMappingsRequest" />
+            <wsdl:output message="tns:retrieveLOBMappingsResponse"
+                name="retrieveLOBMappingsResponse" />
+            <wsdl:fault message="tns:claimServiceFault" name="claimServiceFault" />
+        </wsdl:operation>
+
+		<wsdl:operation name="ping">
+			<wsdl:input message="tns:pingRequest" name="pingRequest" />
+			<wsdl:output message="tns:pingResponse" name="pingResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="ClaimServiceSOAP" type="tns:ClaimService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+
+       <wsdl:operation name="retrievePointInTimeClaimsByPolicyNumber">
+			<soap:operation soapAction="http://service.amfam.com/claimservice/v2/retrievePointInTimeClaimsByPolicyNumber" />
+			<wsdl:input name="retrievePointInTimeClaimsByPolicyNumberRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="retrievePointInTimeClaimsByPolicyNumberResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="claimServiceFault">
+				<soap:fault name="claimServiceFault" use="literal" /> 
+			</wsdl:fault>			
+		</wsdl:operation>
+		
+		<wsdl:operation name="retrievePointInTimeClaimsByClaimNumber">
+			<soap:operation soapAction="http://service.amfam.com/claimservice/v2/retrievePointInTimeClaimsByClaimNumber" />
+			<wsdl:input name="retrievePointInTimeClaimsByClaimNumberRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="retrievePointInTimeClaimsByClaimNumberResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="claimServiceFault">
+				<soap:fault name="claimServiceFault" use="literal" /> 
+			</wsdl:fault>			
+		</wsdl:operation>
+
+        <wsdl:operation name="retrieveClaimSummary">
+           <soap:operation soapAction="http://service.amfam.com/claimservice/v2/retrieveClaimSummary"/>
+           <wsdl:input name="retrieveClaimSummaryRequest">
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="retrieveClaimSummaryResponse">
+               <soap:body use="literal"/>
+           </wsdl:output>
+           <wsdl:fault name="claimServiceFault">
+               <soap:fault name="claimServiceFault" use="literal"/>
+           </wsdl:fault>
+        </wsdl:operation>
+
+        <wsdl:operation name="retrieveClaimDetail">
+           <soap:operation soapAction="http://service.amfam.com/claimservice/v2/retrieveClaimDetail"/>
+           <wsdl:input name="retrieveClaimDetailRequest">
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="retrieveClaimDetailResponse">
+               <soap:body use="literal"/>
+           </wsdl:output>
+           <wsdl:fault name="claimServiceFault">
+               <soap:fault name="claimServiceFault" use="literal"/>
+           </wsdl:fault>
+        </wsdl:operation>
+        
+         <wsdl:operation name="checkClaimCenterRolloutStatus">
+           <soap:operation soapAction="http://service.amfam.com/claimservice/v2/checkClaimCenterRolloutStatus"/>
+           <wsdl:input name="checkClaimCenterRolloutStatusRequest">
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="checkClaimCenterRolloutStatusResponse">
+               <soap:body use="literal"/>
+           </wsdl:output>
+           <wsdl:fault name="claimServiceFault">
+               <soap:fault name="claimServiceFault" use="literal"/>
+           </wsdl:fault>
+        </wsdl:operation>
+        
+        <wsdl:operation name="locateClaimSourceSystem">
+           <soap:operation soapAction="http://service.amfam.com/claimservice/v2/locateSourceSystem"/>
+           <wsdl:input name="locateClaimSourceSystemRequest">
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="locateClaimSourceSystemResponse">
+               <soap:body use="literal"/>
+           </wsdl:output>
+           <wsdl:fault name="claimServiceFault">
+               <soap:fault name="claimServiceFault" use="literal"/>
+           </wsdl:fault>
+        </wsdl:operation>
+        
+          <wsdl:operation name="retrieveLOBMappings">
+           <soap:operation soapAction="http://service.amfam.com/claimservice/v2/retrieveLOBMappings"/>
+           <wsdl:input name="retrieveLOBMappingsRequest">
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="retrieveLOBMappingsResponse">
+               <soap:body use="literal"/>
+           </wsdl:output>
+           <wsdl:fault name="claimServiceFault">
+               <soap:fault name="claimServiceFault" use="literal"/>
+           </wsdl:fault>
+        </wsdl:operation>
+		
+		<wsdl:operation name="ping">
+			<soap:operation soapAction="http://service.amfam.com/claimservice/v2" />
+			<wsdl:input name="pingRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="pingResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+	<wsdl:service name="ClaimService">
+		<wsdl:documentation>Claim  Service provides operations to Get Point in time claims by policy number and claim number</wsdl:documentation>
+		<wsdl:port binding="tns:ClaimServiceSOAP" name="ClaimServiceSOAP">
+			<soap:address
+				location="${claim.service.url}" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
+]]></wsdl_xml>
+    </sys_soap_message>
+</record_update>
