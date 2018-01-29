@@ -43,7 +43,7 @@
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
-        <reference_qual>javascript: 'af_reason_code=' + current.reason_code.reason_code;</reference_qual>
+        <reference_qual>javascript: 'af_reason_code=' + current.reason_code.af_reason_code;</reference_qual>
         <reference_qual_condition/>
         <reference_type/>
         <sizeclass/>
@@ -54,15 +54,15 @@
         <sys_created_on>2017-10-16 13:53:20</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>71d1e69edbb94f04a09bf6e9af96195b</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Sub Reason</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_case_details_sub_reason_code</sys_update_name>
-        <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-10-25 13:15:07</sys_updated_on>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-18 15:08:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

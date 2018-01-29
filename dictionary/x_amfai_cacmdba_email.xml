@@ -2,6 +2,7 @@
 <database>
     <element label="Email" max_length="40" name="x_amfai_cacmdba_email" sizeclass="25941" type="collection">
         <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="Email Address" max_length="60" name="email_address" type="string"/>
         <element choice="1" label="Email Address Usage" max_length="40" name="email_address_usage" type="choice">
             <choice>
@@ -14,6 +15,9 @@
         </element>
         <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_customer" type="reference"/>
         <index name="index">
+            <element name="case_id"/>
+        </index>
+        <index name="index2">
             <element name="person_id"/>
         </index>
     </element>

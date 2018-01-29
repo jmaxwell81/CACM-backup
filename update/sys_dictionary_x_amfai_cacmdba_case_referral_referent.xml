@@ -32,20 +32,19 @@
         <element_reference>false</element_reference>
         <foreign_database/>
         <internal_type display_value="Reference">reference</internal_type>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>32</max_length>
         <name>x_amfai_cacmdba_case_referral</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="x_amfai_cacmdba_person">x_amfai_cacmdba_person</reference>
+        <reference display_value="" name="x_amfai_cacmdba_referent">x_amfai_cacmdba_referent</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
-        <reference_qual>referent=T^EQ</reference_qual>
-        <reference_qual_condition table="x_amfai_cacmdba_person">referent=T^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </reference_qual_condition>
+        <reference_qual/>
+        <reference_qual_condition/>
         <reference_type/>
         <sizeclass/>
         <spell_check>false</spell_check>
@@ -55,7 +54,7 @@
         <sys_created_on>2017-11-02 19:12:55</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>0991d7f3db064f00a09bf6e9af9619de</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Referent</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -63,7 +62,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_case_referral_referent</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-11-09 20:26:07</sys_updated_on>
+        <sys_updated_on>2018-01-18 15:18:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

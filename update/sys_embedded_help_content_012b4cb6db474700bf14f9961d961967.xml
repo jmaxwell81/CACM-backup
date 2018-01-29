@@ -4,7 +4,7 @@
         <active>true</active>
         <category>mid-server</category>
         <content><![CDATA[    <h1 class="title topictitle1">Attach script files to a MID Server</h1>        <div class="body taskbody">        <div class="section context"><span class="ph">Users can attach a script file, such as a                PowerShell script file to a MID Server and synchronize the file to that MID Server.                The synchronization of the script file from the <span class="ph">ServiceNow</span> instance to the                connected MID Server continues to work as if the script was manually added to the                form. If there are multiple attachments, the last attached file gets synchronized to                the MID Server. If you delete the attachment, the script file becomes inactive, and                the synchronized file is deleted from MID Server. </span><div class="p">                <div class="note note"><span class="notetitle">Note:</span> The script file attachment name must match the MID                Server script file name, since the record can contain other attachments.            </div>            </div></div>        <ol class="ol steps" id="ecc_agent_script_file-normal__steps_svm_kgh_2z"><li class="li step stepexpand">                <span class="ph cmd">Select <span class="ph uicontrol">Use attachment</span>, and then click the paperclip icon                    to add the attachment.</span>                <div class="itemgroup info">                    <div class="note note"><span class="notetitle">Note:</span> When <span class="ph uicontrol">Use attachment</span> is checked, an attached script                        file overrides the script contained in the <span class="ph uicontrol">Script</span>                        field. If this check box is cleared, the script in the                            <span class="ph uicontrol">Script</span> field is used instead of the attachment.                    </div>                </div>            </li><li class="li step stepexpand">                <span class="ph cmd">Click <span class="ph uicontrol">Update</span> to initiate the synchronization                    process.</span>                <div class="itemgroup info">Ensure that the file name matches the script name.<div class="note note"><span class="notetitle">Note:</span> If you receive the                        error message: File type not permitted or mime type does not                            match the file content, request that your administrator                        turn off mime type validation on attachments. The system property                            <span class="ph uicontrol">glide.security.file.mime_type.validation</span> controls                        this setting.</div></div>            </li></ol>    </div>    <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:MID_Server_Script_Files&amp;version&#61;jakarta" target="_blank" rel="nofollow">How file synchronization works</a></div></div></div></div>]]></content>
-        <last_sync>2017-12-18 19:14:11</last_sync>
+        <last_sync>2018-01-17 21:25:08</last_sync>
         <modifier>normal</modifier>
         <name>ecc_agent_script_file-normal</name>
         <page>ecc_agent_script_file</page>
@@ -18,7 +18,7 @@
         <sys_created_on>2017-12-18 19:14:11</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>012b4cb6db474700bf14f9961d961967</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>ecc_agent_script_file-normal</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -26,7 +26,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_embedded_help_content_012b4cb6db474700bf14f9961d961967</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2017-12-18 19:14:11</sys_updated_on>
+        <sys_updated_on>2018-01-17 21:25:08</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
     <sys_translated_text action="delete_multiple" query="documentkey=012b4cb6db474700bf14f9961d961967"/>

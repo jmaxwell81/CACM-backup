@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Add New CACM Template</name>
+        <run_as display_value="Pratik Madhikar">bd01729adbc80784f827fb16bf96196d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-01-10 14:30:03</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[/*var gr = new GlideRecord('x_amfai_cacmdba_template_instruction');//Table where new records are being created
+var gr2 = new GlideRecord('x_amfai_cacmdba_state');// New Records for every State
+var gr3 = new GlideRecord('x_amfai_cacmdba_instruction');// New reccords with reference values from this table
+gr3.get('56c55033dbe7c300bf14f9961d9619ac');//Sys Id of New Template from Instruction Table
+var instruct_id = gr3.getValue('sys_id');
+var begin_eff_date = gr3.getValue('begin_eff_date');
+var change_reason = gr3.getValue('change_reason_text');
+
+gr2.orderBy('state_code');
+gr2.query();
+while(gr2.next()){
+	
+	
+	gr.initialize();
+	gr.setValue('template_id', '0b718670dbe407004d70734aaf9619a7');//INSTREF
+	gr.setValue('instruct_id', instruct_id);
+	gr.setValue('state_code', gr2.sys_id);
+	gr.setValue('instruct_type_id', 'f465a06adb7a070067bff3d51d9619b8');//Attorney General
+	gr.setValue('begin_eff_date', begin_eff_date);
+	gr.setValue('change_reason_txt', change_reason);
+	gr.setValue('active', 'true');
+	gr.setValue('default_instruct_ind', 'N');// Default Instruction - No
+	//gr.setValue('customer_privacy_instruction', 'true');// Remove commenting if new instruction is for customer privacy
+	gr.insert();
+	
+	
+	gr.initialize();
+	gr.setValue('template_id', '0b718670dbe407004d70734aaf9619a7');//INSTREF
+	gr.setValue('instruct_id', instruct_id);
+	gr.setValue('state_code', gr2.sys_id);
+	gr.setValue('instruct_type_id', 'f865a06adb7a070067bff3d51d9619b7');//General Phone
+	gr.setValue('begin_eff_date', begin_eff_date);
+	gr.setValue('change_reason_txt', change_reason);
+	gr.setValue('active', 'true');
+	gr.setValue('default_instruct_ind', 'N');// Default Instruction - No
+	gr.insert();
+	
+	
+	gr.initialize();
+	gr.setValue('template_id', '0b718670dbe407004d70734aaf9619a7');//INSTREF
+	gr.setValue('instruct_id', instruct_id);
+	gr.setValue('state_code', gr2.sys_id);
+	gr.setValue('instruct_type_id', 'b865a06adb7a070067bff3d51d9619b6');//General Written
+	gr.setValue('begin_eff_date', begin_eff_date);
+	gr.setValue('change_reason_txt', change_reason);
+	gr.setValue('active', 'true');
+	gr.setValue('default_instruct_ind', 'N');// Default Instruction - No
+	gr.insert();
+	
+	
+	gr.initialize();
+	gr.setValue('template_id', '0b718670dbe407004d70734aaf9619a7');//INSTREF
+	gr.setValue('instruct_id', instruct_id);
+	gr.setValue('state_code', gr2.sys_id);
+	gr.setValue('instruct_type_id', 'fc65a06adb7a070067bff3d51d9619b7');//Insurance Department
+	gr.setValue('begin_eff_date', begin_eff_date);
+	gr.setValue('change_reason_txt', change_reason);
+	gr.setValue('active', 'true');
+	gr.setValue('default_instruct_ind', 'N');// Default Instruction - No
+	gr.insert();
+}*/]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-01-10 14:30:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>83a62946db630b40bf14f9961d961900</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Add New CACM Template</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sysauto_script_83a62946db630b40bf14f9961d961900</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-15 19:46:11</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

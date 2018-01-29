@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>referent</field>
+        <global>true</global>
+        <messages/>
+        <name>check referrals for same referant</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	var referent = g_form.getValue('referent');
+	var event_id = g_form.getValue('event_id');
+	var ga = new GlideAjax('x_amfai_cacmdba.check_referral_for_same_referant');
+	ga.addParam('sysparm_name','checkReferrals');
+	ga.addParam('sysparm_ref', referent);
+	ga.addParam('sysparm_eventId', event_id);
+	ga.getXML(fetchNAICParse);
+	
+	
+	function fetchNAICParse(response) {
+		//	g_form.addInfoMessage('4');
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		//	g_form.addInfoMessage(answer);
+		if(answer != 0){
+			g_form.setValue('referent', '');
+			g_form.showFieldMsg('referent', 'Referent is assigned to another referral for same Event', 'error');
+		}
+	}
+	//Type appropriate comment here, and begin script below
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-01-18 16:34:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f04d0be4db7bc700bf14f9961d9619ed</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>check referrals for same referant</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_client_f04d0be4db7bc700bf14f9961d9619ed</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-18 16:40:08</sys_updated_on>
+        <table>x_amfai_cacmdba_case_referral</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

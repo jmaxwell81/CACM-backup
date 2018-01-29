@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*[BKP BD] Complaint Agent" max_length="40" name="x_amfai_cacmdba_bkp_bd_complnt_agent" type="collection">
+        <element attributes="import_attribute_name=AGENT_CODE,edge_encryption_enabled=true" label="AGENT_CODE" max_length="40" name="u_agent_code" type="string"/>
+        <element attributes="import_attribute_name=AGENT_ID" label="AGENT_ID" max_length="15" name="u_agent_id" type="decimal"/>
+        <element attributes="import_attribute_name=COMPLNT_NUM,edge_encryption_enabled=true" label="COMPLNT_NUM" max_length="40" name="u_complnt_num" type="string"/>
+        <element attributes="import_attribute_name=DISTRICT_CODE,edge_encryption_enabled=true" label="DISTRICT_CODE" max_length="40" name="u_district_code" type="string"/>
+        <element attributes="import_attribute_name=EXTRACT_DATE" label="EXTRACT_DATE" max_length="40" name="u_extract_date" type="datetime"/>
+        <element attributes="import_attribute_name=ROW_EFF_DT" label="ROW_EFF_DT" max_length="40" name="u_row_eff_dt" type="datetime"/>
+        <element attributes="import_attribute_name=ROW_TYP_CD,edge_encryption_enabled=true" label="ROW_TYP_CD" max_length="40" name="u_row_typ_cd" type="string"/>
+    </element>
+</database>

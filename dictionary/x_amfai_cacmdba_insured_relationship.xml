@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Insured Relationship" max_length="40" name="x_amfai_cacmdba_insured_relationship" sizeclass="55291" type="collection">
+        <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_insd_cust" type="reference"/>
+        <element label="Relationship Code" max_length="32" name="relationship_code" reference="x_amfai_cacmdba_relationship" type="reference"/>
+        <index name="index">
+            <element name="case_id"/>
+        </index>
+        <index name="index2">
+            <element name="relationship_code"/>
+        </index>
+        <index name="index3">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>

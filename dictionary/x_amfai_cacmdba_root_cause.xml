@@ -18,8 +18,6 @@
         <element label="Party Instruction" max_length="500" name="party_instruction" type="string"/>
         <element label="Agent ID" max_length="40" name="prty_agent_id" type="string"/>
         <element label="Agent Code" max_length="40" name="prty_agt_cd" type="string"/>
-        <element label="Create Row Timestamp" max_length="40" name="prty_create_row_ts" type="glide_date_time"/>
-        <element label="Create Row User ID" max_length="40" name="prty_create_row_user_id" type="string"/>
         <element label="Department" max_length="40" name="prty_dept_nm" type="string"/>
         <element label="Division" max_length="40" name="prty_division_nm" type="string"/>
         <element label="District Code" max_length="40" name="prty_dst_cd" type="string"/>
@@ -29,8 +27,6 @@
         <element label="Location" max_length="40" name="prty_loc_desc" type="string"/>
         <element label="Middle Initial" max_length="40" name="prty_middle_initial" type="string"/>
         <element label="Status" max_length="40" name="prty_status_cd" type="string"/>
-        <element label="Update Row Timestamp" max_length="40" name="prty_update_row_ts" type="glide_date_time"/>
-        <element label="Update Row User ID" max_length="40" name="prty_update_row_user_id" type="string"/>
         <element label="User ID" max_length="40" name="prty_user_id" type="string"/>
         <index name="index">
             <element name="case_root_cause_id"/>

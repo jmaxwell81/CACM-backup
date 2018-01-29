@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Producer" max_length="40" name="x_amfai_cacmdba_producer" sizeclass="74593" type="collection">
-        <element label="Case ID" max_length="32" name="case_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="District ID" max_length="40" name="classic_dst_cd" type="string"/>
         <element label="Data Populated from Integration" max_length="40" name="data_populated_from_integration" type="string"/>
         <element label="First Name" max_length="40" name="first_name" type="string"/>
@@ -19,7 +19,7 @@
         <element label="New District Code" max_length="40" name="mig_new_dst_code" type="string"/>
         <element label="Status" max_length="40" name="mig_status" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_person" type="reference"/>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_insd_cust" type="reference"/>
         <element label="Policy" max_length="32" name="policy" reference="x_amfai_cacmdba_policy" type="reference"/>
         <element label="End Date" max_length="40" name="producer_end_dt" type="string"/>
         <element display="true" label="Producer ID" max_length="40" name="producer_id" type="string"/>

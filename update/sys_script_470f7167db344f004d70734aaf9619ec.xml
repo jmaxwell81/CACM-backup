@@ -16,8 +16,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_amfai_cacmdba_insd_cust">customer_idISNOTEMPTY^integration_suite=Yes^EQ<item endquery="false" field="customer_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
-            <item endquery="false" field="integration_suite" goto="false" newquery="false" operator="=" or="false" value="Yes"/>
+        <filter_condition table="x_amfai_cacmdba_insd_cust">customer_idISNOTEMPTY^integration_suite=Yes^EQ<item endquery="false" field="integration_suite" goto="false" newquery="false" operator="=" or="false" value="Yes"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>

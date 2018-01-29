@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="sys_import_set_row" label="*03 - Case Migration" max_length="40" name="u_case_migration" sizeclass="192522" type="collection">
-        <element attributes="import_attribute_name=ADVOCATE,edge_encryption_enabled=true" label="ADVOCATE" max_length="40" name="u_advocate" type="string"/>
-        <element attributes="import_attribute_name=CACM_ID,edge_encryption_enabled=true" label="CACM_ID" max_length="40" name="u_cacm_id" type="string"/>
+    <element extends="sys_import_set_row" label="*03 - Case Migration" max_length="40" name="u_case_migration" sizeclass="64124" type="collection">
+        <element attributes="import_attribute_name=ADDRESS_ID,edge_encryption_enabled=true" label="ADDRESS_ID" max_length="40" name="u_address_id" type="string"/>
+        <element attributes="import_attribute_name=CASE_IDENTIFIER" label="CASE_IDENTIFIER" max_length="40" name="u_case_identifier" type="char"/>
+        <element attributes="import_attribute_name=CASE_STATUS" label="CASE_STATUS" max_length="40" name="u_case_status" type="char"/>
         <element attributes="import_attribute_name=CASE_TYPE" label="CASE_TYPE" max_length="40" name="u_case_type" type="char"/>
-        <element attributes="import_attribute_name=CLAIM_OFFICE,edge_encryption_enabled=true" label="CLAIM_OFFICE" max_length="40" name="u_claim_office" type="string"/>
+        <element attributes="import_attribute_name=CLAIM_OFFICE_CODE,edge_encryption_enabled=true" label="CLAIM_OFFICE_CODE" max_length="40" name="u_claim_office_code" type="string"/>
         <element attributes="import_attribute_name=CLOSED_DATE" label="CLOSED_DATE" max_length="40" name="u_closed_date" type="datetime"/>
-        <element attributes="import_attribute_name=COMPANY" label="COMPANY" max_length="15" name="u_company" type="decimal"/>
+        <element attributes="import_attribute_name=COMPANY_CODE" label="COMPANY_CODE" max_length="15" name="u_company_code" type="decimal"/>
+        <element attributes="import_attribute_name=COMPLAINT_ID,edge_encryption_enabled=true" label="COMPLAINT_ID" max_length="40" name="u_complaint_id" type="string"/>
         <element attributes="import_attribute_name=CREATE_DATE" label="CREATE_DATE" max_length="40" name="u_create_date" type="datetime"/>
         <element attributes="import_attribute_name=CREATE_USER_ID,edge_encryption_enabled=true" label="CREATE_USER_ID" max_length="40" name="u_create_user_id" type="string"/>
-        <element attributes="import_attribute_name=DATE_OPENED" label="DATE_OPENED" max_length="40" name="u_date_opened" type="datetime"/>
-        <element attributes="import_attribute_name=IDENTIFIER" label="IDENTIFIER" max_length="40" name="u_identifier" type="char"/>
+        <element attributes="import_attribute_name=LATEST_CLOSED_DATE" label="LATEST_CLOSED_DATE" max_length="40" name="u_latest_closed_date" type="datetime"/>
+        <element attributes="import_attribute_name=OPEN_DATE" label="OPEN_DATE" max_length="40" name="u_open_date" type="datetime"/>
         <element attributes="import_attribute_name=PERSON_ID,edge_encryption_enabled=true" label="PERSON_ID" max_length="40" name="u_person_id" type="string"/>
-        <element attributes="import_attribute_name=STATUS" label="STATUS" max_length="40" name="u_status" type="char"/>
-        <element attributes="import_attribute_name=UPDATE_DATE" label="UPDATE_DATE" max_length="40" name="u_update_date" type="datetime"/>
-        <element attributes="import_attribute_name=UPDATE_USER_ID,edge_encryption_enabled=true" label="UPDATE_USER_ID" max_length="40" name="u_update_user_id" type="string"/>
+        <element attributes="import_attribute_name=USER_ID,edge_encryption_enabled=true" label="USER_ID" max_length="40" name="u_user_id" type="string"/>
     </element>
 </database>

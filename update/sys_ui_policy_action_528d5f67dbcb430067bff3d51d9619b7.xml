@@ -19,7 +19,7 @@
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
         <sys_updated_on>2017-12-21 18:29:02</sys_updated_on>
         <table>x_amfai_cacmdba_document</table>
-        <ui_policy display_value="Hide Select Executive Field">370d17efdb8b430067bff3d51d9619d1</ui_policy>
+        <ui_policy display_value="Only show Select Executive Field when">370d17efdb8b430067bff3d51d9619d1</ui_policy>
         <visible>true</visible>
     </sys_ui_policy_action>
 </record_update>

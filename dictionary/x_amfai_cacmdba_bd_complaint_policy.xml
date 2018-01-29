@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="BD Complaint Policy" max_length="40" name="x_amfai_cacmdba_bd_complaint_policy" type="collection">
+    <element label="[BD] Complaint Policy" max_length="40" name="x_amfai_cacmdba_bd_complaint_policy" type="collection">
         <element label="COMPLNT_NUM" max_length="12" name="complnt_num" type="string"/>
         <element label="POL_NUM" max_length="12" name="pol_num" type="string"/>
         <element label="ROW_EFF_DT" max_length="40" name="row_eff_dt" type="glide_date_time"/>

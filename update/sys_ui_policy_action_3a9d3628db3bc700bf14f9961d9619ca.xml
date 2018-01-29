@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>complaint_state</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-01-18 15:14:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3a9d3628db3bc700bf14f9961d9619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>complaint_state</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_3a9d3628db3bc700bf14f9961d9619ca</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-18 15:14:47</sys_updated_on>
+        <table>x_amfai_cacmdba_case_event</table>
+        <ui_policy display_value="Show Instruction Section, make complaint state and instruction type mandatpory, pre populate complaint State from case details when Add Instruction field is true">a1e7d206db5e0b40a09bf6e9af96194b</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

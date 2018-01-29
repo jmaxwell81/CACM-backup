@@ -8,6 +8,7 @@
         <element label="Email Address" max_length="60" name="email_address" type="string"/>
         <element label="Fax" max_length="40" name="fax" type="string"/>
         <element label="First Name" max_length="40" name="first_name" type="string"/>
+        <element calculation="if (current.first_name.nil() &amp;&amp; current.last_name.nil() &amp;&amp; current.middle_initial.nil() &amp;&amp; !current.full_name.nil()) {&#13;&#10;&#9;var names = current.full_name.toString().split(&quot; &quot;);&#13;&#10;&#9;if (names.length &gt; 1) {&#13;&#10;&#9;&#9;current.first_name = names[0];&#13;&#10;&#9;&#9;names.shift();&#13;&#10;&#9;&#9;current.last_name = names.join(&quot; &quot;);&#13;&#10;&#9;} else&#13;&#10;&#9;current.last_name = names[0];&#13;&#10;}&#13;&#10;&#13;&#10;if(current.first_name.nil()) {&#13;&#10;&#9;current.last_name;&#13;&#10;} else {&#13;&#10;&#9;current.first_name + ' ' + current.middle_initial + ' '  + current.last_name;&#13;&#10;}" display="true" label="Full Name" max_length="150" name="full_name" type="string" virtual="true"/>
         <element label="Last Name" max_length="40" name="last_name" type="string"/>
         <element label="Middle Initial" max_length="1" name="middle_initial" type="string"/>
         <element label="Person ID" max_length="40" name="person_id" type="string"/>

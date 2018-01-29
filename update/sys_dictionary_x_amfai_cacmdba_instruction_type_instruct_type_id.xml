@@ -23,7 +23,7 @@
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>true</display>
+        <display>false</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
@@ -54,15 +54,15 @@
         <sys_created_on>2017-12-05 16:10:24</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>a514e8a6db7a070067bff3d51d961953</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Instruction Type ID</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_instruction_type_instruct_type_id</sys_update_name>
-        <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-12-11 19:05:21</sys_updated_on>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-09 14:37:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

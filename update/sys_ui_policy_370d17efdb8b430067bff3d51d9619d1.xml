@@ -23,7 +23,7 @@
 
 }]]></script_true>
         <set_values/>
-        <short_description>Hide Select Executive Field</short_description>
+        <short_description>Only show Select Executive Field when</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>pmadhika@amfam.com</sys_created_by>
         <sys_created_on>2017-12-21 18:28:26</sys_created_on>
@@ -31,8 +31,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>370d17efdb8b430067bff3d51d9619d1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Hide Select Executive Field</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Only show Select Executive Field when</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -40,7 +40,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_ui_policy_370d17efdb8b430067bff3d51d9619d1</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-12-21 18:28:26</sys_updated_on>
+        <sys_updated_on>2017-12-22 16:12:46</sys_updated_on>
         <table>x_amfai_cacmdba_document</table>
         <ui_type>0</ui_type>
         <view/>

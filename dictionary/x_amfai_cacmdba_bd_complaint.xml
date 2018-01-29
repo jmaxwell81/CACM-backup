@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="BD Complaint" max_length="40" name="x_amfai_cacmdba_bd_complaint" type="collection">
+    <element label="[BD] Complaint" max_length="40" name="x_amfai_cacmdba_bd_complaint" type="collection">
         <element label="CASE_CNT" max_length="15" name="case_cnt" type="decimal"/>
         <element label="COMPLNT_FIRST_NM" max_length="40" name="complnt_first_nm" type="string"/>
         <element label="COMPLNT_LAST_NM" max_length="40" name="complnt_last_nm" type="string"/>

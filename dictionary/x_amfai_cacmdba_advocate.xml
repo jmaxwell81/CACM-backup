@@ -5,7 +5,7 @@
         <element label="Email Address" max_length="40" name="e_mail_address" type="string"/>
         <element label="Fax" max_length="20" name="fax" type="string"/>
         <element label="Location" max_length="50" name="location" type="string"/>
-        <element label="Name" max_length="50" name="name" type="string"/>
+        <element display="true" label="Name" max_length="50" name="name" type="string"/>
         <element label="Phone" max_length="20" name="phone" type="string"/>
         <element label="Security Buffer" max_length="255" name="security_buffer" type="string"/>
         <element label="Security Level" max_length="15" name="security_level" type="decimal"/>

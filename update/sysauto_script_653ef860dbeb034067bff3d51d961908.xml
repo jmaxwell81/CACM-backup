@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Clean Up CACM Staging Tables</name>
+        <run_as display_value="Sumukh Sharma">109b9644dbda3600e90afa38bf96199e</run_as>
+        <run_as_tz>US/Eastern</run_as_tz>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>7</run_dayofweek>
+        <run_period/>
+        <run_start>2018-01-05 19:42:22</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[// Clean up all records created on or before 2 days ago
+//var encQuery = 'sys_created_onRELATIVELE@hour@ago@18'; // Testing Query
+ var encQuery = 'sys_created_onRELATIVELE@dayofweek@ago@';
+var deleteInsuredStg = new GlideRecord('x_amfai_cacmdba_insured_staging');
+deleteInsuredStg.addEncodedQuery(encQuery);
+deleteInsuredStg.deleteMultiple();
+var deleteInsuredStg1 = new GlideRecord('x_amfai_cacmdba_fetch_policies');
+deleteInsuredStg1.addEncodedQuery(encQuery);
+deleteInsuredStg1.deleteMultiple();
+var deleteInsuredStg2= new GlideRecord('x_amfai_cacmdba_insured_staging');
+deleteInsuredStg2.addEncodedQuery(encQuery);
+deleteInsuredStg2.deleteMultiple();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+        <sys_created_on>2018-01-05 19:44:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>653ef860dbeb034067bff3d51d961908</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Clean Up CACM Staging Tables</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sysauto_script_653ef860dbeb034067bff3d51d961908</sys_update_name>
+        <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+        <sys_updated_on>2018-01-10 18:21:47</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

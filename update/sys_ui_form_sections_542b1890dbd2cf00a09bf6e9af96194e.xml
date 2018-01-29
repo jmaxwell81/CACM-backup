@@ -29,6 +29,20 @@
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
             <sys_updated_on>2017-11-03 19:12:08</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-10 18:40:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>28102ecadb2b0b40bf14f9961d961966</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_amfai_cacmdba_case_event" name="x_amfai_cacmdba_case_event" sys_domain="global" view="Default view">542b1890dbd2cf00a09bf6e9af96194e</sys_ui_form>
+            <sys_ui_section caption="Additional Information" display_value="Additional Information" name="x_amfai_cacmdba_case_event" sys_domain="global" view="Default view">e0102ecadb2b0b40bf14f9961d961964</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-10 18:40:49</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_amfai_cacmdba_case_event</name>
             <roles/>

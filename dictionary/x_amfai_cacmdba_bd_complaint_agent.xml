@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="BD Complaint Agent" max_length="40" name="x_amfai_cacmdba_bd_complaint_agent" type="collection">
+    <element label="[BD] Complaint Agent" max_length="40" name="x_amfai_cacmdba_bd_complaint_agent" type="collection">
         <element label="AGENT_CODE" max_length="3" name="agent_code" type="string"/>
         <element label="AGENT_ID" max_length="15" name="agent_id" type="decimal"/>
         <element label="COMPLNT_NUM" max_length="12" name="complnt_num" type="string"/>

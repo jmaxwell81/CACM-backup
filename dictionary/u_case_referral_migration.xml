@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*04.1 - Case Referral Migration" max_length="40" name="u_case_referral_migration" sizeclass="287904" type="collection">
+        <element attributes="import_attribute_name=CALC_START_DATE" label="CALC_START_DATE" max_length="40" name="u_calc_start_date" type="datetime"/>
+        <element attributes="import_attribute_name=COMPLAINT_ID,edge_encryption_enabled=true" label="COMPLAINT_ID" max_length="40" name="u_complaint_id" type="string"/>
+        <element attributes="import_attribute_name=EVENT_ID,edge_encryption_enabled=true" label="EVENT_ID" max_length="40" name="u_event_id" type="string"/>
+        <element attributes="import_attribute_name=PAST_DUE_SECOND_REQUEST,edge_encryption_enabled=true" label="PAST_DUE_SECOND_REQUEST" max_length="40" name="u_past_due_second_request" type="string"/>
+        <element attributes="import_attribute_name=PAST_DUE_THIRD_REQUEST,edge_encryption_enabled=true" label="PAST_DUE_THIRD_REQUEST" max_length="40" name="u_past_due_third_request" type="string"/>
+        <element attributes="import_attribute_name=PERSON_ID,edge_encryption_enabled=true" label="PERSON_ID" max_length="40" name="u_person_id" type="string"/>
+        <element attributes="import_attribute_name=REFERENT_TYPE,edge_encryption_enabled=true" label="REFERENT_TYPE" max_length="40" name="u_referent_type" type="string"/>
+        <element attributes="import_attribute_name=REFERRAL_ID,edge_encryption_enabled=true" label="REFERRAL_ID" max_length="40" name="u_referral_id" type="string"/>
+        <element attributes="import_attribute_name=REFERRAL_TYPE,edge_encryption_enabled=true" label="REFERRAL_TYPE" max_length="40" name="u_referral_type" type="string"/>
+        <element attributes="import_attribute_name=REFERRED_DATE" label="REFERRED_DATE" max_length="40" name="u_referred_date" type="datetime"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_DEPT_NM" max_length="40" name="u_ref_dept_nm" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_DM_ID" max_length="40" name="u_ref_dm_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_EMAIL_ADDR" max_length="40" name="u_ref_email_addr" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_FAX_NUM" max_length="40" name="u_ref_fax_num" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_FIRST_NM" max_length="40" name="u_ref_first_nm" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_JOB_TITLE_NM" max_length="40" name="u_ref_job_title_nm" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_LAST_NM" max_length="40" name="u_ref_last_nm" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_LOC_NM" max_length="40" name="u_ref_loc_nm" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_MIDDLE_INITIAL" max_length="40" name="u_ref_middle_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="REF_WORK_PHONE_NUM" max_length="40" name="u_ref_work_phone_num" type="string"/>
+        <element attributes="import_attribute_name=RESPONSE_DATE" label="RESPONSE_DATE" max_length="40" name="u_response_date" type="datetime"/>
+        <element attributes="import_attribute_name=STATUS,edge_encryption_enabled=true" label="STATUS" max_length="40" name="u_status" type="string"/>
+        <element attributes="import_attribute_name=SUSPENSE_DATE" label="SUSPENSE_DATE" max_length="40" name="u_suspense_date" type="datetime"/>
+    </element>
+</database>

@@ -23,7 +23,7 @@
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>true</display>
+        <display>false</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
@@ -54,7 +54,7 @@
         <sys_created_on>2017-09-20 16:26:40</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>962e85c2db998380a09bf6e9af96197d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Case Sub Root Cause Description</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -62,7 +62,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_case_sub_root_cause_case_sub_root_cause_desc</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-11-29 20:29:08</sys_updated_on>
+        <sys_updated_on>2017-12-28 15:33:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -23,15 +23,15 @@
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
         <last_run_database_field>CREATE_ROW_TS</last_run_database_field>
-        <last_run_datetime>to_date('2017-11-27','yyyy-mm-dd')</last_run_datetime>
+        <last_run_datetime>to_date('to_date('2018-01-03','yyyy-mm-dd')','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
-        <mid_server display_value="">229477d3db89f240a09bf6e9af9619bc</mid_server>
-        <name>09 - Case Sub Root Cause Party</name>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
+        <name>06 - Case Sub Root Cause Party</name>
         <oracle_port>1521</oracle_port>
         <oracle_sid>mp10g0p</oracle_sid>
         <properties/>
-        <query>All Rows from Table</query>
+        <query>Specific SQL</query>
         <query_timeout>0</query_timeout>
         <scp_authentication>Username and Password</scp_authentication>
         <scp_password/>
@@ -39,23 +39,45 @@
         <scp_server/>
         <scp_user_name/>
         <sheet_number>0</sheet_number>
-        <sql_statement/>
+        <sql_statement>select&#13;
+COMPLAINT_ID,&#13;
+SUB_ROOT_CAUSE_ID,&#13;
+ADVOCATE_USER_ID,&#13;
+ROOT_CAUSE_PRTY_LAST_NM,&#13;
+ROOT_CAUSE_PRTY_FIRST_NM,&#13;
+ROOT_CAUSE_PRTY_MIDDLE_INITIAL,&#13;
+ROOT_CAUSE_PRTY_USER_ID,&#13;
+JOB_TITLE_DESC,&#13;
+DEPT_NM,&#13;
+LOC_DESC,&#13;
+DIVISION_NM,&#13;
+DST_CD,&#13;
+AGT_CD,&#13;
+AGT_ID,&#13;
+STATUS_CD,&#13;
+CASE&#13;
+WHEN UPDATE_ROW_TS is null then CREATE_ROW_TS&#13;
+        ELSE UPDATE_ROW_TS end as CREATE_ROW_TS,&#13;
+CASE&#13;
+WHEN UPDATE_ROW_USER_ID is null then CREATE_ROW_USER_ID&#13;
+        ELSE UPDATE_ROW_USER_ID end as CREATE_ROW_USER_ID&#13;
+from CACMDBA.COMPLAINT_SUB_ROOT_CAUSE</sql_statement>
         <ssh_keyfile_path/>
         <sys_class_name>sys_data_source</sys_class_name>
         <sys_created_by>jeremy.wedekind</sys_created_by>
         <sys_created_on>2017-09-26 15:43:33</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>40edbb7bdb910bc04d70734aaf96194b</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>09 - Case Sub Root Cause Party</sys_name>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>06 - Case Sub Root Cause Party</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_40edbb7bdb910bc04d70734aaf96194b</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-11-27 22:03:32</sys_updated_on>
-        <table_name>CACMDBA.COMPLAINT_SUB_ROOT_CAUSE</table_name>
+        <sys_updated_on>2018-01-03 14:12:02</sys_updated_on>
+        <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>
         <use_last_run_datetime>true</use_last_run_datetime>

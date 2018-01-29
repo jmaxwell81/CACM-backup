@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <category/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:oracle:thin:@ORAP0103:1521:mp10g0p</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <database_name/>
+        <database_port/>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>oracle.jdbc.OracleDriver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Insured Phone Migration</import_set_table_label>
+        <import_set_table_name>x_amfai_cacmdba_insured_phone_migration</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>x/KRdgNm3AB7MaSa+EyjGA==</jdbc_password>
+        <jdbc_server>ORAP0103</jdbc_server>
+        <jdbc_user_name>DIRECTDATA_AMITFORMS1_RO</jdbc_user_name>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field/>
+        <last_run_datetime/>
+        <ldap_target/>
+        <maximum_rows/>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
+        <name>07.3 - Insured Phone Migration</name>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>mp10g0p</oracle_sid>
+        <properties/>
+        <query>Specific SQL</query>
+        <query_timeout>0</query_timeout>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement>select DISTINCT&#13;
+p.person_id,&#13;
+p.work_phone AS phone_number,&#13;
+p.work_extension,&#13;
+'work' AS phone_type,&#13;
+c.times_available,&#13;
+i.complaint_id&#13;
+from cacmdba.person p&#13;
+inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
+left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
+where&#13;
+        ((p.work_phone &lt;&gt; '(___) ___-____' and&#13;
+        p.work_phone &lt;&gt; '(   )    -    ' and&#13;
+        p.work_phone &lt;&gt; '(   )    -' and&#13;
+        p.work_phone is not null)&#13;
+        OR&#13;
+        (p.work_extension is not null and&#13;
+        p.work_extension not like '% %' and&#13;
+        p.work_extension &lt;&gt; '_____'))&#13;
+UNION&#13;
+select DISTINCT&#13;
+p.person_id,&#13;
+p.home_phone AS phone_number,&#13;
+null as work_extension,&#13;
+'home' AS phone_type,&#13;
+c.times_available,&#13;
+i.complaint_id&#13;
+from cacmdba.person p&#13;
+inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
+left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
+where&#13;
+        p.home_phone &lt;&gt; '(___) ___-____' and&#13;
+        p.home_phone &lt;&gt; '(   )    -    ' and&#13;
+        p.home_phone &lt;&gt; '(   )    -' and&#13;
+        p.work_phone is not null&#13;
+UNION&#13;
+select DISTINCT&#13;
+p.person_id,&#13;
+p.mobil_phone AS phone_number,&#13;
+null as work_extension,&#13;
+'cell' AS phone_type,&#13;
+c.times_available,&#13;
+i.complaint_id&#13;
+from cacmdba.person p&#13;
+inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
+left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
+where&#13;
+        p.mobil_phone &lt;&gt; '(___) ___-____' and&#13;
+        p.mobil_phone &lt;&gt; '(   )    -    ' and&#13;
+        p.mobil_phone &lt;&gt; '(   )    -' and&#13;
+        p.mobil_phone is not null&#13;
+UNION&#13;
+select DISTINCT&#13;
+p.person_id,&#13;
+p.fax AS phone_number,&#13;
+null as work_extension,&#13;
+'fax' AS phone_type,&#13;
+c.times_available,&#13;
+i.complaint_id&#13;
+from cacmdba.person p&#13;
+inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
+left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
+where&#13;
+        p.fax &lt;&gt; '(___) ___-____' and&#13;
+        p.fax &lt;&gt; '(   )    -    ' and&#13;
+        p.fax &lt;&gt; '(   )    -' and&#13;
+        p.fax is not null and&#13;
+        fax &lt;&gt; '          '</sql_statement>
+        <ssh_keyfile_path/>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2018-01-09 15:53:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b5afe8b9db6f8740bf14f9961d9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>07.3 - Insured Phone Migration</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_data_source_b5afe8b9db6f8740bf14f9961d9619d8</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2018-01-09 15:53:49</sys_updated_on>
+        <table_name/>
+        <type>JDBC</type>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>false</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

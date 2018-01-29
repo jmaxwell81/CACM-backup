@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="BD Reason Type" max_length="40" name="x_amfai_cacmdba_bd_reason_type" type="collection">
+    <element label="[BD] Reason Type" max_length="40" name="x_amfai_cacmdba_bd_reason_type" type="collection">
         <element label="AF_REASON_CODE" max_length="3" name="af_reason_code" type="string"/>
         <element label="BD_TYPE_CODE" max_length="3" name="bd_type_code" type="string"/>
     </element>

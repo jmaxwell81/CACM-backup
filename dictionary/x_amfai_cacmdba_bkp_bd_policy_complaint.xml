@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="[BKP BD] Policy Complaint" max_length="40" name="x_amfai_cacmdba_bkp_bd_policy_complaint" type="collection">
+        <element label="EXTRACT_DATE" max_length="40" name="extract_date" type="glide_date_time"/>
+        <element label="POL_NUM" max_length="12" name="pol_num" type="string"/>
+        <element label="POL_TYP_CD" max_length="4" name="pol_typ_cd" type="string"/>
+        <element label="ROW_EFF_DT" max_length="40" name="row_eff_dt" type="glide_date_time"/>
+        <element label="ROW_TYP_CD" max_length="2" name="row_typ_cd" type="string"/>
+    </element>
+</database>

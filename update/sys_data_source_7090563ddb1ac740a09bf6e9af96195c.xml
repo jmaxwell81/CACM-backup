@@ -22,12 +22,12 @@
         <jdbc_user_name>DLF004</jdbc_user_name>
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
-        <last_run_database_field>UPDATE_DATE</last_run_database_field>
-        <last_run_datetime>to_date('2017-11-16','yyyy-mm-dd')</last_run_datetime>
+        <last_run_database_field>CREATE_DATE</last_run_database_field>
+        <last_run_datetime>to_date('2018-01-10','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
-        <mid_server display_value="">229477d3db89f240a09bf6e9af9619bc</mid_server>
-        <name>07 - Policy Migration</name>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
+        <name>07.5 - Policy Migration</name>
         <oracle_port>1521</oracle_port>
         <oracle_sid>mp10g0p</oracle_sid>
         <properties/>
@@ -39,40 +39,37 @@
         <scp_server/>
         <scp_user_name/>
         <sheet_number>0</sheet_number>
-        <sql_statement>select&#13;
-cp.complaint_id,&#13;
-cp.person_id,&#13;
-cp.policy_number,&#13;
-p.af_line_type_code,&#13;
-p.agent_code,&#13;
+        <sql_statement>select distinct&#13;
+row_number() over (order by cp.policy_number) as Policy_ID,&#13;
+cp.COMPLAINT_ID,&#13;
+cp.PERSON_ID,&#13;
+cp.POLICY_NUMBER,&#13;
 p.amplan_cash_acct_number,&#13;
+p.agent_code,&#13;
+p.district_code,&#13;
+p.af_line_type_code,&#13;
 p.company_code,&#13;
 p.contract_state_code,&#13;
-p.create_date,&#13;
-p.create_user_id,&#13;
-p.district_code,&#13;
-p.update_date,&#13;
-p.update_user_id,&#13;
+p.update_date as create_date,&#13;
+p.update_user_id as create_user_id,&#13;
 'No' as integration&#13;
 from CACMDBA.COMPLAINT_POLICY cp&#13;
-left join CACMDBA.POLICY p&#13;
-on cp.person_id = p.person_id&#13;
-and cp.policy_number = p.policy_number</sql_statement>
+inner join CACMDBA.POLICY p on cp.policy_number = p.policy_number</sql_statement>
         <ssh_keyfile_path/>
         <sys_class_name>sys_data_source</sys_class_name>
         <sys_created_by>jeremy.wedekind</sys_created_by>
         <sys_created_on>2017-11-08 19:37:02</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>7090563ddb1ac740a09bf6e9af96195c</sys_id>
-        <sys_mod_count>21</sys_mod_count>
-        <sys_name>07 - Policy Migration</sys_name>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name>07.5 - Policy Migration</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_7090563ddb1ac740a09bf6e9af96195c</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-11-16 20:17:45</sys_updated_on>
+        <sys_updated_on>2018-01-15 16:23:37</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>

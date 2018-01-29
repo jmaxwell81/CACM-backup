@@ -23,42 +23,48 @@
         <name>Attachment Save</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[//if(current.advoc2dp_save_type == 'doc'){
-	//gs.addInfoMessage('Run');
-	
-	
-	var targetTable= new GlideRecord('x_amfai_cacmdba_document');
-	targetTable.addQuery('sys_id', current.sys_id);
-	targetTable.query();
-	if(targetTable.next()){
-		var sa = new GlideSysAttachment();
-		var filename = current.select_template.getDisplayValue() + ".doc";
-		gs.addInfoMessage (filename);
-		//var binData = gs.base64Decode(current.advoc2dp_letter_text);
-		sa.write(current, filename, "application/msword",current.letter_text);
-		
-		
-		action.setRedirectURL(current);
-		//var binData = gs.base64Decode(current.advoc2dp_letter_text);
-		//new CreateAttachment(current,"ADVOC2DP.doc","application/msword",binData);
-	}
-//}
+        <script><![CDATA[var sysId = current.sys_id;
+var attName = "ADVOC2DP.pdf";
+var htmlText = current.letter_text;
+var tableName = current.getTableName();
 
-// if(current.advoc2dp_save_type == 'pdf'){
-// 	 	//gs.addInfoMessage('Run');
-// 		var htmlText = current.advoc2dp_letter_text;
-// 		var tableName = current.getTableName();
-// 		//gs.addInfoMessage(htmlText);
-// 		var sysId = current.sys_id;
-// 		var attName = "ADVOC2DP.pdf";
-// 		var pdf = new x_amfai_cacmdba.CreateAttachment();
-// 		pdf.createPDF(htmlText, tableName, sysId, attName);
-// 		action.setRedirectURL(current);
-// // 	var dialog = new GlideDialogWindow('x_amfai_cacmdba_save_ADVOC2DP');
-// // 	dialog.setTitle("Saving ADVOC2DP Letter");
-// // 	dialog.render();
-// }
+var attachmentSysId = '304481a7db1b4f0067bff3d51d961929';
+var imageString = "cacm_amfam_logo.pngx";//getImageUrl(attachmentSysId);
+gs.addInfoMessage(imageString);
+function getImageUrl(attachmentSysId){
+	var maxImageBytes = 1*1024*1024;
+// 	gs.addInfoMessage('func run');
+ 	if(gs.nil(attachmentSysId))
+ 		return '';
+ 	var imageAttachment = new GlideRecord('sys_attachment');
+ 	imageAttachment.get(attachmentSysId);
+// 	gs.addInfoMessage(imageAttachment.get(attachmentSysId));
+ 	var base64Image = new GlideSysAttachment().getContentBase64(imageAttachment);
+// 	gs.addInfoMessage(base64Image.toString());
+ 	var imageSize = (base64Image.length * 3)/4;
+ 	if(imageSize > maxImageBytes){
+ 		gs.info('Image size is greater than ' + this.maxImageBytes + ' for SYSID ' + attachmentSysId);
+		return '';
+ 	}
+ 	if (!gs.nil(imageAttachment)){
+// 		gs.addInfoMessage('image returned');
+// 		gs.addInfoMessage('<img src=\"data:image/png;base64,'+ base64Image +  '"/>');
+ 		return '<img src=\"data:image/png;base64,'+ base64Image +  '"/>';
+ 	}
+ 	else
+ 		return '';
+ }
 
+
+
+//var image = new global.imageString();
+
+
+
+var generalFormAPI = new global.GeneralFormAPI(attName, tableName, sysId);
+generalFormAPI.setDocument(imageString, null, "FootNote", "right", "center", "letter");
+generalFormAPI.createPDF(htmlText);
+action.setRedirectURL(current);
 
 ]]></script>
         <show_insert>true</show_insert>
@@ -72,7 +78,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d7f6c9bddb0f0b0067bff3d51d961919</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>84</sys_mod_count>
         <sys_name>Attachment Save</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -81,7 +87,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_ui_action_d7f6c9bddb0f0b0067bff3d51d961919</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-12-21 20:27:41</sys_updated_on>
+        <sys_updated_on>2018-01-02 18:09:25</sys_updated_on>
         <table>x_amfai_cacmdba_document</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

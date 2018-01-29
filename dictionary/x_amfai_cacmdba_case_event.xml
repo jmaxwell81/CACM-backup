@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Case Event" max_length="40" name="x_amfai_cacmdba_case_event" sizeclass="469687" type="collection">
+        <element label="Additional Information" max_length="1000" name="additional_information" type="string"/>
+        <element label="Add Additional Information" max_length="40" name="add_additional_information" type="boolean"/>
         <element label="Add Instructions" max_length="40" name="add_instructions" type="boolean"/>
         <element label="Case ID" max_length="32" name="case_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
-        <element choice="1" label="Method" max_length="32" name="case_method_code" reference="x_amfai_cacmdba_case_method" type="reference">
+        <element choice="1" label="Method" mandatory="true" max_length="32" name="case_method_code" reference="x_amfai_cacmdba_case_method" type="reference">
             <choice/>
         </element>
         <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Complaint State" max_length="32" name="complaint_state" reference="x_amfai_cacmdba_state" type="reference">
             <choice/>
         </element>
-        <element label="Create Date" max_length="40" name="create_date" type="glide_date_time"/>
-        <element label="Create User ID" max_length="8" name="create_user_id" type="string"/>
-        <element label="Comments" max_length="100000" name="event_comments" type="string"/>
-        <element default="javascript:  var gdt = new GlideDate();gdt.getDisplayValue();" label="Event Date" max_length="40" name="event_date" read_only="true" type="glide_date"/>
+        <element label="Comments" mandatory="true" max_length="100000" name="event_comments" type="string"/>
+        <element default="javascript:  var gdt = new GlideDate();gdt.getDisplayValue();" label="Event Date" max_length="40" name="event_date" type="glide_date"/>
         <element label="Select Template" max_length="4000" name="event_template" reference="x_amfai_cacmdba_template" type="glide_list"/>
         <element choice="1" label="Event Type" max_length="40" name="event_type" type="choice">
             <choice>
@@ -21,18 +21,18 @@
                 <element label="Referent Response" sequence="2" value="referent_response"/>
             </choice>
         </element>
-        <element choice="1" label="Instruction Type" max_length="32" name="instruction_type" reference="x_amfai_cacmdba_instruction_type" type="reference">
+        <element label="Instructions Saved" max_length="40" name="instructions_saved" type="boolean"/>
+        <element choice="1" label="Instruction Type" max_length="32" name="instruction_type" reference="x_amfai_cacmdba_instruction_type" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
             <choice/>
         </element>
         <element label="Issues and Handling Instruction" max_length="8000" name="issues_and_handling_instruction" type="html"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Event ID" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Alert" max_length="40" name="potential_caller" type="boolean"/>
-        <element attributes="max_ref_dropdown=150" choice="1" label="Routing" max_length="32" name="routing_identifier" reference="x_amfai_cacmdba_routing" type="reference">
+        <element label="Referent Email List" max_length="1500" name="referent_email_list" read_only="true" type="string"/>
+        <element attributes="max_ref_dropdown=150" choice="1" label="Routing" mandatory="true" max_length="32" name="routing_identifier" reference="x_amfai_cacmdba_routing" type="reference">
             <choice/>
         </element>
         <element label="Special Instructions" max_length="8000" name="special_instructions" type="html"/>
-        <element label="Update Date" max_length="40" name="update_date" type="glide_date_time"/>
-        <element label="Update User ID" max_length="8" name="update_user_id" type="string"/>
         <element label="Advocate" max_length="32" name="user_id" reference="x_amfai_cacmdba_advocate" type="reference"/>
         <index name="index">
             <element name="number"/>

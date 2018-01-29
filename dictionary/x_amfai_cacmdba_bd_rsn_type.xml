@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*[BD] Reason Type" max_length="40" name="x_amfai_cacmdba_bd_rsn_type" type="collection">
+        <element attributes="import_attribute_name=AF_REASON_CODE,edge_encryption_enabled=true" label="AF_REASON_CODE" max_length="40" name="u_af_reason_code" type="string"/>
+        <element attributes="import_attribute_name=BD_TYPE_CODE,edge_encryption_enabled=true" label="BD_TYPE_CODE" max_length="40" name="u_bd_type_code" type="string"/>
+    </element>
+</database>

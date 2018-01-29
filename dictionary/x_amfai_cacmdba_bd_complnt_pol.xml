@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*[BD] Complaint Policy" max_length="40" name="x_amfai_cacmdba_bd_complnt_pol" type="collection">
+        <element attributes="import_attribute_name=COMPLNT_NUM,edge_encryption_enabled=true" label="COMPLNT_NUM" max_length="40" name="u_complnt_num" type="string"/>
+        <element attributes="import_attribute_name=POL_NUM,edge_encryption_enabled=true" label="POL_NUM" max_length="40" name="u_pol_num" type="string"/>
+        <element attributes="import_attribute_name=ROW_EFF_DT" label="ROW_EFF_DT" max_length="40" name="u_row_eff_dt" type="datetime"/>
+        <element attributes="import_attribute_name=ROW_TYP_CD" label="ROW_TYP_CD" max_length="40" name="u_row_typ_cd" type="char"/>
+    </element>
+</database>

@@ -407,6 +407,48 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>case_id</element>
+            <position>29</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-01-10 17:09:46</sys_created_on>
+            <sys_id>3e3b820edb270b40bf14f9961d961964</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_policy" sys_domain="global" view="Default view">3c822a9adb8c4f88a09bf6e9af961907</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-01-10 17:09:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>party_id</element>
+            <position>30</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-01-10 17:10:32</sys_created_on>
+            <sys_id>4e6bce0edb270b40bf14f9961d961924</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_policy" sys_domain="global" view="Default view">3c822a9adb8c4f88a09bf6e9af961907</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-01-10 17:10:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>policy_id</element>
+            <position>31</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-01-10 21:41:42</sys_created_on>
+            <sys_id>92790782db6f0b40bf14f9961d9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_policy" sys_domain="global" view="Default view">3c822a9adb8c4f88a09bf6e9af961907</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-01-10 21:41:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

@@ -26,7 +26,7 @@
         <last_run_datetime>to_date('2017-10-20','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
-        <mid_server display_value="">229477d3db89f240a09bf6e9af9619bc</mid_server>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
         <name>*Case Root Cause</name>
         <oracle_port>1521</oracle_port>
         <oracle_sid>mp10g0p</oracle_sid>
@@ -59,7 +59,7 @@ FROM CACMDBA.ROOT_CAUSE</sql_statement>
         <sys_created_on>2017-04-24 15:54:21</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>59527d02db5a3640a09bf6e9af961949</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>*Case Root Cause</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -67,7 +67,7 @@ FROM CACMDBA.ROOT_CAUSE</sql_statement>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_59527d02db5a3640a09bf6e9af961949</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-11-29 19:54:00</sys_updated_on>
+        <sys_updated_on>2017-12-27 20:52:10</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>

@@ -4,268 +4,254 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
             <position>0</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>63d43a53db4f030067bff3d51d961976</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>f2f8c95adbdf4b0067bff3d51d96198c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
-            <position>1</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>2bd43a53db4f030067bff3d51d961976</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>customer_id</element>
-            <position>2</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>abd43a53db4f030067bff3d51d961976</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
             <element>insured_type</element>
-            <position>3</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>2fd43a53db4f030067bff3d51d961976</sys_id>
+            <position>1</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>76f8c95adbdf4b0067bff3d51d96198c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>business_name</element>
+            <position>2</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>f6f8c95adbdf4b0067bff3d51d96198c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>first_name</element>
-            <position>4</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>afd43a53db4f030067bff3d51d961976</sys_id>
+            <position>3</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>7af8c95adbdf4b0067bff3d51d96198c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>middle_name</element>
-            <position>5</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>23d43a53db4f030067bff3d51d961977</sys_id>
+            <position>4</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>faf8c95adbdf4b0067bff3d51d96198c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>last_name</element>
-            <position>6</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>a3d43a53db4f030067bff3d51d961977</sys_id>
+            <position>5</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>7ef8c95adbdf4b0067bff3d51d96198c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>6</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>fef8c95adbdf4b0067bff3d51d96198c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>family_suffix</element>
             <position>7</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>27d43a53db4f030067bff3d51d961977</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>72f8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>birth_date</element>
+            <element>full_name</element>
             <position>8</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>a7d43a53db4f030067bff3d51d961977</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>f2f8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gender</element>
+            <position>9</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>76f8c95adbdf4b0067bff3d51d96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>9</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>2bd43a53db4f030067bff3d51d961977</sys_id>
+            <position>10</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>f6f8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>case_id</element>
-            <position>10</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>abd43a53db4f030067bff3d51d961977</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>drivers_license_number</element>
             <position>11</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>2fd43a53db4f030067bff3d51d961977</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>7af8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>drivers_license_state</element>
+            <element>person_id</element>
             <position>12</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>afd43a53db4f030067bff3d51d961977</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>faf8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>deceased_indicator</element>
+            <element>party_id</element>
             <position>13</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>23d43a53db4f030067bff3d51d961978</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>7ef8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>line1</element>
+            <element>preferred_contact_method</element>
             <position>14</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>a3d43a53db4f030067bff3d51d961978</sys_id>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>fef8c95adbdf4b0067bff3d51d96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>city</element>
-            <position>15</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>27d43a53db4f030067bff3d51d961978</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>state</element>
-            <position>16</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>a7d43a53db4f030067bff3d51d961978</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>zip5</element>
-            <position>17</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>2bd43a53db4f030067bff3d51d961978</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>18</position>
-            <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-20 20:52:41</sys_created_on>
-            <sys_id>abd43a53db4f030067bff3d51d961978</sys_id>
+            <position>15</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>72f8c95adbdf4b0067bff3d51d96198e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
-            <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-20 20:52:41</sys_updated_on>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>complaint_id</element>
+            <position>16</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>f2f8c95adbdf4b0067bff3d51d96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>data_populated_from_integration</element>
+            <position>17</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-29 20:43:06</sys_created_on>
+            <sys_id>76f8c95adbdf4b0067bff3d51d96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_insd_cust" sys_domain="global" view="Default view">88401043dbd4c3404d70734aaf961942</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-29 20:43:06</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>

@@ -39,24 +39,24 @@ CreateAttachment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 			this._document.startHTMLParser();
 			this._document.addHTML(html);
 			this._document.stopHTMLParser();
-			var a = this._document.get();
-			gs.addInfoMessage('A = ' + a);
-			this._saveAs(table, sys_id, filename);
+// 			var a = this._document.get();
+// 			gs.addInfoMessage('A = ' + a);
+			this._saveAs(html, table, sys_id, filename);
 		},
 		
-		_saveAs : function (table, sys_id, filename){
+		_saveAs : function (html, table, sys_id, filename){
 			gs.addInfoMessage('si s2 run');
 			//gs.addInfoMessage(table);
 			//gs.addInfoMessage(sys_id);
 			//gs.addInfoMessage(filename);
-			var att = new global.CACM_PDF_Attachment.Attachment();
+			var att = new global.CACM_PDF_Attachment.Attachment(sys_id, table, filename, null, 'application/pdf');
 			//gs.addInfoMessage(att);
-			att.setTableName(table);
-			att.setTableId(sys_id);
-			att.setName(filename);
-			att.setType('application/pdf');
-			gs.addInfoMessage(this._document.get());
-			att.setBody(this._document.get());
+// 			att.setTableName(table);
+// 			att.setTableId(sys_id);
+// 			att.setName(filename);
+// 			att.setType('application/pdf');
+// 			gs.addInfoMessage(this._document.get());
+// 			att.setBody(html);
 			global.CACM_PDF_Attachment.attach(att);
 		},
 		
@@ -68,7 +68,7 @@ CreateAttachment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_created_on>2017-12-15 21:01:30</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>394601bddb0f0b0067bff3d51d961912</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>CreateAttachment</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy>read</sys_policy>
@@ -76,6 +76,6 @@ CreateAttachment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_script_include_394601bddb0f0b0067bff3d51d961912</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-12-20 18:13:04</sys_updated_on>
+        <sys_updated_on>2017-12-22 18:10:10</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -105,4 +105,21 @@
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_price_if_checked</field>
+        <id>631be47ddbdd0380a09bf6e9af961928</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2017-12-22 14:09:03</sys_created_on>
+        <sys_id>96abe3fbdb8b8300bf14f9961d961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2017-12-22 14:09:03</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
 </record_update>

@@ -25,6 +25,25 @@
             <element>referral_type</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Additional Information</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_case_referral</name>
+            <sequence/>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-10 16:56:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2418464adb270b40bf14f9961d9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-10 16:56:24</sys_updated_on>
+            <value>additional_information</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>referral_type</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>FYI</label>
             <language>en</language>
             <name>x_amfai_cacmdba_case_referral</name>

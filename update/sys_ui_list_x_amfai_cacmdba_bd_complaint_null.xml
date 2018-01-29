@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_amfai_cacmdba_bd_complaint" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>case_cnt</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>b9ba35a5db570b00bf14f9961d96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_first_nm</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>3dba35a5db570b00bf14f9961d96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_last_nm</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>bdba35a5db570b00bf14f9961d96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_midd_nm</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>31ba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_num</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>b1ba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_rec_dt</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>35ba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_reslv_dt</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>b5ba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>complnt_typ_cd_1</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>39ba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>event_cnt</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>b9ba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>row_eff_dt</element>
+            <list_id display_value="x_amfai_cacmdba_bd_complaint" element="NULL" name="x_amfai_cacmdba_bd_complaint" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">35ba35a5db570b00bf14f9961d96190e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_id>3dba35a5db570b00bf14f9961d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_amfai_cacmdba_bd_complaint</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>dfoss@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-27 16:24:57</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>35ba35a5db570b00bf14f9961d96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_bd_complaint</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_list_x_amfai_cacmdba_bd_complaint_null</sys_update_name>
+            <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-27 16:24:57</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

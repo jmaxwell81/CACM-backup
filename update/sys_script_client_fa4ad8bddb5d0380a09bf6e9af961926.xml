@@ -17,8 +17,10 @@
    //Call global Script Include calc_referral_suspense_date to calculate the suspense date.  Pass it the Number of Days, and the Day Type (Calendar Days or Business Days).
 	var numOfDays = g_form.getValue('number_of_days');
 	var dayType = g_form.getValue('day_type');
+	var calcStartDate = g_form.getValue('calc_start_date');
 	var ga = new GlideAjax('global.calc_referral_suspense_date');
 	ga.addParam('sysparm_name','calcSuspDate');
+	ga.addParam('sysparm_calc_start_date', calcStartDate);
 	ga.addParam('sysparm_numDays', numOfDays);
 	ga.addParam('sysparm_dayType', dayType);
 	ga.getXML(fetchSuspenseDate);
@@ -35,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fa4ad8bddb5d0380a09bf6e9af961926</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Calculate Referral Suspense Date</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -43,8 +45,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_script_client_fa4ad8bddb5d0380a09bf6e9af961926</sys_update_name>
-        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-09-26 21:34:57</sys_updated_on>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-16 15:08:46</sys_updated_on>
         <table>x_amfai_cacmdba_case_referral</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

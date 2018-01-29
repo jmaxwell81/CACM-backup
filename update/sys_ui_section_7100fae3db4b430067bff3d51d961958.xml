@@ -5,13 +5,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>f05827efdbcb430067bff3d51d9619be</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>21c10440db5b830067bff3d51d96197e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -19,85 +19,113 @@
             <element>select_executive</element>
             <position>1</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>745827efdbcb430067bff3d51d9619be</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>a1c10440db5b830067bff3d51d96197e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>additional_address</element>
+            <position>2</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>25c10440db5b830067bff3d51d96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_amfai_cacmdba_Generate_Letter.xml</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>f45827efdbcb430067bff3d51d9619be</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>a5c10440db5b830067bff3d51d96197e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Generate Letter">5609b321db878300bf14f9961d96192f</sys_ui_formatter>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>f85827efdbcb430067bff3d51d9619be</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>a9c10440db5b830067bff3d51d96197e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>7c5827efdbcb430067bff3d51d9619be</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>2dc10440db5b830067bff3d51d96197e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>letter_text</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>fc5827efdbcb430067bff3d51d9619be</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>adc10440db5b830067bff3d51d96197e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_amfai_cacmdba_save_attachment.xml</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-21 19:15:59</sys_created_on>
-            <sys_id>705827efdbcb430067bff3d51d9619bf</sys_id>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>21c10440db5b830067bff3d51d96197f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Save Attachment">5ab98971db4f0b0067bff3d51d96194f</sys_ui_formatter>
             <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-21 19:15:59</sys_updated_on>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>letter</element>
+            <position>8</position>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2017-12-22 15:45:39</sys_created_on>
+            <sys_id>25c10440db5b830067bff3d51d96197f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Letter Details" display_value="Letter Details" name="x_amfai_cacmdba_document" sys_domain="global" view="Default view">7100fae3db4b430067bff3d51d961958</sys_ui_section>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2017-12-22 15:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Letter Details</caption>

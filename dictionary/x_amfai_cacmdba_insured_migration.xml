@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="*07 - Insured Migration" max_length="40" name="x_amfai_cacmdba_insured_migration" sizeclass="108340" type="collection">
+        <element attributes="import_attribute_name=BUSINESS,edge_encryption_enabled=true" label="BUSINESS" max_length="40" name="u_business" type="string"/>
+        <element attributes="import_attribute_name=COMPLAINT_ID,edge_encryption_enabled=true" label="COMPLAINT_ID" max_length="40" name="u_complaint_id" type="string"/>
+        <element attributes="import_attribute_name=CREATE_DATE" label="CREATE_DATE" max_length="40" name="u_create_date" type="datetime"/>
+        <element attributes="import_attribute_name=CREATE_USER_ID,edge_encryption_enabled=true" label="CREATE_USER_ID" max_length="40" name="u_create_user_id" type="string"/>
+        <element attributes="import_attribute_name=FIRST_NAME,edge_encryption_enabled=true" label="FIRST_NAME" max_length="40" name="u_first_name" type="string"/>
+        <element attributes="import_attribute_name=GENDER,edge_encryption_enabled=true" label="GENDER" max_length="40" name="u_gender" type="string"/>
+        <element attributes="import_attribute_name=INSURED_TYPE,edge_encryption_enabled=true" label="INSURED_TYPE" max_length="40" name="u_insured_type" type="string"/>
+        <element attributes="import_attribute_name=INTEGRATION_ID" label="INTEGRATION_ID" max_length="40" name="u_integration_id" type="char"/>
+        <element attributes="import_attribute_name=LAST_NAME,edge_encryption_enabled=true" label="LAST_NAME" max_length="40" name="u_last_name" type="string"/>
+        <element attributes="import_attribute_name=MIDDLE_INITIAL,edge_encryption_enabled=true" label="MIDDLE_INITIAL" max_length="40" name="u_middle_initial" type="string"/>
+        <element attributes="import_attribute_name=PERSON_ID,edge_encryption_enabled=true" label="PERSON_ID" max_length="40" name="u_person_id" type="string"/>
+        <element attributes="import_attribute_name=PREFERRED_ROUTING,edge_encryption_enabled=true" label="PREFERRED_ROUTING" max_length="40" name="u_preferred_routing" type="string"/>
+    </element>
+</database>

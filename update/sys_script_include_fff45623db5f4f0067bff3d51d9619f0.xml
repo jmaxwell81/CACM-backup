@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.CACMAjaxIntegrationUtil</api_name>
+        <client_callable>true</client_callable>
+        <description>CACM Soap calls for&#13;
+Associate Claims&#13;
+Associate Insured&#13;
+Associate Policies</description>
+        <name>CACMAjaxIntegrationUtil</name>
+        <script><![CDATA[var CACMAjaxIntegrationUtil = Class.create();
+CACMAjaxIntegrationUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	// get insured members
+	triggerPartySearchSOAPCall: function(){
+		
+		var aInsuredGR = {};
+			
+			aInsuredGR.first_name = this.getParameter('sysparm_fn_name');
+			aInsuredGR.last_name = this.getParameter('sysparm_ln_name');
+			aInsuredGR.state = this.getParameter('sysparm_state');
+			aInsuredGR.caseID = this.getParameter('sysparm_caseID');
+			var insuredStgObj = {};
+				var randomNum = this.getRandomInt(1, 100000000);
+				insuredStgObj.caseid = aInsuredGR.caseID;
+				insuredStgObj.random_number = randomNum;
+				
+				try {
+					var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.PartySearchServiceV7', 'searchParty_Party');
+					
+					//override authentication profile
+					//authentication type ='basic'
+					//r.setAuthentication(authentication type,profile name);
+					
+					s.setStringParameterNoEscape('firstName', aInsuredGR.first_name);
+					s.setStringParameterNoEscape('AddressMatchBy', 'EXACT');
+					s.setStringParameterNoEscape('stateCode', aInsuredGR.state);
+					s.setStringParameterNoEscape('partnerIdentifier', 'AFI');
+					s.setStringParameterNoEscape('lastName', aInsuredGR.last_name);
+					
+					var response = s.execute();
+					var responseBody = response.getBody();
+					var status = response.getStatusCode();
+					
+					
+					
+					var partySearchResponse = new XMLDocument2();
+					partySearchResponse.parseXML(responseBody);
+					
+					var partyIdentifier = this.getResponseNodeText(partySearchResponse, "partyIdentifier");
+					
+					if(partyIdentifier != null){
+						
+						var requestNode = partySearchResponse.getNode('//ns1:PartySearchResponse');
+						
+						var requestIter = requestNode.getChildNodeIterator();
+						
+						while (requestIter.hasNext()) {
+							
+							var entryNode = requestIter.next();
+							var PartySearchResult = entryNode.getChildNodeIterator();
+							while (PartySearchResult.hasNext()) {
+								var PartySearchResultNode = PartySearchResult.next();
+								
+								if(PartySearchResultNode.getNodeName() == "ns1:partyIdentifier"){
+									insuredStgObj.partyidentifier = PartySearchResultNode.getTextContent();
+								}
+								else if(PartySearchResultNode.getNodeName() == "ns1:PartyType"){
+									insuredStgObj.partytype = PartySearchResultNode.getTextContent();
+								}
+								else if(PartySearchResultNode.getNodeName() == "ns1:partnerIdentifier"){
+									insuredStgObj.partneridentifier = PartySearchResultNode.getTextContent();
+								}else if(PartySearchResultNode.getNodeName() == "ns1:PersonSearchResult"){
+									var PersonSearchResult = PartySearchResultNode.getChildNodeIterator();
+									while (PersonSearchResult.hasNext()) {
+										var PersonSearchResultNode = PersonSearchResult.next();
+										
+										if(PersonSearchResultNode.getNodeName() == "ns1:firstName"){
+											insuredStgObj.first_name = PersonSearchResultNode.getTextContent();
+										}	else if(PersonSearchResultNode.getNodeName() == "ns1:lastName"){
+											insuredStgObj.last_name = PersonSearchResultNode.getTextContent();
+										}	else if(PersonSearchResultNode.getNodeName() == "ns1:middleName"){
+											insuredStgObj.middle_name = PersonSearchResultNode.getTextContent();
+										}	else if(PersonSearchResultNode.getNodeName() == "ns1:FamilySuffix"){
+											insuredStgObj.family_suffix = PersonSearchResultNode.getTextContent();
+										}
+										
+									}
+								}
+								//Update Address
+								else if(PartySearchResultNode.getNodeName() == "ns1:PrimaryMailingAddress"){
+									var PrimaryMailingAddress = PartySearchResultNode.getChildNodeIterator();
+									while (PrimaryMailingAddress.hasNext()) {
+										var PrimaryMailingAddressNode = PrimaryMailingAddress.next();
+										if(PrimaryMailingAddressNode.getNodeName() == "ns2:Address"){
+											var Address = PrimaryMailingAddressNode.getChildNodeIterator();
+									while (Address.hasNext()) {
+										var AddressNode = Address.next();
+										if(AddressNode.getNodeName() == "ns2:countryIdentifier"){
+											insuredStgObj.country = AddressNode.getTextContent();	
+										}
+										else if(AddressNode.getNodeName() == "ns2:addressLine1"){
+											insuredStgObj.address_line_1 = AddressNode.getTextContent();	
+										}
+										else if(AddressNode.getNodeName() == "ns2:city"){
+											insuredStgObj.city = AddressNode.getTextContent();	
+										}
+										else if(AddressNode.getNodeName() == "ns2:stateCode"){
+											insuredStgObj.state = AddressNode.getTextContent();	
+										}else if(AddressNode.getNodeName() == "ns2:zip5Code"){
+											insuredStgObj.zip_code = AddressNode.getTextContent();	
+										}
+									}
+										}	
+										
+									}
+								}
+								
+							}
+							
+							this.insertCACMInsuredStagingTable(insuredStgObj);
+							insuredStgObj.party_id = '';
+							insuredStgObj.first_name = '';
+							insuredStgObj.last_name = '';
+							insuredStgObj.middle_name = '';
+							insuredStgObj.family_suffix = '';
+							
+						}
+						
+					}else{
+						var message = this.getNSResponseNodeText(partySearchResponse, "errorMessage", "ns2:");
+						if(message == null || message == 'null' || message == ""){
+							message = this.getNSResponseNodeText(partySearchResponse, "message", "ns2:");
+						}
+						
+						var error_message = "[" + new GlideDateTime().getValue() + "] A issue was encountered while performing this search for these parameters: " + message;
+						gs.addErrorMessage(error_message);
+						aInsuredGR.update();
+					}
+					
+				}
+				catch(ex) {
+					var message = ex.getMessage();
+				}
+				
+				return randomNum;
+				
+			},
+			
+			getResponseNodeText: function(aXMLDoc, aNodeName){
+				
+				if(aNodeName == "")
+					return "";
+				
+				return aXMLDoc.getNodeText('//ns1:'+aNodeName);//this.namespace+
+				
+			},
+			updatePartySearchDetailsFromResponse: function(aInsuredGR, aPartySearchResultNodeString){
+				
+				var partySearchResponse = new XMLDocument2();
+				partySearchResponse.parseXML(aPartySearchResultNodeString);
+				
+				//aInsuredGR.setValue("partyidentifier", this.getResponseNodeText(partySearchResponse, "partyIdentifier"));
+				//aInsuredGR.setValue("partneridentifier", this.getResponseNodeText(partySearchResponse, "partnerIdentifier"));
+				aInsuredGR.setValue("insured_type", this.getResponseNodeText(partySearchResponse, "PartyType", "ns1:"));
+				//aInsuredGR.setValue("addrcountryidentifier", this.getNSResponseNodeText(partySearchResponse, "countryIdentifier", "ns2:"));
+				aInsuredGR.setValue("line1", this.getNSResponseNodeText(partySearchResponse, "addressLine1", "ns2:"));
+				aInsuredGR.setValue("city", this.getNSResponseNodeText(partySearchResponse, "city", "ns2:"));
+				aInsuredGR.setValue("state", this.getNSResponseNodeText(partySearchResponse, "stateCode", "ns2:"));
+				aInsuredGR.setValue("zip5", this.getNSResponseNodeText(partySearchResponse, "zip5Code", "ns2:"));
+				aInsuredGR.setValue("data_populated_from_integration", 'Yes');
+				//aInsuredGR.setValue("addrzip2code", this.getNSResponseNodeText(partySearchResponse, "zip2Code", "ns2:"));
+				//aInsuredGR.setValue("addrlatitudenumber", this.getNSResponseNodeText(partySearchResponse, "latitudeNumber", "ns2:"));
+				//aInsuredGR.setValue("addrlongitudenumber", this.getNSResponseNodeText(partySearchResponse, "longitudeNumber", "ns2:"));
+				//aInsuredGR.setValue("addrgeomatchlevelcode", this.getNSResponseNodeText(partySearchResponse, "geoMatchLevelCode", "ns2:"));
+				//aInsuredGR.setValue("addrfipscountynumber", this.getNSResponseNodeText(partySearchResponse, "fipsCountyNumber", "ns2:"));
+				//aInsuredGR.setValue("addrfipsstatenumber", this.getNSResponseNodeText(partySearchResponse, "fipsStateNumber", "ns2:"));
+				//aInsuredGR.setValue("addrcensusblockgroup", this.getNSResponseNodeText(partySearchResponse, "censusBlockGroup", "ns2:"));
+				//aInsuredGR.setValue("addrcensusblockmd", this.getNSResponseNodeText(partySearchResponse, "censusBlockMD", "ns2:"));
+				//aInsuredGR.setValue("addrcensustractnumber", this.getNSResponseNodeText(partySearchResponse, "censusTractNumber", "ns2:"));
+				//aInsuredGR.setValue("addrcarrierroute", this.getNSResponseNodeText(partySearchResponse, "carrierRoute", "ns2:"));
+				//aInsuredGR.setValue("addrshortcity", this.getNSResponseNodeText(partySearchResponse, "shortCity", "ns2:"));
+				//aInsuredGR.setValue("addrdeliverypointvalidationmatchindicator", this.getNSResponseNodeText(partySearchResponse, "deliveryPointValidationMatchIndicator", "ns2:"));
+				//aInsuredGR.setValue("addrdeliverypointvalidationcommercialmailreceivingcode", this.getNSResponseNodeText(partySearchResponse, "deliveryPointValidationCommercialMailreceivingCode", "ns2:"));
+				//aInsuredGR.setValue("addrnolongervalidindicator", this.getResponseNodeText(partySearchResponse, "noLongerValidIndicator"));
+				aInsuredGR.setValue("first_name", this.getResponseNodeText(partySearchResponse, "firstName", "ns1:"));
+				
+				aInsuredGR.setValue("middle_name", this.getResponseNodeText(partySearchResponse, "middleName", "ns1:"));
+				aInsuredGR.setValue("last_name", this.getResponseNodeText(partySearchResponse, "lastName", "ns1:"));
+				aInsuredGR.setValue("family_suffix", this.getResponseNodeText(partySearchResponse, "FamilySuffix", "ns1:"));
+				aInsuredGR.setValue("deceased_indicator", this.getResponseNodeText(partySearchResponse, "DeceasedIndicator", "ns1:"));
+				aInsuredGR.setValue("birth_date", this.getResponseNodeText(partySearchResponse, "birthDate", "ns1:"));
+				aInsuredGR.setValue("drivers_license_number", this.getResponseNodeText(partySearchResponse, "licenseNumber", "ns1:"));
+				aInsuredGR.setValue("drivers_license_state", this.getResponseNodeText(partySearchResponse, "licenseState", "ns1:"));
+				aInsuredGR.setValue("customer_id", this.getResponseNodeText(partySearchResponse, "partyIdentifier", "ns1:"));
+				
+				aInsuredGR.update();
+				
+			},
+			
+			insertCACMInsuredStagingTable: function(stgInsuredObj){
+				var stgInsuredgld = new GlideRecord('x_amfai_cacmdba_insured_staging');
+				stgInsuredgld.initialize();
+				stgInsuredgld.random_number = stgInsuredObj.random_number;
+				stgInsuredgld.partyidentifier = this.getPartyIdentifier(stgInsuredObj);
+				stgInsuredgld.partytype = stgInsuredObj.partytype;
+				stgInsuredgld.partneridentifier = stgInsuredObj.partneridentifier;
+				stgInsuredgld.caseid = stgInsuredObj.caseid;
+				stgInsuredgld.insert();
+			},
+			getPartyIdentifier: function(stgInsuredObj){
+				var insdCustgld = new GlideRecord('x_amfai_cacmdba_insd_cust');
+				insdCustgld.addQuery('party_id',stgInsuredObj.partyidentifier);
+				insdCustgld.query();
+				if(insdCustgld.next()){
+					insdCustgld.first_name = stgInsuredObj.first_name;
+					insdCustgld.last_name = stgInsuredObj.last_name;
+					insdCustgld.middle_name = stgInsuredObj.middle_name;
+					insdCustgld.family_suffix = stgInsuredObj.family_suffix;
+					insdCustgld.data_populated_from_integration = "Yes";
+					insdCustgld.preferred_contact_method = "M";
+					insdCustgld.update();
+				}else{
+					insdCustgld.initialize();
+					insdCustgld.party_id = stgInsuredObj.partyidentifier;
+					insdCustgld.first_name = stgInsuredObj.first_name;
+					insdCustgld.last_name = stgInsuredObj.last_name;
+					insdCustgld.middle_name = stgInsuredObj.middle_name;
+					insdCustgld.family_suffix = stgInsuredObj.family_suffix;
+					insdCustgld.data_populated_from_integration = "Yes";
+					insdCustgld.preferred_contact_method = "M";
+					insdCustgld.insert();
+				}
+				this.insertOrUpdateAddress(insdCustgld,stgInsuredObj);//Insert or update address
+				return insdCustgld.sys_id;
+			},
+			
+			
+			
+			getRandomInt: function(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+			},
+			
+			// get Polices
+			
+			
+			triggerPoliciesSOAPCall: function(){
+				
+				var aInsuredGR = {};
+					
+					aInsuredGR.Policy_Number = this.getParameter('sysparm_pNumber');
+					// 				aInsuredGR.last_name = this.getParameter('sysparm_ln_name');
+					// 				aInsuredGR.state = this.getParameter('sysparm_state');
+					aInsuredGR.caseID = this.getParameter('sysparm_caseID');
+					var insuredStgObj = {};
+						var randomNum = this.getRandomInt(1, 100000000);
+						insuredStgObj.caseid = aInsuredGR.caseID;
+						insuredStgObj.random_number = randomNum;
+						insuredStgObj.policynumber = '';
+						
+						insuredStgObj.insured_id = '';
+						insuredStgObj.contract_state_cd = '';
+						insuredStgObj.classic_product_type_cd = '';
+						insuredStgObj.advance_product_type_code = '';
+						insuredStgObj.advance_product_cd = '';
+						insuredStgObj.company = '';
+						insuredStgObj.data_populated_from_integration = '';
+						insuredStgObj.sourcesystem = '';
+						insuredStgObj.producer_id = '';
+						insuredStgObj.riskdescription = '';
+						insuredStgObj.roledescription = '';
+						
+						
+						try {
+							var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ProductPortfolioServiceV5', 'RetrieveProductPortfolioRequest');
+							// s.setStringParameterNoEscape('UserId', 'crusrvt');
+							s.setStringParameterNoEscape('ApplicationName', 'CACM');
+							//s.setStringParameterNoEscape('CustomerIds', aPolicyGR.insured_id);
+							s.setStringParameterNoEscape('ProductIds', aInsuredGR.Policy_Number);
+							s.setStringParameterNoEscape('ProductExtractLevels', 'POLICIES');
+							//s.setEccCorrelator("CACM-"+aPolicyGR.policynumber);
+							
+							var response = s.execute();
+							var responseBody = response.getBody();
+							var status = response.getStatusCode();
+							gs.info("Node Name "+responseBody);
+							
+							
+							var partySearchResponse = new XMLDocument2();
+							partySearchResponse.parseXML(responseBody);
+							
+							var partyIdentifier = this.getResponseNodeText(partySearchResponse, "policyNumber");
+							
+							if(partyIdentifier != null){
+								
+								var requestNode = partySearchResponse.getNode('//ns1:RetrieveProductPortfolioOutput');
+								
+								var requestIter = requestNode.getChildNodeIterator();
+								
+								while (requestIter.hasNext()) {
+									
+									var entryNode = requestIter.next();
+									if(entryNode.getNodeName() == "ns1:policies"){
+										
+										
+										var policies = entryNode.getChildNodeIterator();
+										while (policies.hasNext()) {
+											var policiesNode = policies.next();
+											
+											if(policiesNode.getNodeName() == "ns1:policyNumber"){
+												
+												insuredStgObj.policynumber = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:companyInfo"){
+												var companyInfo = policiesNode.getChildNodeIterator();
+										while (companyInfo.hasNext()) {
+											var companyInfoNode = companyInfo.next();
+											if(companyInfoNode.getNodeName() == "ns1:companyCode"){
+												insuredStgObj.company = companyInfoNode.getTextContent();
+										}
+										}
+											}else if(policiesNode.getNodeName() == "ns1:stateCode"){
+												
+												insuredStgObj.contract_state_cd = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:policyTypeCode"){
+												
+												insuredStgObj.classic_product_type_cd = policiesNode.getTextContent();
+												
+											}else if(policiesNode.getNodeName() == "ns1:policyTypeDesc"){
+												
+												insuredStgObj.advance_product_type_code = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:productCode"){
+												
+												insuredStgObj.advance_product_cd = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:companyCode"){
+												
+												insuredStgObj.company = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:sourceSystem"){
+												
+												insuredStgObj.sourcesystem = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:originatingProducerId"){
+												
+												insuredStgObj.producer_id = policiesNode.getTextContent();
+											}else if(policiesNode.getNodeName() == "ns1:risk"){
+												var risk = policiesNode.getChildNodeIterator();
+												while (risk.hasNext()) {
+													var riskNode = risk.next();
+												if(riskNode.getNodeName() == 'ns1:riskDescription'){
+											insuredStgObj.riskdescription = riskNode.getTextContent();	
+													
+											//gs.info("Node Name "+ riskNode.getNodeName()+"******* Node Value "+riskNode.getTextContent());	
+												}
+												}
+												
+											}
+											else if(policiesNode.getNodeName() == "ns1:customerRoles"){
+												var roleDescription = '';
+												
+												var customerRoles = policiesNode.getChildNodeIterator();
+												while (customerRoles.hasNext()) {
+													var customerRolesNode = customerRoles.next();
+													if(customerRolesNode.getNodeName() == "ns1:customerId"){
+														
+														//gs.info("I am here");
+														//gs.info("Node Name "+ customerRolesNode.getNodeName()+"******* Node Value "+customerRolesNode.getTextContent());
+														insuredStgObj.insured_id = policiesNode.getTextContent();
+													}else if(customerRolesNode.getNodeName() == "ns1:roles"){
+														
+														var roles = customerRolesNode.getChildNodeIterator();
+												while (roles.hasNext()) {
+													var rolesNode = roles.next();
+													if(rolesNode.getNodeName() == "ns1:roleDescription"){
+													if(roleDescription == ''){
+													roleDescription = rolesNode.getTextContent();
+													}
+														else{
+														roleDescription = roleDescription +","+ rolesNode.getTextContent();	
+														}
+														//gs.info("Node Name "+ rolesNode.getNodeName()+"******* Node Value "+rolesNode.getTextContent());
+														
+													}
+												}
+														
+													insuredStgObj.roledescription = roleDescription;
+														
+													}
+													
+												}
+												
+											}
+										}
+										
+									}
+									
+								}
+								this.insertCACMPolicyStagingTable(insuredStgObj);
+								insuredStgObj.insured_id = '';
+								insuredStgObj.contract_state_cd = '';
+								insuredStgObj.classic_product_type_cd = '';
+								insuredStgObj.advance_product_type_code = '';
+								insuredStgObj.advance_product_cd = '';
+								insuredStgObj.company = '';
+								insuredStgObj.data_populated_from_integration = '';
+								insuredStgObj.sourcesystem = '';
+								insuredStgObj.producer_id = '';
+								insuredStgObj.riskdescription = '';
+								insuredStgObj.roledescription = '';
+								
+							}else{
+								var message = this.getNSResponseNodeText(partySearchResponse, "errorMessage", "ns2:");
+								if(message == null || message == 'null' || message == ""){
+									message = this.getNSResponseNodeText(partySearchResponse, "message", "ns2:");
+								}
+								
+								var error_message = "[" + new GlideDateTime().getValue() + "] A issue was encountered while performing this search for these parameters: " + message;
+								gs.addErrorMessage(error_message);
+								aInsuredGR.update();
+							}
+							
+						}
+						catch(ex) {
+							var message = ex.getMessage();
+						}
+						
+						return randomNum;
+						
+					},
+					
+					//Insert Policy Record in Staging Table
+					insertCACMPolicyStagingTable: function(stgInsuredObj){
+						var stgInsuredgld = new GlideRecord('x_amfai_cacmdba_fetch_policies');
+						stgInsuredgld.initialize();
+						stgInsuredgld.random_number = stgInsuredObj.random_number;
+						stgInsuredgld.policy_number = this.getPolicyDetails(stgInsuredObj);
+						// 						stgInsuredgld.partytype = stgInsuredObj.partytype;
+						// 						stgInsuredgld.partneridentifier = stgInsuredObj.partneridentifier;
+						stgInsuredgld.case_id = stgInsuredObj.caseid;
+						stgInsuredgld.insert();
+					},
+					getPolicyDetails: function(stgInsuredObj){
+						var insdCustgld = new GlideRecord('x_amfai_cacmdba_policy');
+						insdCustgld.addQuery('policynumber',stgInsuredObj.policynumber);
+						insdCustgld.query();
+						if(insdCustgld.next()){
+							insdCustgld.contract_state_cd = stgInsuredObj.contract_state_cd;
+							insdCustgld.classic_product_type_cd = stgInsuredObj.classic_product_type_cd;
+							insdCustgld.advance_product_type_code = stgInsuredObj.advance_product_type_code;
+							insdCustgld.advance_product_cd = stgInsuredObj.advance_product_cd;
+							insdCustgld.company = stgInsuredObj.company;
+							insdCustgld.sourcesystem = stgInsuredObj.sourcesystem;
+							insdCustgld.producer_id = stgInsuredObj.producer_id;
+							insdCustgld.riskdescription = stgInsuredObj.riskdescription;
+							insdCustgld.roledescription = stgInsuredObj.roledescription;
+							insdCustgld.data_populated_from_integration = "Yes";
+							
+							insdCustgld.update();
+						}else{
+							insdCustgld.initialize();
+							insdCustgld.policynumber = stgInsuredObj.policynumber;
+							insdCustgld.contract_state_cd = stgInsuredObj.contract_state_cd;
+							insdCustgld.classic_product_type_cd = stgInsuredObj.classic_product_type_cd;
+							insdCustgld.advance_product_type_code = stgInsuredObj.advance_product_type_code;
+							insdCustgld.advance_product_cd = stgInsuredObj.advance_product_cd;
+							insdCustgld.company = stgInsuredObj.company;
+							insdCustgld.sourcesystem = stgInsuredObj.sourcesystem;
+							insdCustgld.producer_id = stgInsuredObj.producer_id;
+							insdCustgld.riskdescription = stgInsuredObj.riskdescription;
+							insdCustgld.roledescription = stgInsuredObj.roledescription;
+							insdCustgld.data_populated_from_integration = "Yes";
+							insdCustgld.insert();
+						}
+						return insdCustgld.sys_id;
+					},
+					// get Claim Info
+					triggerClaimInfoSOAPCall: function(){
+						
+						var aInsuredGR = {};
+							
+							aInsuredGR.first_name = this.getParameter('sysparm_fn_name');
+							aInsuredGR.last_name = this.getParameter('sysparm_ln_name');
+							aInsuredGR.state = this.getParameter('sysparm_state');
+							aInsuredGR.caseID = this.getParameter('sysparm_caseID');
+							var insuredStgObj = {};
+								var randomNum = this.getRandomInt(1, 100000000);
+								insuredStgObj.caseid = aInsuredGR.caseID;
+								insuredStgObj.random_number = randomNum;
+								insuredStgObj.data_populated_from_integration = 'Yes';
+								insuredStgObj.source_center = 'ICS';
+								insuredStgObj.first_name = aInsuredGR.first_name;
+								insuredStgObj.last_name = aInsuredGR.last_name;
+								insuredStgObj.state = aInsuredGR.state;
+								insuredStgObj.search_by = 'customer_information';
+								
+								try {
+									var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ClaimInfoServiceV5', 'getClaimsByName');
+									
+									//override authentication profile
+									//authentication type ='basic'
+									//r.setAuthentication(authentication type,profile name);
+									
+									s.setStringParameterNoEscape('consumingSystemName', 'cacm');
+									s.setStringParameterNoEscape('firstName', aInsuredGR.first_name);
+									s.setStringParameterNoEscape('lastName', aInsuredGR.last_name);
+									s.setStringParameterNoEscape('MatchEnum', 'MATCH_TYPE_STARTS_WITH');
+									s.setStringParameterNoEscape('SearchEnum','SEARCH_TYPE_PERSON');
+									s.setStringParameterNoEscape('state1', aInsuredGR.state);
+									
+									var response = s.execute();
+									var responseBody = response.getBody();
+									var status = response.getStatusCode();
+									
+									
+									
+									if(status == '200'){
+										//var node = cacmResponse.getNode('//ns1:policies['+i+']');
+										var claimResponse = new XMLDocument2();
+										claimResponse.parseXML(responseBody);
+										
+										var Code =  claimResponse.getNodeText("//severity");
+										if(Code == 'ERROR'){
+											
+											var Current_date = new GlideDateTime();
+											gs.addErrorMessage("[" + Current_date + "] A issue was encountered while fetching Claim details for this record: "+claimResponse.getNodeText("//messageDescription"));
+											//aCACMClaim.update();
+										}
+										//gs.addInfoMessage(error);
+										//gs.addInfoMessage(responseBody);
+										else {
+											var node = claimResponse.getNode('//ns2:ClaimsByNameResponse');
+											var requestIter = node.getChildNodeIterator();
+											
+											while (requestIter.hasNext()) {
+												
+												var entryNode = requestIter.next();
+												
+												if(entryNode.getNodeName() == "ClaimsByName"){
+													
+													
+													var ClaimsByName = entryNode.getChildNodeIterator();
+													while (ClaimsByName.hasNext()) {
+														var ClaimsByNameNode = ClaimsByName.next();
+														
+														if(ClaimsByNameNode.getNodeName() == "Claims"){
+															var Claims = ClaimsByNameNode.getChildNodeIterator();
+															while (Claims.hasNext()) {
+																var ClaimsNode = Claims.next();
+																if(ClaimsNode.getNodeName() == "Claim"){
+																	var Claim = ClaimsNode.getChildNodeIterator();
+																	while (Claim.hasNext()) {
+																		var ClaimNode = Claim.next();
+																		//gs.info("Node Name "+ ClaimNode.getNodeName()+"******* Node Value "+ClaimNode.getTextContent());
+																		if(ClaimNode.getNodeName() == "claimNumber"){
+																			insuredStgObj.claim_number = ClaimNode.getTextContent();
+																		}else if(ClaimNode.getNodeName() == "claimOfficeId"){
+																			insuredStgObj.claim_office_identifier = ClaimNode.getTextContent();
+																		} else if(ClaimNode.getNodeName() == "regionNumber"){
+																			insuredStgObj.claim_region_identifier = ClaimNode.getTextContent();
+																		} else if(ClaimNode.getNodeName() == "dateOfLoss"){
+																			insuredStgObj.loss_incurred_date = ClaimNode.getTextContent();
+																		}
+																	}
+																}
+															}
+														}
+														
+													}
+												}
+												
+											}
+											this.insertCACMClaimStagingTable(insuredStgObj);
+											insuredStgObj.claimOfficeId = '';
+											insuredStgObj.classic_product_type_cd = '';
+											insuredStgObj.claim_region_identifier = '';
+											insuredStgObj.loss_incurred_date = '';
+											
+										}
+									}
+									
+								}
+								catch(ex) {
+									var message = ex.getMessage();
+								}
+								return randomNum;
+							},
+							
+							
+							// get Claim Info by claim Number
+							triggerClaimInfobyNumSOAPCall: function(){
+								
+								var aInsuredGR = {};
+									
+									aInsuredGR.claim_number = this.getParameter('sysparm_claim_number');
+									aInsuredGR.caseID = this.getParameter('sysparm_caseID');
+									var insuredStgObj = {};
+										var randomNum = this.getRandomInt(1, 100000000);
+										insuredStgObj.caseid = aInsuredGR.caseID;
+										insuredStgObj.random_number = randomNum;
+										insuredStgObj.data_populated_from_integration = 'Yes';
+										insuredStgObj.source_center = 'CC';
+										insuredStgObj.search_by = 'claim_number';
+										
+										try {
+											var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ClaimServiceV2', 'retrieveClaimSummary');
+											
+											//override authentication profile
+											//authentication type ='basic'
+											//r.setAuthentication(authentication type,profile name);
+											
+											s.setStringParameterNoEscape('userId', '');
+											//s.setStringParameterNoEscape('policyNumber', '5045630701');
+											s.setStringParameterNoEscape('systemName', '');
+											s.setStringParameterNoEscape('claimNumber',aInsuredGR.claim_number);
+											s.setStringParameterNoEscape('consumerTransactionID', '');
+											s.setStringParameterNoEscape('barcodeId', '');
+											
+											var response = s.execute();
+											var responseBody = response.getBody();
+											var status = response.getStatusCode();
+										
+											
+											
+											if(status == '200'){
+												//var node = cacmResponse.getNode('//ns1:policies['+i+']');
+												var claimResponse = new XMLDocument2();
+												claimResponse.parseXML(responseBody);
+												
+												var Code =  claimResponse.getNodeText("//severity");
+													
+												if(Code == 'ERROR'){
+													
+													var Current_date = new GlideDateTime();
+													gs.addErrorMessage("[" + Current_date + "] A issue was encountered while fetching Claim details for this record: "+claimResponse.getNodeText("//messageDescription"));
+													//aCACMClaim.update();
+												}
+												//gs.addInfoMessage(error);
+												//gs.addInfoMessage(responseBody);
+												else {
+													
+													var node = claimResponse.getNode('//ClaimSummaryResponse');
+													var requestIter = node.getChildNodeIterator();
+												
+													while (requestIter.hasNext()) {
+														
+														var entryNode = requestIter.next();
+														//gs.info("Node Name "+ entryNode.getNodeName()+"******* Node Value "+entryNode.getTextContent());
+														
+														if(entryNode.getNodeName() == "ClaimSummaryDetail"){
+															
+															
+															var ClaimsByName = entryNode.getChildNodeIterator();
+															while (ClaimsByName.hasNext()) {
+																var ClaimsByNameNode = ClaimsByName.next();
+																
+																if(ClaimsByNameNode.getNodeName() == "ClaimsSummary"){
+																	var Claims = ClaimsByNameNode.getChildNodeIterator();
+																	while (Claims.hasNext()) {
+																		var ClaimsNode = Claims.next();
+																		if(ClaimsNode.getNodeName() == "ns2:claimNumber"){
+																				//gs.info("Claim Number"+ClaimsNode.getTextContent());
+																			insuredStgObj.claim_number = ClaimsNode.getTextContent();
+																		}else if(ClaimsNode.getNodeName() == "ns2:securedClaim"){
+																			insuredStgObj.secured_claim_indicator = ClaimsNode.getTextContent();
+																		}else if(ClaimsNode.getNodeName() == "ns2:catIndicator"){
+																			insuredStgObj.catastrophe_claim_indicator = ClaimsNode.getTextContent();
+																		}else if(ClaimsNode.getNodeName() == "ns2:causeDescription"){
+																			insuredStgObj.causeDescription = ClaimsNode.getTextContent();
+																		}else if(ClaimsNode.getNodeName() == "ns2:Office"){
+																			var Office = entryNode.getChildNodeIterator();
+																			while (Office.hasNext()) {
+																				var OfficeNode = Office.next();
+																				if(OfficeNode.getNodeName() == "ns2:claimOfficeID"){
+																					insuredStgObj.claim_office_identifier = OfficeNode.getTextContent();
+																				}else if(OfficeNode.getNodeName() == "ns2:claimRegionID"){
+																					insuredStgObj.claim_region_identifier = OfficeNode.getTextContent();
+																				
+																			}
+																		}
+																	}
+																}
+															}
+															
+														}
+													}
+													
+												}
+												this.insertCACMClaimStagingTable(insuredStgObj);
+												insuredStgObj.claimOfficeId = '';
+												insuredStgObj.classic_product_type_cd = '';
+												insuredStgObj.claim_region_identifier = '';
+												insuredStgObj.loss_incurred_date = '';
+												
+											}
+										}
+										
+									}
+									catch(ex) {
+										var message = ex.getMessage();
+									}
+									return randomNum;
+								},
+								
+								
+								//Insert Policy Record in Staging Table
+								insertCACMClaimStagingTable: function(stgInsuredObj){
+									var stgInsuredgld = new GlideRecord('x_amfai_cacmdba_claim_cst_info_stg');
+									stgInsuredgld.initialize();
+									stgInsuredgld.random_number = stgInsuredObj.random_number;
+									stgInsuredgld.claim = this.getClaimDetails(stgInsuredObj);
+									// 						stgInsuredgld.partytype = stgInsuredObj.partytype;
+									// 						stgInsuredgld.partneridentifier = stgInsuredObj.partneridentifier;
+									stgInsuredgld.case_id = stgInsuredObj.caseid;
+									stgInsuredgld.insert();
+								},
+								getClaimDetails: function(stgInsuredObj){
+									var insdCustgld = new GlideRecord('x_amfai_cacmdba_claim');
+									insdCustgld.addQuery('claim_number',stgInsuredObj.claim_number);
+									insdCustgld.query();
+									if(insdCustgld.next()){
+										insdCustgld.claim_office_identifier = stgInsuredObj.claimOfficeId;
+										insdCustgld.classic_product_type_cd = stgInsuredObj.classic_product_type_cd;
+										insdCustgld.claim_region_identifier = stgInsuredObj.claim_region_identifier;
+										insdCustgld.loss_incurred_date = stgInsuredObj.loss_incurred_date;
+										insdCustgld.data_populated_from_integration = stgInsuredObj.data_populated_from_integration;
+										insdCustgld.source_center = stgInsuredObj.source_center;
+										insdCustgld.first_name = stgInsuredObj.first_name;
+										insdCustgld.last_name = stgInsuredObj.last_name;
+										insdCustgld.state = stgInsuredObj.state;
+										insdCustgld.search_by = stgInsuredObj.search_by;
+										insdCustgld.secured_claim_indicator = stgInsuredObj.secured_claim_indicator;
+										insdCustgld.catastrophe_claim_indicator = stgInsuredObj.catastrophe_claim_indicator;
+										insdCustgld.claim_description = stgInsuredObj.claim_description;
+										insdCustgld.claim_office_identifier = stgInsuredObj.claim_office_identifier;
+										insdCustgld.claim_region_identifier = stgInsuredObj.claim_region_identifier;
+										insdCustgld.update();
+									}else{
+										insdCustgld.initialize();
+										insdCustgld.claim_number = stgInsuredObj.claim_number;
+										insdCustgld.claim_office_identifier = stgInsuredObj.claimOfficeId;
+										insdCustgld.classic_product_type_cd = stgInsuredObj.classic_product_type_cd;
+										insdCustgld.claim_region_identifier = stgInsuredObj.claim_region_identifier;
+										insdCustgld.loss_incurred_date = stgInsuredObj.loss_incurred_date;
+										insdCustgld.data_populated_from_integration = stgInsuredObj.data_populated_from_integration;
+										insdCustgld.source_center = stgInsuredObj.source_center;
+										insdCustgld.first_name = stgInsuredObj.first_name;
+										insdCustgld.last_name = stgInsuredObj.last_name;
+										insdCustgld.state = stgInsuredObj.state;
+										insdCustgld.search_by = stgInsuredObj.search_by;
+										insdCustgld.secured_claim_indicator = stgInsuredObj.secured_claim_indicator;
+										insdCustgld.catastrophe_claim_indicator = stgInsuredObj.catastrophe_claim_indicator;
+										insdCustgld.claim_description = stgInsuredObj.claim_description;
+										insdCustgld.claim_office_identifier = stgInsuredObj.claim_office_identifier;
+										insdCustgld.claim_region_identifier = stgInsuredObj.claim_region_identifier;
+										insdCustgld.insert();
+									}
+									return insdCustgld.sys_id;
+								},
+	
+	insertOrUpdateAddress:function(insGld,AddObj){//Insert or update primary address
+		var addressGlide = new GlideRecord('x_amfai_cacmdba_insured_address');
+		addressGlide.addQuery('person_id',insGld.sys_id);
+		addressGlide.query();
+		if(addressGlide.next()){	
+			addressGlide.address_line_1 = AddObj.address_line_1;
+			addressGlide.city = AddObj.city;
+			addressGlide.zip_code = AddObj.zip_code;
+			addressGlide.state.setDisplayValue(AddObj.state);
+			addressGlide.address_type = "primary";
+			addressGlide.update();
+		}else{
+			addressGlide.initialize();
+			addressGlide.person_id = insGld.sys_id;
+			addressGlide.address_line_1 = AddObj.address_line_1;
+			addressGlide.city = AddObj.city;
+			addressGlide.zip_code = AddObj.zip_code;
+			addressGlide.state.setDisplayValue(AddObj.state);
+			addressGlide.address_type = "primary";
+			addressGlide.insert();
+			
+		}
+		
+	},
+								
+								type: 'CACMAjaxIntegrationUtil'
+							});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+        <sys_created_on>2018-01-02 23:28:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fff45623db5f4f0067bff3d51d9619f0</sys_id>
+        <sys_mod_count>144</sys_mod_count>
+        <sys_name>CACMAjaxIntegrationUtil</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_fff45623db5f4f0067bff3d51d9619f0</sys_update_name>
+        <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+        <sys_updated_on>2018-01-25 21:22:29</sys_updated_on>
+    </sys_script_include>
+</record_update>

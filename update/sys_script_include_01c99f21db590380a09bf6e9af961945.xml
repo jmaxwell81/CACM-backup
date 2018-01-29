@@ -2,7 +2,7 @@
 <record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
-        <active>true</active>
+        <active>false</active>
         <api_name>x_amfai_cacmdba.calculate_referral_suspense_date</api_name>
         <client_callable>true</client_callable>
         <description>Used on the Case Referral table to calculate suspense date</description>
@@ -56,14 +56,14 @@ gs.addInfoMessage("made it to Business Days 5");
         <sys_created_on>2017-09-19 13:22:05</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>01c99f21db590380a09bf6e9af961945</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>calculate_referral_suspense_date</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_script_include_01c99f21db590380a09bf6e9af961945</sys_update_name>
-        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-09-25 20:56:22</sys_updated_on>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-19 18:58:36</sys_updated_on>
     </sys_script_include>
 </record_update>

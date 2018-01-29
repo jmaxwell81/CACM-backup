@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_grid_canvas" unload_date="2018-01-29 14:47:50">
+    <sys_grid_canvas action="INSERT_OR_UPDATE">
+        <legacy_page display_value="PA New Tab 2">451ebfc3db3f0b00bf14f9961d96195e</legacy_page>
+        <name>PA New Tab 2</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-01-26 14:21:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0d1ebfc3db3f0b00bf14f9961d96195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA New Tab 2</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_grid_canvas_0d1ebfc3db3f0b00bf14f9961d96195e</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-01-26 14:21:10</sys_updated_on>
+    </sys_grid_canvas>
+</record_update>

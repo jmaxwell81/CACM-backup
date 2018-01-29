@@ -22,9 +22,26 @@
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
 	g_form.setSectionDisplay('instructions', true);
+	var case_id = g_form.getValue('case_id');
+	var ajax = new GlideAjax('x_amfai_cacmdba.get_complaint_state');
+	ajax.addParam('sysparm_name', 'getComplaintState');
+	ajax.addParam('sysparm_caseID', case_id);
+	ajax.getXML(loadValue);
+	
+	function loadValue(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		if (answer == 'null'){
+			g_form.showFieldMsg('complaint_state', 'No Complaint State is set in Case Details', 'error');
+		}
+		else if (answer == 'No Case Details found'){
+			g_form.addErrorMessage('No Case Details found');
+		}
+		else
+			g_form.setValue('complaint_state', answer);
+	}
 }]]></script_true>
         <set_values/>
-        <short_description>Show Instruction Section when Add Instruction field is true</short_description>
+        <short_description>Show Instruction Section, make complaint state and instruction type mandatpory, pre populate complaint State from case details when Add Instruction field is true</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>pmadhika@amfam.com</sys_created_by>
         <sys_created_on>2017-11-09 14:47:17</sys_created_on>
@@ -32,8 +49,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a1e7d206db5e0b40a09bf6e9af96194b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Show Instruction Section when Add Instruction field is true</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Show Instruction Section, make complaint state and instruction type mandatpory, pre populate complaint State from case details when Add Instruction field is true</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -41,7 +58,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_ui_policy_a1e7d206db5e0b40a09bf6e9af96194b</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-11-09 14:49:08</sys_updated_on>
+        <sys_updated_on>2018-01-18 15:15:49</sys_updated_on>
         <table>x_amfai_cacmdba_case_event</table>
         <ui_type>0</ui_type>
         <view/>

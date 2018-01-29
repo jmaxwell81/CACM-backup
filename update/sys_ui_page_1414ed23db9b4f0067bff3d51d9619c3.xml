@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_amfai_cacmdba_amfam_search_with_insured.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<span class= "modal-title"><p id="mandatory-text">Please fill required fields</p></span>
+<div class="row">
+<div class="col-sm-8 divspacing"><span class="icon-required"></span><span class="label-text">  First Name: </span><input class="form-control" id="fname"></input></div>
+<div class="col-sm-8 divspacing"><span class="icon-required"></span><span class="label-text">  Last Name: </span><input class="form-control" id="lname"></input></div>
+<div class="col-sm-8 divspacing"><span class="icon-required"></span><span class="label-text">  State: </span><input class="form-control"  id="state"></input></div>
+	</div>
+	<style>
+		.divspacing{
+		padding-bottom: 10px;
+		}
+		</style>
+	<br></br>
+	<button class="form_action_button  action_context btn btn-default" onclick="showInsuredListView()"><span>Fetch Insured Details</span></button>
+	<style>
+		.icon-required{
+		    margin-right: 5px;
+		}
+		</style>
+	<script>
+		function showInsuredListView(){
+	var fname = document.getElementById('fname').value;
+		var lname = document.getElementById('lname').value;
+		var state = document.getElementById('state').value;
+		if(fname == '' || lname == '' || state == ""){
+		document.getElementById("mandatory-text").style.color = "#ff0000";
+		return true;
+		}
+	var ga = new GlideAjax('x_amfai_cacmdba.CACMAjaxIntegrationUtil');
+	ga.addParam('sysparm_name','triggerPartySearchSOAPCall');
+	ga.addParam('sysparm_fn_name',fname);
+	ga.addParam('sysparm_ln_name',lname);
+	ga.addParam('sysparm_state',state);
+ga.addParam('sysparm_caseID',g_form.getUniqueValue());
+	ga.getXML(getSoapResponse);
+	
+	function getSoapResponse(response) {
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		//alert(answer);
+		GlideModal.get().destroy();
+		var w = new GlideModal('show_list');
+		w.setTitle('Insured');
+		w.setPreference('table','x_amfai_cacmdba_insured_staging_list');
+		w.setWidth(1500);
+		w.setPreference('sysparm_query',"sys_created_onONCurrent minute@javascript:gs.beginningOfCurrentMinute()@javascript:gs.endOfCurrentMinute()^case_id="+g_form.getValue('number')+"^random_number="+answer);
+		w.render();
+	}
+	
+	
+}
+		</script>
+</j:jelly>]]></html>
+        <name>amfam_search_with_insured</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+        <sys_created_on>2018-01-02 19:53:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1414ed23db9b4f0067bff3d51d9619c3</sys_id>
+        <sys_mod_count>78</sys_mod_count>
+        <sys_name>amfam_search_with_insured</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_page_1414ed23db9b4f0067bff3d51d9619c3</sys_update_name>
+        <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+        <sys_updated_on>2018-01-10 18:30:21</sys_updated_on>
+    </sys_ui_page>
+</record_update>

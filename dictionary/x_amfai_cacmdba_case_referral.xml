@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Case Referral" max_length="40" name="x_amfai_cacmdba_case_referral" sizeclass="142354" type="collection">
-        <element hint="DATE DATE DATE" label="Acknowledge Before" max_length="40" name="acknowledge_before" type="glide_date"/>
+        <element hint="DATE DATE DATE" label="Acknowledge Before" max_length="40" name="acknowledge_before" read_only="true" type="glide_date"/>
+        <element label="Additional Comments" max_length="4000" name="additional_comments" type="journal_input"/>
+        <element label="Additional Comments Log" max_length="4000" name="additional_comments_log" type="journal_list"/>
+        <element label="Additional Information" max_length="1000" name="additional_information" type="string"/>
+        <element label="Add Additional Information" max_length="40" name="add_additional_information" type="boolean"/>
         <element label="Add Instructions" max_length="40" name="add_instructions" type="boolean"/>
         <element label="CACM ID" max_length="32" name="cacm_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
-        <element label="Current Request" max_length="2" name="current_request" type="integer"/>
-        <element choice="1" default="referral date" label="Day Source" max_length="40" name="day_source" type="choice">
-            <choice>
-                <element label="Referral Date" sequence="0" value="referral date"/>
-                <element label="Insurance Date" sequence="1" value="insurance date"/>
-            </choice>
-        </element>
+        <element default="javascript:  var gdt = new GlideDate();gdt.getDisplayValue();" label="Calculation Start Date" max_length="40" name="calc_start_date" type="glide_date"/>
         <element choice="1" default="business days" label="Day Type" max_length="40" name="day_type" type="choice">
             <choice>
                 <element label="Business Days" sequence="0" value="business days"/>
@@ -26,19 +24,30 @@
         <element default="0" label="Number of Days" max_length="3" name="number_of_days" type="integer"/>
         <element label="Past Due Second Request" max_length="40" name="past_due_second_request" type="boolean"/>
         <element label="Past Due Third Request" max_length="40" name="past_due_third_request" type="boolean"/>
-        <element label="Referent" max_length="32" name="referent" reference="x_amfai_cacmdba_person" reference_qual="referent=T^EQ" reference_qual_condition="referent=T^EQ" type="reference"/>
-        <element label="Referent Email" max_length="150" name="referent_email" type="string"/>
+        <element label="Referent" mandatory="true" max_length="32" name="referent" reference="x_amfai_cacmdba_referent" type="reference"/>
+        <element label="Referent Email" max_length="150" name="referent_email" read_only="true" type="string"/>
         <element label="Referent Type" max_length="1" name="referent_type" type="string"/>
         <element label="Referral Description" max_length="256" name="referral_description" type="string"/>
         <element choice="1" default="action required" label="Referral Type" max_length="40" name="referral_type" type="choice">
             <choice>
                 <element label="Action Required" value="action required"/>
+                <element label="Additional Information" value="additional_information"/>
                 <element label="FYI" value="FYI"/>
                 <element label="Phone" value="Phone"/>
                 <element label="Written" value="Written"/>
             </choice>
         </element>
-        <element label="Referred Date" max_length="40" name="referred_date" type="glide_date"/>
+        <element label="Referred Date" max_length="40" name="referred_date" read_only="true" type="glide_date"/>
+        <element label="Referent DM Identifier" max_length="40" name="ref_dm_id" type="string"/>
+        <element label="Referent Department" max_length="40" name="ref_dpt_nm" type="string"/>
+        <element label="Referent Email Address" max_length="40" name="ref_email_addr" type="string"/>
+        <element label="Referent Fax Number" max_length="40" name="ref_fax_num" type="string"/>
+        <element label="Referent First Name" max_length="40" name="ref_first_nm" type="string"/>
+        <element label="Referent Job Title" max_length="80" name="ref_job_title_nm" type="string"/>
+        <element label="Referent Last name" max_length="40" name="ref_last_nm" type="string"/>
+        <element label="Referent Location" max_length="40" name="ref_loc_nm" type="string"/>
+        <element label="Referent Middle Initial" max_length="40" name="ref_middle_initial" type="string"/>
+        <element label="Referent Work Phone Number" max_length="40" name="ref_work_phone_num" type="string"/>
         <element label="Response Date" max_length="40" name="response_date" read_only="true" type="glide_date"/>
         <element default="SECOND REQUEST:  You did not take a required action on  a Consumer Affairs case  referred to you.  You must click here (link) to access the case and take the required action." label="Past Due-Second Request Notification" max_length="8000" name="second_request_notification" type="html"/>
         <element label="Second Request Sent" max_length="40" name="second_request_sent" type="boolean"/>
@@ -54,7 +63,7 @@
                 <element label="Closed" sequence="6" value="closed"/>
             </choice>
         </element>
-        <element label="Suspense Date" max_length="40" name="suspense_date" type="glide_date"/>
+        <element label="Suspense Date" mandatory="true" max_length="40" name="suspense_date" type="glide_date"/>
         <element label="Suspense Date Reminder" max_length="40" name="suspense_date_reminder" type="boolean"/>
         <element default="THIRD REQUEST:  You did not take a required action on  a Consumer Affairs case sent to you.  You must click here (link) to access the case and take the required action.  A copy of  this notification has been sent to your manager." label="Past Due-Third Request Notification" max_length="8000" name="third_request_notification" type="html"/>
         <element label="Third Request Sent" max_length="40" name="third_request_sent" type="boolean"/>

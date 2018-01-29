@@ -23,7 +23,7 @@
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
         <last_run_database_field>CREATE_DATE</last_run_database_field>
-        <last_run_datetime>to_date('2017-12-14','yyyy-mm-dd')</last_run_datetime>
+        <last_run_datetime>to_date('2018-01-09','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
         <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
@@ -40,19 +40,21 @@
         <scp_user_name/>
         <sheet_number>0</sheet_number>
         <sql_statement>Select&#13;
-complaint_id as CACM_ID,&#13;
-'case' as Identifier,&#13;
-'complaint' as Case_type,&#13;
+complaint_id,&#13;
+'case' as case_identifier,&#13;
+'complaint' as case_type,&#13;
 CASE WHEN closed_date IS NOT NULL THEN '3'&#13;
-     ELSE '1' END as Status,&#13;
-open_date as Date_Opened,&#13;
-closed_date as Closed_Date,&#13;
-person_id as Person_ID,&#13;
-user_id as Advocate,&#13;
-claim_office_code as Claim_Office,&#13;
-update_date as Create_Date,&#13;
-update_user_id as Create_User_ID,&#13;
-company_code as Company&#13;
+     ELSE '1' END as case_status,&#13;
+open_date,&#13;
+closed_date,&#13;
+closed_date as latest_closed_date,&#13;
+address_id,&#13;
+person_id,&#13;
+company_code,&#13;
+claim_office_code,&#13;
+user_id,&#13;
+update_date as create_date,&#13;
+update_user_id as create_user_id&#13;
 From cacmdba.complaint</sql_statement>
         <ssh_keyfile_path/>
         <sys_class_name>sys_data_source</sys_class_name>
@@ -60,7 +62,7 @@ From cacmdba.complaint</sql_statement>
         <sys_created_on>2017-10-09 13:54:31</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>00f16e4cdb790f044d70734aaf9619c2</sys_id>
-        <sys_mod_count>75</sys_mod_count>
+        <sys_mod_count>107</sys_mod_count>
         <sys_name>03 - Case Migration</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -68,7 +70,7 @@ From cacmdba.complaint</sql_statement>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_00f16e4cdb790f044d70734aaf9619c2</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-12-14 22:30:48</sys_updated_on>
+        <sys_updated_on>2018-01-09 16:14:07</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>

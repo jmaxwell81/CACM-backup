@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Insured Address" max_length="40" name="x_amfai_cacmdba_insured_address" sizeclass="54438" type="collection">
+        <element label="Address ID" max_length="40" name="address_id" type="string"/>
+        <element label="Address Line 1" max_length="60" name="address_line_1" type="string"/>
+        <element choice="1" label="Address Type" max_length="40" name="address_type" type="string">
+            <choice>
+                <element label="primary" sequence="0" value="primary"/>
+            </choice>
+        </element>
+        <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_insd_cust" type="reference"/>
+        <element label="State" max_length="32" name="state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="Zip Code" max_length="40" name="zip_code" type="string"/>
+        <index name="index">
+            <element name="case_id"/>
+        </index>
+        <index name="index2">
+            <element name="state"/>
+        </index>
+        <index name="index3">
+            <element name="person_id"/>
+        </index>
+    </element>
+</database>
