@@ -7,7 +7,7 @@
         <element attributes="import_attribute_name=COMPLAINT_STATE,edge_encryption_enabled=true" label="COMPLAINT_STATE" max_length="40" name="u_complaint_state" type="string"/>
         <element attributes="import_attribute_name=CREATE_DATE" label="CREATE_DATE" max_length="40" name="u_create_date" type="datetime"/>
         <element attributes="import_attribute_name=CREATE_USER_ID,edge_encryption_enabled=true" label="CREATE_USER_ID" max_length="40" name="u_create_user_id" type="string"/>
-        <element attributes="import_attribute_name=DESCRIPTION,edge_encryption_enabled=true" label="DESCRIPTION" max_length="50" name="u_description" type="string"/>
+        <element attributes="import_attribute_name=DESCRIPTION,edge_encryption_enabled=true" display="true" label="DESCRIPTION" max_length="50" name="u_description" type="string"/>
         <element attributes="import_attribute_name=END_EFF_DATE" label="END_EFF_DATE" max_length="40" name="u_end_eff_date" type="datetime"/>
         <element attributes="import_attribute_name=FUNCTION,edge_encryption_enabled=true" label="FUNCTION" max_length="50" name="u_function" type="string"/>
         <element attributes="import_attribute_name=UPDATE_DATE" label="UPDATE_DATE" max_length="40" name="u_update_date" type="datetime"/>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="producer_last_name" label="Producer Last Name" language="en" table="x_amfai_cacmdba_producer_staging_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>producer_last_name</element>
+            <help/>
+            <hint/>
+            <label>Producer Last Name</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_producer_staging_table</name>
+            <plural>Producer Last Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-03-01 22:32:20</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>eb84f4dadbe8db8067bff3d51d961945</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Producer Last Name</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_documentation_x_amfai_cacmdba_producer_staging_table_producer_last_name_en</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-03-01 22:32:20</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

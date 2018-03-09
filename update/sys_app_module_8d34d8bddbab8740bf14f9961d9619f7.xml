@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <application display_value="CACM">c39e662ddb8336804d70734aaf9619d4</application>
         <assessment/>
         <content_page/>
@@ -15,7 +15,7 @@
         <mobile_title>Insured Emails</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_amfai_cacmdba_insured_email</name>
-        <order/>
+        <order>130</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8d34d8bddbab8740bf14f9961d9619f7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Insured Emails</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_app_module_8d34d8bddbab8740bf14f9961d9619f7</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-01-09 13:51:14</sys_updated_on>
+        <sys_updated_on>2018-01-31 15:33:22</sys_updated_on>
         <timeline_page/>
         <title>Insured Emails</title>
         <uncancelable>false</uncancelable>

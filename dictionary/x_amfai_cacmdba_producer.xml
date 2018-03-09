@@ -2,12 +2,17 @@
 <database>
     <element label="Producer" max_length="40" name="x_amfai_cacmdba_producer" sizeclass="74593" type="collection">
         <element label="Case ID" max_length="32" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
-        <element label="District ID" max_length="40" name="classic_dst_cd" type="string"/>
         <element label="Data Populated from Integration" max_length="40" name="data_populated_from_integration" type="string"/>
-        <element label="First Name" max_length="40" name="first_name" type="string"/>
-        <element label="Last Name" max_length="40" name="last_name" type="string"/>
-        <element label="Middle Name" max_length="40" name="middle_name" type="string"/>
-        <element label="AF State Code" max_length="32" name="mig_af_state_code" reference="x_amfai_cacmdba_sales_state" type="reference"/>
+        <element label="End Date" max_length="40" name="int_end_date" type="string"/>
+        <element label="First Name" max_length="40" name="int_first_name" type="string"/>
+        <element label="Last Name" max_length="40" name="int_last_name" type="string"/>
+        <element label="Middle Name" max_length="40" name="int_middle_name" type="string"/>
+        <element label="Nick Name" max_length="40" name="int_nick_name" type="string"/>
+        <element label="Type" max_length="40" name="int_position_type" type="string"/>
+        <element label="Start Date" max_length="40" name="int_start_date" type="string"/>
+        <element label="State" max_length="40" name="int_state" type="string"/>
+        <element label="Status" max_length="40" name="int_status" type="string"/>
+        <element label="Sales State" max_length="32" name="mig_af_state_code" reference="x_amfai_cacmdba_sales_state" type="reference"/>
         <element label="Agent Code" max_length="40" name="mig_agent_code" type="string"/>
         <element label="Agent ID" max_length="40" name="mig_agent_id" type="string"/>
         <element label="Agent Type" max_length="32" name="mig_agent_type" reference="x_amfai_cacmdba_agent_type" type="reference"/>
@@ -18,19 +23,10 @@
         <element label="New Agent Code" max_length="40" name="mig_new_agt_code" type="string"/>
         <element label="New District Code" max_length="40" name="mig_new_dst_code" type="string"/>
         <element label="Status" max_length="40" name="mig_status" type="string"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_insd_cust" type="reference"/>
         <element label="Policy" max_length="32" name="policy" reference="x_amfai_cacmdba_policy" type="reference"/>
-        <element label="End Date" max_length="40" name="producer_end_dt" type="string"/>
         <element display="true" label="Producer ID" max_length="40" name="producer_id" type="string"/>
-        <element label="Agent Type" max_length="40" name="producer_job_title_nm" type="string"/>
-        <element label="Nick Name" max_length="50" name="producer_nick_nm" type="string"/>
-        <element label="Sales Region" max_length="40" name="producer_regn_nm" type="string"/>
-        <element label="Type" max_length="40" name="producer_role_nm" type="string"/>
-        <element label="Start Date" max_length="40" name="producer_start_dt" type="string"/>
-        <element label="Sales State" max_length="40" name="producer_state_nm" type="string"/>
-        <element label="Status" max_length="40" name="producer_status_nm" type="string"/>
-        <element label="User ID" max_length="40" name="user_id" type="string"/>
         <index name="index">
             <element name="mig_agent_type"/>
         </index>

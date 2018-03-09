@@ -47,7 +47,7 @@
         <lock>false</lock>
         <protocol_profile/>
         <qualified_name>ClaimInfoServiceV5 [ getClaimsByName ]</qualified_name>
-        <soap_action>ClaimInfoService/v1/getClaimsByName</soap_action>
+        <soap_action>http://service.amfam.com/ClaimInfoService/v1/getClaimsByName</soap_action>
         <soap_endpoint>https://accesb.amfam.com/ccx/cc-router/ClaimInfoService/v5/ac</soap_endpoint>
         <soap_message display_value="ClaimInfoServiceV5">925a9bd0db344740a09bf6e9af96190b</soap_message>
         <strip_whitespace>false</strip_whitespace>
@@ -56,7 +56,7 @@
         <sys_created_on>2017-08-21 19:42:34</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>9a7bd354db344740a09bf6e9af96193a</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>getClaimsByName</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -64,7 +64,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_soap_message_function_9a7bd354db344740a09bf6e9af96193a</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-12-12 20:40:32</sys_updated_on>
+        <sys_updated_on>2018-02-23 13:10:03</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
         <use_ws_security>false</use_ws_security>

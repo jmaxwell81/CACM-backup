@@ -11,9 +11,9 @@
             <plural>*07.7 - Producer Migrations</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-17 13:59:28</sys_created_on>
+            <sys_created_on>2018-02-07 20:51:40</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>e7c2addcdb3f830067bff3d51d961923</sys_id>
+            <sys_id>1a8a030bdb0c134067bff3d51d96197d</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_name>*07.7 - Producer Migration</sys_name>
             <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -22,7 +22,7 @@
             <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
             <sys_update_name>sys_documentation_u_producer_migration__en</sys_update_name>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-17 14:19:45</sys_updated_on>
+            <sys_updated_on>2018-02-07 22:08:08</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

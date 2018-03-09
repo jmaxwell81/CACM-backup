@@ -2,7 +2,7 @@
 <record_update table="sys_soap_message_parameters">
     <sys_soap_message_parameters action="INSERT_OR_UPDATE">
         <name>ProductIds</name>
-        <soap_function display_value="RetrieveProductPortfolioRequest-CustomerID">73b9025fdbb00f004d70734aaf9619dd</soap_function>
+        <soap_function display_value="RetrieveProductPortfolio - CustomerID">73b9025fdbb00f004d70734aaf9619dd</soap_function>
         <sys_class_name>sys_soap_message_parameters</sys_class_name>
         <sys_created_by>pmadhika@amfam.com</sys_created_by>
         <sys_created_on>2017-08-30 21:28:50</sys_created_on>

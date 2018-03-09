@@ -30,31 +30,31 @@
         </v5:retrieveProductPortfolio>
     </soapenv:Body>
 </soapenv:Envelope>]]></envelope>
-        <function_name>RetrieveProductPortfolioRequest-CustomerID</function_name>
+        <function_name>RetrieveProductPortfolio - CustomerID</function_name>
         <key_store/>
         <key_store_alias/>
         <key_store_password/>
         <lock>false</lock>
         <protocol_profile/>
-        <qualified_name>ProductPortfolioServiceV5-CustomerID [ RetrieveProductPortfolioRequest-CustomerID ]</qualified_name>
+        <qualified_name>ProductPortfolioServiceV5 [ RetrieveProductPortfolio - CustomerID ]</qualified_name>
         <soap_action>http://service.amfam.com/productportfolioservice/retrieveProductPortfolio</soap_action>
         <soap_endpoint>https://accesb.amfam.com/ccx/cc-router/ProductPortfolioService/v05sit</soap_endpoint>
-        <soap_message display_value="ProductPortfolioServiceV5-CustomerID">bbe88adbdbb00f004d70734aaf9619f8</soap_message>
+        <soap_message display_value="ProductPortfolioServiceV5">a2b7e686db5e3640a09bf6e9af96192d</soap_message>
         <strip_whitespace>false</strip_whitespace>
         <sys_class_name>sys_soap_message_function</sys_class_name>
         <sys_created_by>pmadhika@amfam.com</sys_created_by>
         <sys_created_on>2017-08-30 21:28:21</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>73b9025fdbb00f004d70734aaf9619dd</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>RetrieveProductPortfolioRequest-CustomerID</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>RetrieveProductPortfolio - CustomerID</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_soap_message_function_73b9025fdbb00f004d70734aaf9619dd</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-12-12 20:46:12</sys_updated_on>
+        <sys_updated_on>2018-03-06 20:12:42</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
         <use_ws_security>false</use_ws_security>

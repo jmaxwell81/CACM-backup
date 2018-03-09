@@ -17,13 +17,13 @@
         <import_set_table_label>Claim Migration</import_set_table_label>
         <import_set_table_name>u_claim_migration</import_set_table_name>
         <instance_name/>
-        <jdbc_password>YbBclT6bxQt7MaSa+EyjGA==</jdbc_password>
+        <jdbc_password>x8GknVw95Rd7MaSa+EyjGA==</jdbc_password>
         <jdbc_server>ORAP0103</jdbc_server>
         <jdbc_user_name>DIRECTDATA_AMITFORMS1_RO</jdbc_user_name>
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
-        <last_run_database_field>CREATE_DATE</last_run_database_field>
-        <last_run_datetime/>
+        <last_run_database_field>c.update_date</last_run_database_field>
+        <last_run_datetime>to_date('2018-02-06','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
         <mid_server display_value="mid_sb_test_1">0fa6f565db9cfe00b061fb16bf96190a</mid_server>
@@ -54,7 +54,7 @@ inner join CACMDBA.CLAIM c on cc.claim_number = c.claim_number</sql_statement>
         <sys_created_on>2017-11-09 13:52:00</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>584b8a4edb9a0b40a09bf6e9af961920</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>07.6 - Claim Migration</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -62,7 +62,7 @@ inner join CACMDBA.CLAIM c on cc.claim_number = c.claim_number</sql_statement>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_584b8a4edb9a0b40a09bf6e9af961920</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-01-17 14:48:53</sys_updated_on>
+        <sys_updated_on>2018-02-07 17:03:49</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function continueOK(){
+	//Get the selected values from the right slushbucket
+	window.print();
+}
+function continueCancel(){
+	//Close the dialog window
+	GlideDialogWindow.get().destroy();
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_amfai_cacmdba_print_preview.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate var="jvar_id" object="true">
+
+  var sysparm_id = RP.getParameterValue("sysparm_id");
+  var gr = new GlideRecord('x_amfai_cacmdba_document');  
+  gr.addQuery('sys_id',sysparm_id);  
+  gr.query();  
+  gr;
+  
+
+</g:evaluate>  
+    <j:if test="${jvar_id.next()}">  
+  <g:no_escape>${gr.letter_text.getHTMLValue()}</g:no_escape>  
+  </j:if> 
+	<Table>
+	<TR>
+	<TD align="right">
+	<g:dialog_buttons_ok_cancel ok="return continueOK()" cancel="return continueCancel()" ok_type="button" cancel_type="button"/>
+		</TD>
+		</TR>
+		</Table>
+</j:jelly>]]></html>
+        <name>print_preview</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-02-15 15:43:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>299f4b69dbdc9b4067bff3d51d9619f5</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>print_preview</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_page_299f4b69dbdc9b4067bff3d51d9619f5</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-02-15 18:56:44</sys_updated_on>
+    </sys_ui_page>
+</record_update>

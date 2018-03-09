@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_programmatic">
+    <content_block_programmatic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame display_value="frame_grey_border">cf52ad460a0a0b6300321234a7187571</frame>
+        <logged_on>false</logged_on>
+        <name>cacm_print_preview_cms</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate var="jvar_sysId">
+
+  var sysparm_sysId = RP.getParameterValue("sysparm_id");
+  sysparm_sysId;
+
+</g:evaluate> 
+	
+	
+	<g:evaluate var="jvar_id" object="true">
+
+  var sysparm_id = RP.getParameterValue("sysparm_id");
+  var gr = new GlideRecord('x_amfai_cacmdba_document');  
+  gr.addQuery('sys_id',sysparm_id);  
+  gr.query();  
+  gr;
+  
+
+</g:evaluate> 
+	<style>
+
+		img {
+		 -webkit-print-color-adjust: exact;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+	width: 15%;
+    height: 90px;
+}
+	
+</style>
+
+	<div ><img id="banner" src="cacm_amfam_logo.pngx" alt="Banner Image"/></div>
+	<input type="hidden" id='flag' name='flag' value="${jvar_sysId}" />
+    <j:if test="${jvar_id.next()}">
+		<input type="input" id='flag1' name='flag1' value="${gr.letter_text.getHTMLValue()}" />
+		<input type="input" id='flag2' name='flag2' value="${gr.getTableName()}" />
+		<input type="input" id='flag3' name='flag3' value="${gr.getDisplayValue('select_template')}" />
+		<input type="input" id='flag4' name='flag4' value="${gr.sys_id}" />
+  <g:no_escape>${gr.letter_text.getHTMLValue()}</g:no_escape>  
+  </j:if> 
+	<Table>
+	<TR>
+	<TD align="right">
+	<button class="form_action_button  action_context btn btn-default" onclick="continueOK()"><span>Print</span></button>
+		<button class="form_action_button  action_context btn btn-default" onclick="continueCancel()"><span>Cancel</span></button>
+		</TD>
+		</TR>
+		</Table>
+	<script type="text/javascript">
+        function continueOK() {
+		var letter_text = document.getElementById('flag1').value
+		var table_name = document.getElementById('flag2').value
+		var att_name = document.getElementById('flag3').value
+		var sysId = document.getElementById('flag4').value
+            var prtContent = '<html>' +
+            '<head>' +
+		    '<style>.footer {position: fixed;left: 0;bottom: 0;width: 100%;text-align: center;font-size: 10px;color: #285BA7;}</style>' +
+            '<meta charset="utf-8" />' +
+            '<title>Inventory</title>' +
+            '<style type="text/css"> body {-webkit-print-color-adjust: exact; font-family: Arial; }</style>' +
+            '</head>' +
+            '<body><div><div><img style="width:30%; float:right;" src="cacm_amfam_logo.pngx"/></div><div>'+letter_text+'</div><div class="footer"><p>American Family Mutual Insurance Company, S.I. amd its Operating Companies, American Family Life Insurance Company</p><p>6000 American Parkway, Madison WI 53783-0001</p></div></div></body></html>';
+		
+		
+
+		
+		
+		
+            var WinPrint =
+ window.open('', '', 'left=0,top=0,width=1000,height=1000,toolbar=0,scrollbars=0,status=0');
+            WinPrint.document.write(prtContent);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+		    WinPrint.close();
+      if (window.onafterprint) { //check if browser supports window.onafterprint event handler (Firefox and IE)
+    printCompleteCallback();
+}
+else { //Use setTimeout solution if onafterprint is not supported (Chrome)
+    setTimeout(printCompleteCallback, 0);
+}    
+		var generalFormAPI = new GeneralFormAPI(att_name, table_name, sysId);
+generalFormAPI.setDocument(null, null, null, null, null, "letter");
+generalFormAPI.createPDF(prtContent);
+		
+}
+		
+		
+		var printCompleteCallback = function () {
+		
+	var sys_id = document.getElementById('flag').value;
+    var conf = confirm('Confirm printing as successfull and mark Document Status as Printed');
+    if (conf) {
+  // alert('hi');
+    var ajax = new GlideAjax('print_confirmation');
+	ajax.addParam('sysparm_name', 'printConfirmation');
+	ajax.addParam('sysparm_currentDocID', sys_id);
+	ajax.addParam('sysparm_currentConfirmation', 'Printed');
+	ajax.getXML(loadResponse);
+        
+    }
+		
+	else{
+	var ajax = new GlideAjax('print_confirmation');
+	ajax.addParam('sysparm_name', 'printConfirmation');
+	ajax.addParam('sysparm_currentDocID', sys_id);
+	ajax.addParam('sysparm_currentConfirmation', 'Canceled');
+	ajax.getXML(loadResponse);
+		}
+		
+		function loadResponse(response){
+	//Process the return XML document and add groups to the left select
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	if(answer == 'true'){
+		close();
+		}
+	}
+}
+		function continueCancel(){
+		var sys_id = document.getElementById('flag').value;
+		//alert(sys_id);
+	//Close the dialog window
+	if (confirm("Letter is not Printed, Are you sure to close the window?")) {
+	var ajax = new GlideAjax('print_confirmation');
+	ajax.addParam('sysparm_name', 'printConfirmation');
+	ajax.addParam('sysparm_currentDocID', sys_id);
+	ajax.addParam('sysparm_currentConfirmation', 'Canceled');
+	ajax.getXML(loadResponse);
+  }
+		function loadResponse(response){
+	//Process the return XML document and add groups to the left select
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	if(answer == 'true'){
+		close();
+		}
+	}
+}
+ </script>
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-02-15 20:14:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6f2b0c7ddbd0db4067bff3d51d9619a6</sys_id>
+        <sys_mod_count>117</sys_mod_count>
+        <sys_name>cacm_print_preview_cms</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>content_block_programmatic_6f2b0c7ddbd0db4067bff3d51d9619a6</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-02-28 15:28:21</sys_updated_on>
+        <two_phase>false</two_phase>
+    </content_block_programmatic>
+</record_update>

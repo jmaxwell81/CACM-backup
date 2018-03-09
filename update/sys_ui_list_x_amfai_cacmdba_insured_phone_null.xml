@@ -4,92 +4,122 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>person_id</element>
-            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fa91b4bddb6f8740bf14f9961d961925</list_id>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
-            <sys_id>7291b4bddb6f8740bf14f9961d961926</sys_id>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>499f34aedbc85f0067bff3d51d961928</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>phone_number</element>
-            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fa91b4bddb6f8740bf14f9961d961925</list_id>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
-            <sys_id>f291b4bddb6f8740bf14f9961d961926</sys_id>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>cd9f34aedbc85f0067bff3d51d961928</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>phone_extension</element>
-            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fa91b4bddb6f8740bf14f9961d961925</list_id>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
-            <sys_id>7691b4bddb6f8740bf14f9961d961926</sys_id>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>419f34aedbc85f0067bff3d51d961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>phone_type</element>
-            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fa91b4bddb6f8740bf14f9961d961925</list_id>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
-            <sys_id>f691b4bddb6f8740bf14f9961d961926</sys_id>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>c19f34aedbc85f0067bff3d51d961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>phone_availability</element>
-            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fa91b4bddb6f8740bf14f9961d961925</list_id>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
-            <sys_id>7a91b4bddb6f8740bf14f9961d961926</sys_id>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>459f34aedbc85f0067bff3d51d961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>case_id</element>
-            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">fa91b4bddb6f8740bf14f9961d961925</list_id>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
-            <sys_id>fa91b4bddb6f8740bf14f9961d961926</sys_id>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>c59f34aedbc85f0067bff3d51d961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>499f34aedbc85f0067bff3d51d961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_by</element>
+            <list_id display_value="x_amfai_cacmdba_insured_phone" element="NULL" name="x_amfai_cacmdba_insured_phone" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cd9f34aedbc85f0067bff3d51d961927</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
+            <sys_id>c99f34aedbc85f0067bff3d51d961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -103,11 +133,11 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2018-01-09 15:59:42</sys_created_on>
+            <sys_created_on>2018-02-05 21:27:36</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>fa91b4bddb6f8740bf14f9961d961925</sys_id>
+            <sys_id>cd9f34aedbc85f0067bff3d51d961927</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_amfai_cacmdba_insured_phone</sys_name>
             <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -116,7 +146,7 @@
             <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
             <sys_update_name>sys_ui_list_x_amfai_cacmdba_insured_phone_null</sys_update_name>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2018-01-09 15:59:42</sys_updated_on>
+            <sys_updated_on>2018-02-05 21:27:36</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

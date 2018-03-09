@@ -169,6 +169,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>repeater</element>
+            <position>12</position>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-02-14 16:51:14</sys_created_on>
+            <sys_id>e4a6da11db105b4067bff3d51d9619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_amfai_cacmdba_case_event" sys_domain="global" view="Default view">7e7b3223dbb84f004d70734aaf96191c</sys_ui_section>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-02-14 16:51:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

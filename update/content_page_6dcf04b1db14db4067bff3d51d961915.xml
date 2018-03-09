@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="content_page" unload_date="2018-03-09 13:41:07">
+    <sys_portal action="delete_multiple" query="page=6dcf04b1db14db4067bff3d51d961915">
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone100</dropzone>
+                <offset>0</offset>
+                <page display_value="">6dcf04b1db14db4067bff3d51d961915</page>
+                <summary/>
+                <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                <sys_created_on>2018-02-16 15:33:29</sys_created_on>
+                <sys_id>d908dc8adb501f4067bff3d51d9619f9</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-02-16 09:33:29">d908dc8adb501f4067bff3d51d9619f9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-02-16 15:33:29</sys_created_on>
+                        <sys_id>5108dc8adb501f4067bff3d51d9619fb</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+                        <value>6dcf04b1db14db4067bff3d51d961915</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-02-16 09:33:29">d908dc8adb501f4067bff3d51d9619f9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-02-16 15:33:29</sys_created_on>
+                        <sys_id>5d08dc8adb501f4067bff3d51d9619f9</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+                        <value>6f2b0c7ddbd0db4067bff3d51d9619a6</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2018-02-16 09:33:29">d908dc8adb501f4067bff3d51d9619f9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-02-16 15:33:29</sys_created_on>
+                        <sys_id>5d08dc8adb501f4067bff3d51d9619fa</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+                        <value>content_block_programmatic</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-02-16 09:33:29">d908dc8adb501f4067bff3d51d9619f9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-02-16 15:33:29</sys_created_on>
+                        <sys_id>d108dc8adb501f4067bff3d51d9619fa</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+                        <value>com.glide.cms.RenderBlock</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-02-16 09:33:29">d908dc8adb501f4067bff3d51d9619f9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-02-16 15:33:29</sys_created_on>
+                        <sys_id>d508dc8adb501f4067bff3d51d9619fa</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+                        <value>cacm_print_preview_cms</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal>
+    <content_page action="INSERT_OR_UPDATE">
+        <content_site display_value="CACM">1faf4071db14db4067bff3d51d961959</content_site>
+        <content_theme display_value="CACM Print Preview">d1c61c4adb501f4067bff3d51d9619aa</content_theme>
+        <description/>
+        <frame_buster>false</frame_buster>
+        <layout/>
+        <model_id/>
+        <model_table/>
+        <name>cacm_print_preview</name>
+        <order/>
+        <parent_page/>
+        <read_roles/>
+        <roles/>
+        <selectable>true</selectable>
+        <sys_class_name>content_page</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-02-15 20:19:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6dcf04b1db14db4067bff3d51d961915</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>cacm_print_preview</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>content_page_6dcf04b1db14db4067bff3d51d961915</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-02-16 15:33:29</sys_updated_on>
+        <title/>
+        <url_suffix>cacm_print_preview</url_suffix>
+        <user/>
+        <view/>
+        <workflow_state>published</workflow_state>
+    </content_page>
+</record_update>

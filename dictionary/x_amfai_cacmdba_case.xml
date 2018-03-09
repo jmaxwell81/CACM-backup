@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" label="Case" max_length="40" name="x_amfai_cacmdba_case" sizeclass="52709" type="collection">
-        <element label="Advocate" mandatory="true" max_length="32" name="advocate" reference="x_amfai_cacmdba_advocate" reference_qual="javascript: USER_ID= + current.x_amfai_cacmdba_case.advocate_user_id;" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Advocate" max_length="32" name="advocate" reference="x_amfai_cacmdba_advocate" reference_qual="javascript: USER_ID= + current.x_amfai_cacmdba_case.advocate_user_id;" type="reference" use_reference_qualifier="advanced"/>
         <element label="Case Actual Delete Date" max_length="40" name="case_actual_delete_date" type="glide_date"/>
         <element attributes="ref_qual_elements=case_name,max_ref_dropdown=50" choice="1" dependent="case_name" dependent_on_field="case_name" label="Customer Address" max_length="32" name="case_address" reference="x_amfai_cacmdba_address" reference_qual="javascript: 'person_id=' + current.person_id.person_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
             <choice/>
         </element>
+        <element label="Agents" max_length="4000" name="case_agents" read_only="true" reference="x_amfai_cacmdba_producer_staging_table" type="glide_list"/>
         <element label="Address" max_length="250" name="case_amfam_address" type="string"/>
         <element label="City" max_length="100" name="case_amfam_city" type="string"/>
         <element label="Email" max_length="50" name="case_amfam_email" type="string"/>
@@ -39,6 +40,7 @@
         <element label="Last Name" max_length="40" name="case_complainant_last_name" type="string"/>
         <element label="Middle Initial" max_length="1" name="case_complainant_middle_initial" type="string"/>
         <element label="Residence State" max_length="32" name="case_complainant_residence_state" reference="x_amfai_cacmdba_state" type="reference"/>
+        <element label="District" max_length="32" name="case_district" read_only="true" reference="x_amfai_cacmdba_district" type="reference"/>
         <element choice="3" default="request" label="Identifier" max_length="40" name="case_identifier" read_only="true" type="choice">
             <choice>
                 <element label="Request" sequence="0" value="request"/>
@@ -106,6 +108,8 @@
                 <element label="Customer Privacy" sequence="3" value="customer_privacy"/>
             </choice>
         </element>
+        <element attributes="ref_qual_elements=case_name,max_ref_dropdown=50" dependent="case_name" dependent_on_field="case_name" label="Customer Email" max_length="32" name="customer_email" reference="x_amfai_cacmdba_email" reference_qual="javascript: 'person_id=' + current.person_id.person_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced"/>
+        <element attributes="ref_qual_elements=case_name,max_ref_dropdown=50" dependent="case_name" dependent_on_field="case_name" label="Customer Phone" max_length="32" name="customer_phone" reference="x_amfai_cacmdba_phone" reference_qual="javascript: 'person_id=' + current.person_id.person_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced"/>
         <element label="Latest Closed Date" max_length="40" name="latest_closed_date" type="glide_date"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="CACM ID" max_length="40" name="number" read_only="true" type="string"/>
         <index name="index">
@@ -115,42 +119,51 @@
             <element name="case_policy_number"/>
         </index>
         <index name="index3">
-            <element name="case_amfam_ins_state"/>
+            <element name="customer_phone"/>
         </index>
         <index name="index4">
-            <element name="advocate"/>
+            <element name="case_amfam_ins_state"/>
         </index>
         <index name="index5">
-            <element name="case_insured_sales_state"/>
+            <element name="advocate"/>
         </index>
         <index name="index6">
-            <element name="case_req_sub_reason"/>
+            <element name="case_insured_sales_state"/>
         </index>
         <index name="index7">
-            <element name="case_amfam_state_province"/>
+            <element name="case_req_sub_reason"/>
         </index>
         <index name="index8">
-            <element name="case_claim_office"/>
+            <element name="case_amfam_state_province"/>
         </index>
         <index name="index9">
-            <element name="number"/>
+            <element name="case_claim_office"/>
         </index>
         <index name="index10">
-            <element name="case_req_disposition"/>
+            <element name="number"/>
         </index>
         <index name="index11">
-            <element name="case_req_reason"/>
+            <element name="case_district"/>
         </index>
         <index name="index12">
-            <element name="case_claim_number"/>
+            <element name="case_req_disposition"/>
         </index>
         <index name="index13">
-            <element name="case_address"/>
+            <element name="case_req_reason"/>
         </index>
         <index name="index14">
-            <element name="case_req_sub_disposition"/>
+            <element name="customer_email"/>
         </index>
         <index name="index15">
+            <element name="case_claim_number"/>
+        </index>
+        <index name="index16">
+            <element name="case_address"/>
+        </index>
+        <index name="index17">
+            <element name="case_req_sub_disposition"/>
+        </index>
+        <index name="index18">
             <element name="case_line"/>
         </index>
     </element>

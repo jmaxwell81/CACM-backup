@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="District" max_length="40" name="x_amfai_cacmdba_district" type="collection">
+        <element display="true" label="District" max_length="40" name="district" type="string"/>
+    </element>
+</database>

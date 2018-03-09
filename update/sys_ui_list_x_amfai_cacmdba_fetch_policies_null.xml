@@ -3,33 +3,273 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_amfai_cacmdba_fetch_policies" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>case_id</element>
-            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">43c91e28dbef034067bff3d51d96192d</list_id>
+            <element>policy_number.policynumber</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
-            <sys_created_on>2018-01-06 02:22:31</sys_created_on>
-            <sys_id>c7c91e28dbef034067bff3d51d96192d</sys_id>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>56ada384dbc8570067bff3d51d9619ac</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
-            <sys_updated_on>2018-01-06 02:22:31</sys_updated_on>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>policy_number</element>
-            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">43c91e28dbef034067bff3d51d96192d</list_id>
+            <element>policy_number.policy_id</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
-            <sys_created_on>2018-01-06 02:22:31</sys_created_on>
-            <sys_id>4bc91e28dbef034067bff3d51d96192d</sys_id>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>d6ada384dbc8570067bff3d51d9619ac</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
-            <sys_updated_on>2018-01-06 02:22:31</sys_updated_on>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.party_id</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>5aada384dbc8570067bff3d51d9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.person_id</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>daada384dbc8570067bff3d51d9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.mig_agent_code</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>5eada384dbc8570067bff3d51d9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.mig_company_code</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>deada384dbc8570067bff3d51d9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.company</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>52ada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.contract_state_cd</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>d2ada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.mig_contract_state_code</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>56ada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.mig_district_code</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>d6ada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.mig_af_line_type_code</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>5aada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.number</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>11</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>daada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.producer_id</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>12</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>5eada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.riskdescription</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>13</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>deada384dbc8570067bff3d51d9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.roledescription</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>14</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>52ada384dbc8570067bff3d51d9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.sourcesystem</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>15</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>d2ada384dbc8570067bff3d51d9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.advance_product_type_code</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>16</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>56ada384dbc8570067bff3d51d9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>policy_number.advance_product_cd</element>
+            <list_id display_value="x_amfai_cacmdba_fetch_policies" element="NULL" name="x_amfai_cacmdba_fetch_policies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">deada384dbc8570067bff3d51d9619ab</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>17</position>
+            <sum>false</sum>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
+            <sys_id>d6ada384dbc8570067bff3d51d9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -43,21 +283,21 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
-            <sys_created_on>2018-01-17 19:46:01</sys_created_on>
+            <sys_created_on>2018-01-29 15:43:21</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>802276d4dbfbc30067bff3d51d9619b1</sys_id>
+            <sys_id>deada384dbc8570067bff3d51d9619ab</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name/>
-            <sys_package/>
+            <sys_name>x_amfai_cacmdba_fetch_policies</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
-            <sys_update_name/>
+            <sys_update_name>sys_ui_list_x_amfai_cacmdba_fetch_policies_null</sys_update_name>
             <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
-            <sys_updated_on>2018-01-17 19:46:01</sys_updated_on>
-            <sys_user display_value="Sumukh Sharma">109b9644dbda3600e90afa38bf96199e</sys_user>
+            <sys_updated_on>2018-01-29 15:43:21</sys_updated_on>
+            <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
         </sys_ui_list>

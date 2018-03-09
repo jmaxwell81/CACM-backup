@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="[INT] Cacmdba M2m Claims Cases" max_length="40" name="x_amfai_cacmdba_m2m_claims_cases" type="collection">
+    <element label="[INT] CACM Case Claims" max_length="40" name="x_amfai_cacmdba_m2m_claims_cases" type="collection">
         <element label="Case" max_length="32" name="caseid" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="Claim" max_length="32" name="claim" reference="x_amfai_cacmdba_claim" type="reference"/>
         <index name="index">

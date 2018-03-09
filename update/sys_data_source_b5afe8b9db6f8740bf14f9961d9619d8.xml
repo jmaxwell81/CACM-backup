@@ -17,13 +17,13 @@
         <import_set_table_label>Insured Phone Migration</import_set_table_label>
         <import_set_table_name>x_amfai_cacmdba_insured_phone_migration</import_set_table_name>
         <instance_name/>
-        <jdbc_password>x/KRdgNm3AB7MaSa+EyjGA==</jdbc_password>
+        <jdbc_password>at9WHMvuG1t7MaSa+EyjGA==</jdbc_password>
         <jdbc_server>ORAP0103</jdbc_server>
         <jdbc_user_name>DIRECTDATA_AMITFORMS1_RO</jdbc_user_name>
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
-        <last_run_database_field/>
-        <last_run_datetime/>
+        <last_run_database_field>p.UPDATE_DATE</last_run_database_field>
+        <last_run_datetime>to_date('2018-02-07','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
         <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
@@ -45,19 +45,20 @@ p.work_phone AS phone_number,&#13;
 p.work_extension,&#13;
 'work' AS phone_type,&#13;
 c.times_available,&#13;
-i.complaint_id&#13;
+i.complaint_id,&#13;
+p.update_date as create_date,&#13;
+p.update_user_id as create_user_id&#13;
 from cacmdba.person p&#13;
 inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
 left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
-where&#13;
-        ((p.work_phone &lt;&gt; '(___) ___-____' and&#13;
-        p.work_phone &lt;&gt; '(   )    -    ' and&#13;
-        p.work_phone &lt;&gt; '(   )    -' and&#13;
-        p.work_phone is not null)&#13;
-        OR&#13;
-        (p.work_extension is not null and&#13;
-        p.work_extension not like '% %' and&#13;
-        p.work_extension &lt;&gt; '_____'))&#13;
+where ((p.work_phone &lt;&gt; '(___) ___-____' and&#13;
+p.work_phone &lt;&gt; '(   )    -    ' and&#13;
+p.work_phone &lt;&gt; '(   )    -' and&#13;
+p.work_phone is not null)&#13;
+OR&#13;
+(p.work_extension is not null and&#13;
+p.work_extension not like '% %' and&#13;
+p.work_extension &lt;&gt; '_____'))&#13;
 UNION&#13;
 select DISTINCT&#13;
 p.person_id,&#13;
@@ -65,15 +66,16 @@ p.home_phone AS phone_number,&#13;
 null as work_extension,&#13;
 'home' AS phone_type,&#13;
 c.times_available,&#13;
-i.complaint_id&#13;
+i.complaint_id,&#13;
+p.update_date as create_date,&#13;
+p.update_user_id as create_user_id&#13;
 from cacmdba.person p&#13;
 inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
 left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
-where&#13;
-        p.home_phone &lt;&gt; '(___) ___-____' and&#13;
-        p.home_phone &lt;&gt; '(   )    -    ' and&#13;
-        p.home_phone &lt;&gt; '(   )    -' and&#13;
-        p.work_phone is not null&#13;
+where p.home_phone &lt;&gt; '(___) ___-____' and&#13;
+p.home_phone &lt;&gt; '(   )    -    ' and&#13;
+p.home_phone &lt;&gt; '(   )    -' and&#13;
+p.work_phone is not null&#13;
 UNION&#13;
 select DISTINCT&#13;
 p.person_id,&#13;
@@ -81,15 +83,16 @@ p.mobil_phone AS phone_number,&#13;
 null as work_extension,&#13;
 'cell' AS phone_type,&#13;
 c.times_available,&#13;
-i.complaint_id&#13;
+i.complaint_id,&#13;
+p.update_date as create_date,&#13;
+p.update_user_id as create_user_id&#13;
 from cacmdba.person p&#13;
 inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
 left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
-where&#13;
-        p.mobil_phone &lt;&gt; '(___) ___-____' and&#13;
-        p.mobil_phone &lt;&gt; '(   )    -    ' and&#13;
-        p.mobil_phone &lt;&gt; '(   )    -' and&#13;
-        p.mobil_phone is not null&#13;
+where p.mobil_phone &lt;&gt; '(___) ___-____' and&#13;
+p.mobil_phone &lt;&gt; '(   )    -    ' and&#13;
+p.mobil_phone &lt;&gt; '(   )    -' and&#13;
+p.mobil_phone is not null&#13;
 UNION&#13;
 select DISTINCT&#13;
 p.person_id,&#13;
@@ -97,23 +100,24 @@ p.fax AS phone_number,&#13;
 null as work_extension,&#13;
 'fax' AS phone_type,&#13;
 c.times_available,&#13;
-i.complaint_id&#13;
+i.complaint_id,&#13;
+p.update_date as create_date,&#13;
+p.update_user_id as create_user_id&#13;
 from cacmdba.person p&#13;
 inner join CACMDBA.INSURED i on p.person_id = i.person_id&#13;
 left join CACMDBA.COMPLAINANT c on i.person_id = c.person_id&#13;
-where&#13;
-        p.fax &lt;&gt; '(___) ___-____' and&#13;
-        p.fax &lt;&gt; '(   )    -    ' and&#13;
-        p.fax &lt;&gt; '(   )    -' and&#13;
-        p.fax is not null and&#13;
-        fax &lt;&gt; '          '</sql_statement>
+where p.fax &lt;&gt; '(___) ___-____' and&#13;
+p.fax &lt;&gt; '(   )    -    ' and&#13;
+p.fax &lt;&gt; '(   )    -' and&#13;
+p.fax is not null and&#13;
+fax &lt;&gt; '          '</sql_statement>
         <ssh_keyfile_path/>
         <sys_class_name>sys_data_source</sys_class_name>
         <sys_created_by>jeremy.wedekind</sys_created_by>
         <sys_created_on>2018-01-09 15:53:49</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b5afe8b9db6f8740bf14f9961d9619d8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>07.3 - Insured Phone Migration</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -121,7 +125,7 @@ where&#13;
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_b5afe8b9db6f8740bf14f9961d9619d8</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-01-09 15:53:49</sys_updated_on>
+        <sys_updated_on>2018-02-14 15:28:50</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>

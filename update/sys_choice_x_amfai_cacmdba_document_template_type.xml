@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="template_type" table="x_amfai_cacmdba_document" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>template_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Internet</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_document</name>
+            <sequence>0</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-02-06 14:47:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3f9da436db889f0067bff3d51d96193a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-02-07 16:12:05</sys_updated_on>
+            <value>I</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>template_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Letter</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_document</name>
+            <sequence>1</sequence>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-02-06 14:48:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8abda032db889f0067bff3d51d961984</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-02-06 15:02:47</sys_updated_on>
+            <value>L</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>template_type</element>
+            <name>x_amfai_cacmdba_document</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-02-06 14:47:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>85bde4f2db889f0067bff3d51d9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>template_type</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_document_template_type</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-02-06 14:47:59</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="CACM Multifile Request" max_length="40" name="x_amfai_cacmdba_cacm_multifile_request" type="collection">
+        <element attributes="staticDependent=x_amfai_cacmdba_policy" label="Case Filter" max_length="4000" name="case_filter" type="conditions"/>
+        <element label="Target Path" max_length="40" name="file_target_path" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="1" default="New" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element label="New" sequence="0" value="New"/>
+                <element label="Submitted" sequence="1" value="Submitted"/>
+                <element label="Processing" sequence="2" value="Processing"/>
+                <element label="Processed" sequence="3" value="Processed"/>
+            </choice>
+        </element>
+    </element>
+</database>

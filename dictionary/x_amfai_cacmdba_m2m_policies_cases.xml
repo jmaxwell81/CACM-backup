@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="[INT] Cacmdba M2m Policies Cases" max_length="40" name="x_amfai_cacmdba_m2m_policies_cases" type="collection">
+    <element label="[INT] CACM Case Policies" max_length="40" name="x_amfai_cacmdba_m2m_policies_cases" type="collection">
         <element label="Case" max_length="32" name="caseid" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="Policy" max_length="32" name="policy" reference="x_amfai_cacmdba_policy" type="reference"/>
         <index name="index">

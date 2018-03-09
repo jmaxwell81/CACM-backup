@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="[INT] Fetch Policies" max_length="40" name="x_amfai_cacmdba_fetch_policies" type="collection">
+    <element label="[INT] CACM Policy Search Results" max_length="40" name="x_amfai_cacmdba_fetch_policies" type="collection">
         <element label="Case ID" max_length="40" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="Policy Number" max_length="40" name="policy_number" reference="x_amfai_cacmdba_policy" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Random number" max_length="40" name="random_number" type="string"/>

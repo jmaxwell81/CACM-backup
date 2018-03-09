@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <category/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url>jdbc:oracle:thin:@ORAI0103:1521:mp10g0i</connection_url>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <database_name/>
+        <database_port/>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>oracle.jdbc.OracleDriver</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Case Details Migration</import_set_table_label>
+        <import_set_table_name>u_case_details_migration</import_set_table_name>
+        <instance_name/>
+        <jdbc_password>BaNXfhyzmZg=</jdbc_password>
+        <jdbc_server>ORAI0103</jdbc_server>
+        <jdbc_user_name>java_batch</jdbc_user_name>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field>CREATE_DATE</last_run_database_field>
+        <last_run_datetime>to_date('2017-11-10','yyyy-mm-dd')</last_run_datetime>
+        <ldap_target/>
+        <maximum_rows/>
+        <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
+        <name>05 - [INT] Case Details Migration</name>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>mp10g0i</oracle_sid>
+        <properties/>
+        <query>Specific SQL</query>
+        <query_timeout>0</query_timeout>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement>select&#13;
+case_id,&#13;
+complaint_id,&#13;
+complaint_state,&#13;
+af_disposition_code,&#13;
+af_reason_code,&#13;
+ins_dept_case_id,&#13;
+open_date,&#13;
+af_disposition_subcode,&#13;
+af_reason_subcode,&#13;
+update_date as create_date,&#13;
+update_user_id as create_user_id&#13;
+from cacmdba.case</sql_statement>
+        <ssh_keyfile_path/>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>jeremy.wedekind</sys_created_by>
+        <sys_created_on>2018-02-14 19:14:23</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a967329ddb505b4067bff3d51d96190e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>05 - [INT] Case Details Migration</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_data_source_a967329ddb505b4067bff3d51d96190e</sys_update_name>
+        <sys_updated_by>jeremy.wedekind</sys_updated_by>
+        <sys_updated_on>2018-02-14 19:35:45</sys_updated_on>
+        <table_name/>
+        <type>JDBC</type>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>true</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+</record_update>

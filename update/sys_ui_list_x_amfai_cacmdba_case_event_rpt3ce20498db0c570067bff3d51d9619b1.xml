@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_amfai_cacmdba_case_event" version="2" view="RPT3ce20498db0c570067bff3d51d9619b1">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_amfai_cacmdba_case_event" element="NULL" name="x_amfai_cacmdba_case_event" parent="NULL" relationship="NULL" sys_domain="global" view="78e288d8db0c570067bff3d51d9619a2">d488c010db4c570067bff3d51d9619cf</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_id>5c88c010db4c570067bff3d51d9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>case_id</element>
+            <list_id display_value="x_amfai_cacmdba_case_event" element="NULL" name="x_amfai_cacmdba_case_event" parent="NULL" relationship="NULL" sys_domain="global" view="78e288d8db0c570067bff3d51d9619a2">d488c010db4c570067bff3d51d9619cf</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_id>dc88c010db4c570067bff3d51d9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>user_id</element>
+            <list_id display_value="x_amfai_cacmdba_case_event" element="NULL" name="x_amfai_cacmdba_case_event" parent="NULL" relationship="NULL" sys_domain="global" view="78e288d8db0c570067bff3d51d9619a2">d488c010db4c570067bff3d51d9619cf</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_id>5088c010db4c570067bff3d51d9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>case_method_code</element>
+            <list_id display_value="x_amfai_cacmdba_case_event" element="NULL" name="x_amfai_cacmdba_case_event" parent="NULL" relationship="NULL" sys_domain="global" view="78e288d8db0c570067bff3d51d9619a2">d488c010db4c570067bff3d51d9619cf</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_id>d088c010db4c570067bff3d51d9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>routing_identifier</element>
+            <list_id display_value="x_amfai_cacmdba_case_event" element="NULL" name="x_amfai_cacmdba_case_event" parent="NULL" relationship="NULL" sys_domain="global" view="78e288d8db0c570067bff3d51d9619a2">d488c010db4c570067bff3d51d9619cf</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_id>5488c010db4c570067bff3d51d9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>event_comments</element>
+            <list_id display_value="x_amfai_cacmdba_case_event" element="NULL" name="x_amfai_cacmdba_case_event" parent="NULL" relationship="NULL" sys_domain="global" view="78e288d8db0c570067bff3d51d9619a2">d488c010db4c570067bff3d51d9619cf</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_id>d488c010db4c570067bff3d51d9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_amfai_cacmdba_case_event</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>pmadhika@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 17:40:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d488c010db4c570067bff3d51d9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_amfai_cacmdba_case_event</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_list_x_amfai_cacmdba_case_event_RPT3ce20498db0c570067bff3d51d9619b1</sys_update_name>
+            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 17:40:39</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rpt3ce20498db0c570067bff3d51d9619b1" name="RPT3ce20498db0c570067bff3d51d9619b1">78e288d8db0c570067bff3d51d9619a2</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

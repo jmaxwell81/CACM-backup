@@ -5,8 +5,8 @@
         <element label="Effective Date" max_length="40" name="begin_eff_date" type="glide_date"/>
         <element label="End Effective Date" max_length="40" name="end_eff_date" type="glide_date"/>
         <element label="Sales Region Code" max_length="20" name="sales_region_code" type="string"/>
-        <element display="true" label="Sales State Code" max_length="10" name="sales_state_code" type="string"/>
-        <element label="Sales State Description" max_length="50" name="sales_state_description" type="string"/>
+        <element label="Sales State Code" max_length="10" name="sales_state_code" type="string"/>
+        <element display="true" label="Sales State Description" max_length="50" name="sales_state_description" type="string"/>
         <index name="index">
             <element name="sales_state_code"/>
         </index>

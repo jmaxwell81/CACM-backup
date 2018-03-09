@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="f2ace498dbcc570067bff3d51d9619dc" sys_domain="global" table="u_person_migration" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>07ace498dbcc570067bff3d51d9619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_business</element>
+            <position>1</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>8bace498dbcc570067bff3d51d9619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_customer_type</element>
+            <position>2</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>0face498dbcc570067bff3d51d9619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_first_name</element>
+            <position>3</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>8face498dbcc570067bff3d51d9619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_last_name</element>
+            <position>4</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>03ace498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_middle_initial</element>
+            <position>5</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>83ace498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ref_update_date</element>
+            <position>6</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>07ace498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ref_update_user_id</element>
+            <position>7</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>87ace498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_update_date</element>
+            <position>8</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>0bace498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_update_user_id</element>
+            <position>9</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>8bace498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_create_date</element>
+            <position>10</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>0face498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_create_user_id</element>
+            <position>11</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>8face498dbcc570067bff3d51d9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>12</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>03ace498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_dm_id</element>
+            <position>13</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>83ace498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_gender</element>
+            <position>14</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>07ace498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_person_id</element>
+            <position>15</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>87ace498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_preferred_routing</element>
+            <position>16</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>0bace498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_referent</element>
+            <position>17</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>8bace498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_referentid</element>
+            <position>18</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>0face498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ref_create_date</element>
+            <position>19</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>8face498dbcc570067bff3d51d9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ref_create_user_id</element>
+            <position>20</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>03ace498dbcc570067bff3d51d9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>21</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>83ace498dbcc570067bff3d51d9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_title</element>
+            <position>22</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>07ace498dbcc570067bff3d51d9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_person_type</element>
+            <position>23</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>87ace498dbcc570067bff3d51d9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>24</position>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_id>0bace498dbcc570067bff3d51d9619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="u_person_migration" sys_domain="global" view="Default view">f2ace498dbcc570067bff3d51d9619dc</sys_ui_section>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>u_person_migration</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>smarti3@amfam.com</sys_created_by>
+            <sys_created_on>2018-01-29 20:18:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f2ace498dbcc570067bff3d51d9619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_person_migration</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_section_f2ace498dbcc570067bff3d51d9619dc</sys_update_name>
+            <sys_updated_by>smarti3@amfam.com</sys_updated_by>
+            <sys_updated_on>2018-01-29 20:18:39</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

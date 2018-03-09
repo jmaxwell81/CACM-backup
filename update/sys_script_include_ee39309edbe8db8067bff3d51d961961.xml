@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.CACMProducerSearchUtil</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CACMProducerSearchUtil</name>
+        <script><![CDATA[var CACMProducerSearchUtil = Class.create();
+CACMProducerSearchUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	triggerProducerSOAPCall: function(){
+		//gs.addInfoMessage('Soap');
+		var aInsuredGR = {};
+			var randomNum = this.getRandomInt(1, 100000000);
+			aInsuredGR.CaseId = this.getParameter('sysparm_caseID');
+			aInsuredGR.district = this.getParameter('sysparm_district');
+			var gr = new GlideRecord('x_amfai_cacmdba_district');
+			gr.addQuery('sys_id', aInsuredGR.district);
+			gr.query();
+			var district = '';
+			if(gr.next()){
+				district = gr.district;
+			}
+			//gs.addInfoMessage(aInsuredGR.district);
+			var insuredStgObj = {};
+		        insuredStgObj.CaseId = aInsuredGR.CaseId;
+				insuredStgObj.randomId = randomNum;
+				try {
+					//gs.addInfoMessage('try');
+					var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ProducerServiceV5', 'searchProducer');
+					
+					//override authentication profile
+					//authentication type ='basic'
+					//r.setAuthentication(authentication type,profile name);
+					
+					s.setStringParameterNoEscape('district', district);
+					s.setStringParameterNoEscape('Status', 'ACTIVE');
+					s.setStringParameterNoEscape('systemName', 'cacm');
+					s.setStringParameterNoEscape('userID', 'test12');
+					
+					var response = s.execute();
+					var responseBody = response.getBody();
+					var status = response.getStatusCode();
+					//gs.addInfoMessage(status);
+					
+					
+					var partySearchResponse = new XMLDocument2();
+					partySearchResponse.parseXML(responseBody);
+					//gs.addInfoMessage(partySearchResponse);
+					var partyIdentifier = this.getResponseNodeText(partySearchResponse, "code");
+					//gs.addInfoMessage(partyIdentifier);
+					if(partyIdentifier == 'SUCCESS'){
+						
+						var requestNode = partySearchResponse.getNode('//SearchProducerResult');
+						
+						var requestIter = requestNode.getChildNodeIterator();
+						
+						while (requestIter.hasNext()) {
+							//gs.addInfoMessage('requestIter');
+							var entryNode = requestIter.next();
+							//gs.addInfoMessage(entryNode.getNodeName());
+							if(entryNode.getNodeName() == 'ProducerSummaryGroup'){
+								//gs.addInfoMessage('entryNode');
+								var ProducerSummaryGroup = entryNode.getChildNodeIterator();
+								while(ProducerSummaryGroup.hasNext()){
+									var PartySearchNode = ProducerSummaryGroup.next();
+									if (PartySearchNode.getNodeName() == 'ProducerSummary'){
+										var PartySearchResult = PartySearchNode.getChildNodeIterator();
+										while (PartySearchResult.hasNext()) {
+											//gs.addInfoMessage('PartySearchResult');
+											var PartySearchResultNode = PartySearchResult.next();
+											
+											if(PartySearchResultNode.getNodeName() == "producerId"){
+												insuredStgObj.producerId = PartySearchResultNode.getTextContent();
+												//gs.addInfoMessage(insuredStgObj.producerId);
+												//gs.addInfoMessage('yes');
+											}
+											else if(PartySearchResultNode.getNodeName() == "firstName"){
+												insuredStgObj.firstName = PartySearchResultNode.getTextContent();
+												//gs.addInfoMessage(insuredStgObj.firstName);
+											}
+											else if(PartySearchResultNode.getNodeName() == "middleName"){
+												insuredStgObj.middleName = PartySearchResultNode.getTextContent();
+												//gs.addInfoMessage(insuredStgObj.middleName);
+											}
+											else if(PartySearchResultNode.getNodeName() == "lastName"){
+												insuredStgObj.lastName = PartySearchResultNode.getTextContent();
+												//gs.addInfoMessage(insuredStgObj.lastName);
+											}
+											else if(PartySearchResultNode.getNodeName() == "primaryGeoState"){
+												insuredStgObj.primaryGeoState = PartySearchResultNode.getTextContent();
+												//gs.addInfoMessage(insuredStgObj.primaryGeoState);
+											}
+											
+										}
+										this.insertProducerStagingTable(insuredStgObj);
+										insuredStgObj.firstName = '';
+										insuredStgObj.lastName = '';
+										insuredStgObj.middleName = '';
+										insuredStgObj.producerId = '';
+										insuredStgObj.primaryGeoState = '';
+									}
+								}
+							}
+							
+						}
+						
+					}else{
+						var message = this.getNSResponseNodeText(partySearchResponse, "errorMessage", "ns2:");
+						if(message == null || message == 'null' || message == ""){
+							message = this.getNSResponseNodeText(partySearchResponse, "message", "ns2:");
+						}
+						
+						var error_message = "[" + new GlideDateTime().getValue() + "] A issue was encountered while performing this search for these parameters: " + message;
+						gs.addErrorMessage(error_message);
+						aInsuredGR.update();
+					}
+					
+				}
+				catch(ex) {
+					var message = ex.getMessage();
+				}
+				
+				return randomNum;
+				
+			},
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			triggerProducerSecondSoapCall: function(producerSysId, producerId){
+				//gs.addInfoMessage('Soap Second Call');
+				var aInsuredGR = {};
+					var randomNum = this.getRandomInt(1, 100000000);
+					aInsuredGR.producerSysId = producerSysId; //this.getParameter('sysparm_sysId');
+					aInsuredGR.producerId = producerId; //this.getParameter('sysparm_producerId');
+					
+					//gs.addInfoMessage(aInsuredGR.producerSysId);
+				    //gs.addInfoMessage(aInsuredGR.producerId);
+					var producerStgObj = {};
+						producerStgObj.producerSysId = aInsuredGR.producerSysId;
+						try {
+							//gs.addInfoMessage('try');
+							var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.ProducerServiceV5', 'retrieveProducerDetail');
+							
+							//override authentication profile
+							//authentication type ='basic'
+							//r.setAuthentication(authentication type,profile name);
+							
+							s.setStringParameterNoEscape('producerId', aInsuredGR.producerId);
+							s.setStringParameterNoEscape('systemName', 'cacm');
+							s.setStringParameterNoEscape('userId', 'test12');
+							
+							var response = s.execute();
+							var responseBody = response.getBody();
+							var status = response.getStatusCode();
+							//gs.addInfoMessage(status);
+							
+							
+							var partySearchResponse = new XMLDocument2();
+							partySearchResponse.parseXML(responseBody);
+							//gs.addInfoMessage(partySearchResponse);
+							var partyIdentifier = this.getResponseNodeText(partySearchResponse, "code");
+							//gs.addInfoMessage(partyIdentifier);
+							if(partyIdentifier == 'SUCCESS'){
+								
+								var requestNode = partySearchResponse.getNode('//RetrieveProducerDetailResult');
+								
+								var requestIter = requestNode.getChildNodeIterator();
+								
+								while (requestIter.hasNext()) {
+									//gs.addInfoMessage('requestIter');
+									var entryNode = requestIter.next();
+									//gs.addInfoMessage(entryNode.getNodeName());
+									if(entryNode.getNodeName() == 'ProducerResponse'){
+										//gs.addInfoMessage('entryNode');
+										var ProducerResponse = entryNode.getChildNodeIterator();
+										while(ProducerResponse.hasNext()){
+											var Producer = ProducerResponse.next();
+											if (Producer.getNodeName() == 'Producer'){
+												var ProducerNode = Producer.getChildNodeIterator();
+												while (ProducerNode.hasNext()) {
+													//gs.addInfoMessage('PartySearchResult');
+													var ProducerResultNode = ProducerNode.next();
+													if(ProducerResultNode.getNodeName() == "ns3:ProducerName"){
+														var ProducerNameNode1 = ProducerResultNode.getChildNodeIterator();
+														while (ProducerNameNode1.hasNext()){
+															var ProducerNameNode1Result = ProducerNameNode1.next();
+															if(ProducerNameNode1Result.getNodeName() == "ns3:PersonName"){
+																var PersonNameNode = ProducerNameNode1Result.getChildNodeIterator();
+																while (PersonNameNode.hasNext()){
+																	var nickName = PersonNameNode.next();
+																	if(nickName.getNodeName() == "ns3:nickName"){
+																		producerStgObj.nickName = nickName.getTextContent();
+																	}
+																}
+															}
+														}
+													}
+													
+													else if(ProducerResultNode.getNodeName() == "ns3:Status"){
+														var statusNode = ProducerResultNode.getChildNodeIterator();
+														while (statusNode.hasNext()){
+															var statusResultNode = statusNode.next();
+															if(statusResultNode.getNodeName() == "ns3:status"){
+																producerStgObj.status = statusResultNode.getTextContent();
+															}
+															else if(statusResultNode.getNodeName() == "ns3:startDate"){
+																producerStgObj.startDate = statusResultNode.getTextContent();
+															}
+															else if(statusResultNode.getNodeName() == "ns3:endDate"){
+																producerStgObj.endDate = statusResultNode.getTextContent();
+															}
+														}
+													}
+													
+													else if(ProducerResultNode.getNodeName() == "ns3:Hierarchy"){
+														var HierarchyNode = ProducerResultNode.getChildNodeIterator();
+														while (HierarchyNode.hasNext()){
+															var HierarchyNodeResult = HierarchyNode.next();
+															if(HierarchyNodeResult.getNodeName() == "ns3:ChildPosition"){
+																var PositionNode = HierarchyNodeResult.getChildNodeIterator();
+																while (PositionNode.hasNext()){
+																	var PositionNodeResult = PositionNode.next();
+																	if(PositionNodeResult.getNodeName() == "ns3:positionType"){
+																		producerStgObj.type = PositionNodeResult.getTextContent();
+																	}
+																}
+															}
+														}
+													}
+												}
+												this.updateProducerRecord(producerStgObj);
+												producerStgObj.endDate = '';
+												producerStgObj.startDate = '';
+												producerStgObj.status = '';
+												producerStgObj.type = '';
+												producerStgObj.nickName = '';
+												producerStgObj.producerSysId = '';
+											}
+										}
+									}
+								}
+								
+							}else{
+								var message = this.getNSResponseNodeText(partySearchResponse, "errorMessage", "ns2:");
+								if(message == null || message == 'null' || message == ""){
+									message = this.getNSResponseNodeText(partySearchResponse, "message", "ns2:");
+								}
+								
+								var error_message = "[" + new GlideDateTime().getValue() + "] A issue was encountered while performing this search for these parameters: " + message;
+								gs.addErrorMessage(error_message);
+								aInsuredGR.update();
+							}
+							
+						}
+						catch(ex) {
+							var message = ex.getMessage();
+						}
+						
+						return randomNum;
+						
+					},
+					
+					
+					
+					
+					
+					
+					insertProducerStagingTable: function(stgInsuredObj){
+						var stgInsuredgld = new GlideRecord('x_amfai_cacmdba_producer_staging_table');
+						stgInsuredgld.initialize();
+						//stgInsuredgld.random_number = stgInsuredObj.random_number;
+						stgInsuredgld.producer_middle_name = stgInsuredObj.middleName;
+						stgInsuredgld.producer_first_name = stgInsuredObj.firstName;
+						stgInsuredgld.producer_last_name = stgInsuredObj.lastName;
+						stgInsuredgld.producer_id = stgInsuredObj.producerId;
+						stgInsuredgld.producer_state_code = stgInsuredObj.primaryGeoState;
+						stgInsuredgld.record_producer_id = stgInsuredObj.randomId;
+						stgInsuredgld.case_sys_id = stgInsuredObj.CaseId;
+						stgInsuredgld.insert();
+					},
+					
+					
+					updateProducerRecord: function(stgInsuredObj){
+						var stgInsuredgld = new GlideRecord('x_amfai_cacmdba_producer');
+						stgInsuredgld.addQuery('sys_id', stgInsuredObj.producerSysId);
+						stgInsuredgld.query();
+						if(stgInsuredgld.next()){
+							stgInsuredgld.int_end_date = stgInsuredObj.endDate;
+							stgInsuredgld.int_start_date = stgInsuredObj.startDate;
+							stgInsuredgld.int_status = stgInsuredObj.status;
+							stgInsuredgld.int_position_type = stgInsuredObj.type;
+							stgInsuredgld.int_nick_name = stgInsuredObj.nickName;
+							stgInsuredgld.data_populated_from_integration = 'Yes';
+							stgInsuredgld.update();
+						}
+					},
+					
+					
+					
+					
+					getResponseNodeText: function(aXMLDoc, aNodeName){
+						
+						if(aNodeName == "")
+							return "";
+						
+						return aXMLDoc.getNodeText('//'+aNodeName);//this.namespace+
+						
+					},
+					
+					getRandomInt: function(min, max) {
+						min = Math.ceil(min);
+						max = Math.floor(max);
+						return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+					},
+					type: 'CACMProducerSearchUtil'
+				});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-03-01 22:52:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ee39309edbe8db8067bff3d51d961961</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>CACMProducerSearchUtil</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_ee39309edbe8db8067bff3d51d961961</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-07 15:21:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

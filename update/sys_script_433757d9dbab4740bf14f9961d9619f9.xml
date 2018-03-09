@@ -32,6 +32,32 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 	//gs.addInfoMessage('test');
+	var loggedUser = gs.getUserID();
+	var dateTime = new GlideDateTime();
+	var referentId = '';
+	var userId = '';
+	
+	var gr = new GlideRecord('x_amfai_cacmdba_referent');
+	gr.addQuery('sys_id', current.referent);
+	gr.query();
+	if(gr.next()){
+		//gs.addInfoMessage('referent returned');
+		referentId = gr.referent_user_id;
+	}
+	
+	var br = new GlideRecord('sys_user');
+	br.addQuery('sys_id', loggedUser);
+	br.query();
+	if(br.next()){
+		//gs.addInfoMessage('user returned');
+		userId = br.u_afi_user_id;
+	}
+	
+	
+	if (referentId == userId){
+		//gs.addInfoMessage('referent and user matched');
+		current.referent_comments_update = dateTime.getDisplayValue();
+	}
 	var additional_comments = current.getValue('additional_comments');
 	current.additional_comments_log = additional_comments;
 	// Add your code here
@@ -44,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>433757d9dbab4740bf14f9961d9619f9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Addn Commets to Addn Comments Log</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -53,7 +79,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_script_433757d9dbab4740bf14f9961d9619f9</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2018-01-08 15:02:17</sys_updated_on>
+        <sys_updated_on>2018-01-30 22:01:37</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

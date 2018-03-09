@@ -22,8 +22,8 @@
         <jdbc_user_name>DLF004</jdbc_user_name>
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
-        <last_run_database_field>CREATE_DATE</last_run_database_field>
-        <last_run_datetime>to_date('2018-01-10','yyyy-mm-dd')</last_run_datetime>
+        <last_run_database_field>p.update_date</last_run_database_field>
+        <last_run_datetime>to_date('to_date('2018-03-08','yyyy-mm-dd')','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
         <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
@@ -40,7 +40,6 @@
         <scp_user_name/>
         <sheet_number>0</sheet_number>
         <sql_statement>select distinct&#13;
-row_number() over (order by cp.policy_number) as Policy_ID,&#13;
 cp.COMPLAINT_ID,&#13;
 cp.PERSON_ID,&#13;
 cp.POLICY_NUMBER,&#13;
@@ -61,15 +60,15 @@ inner join CACMDBA.POLICY p on cp.policy_number = p.policy_number</sql_statement
         <sys_created_on>2017-11-08 19:37:02</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>7090563ddb1ac740a09bf6e9af96195c</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>07.5 - Policy Migration</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_7090563ddb1ac740a09bf6e9af96195c</sys_update_name>
-        <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-01-15 16:23:37</sys_updated_on>
+        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-08 18:24:36</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>

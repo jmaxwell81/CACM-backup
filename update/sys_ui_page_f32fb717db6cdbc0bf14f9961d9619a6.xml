@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_amfai_cacmdba_amfam_search_with_producers.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<html>
+	<body>
+		<span class= "modal-title"><p id="mandatory-text">Distirct Selection is Mandatory</p></span>
+	<form>
+		<div class="row">
+			<div class="col-sm-4 divspacing"><span class="icon-required"></span><span class="label-text">Select District Code:</span></div>
+<div ><select id="mySelect" size="10" onchange="selectFunction()"></select></div>
+	</div>
+	<style>
+		.divspacing{
+		padding-bottom: 10px;
+		}
+		</style>
+		<br></br>
+		<br></br>
+		
+		<p>Selected Value:</p>
+		 <input type="input" id='flag1' name='flag1' value="" readonly="readonly"/>
+</form>
+	<br></br>
+	<button class="form_action_button  action_context btn btn-default" onclick="showProducerListView()"><span>Fetch Producer Details</span></button>
+	<style>
+		.icon-required{
+		    margin-right: 5px;
+		}
+		</style>
+	
+	<script>
+		addLoadEvent( function() {   
+        myFunction();   
+        });
+		
+		function selectFunction(){
+		
+	    var districtElement = document.getElementById("mySelect");
+		var districtIndex = districtElement.selectedIndex;
+		var districtText = districtElement.options[districtIndex].text;
+		document.getElementById("flag1").value = districtText;
+		
+		}
+		
+		
+		function myFunction() {
+		var gr = new GlideRecord('x_amfai_cacmdba_district');
+		gr.orderBy('district');
+		gr.query();
+		while(gr.next()){
+		var x = document.getElementById("mySelect");
+        var option = document.createElement("option");
+        option.text = gr.getValue('district');
+		option.value = gr.sys_id;
+        x.add(option);
+		}
+		document.getElementById("flag1").value = '';
+        }
+		
+		
+		function showProducerListView(){
+		var text = document.getElementById("flag1").value
+		if(text == '' || text == null){
+		document.getElementById("mandatory-text").style.color = "#ff0000";
+		return true;
+		}
+		var districtElement = document.getElementById("mySelect");
+		var districtIndex = districtElement.selectedIndex;
+		var districtSysId = districtElement.options[districtIndex].value;
+		
+	var a =	g_form.getUniqueValue();
+	var ga = new GlideAjax('x_amfai_cacmdba.CACMProducerSearchUtil');
+	ga.addParam('sysparm_name','triggerProducerSOAPCall');
+	ga.addParam('sysparm_district',districtSysId);
+	ga.addParam('sysparm_caseID',g_form.getUniqueValue());
+	//g_form.addInfoMessage(a);
+	ga.getXML(getSoapResponse);
+	
+	function getSoapResponse(response) {
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		//alert(answer);
+		GlideModal.get().destroy();
+		var w = new GlideModal('show_list');
+		w.setTitle('Producers');
+		w.setPreference('table','x_amfai_cacmdba_producer_staging_table_list');
+		w.setWidth(1500);
+		w.setPreference('sysparm_query',"record_producer_id="+answer);
+		w.render();
+	}
+	
+	
+}
+		</script>
+	</body>
+	</html>
+</j:jelly>]]></html>
+        <name>amfam_search_with_producers</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-03-05 15:51:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f32fb717db6cdbc0bf14f9961d9619a6</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>amfam_search_with_producers</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_page_f32fb717db6cdbc0bf14f9961d9619a6</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-07 14:41:26</sys_updated_on>
+    </sys_ui_page>
+</record_update>

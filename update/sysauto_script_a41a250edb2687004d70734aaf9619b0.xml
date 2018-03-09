@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <condition/>
         <conditional>false</conditional>
         <name>CACM Auto Purge Case</name>
@@ -13,67 +13,226 @@
         <run_start>2017-11-17 21:39:52</run_start>
         <run_time>1970-01-01 12:00:00</run_time>
         <run_type>daily</run_type>
-        <script><![CDATA[var currentDate = new GlideDate();// Date when Script is running
-//currentDate.setDisplayValue("01-20-2018");// test date
+        <script><![CDATA[/***************Cleaning Purge Candidate Table*****************/
 
 
-var potCaller = new GlideRecord('x_amfai_cacmdba_person');// setting up person table
-potCaller.addQuery('potential_caller', 'T');// selecting all potential callers
-potCaller.addQuery('potential_expire_date', "<", currentDate);// selecting all that have exceded expiration date
-potCaller.orderBy('person_id');// order by person id
-potCaller.query();// run query against person table with all above filters
+var vr = new GlideRecord('x_amfai_cacmdba_purge_candidate');
+vr.addNotNullQuery('number');
+vr.deleteMultiple();
+
+/***************Setting up Purge Date*****************/
+
+var currentDate = new GlideDate();
+currentDate.setDisplayValue("02-07-2008");
+gs.addInfoMessage('set date- ' + currentDate);
+
+var currentDate1 = new GlideDateTime(currentDate.toString());
+gs.addInfoMessage('set date time- ' + currentDate1);
+//currentDate1.addYearsLocalTime(-10);
+gs.addInfoMessage('set date time years subtracted- ' + currentDate1);
+
+var date = currentDate1.getDate();
+
+
+/***************Setting up Case Glide Query*****************/
+
+var cacmCase = new GlideRecord('x_amfai_cacmdba_case');             // setting up person table
+
+
+cacmCase.addQuery('case_identifier', 'case');// selecting all potential callers
+
+cacmCase.orderBy('number');
+cacmCase.addQuery('latest_closed_date', '<', date);
+cacmCase.addQuery('case_open_timestamp', '<', date);
+
+cacmCase.query();// run query against person table with all above filters
 
 
 var count = 0;// variable to collect parent records ("person records")
-var count1 = 0;// variable to collect child records (" child to person- phone email address")
+
+var closeDate = '';
+var openedDate = '';
+var detailsDate = '';
+var eventDate = '';
 
 
-while(potCaller.next()){// iterate thrugh queried records
-	//gs.addInfoMessage('Eureka!!!' + potCaller.person_id);// test message
+/***************Case Glide Query Run*****************/
+
+
+while(cacmCase.next()){                  // iterate thrugh queried records
 	
-	var personAdd = new GlideRecord('x_amfai_cacmdba_person_address');// setting up person address table
-	personAdd.addQuery('person_id', potCaller.sys_id);// selecting all person address with queried person ids
-	personAdd.query();
-	while(personAdd.next()){
-		//gs.addInfoMessage('Address is here!');// test message
-		count1 = count1 + 1;
-		personAdd.deleteRecord();
+	
+/***************Setting up Case Details Glide Query*****************/
+	
+	var caseDetails = new GlideRecord ('x_amfai_cacmdba_case_details');
+	caseDetails.addQuery('cacm_case', cacmCase.sys_id);
+	caseDetails.orderByDesc('open_date');
+	caseDetails.setLimit(1);
+	caseDetails.query();
+	
+
+/***************Case Details Glide Query Run*****************/
+
+	if(caseDetails.next()){
+
+		if(caseDetails.open_date < date){
+			detailsDate = 'True';
+		}
+		
+		else{
+			detailsDate = 'False';
+		}
+	}
+
+/***************Setting up Case Events Glide Query*****************/
+
+	var caseEvents = new GlideRecord ('x_amfai_cacmdba_case_event');
+	caseEvents.addQuery('case_id', cacmCase.sys_id);
+	caseEvents.orderByDesc('event_date');
+	caseEvents.setLimit(1);
+	caseEvents.query();
+
+
+/***************Case Events Glide Query Run*****************/
+
+	
+	if(caseEvents.next()){
+
+		if (caseEvents.event_date < date){
+			eventDate = 'True';
+		}
+		
+		else{
+			eventDate = 'False';
+		}
+	}
+
+
+/***************Counting Valid Case Candidates*****************/
+
+	if(detailsDate == 'True' && eventDate == 'True'){
+
+		count = count+1;
+
+
+/***************Setting up and Pushing Purge Candidates to Table*****************/
+
+		var vr = new GlideRecord('x_amfai_cacmdba_purge_candidate');
+		vr.initialize();
+		vr.setValue('case_number', cacmCase.sys_id);
+		vr.setValue('active', true);
+		vr.insert();
+		
 	}
 	
-	var personEmail = new GlideRecord('x_amfai_cacmdba_person_email');// setting up person email table
-	personEmail.addQuery('person_id', potCaller.sys_id);// selecting all person email with queried person ids
-	personEmail.query();
-	while(personEmail.next()){
-		//gs.addInfoMessage('Email is here!');// test message
-		count1 = count1 + 1;
-		personEmail.deleteRecord();
-	}
-	
-	var personPhone = new GlideRecord('x_amfai_cacmdba_person_phone');// setting up person phone table
-	personPhone.addQuery('person_id', potCaller.sys_id);// selecting all person phone with queried person ids
-	personPhone.query();
-	while(personPhone.next()){
-		//gs.addInfoMessage('Phone is here!');// test message
-		count1 = count1 + 1;
-		personPhone.deleteRecord();
-	}
-	
-	count = count + 1;
-	potCaller.deleteRecord();
 }
 
-// Following is  Setting up Notification and triggering an event and notification associated to event
-var msg1 = 'Total number of Potential Callers Purged: ' +count;
-var msg2 = 'Total number of Child Records related to Potential Callers Purged: ' +count1;
-//gs.addInfoMessage(msg1);
-//gs.addInfoMessage(msg2);
-gs.eventQueue('x_amfai_cacmdba.purge_requests', current, msg1, msg2);]]></script>
+var link_closeDate = '';
+var link_openedDate = '';
+var link_detailsDate = '';
+var link_eventDate = '';
+var link_caseFailcount = 0;
+var link_case = '';
+
+var purge_candidate = new GlideRecord('x_amfai_cacmdba_purge_candidate');
+purge_candidate.addActiveQuery();
+purge_candidate.orderBy('case_number');
+purge_candidate.query();
+while(purge_candidate.next()){
+	
+	var caseId = purge_candidate.case_number;
+	var linkedCases = new GlideRecord('x_amfai_cacmdba_case_link');
+	linkedCases.addQuery('case_id', caseId);
+	linkedCases.query();
+	while(linkedCases.next()){
+		
+		var link_case = linkedCases.linked_case_id;
+		var cases = new GlideRecord('x_amfai_cacmdba_case');
+		cases.addQuery('sys_id', link_case);
+		//cases.addQuery('latest_closed_date', '<', date);
+		//cases.addQuery('case_open_timestamp', '<', date);
+		cases.query();
+		if(cases.next()){
+			
+			if(cases.latest_closed_date < date){
+				link_closeDate = 'True';
+			}
+			
+			else{
+				link_closeDate = 'False';
+			}
+			
+			if(cases.case_open_timestamp < date){
+				link_openedDate = 'True';
+			}
+			
+			else{
+				link_openedDate = 'False';
+			}
+			
+			var link_caseDetails = new GlideRecord ('x_amfai_cacmdba_case_details');
+			link_caseDetails.addQuery('cacm_case', cases.sys_id);
+			link_caseDetails.orderByDesc('open_date');
+			link_caseDetails.setLimit(1);
+			link_caseDetails.query();
+			if(link_caseDetails.next()){
+				
+				if(link_caseDetails.open_date < date){
+					link_detailsDate = 'True';
+				}
+				
+				else{
+					link_detailsDate = 'False';
+				}
+			}
+			
+			var link_caseEvents = new GlideRecord ('x_amfai_cacmdba_case_event');
+			link_caseEvents.addQuery('case_id', cases.sys_id);
+			link_caseEvents.orderByDesc('event_date');
+			link_caseEvents.setLimit(1);
+			link_caseEvents.query();
+			if(link_caseEvents.next()){
+				
+				if (link_caseEvents.event_date < date){
+					link_eventDate = 'True';
+				}
+				
+				else{
+					link_eventDate = 'False';
+				}
+			}
+			
+			if(link_closeDate == 'False' || link_openedDate == 'False' || link_detailsDate == 'False' || link_eventDate == 'False'){
+				
+				link_case = 'Fail';
+			}
+			else{
+				link_case = 'Pass';
+			}
+			
+			
+		}
+		if(link_case == 'Fail'){
+			link_caseFailcount = link_caseFailcount+1;
+			//purge_candidate.deleteRecord();
+			break;
+		}
+		else{
+			continue;
+		}
+		
+	}
+	
+}
+
+
+gs.addInfoMessage(link_caseFailcount);]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>pmadhika@amfam.com</sys_created_by>
         <sys_created_on>2017-11-21 21:42:06</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>a41a250edb2687004d70734aaf9619b0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>CACM Auto Purge Case</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -81,7 +240,7 @@ gs.eventQueue('x_amfai_cacmdba.purge_requests', current, msg1, msg2);]]></script
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sysauto_script_a41a250edb2687004d70734aaf9619b0</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-11-21 21:42:06</sys_updated_on>
+        <sys_updated_on>2018-02-20 21:01:12</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

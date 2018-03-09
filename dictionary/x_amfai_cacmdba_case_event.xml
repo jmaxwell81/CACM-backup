@@ -29,6 +29,7 @@
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Event ID" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Alert" max_length="40" name="potential_caller" type="boolean"/>
         <element label="Referent Email List" max_length="1500" name="referent_email_list" read_only="true" type="string"/>
+        <element label="Repeater" max_length="40" name="repeater" type="boolean"/>
         <element attributes="max_ref_dropdown=150" choice="1" label="Routing" mandatory="true" max_length="32" name="routing_identifier" reference="x_amfai_cacmdba_routing" type="reference">
             <choice/>
         </element>

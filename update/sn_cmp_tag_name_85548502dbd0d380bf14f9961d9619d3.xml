@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sn_cmp_tag_name">
+    <sn_cmp_tag_name action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <label>pp_role</label>
+        <name>u_pp_role</name>
+        <order_field/>
+        <order_table>sn_cmp_order</order_table>
+        <script/>
+        <sys_class_name>sn_cmp_tag_name</sys_class_name>
+        <sys_created_by>mid_user</sys_created_by>
+        <sys_created_on>2018-02-16 18:47:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>85548502dbd0d380bf14f9961d9619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_pp_role</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sn_cmp_tag_name_85548502dbd0d380bf14f9961d9619d3</sys_update_name>
+        <sys_updated_by>mid_user</sys_updated_by>
+        <sys_updated_on>2018-02-16 18:47:05</sys_updated_on>
+        <table/>
+        <tag_type>User-defined</tag_type>
+        <value_type>Variable</value_type>
+        <variable_name/>
+        <visible>false</visible>
+    </sn_cmp_tag_name>
+</record_update>

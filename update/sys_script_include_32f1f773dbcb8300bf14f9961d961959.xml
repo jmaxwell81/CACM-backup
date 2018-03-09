@@ -9,6 +9,123 @@
         <name>generate_letter</name>
         <script><![CDATA[var generate_letter = Class.create();
 generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getInsuredList: function(caseID){
+		
+		var ir = new GlideRecord('x_amfai_cacmdba_insured_relationship');
+		ir.addQuery('case_id', caseID);
+		ir.query();
+		var insuredList = '';
+		while(ir.next()){
+			if(insuredList == ''){
+				insuredList += ir.person_id.full_name;
+			}
+			else
+				insuredList += ', ' + ir.person_id.full_name;
+		}
+		return insuredList;
+	},
+	
+	getPolicyList: function(caseID){
+		
+		var pr = new GlideRecord('x_amfai_cacmdba_m2m_policies_cases');
+		pr.addQuery('caseid', caseID);
+		pr.query();
+		var policyList = '';
+		while(pr.next()){
+			if(policyList == ''){
+				policyList += pr.policy.policynumber;
+			}
+			else
+				policyList += ', ' + pr.policy.policynumber;
+		}
+		return policyList;
+	},
+	
+	
+	getClaimList: function(caseID){
+		
+		var cr = new GlideRecord('x_amfai_cacmdba_m2m_claims_cases');
+		cr.addQuery('caseid', caseID);
+		cr.query();
+		var claimList = '';
+		while(cr.next()){
+			if(claimList == ''){
+				claimList += cr.claim.claim_number;
+			}
+			else
+				claimList += ', ' + cr.claim.claim_number;
+		}
+		return claimList;
+	},
+	
+	getReferentData: function(referent){
+		
+		var vr = new GlideRecord('x_amfai_cacmdba_referent');
+		vr.addQuery('sys_id', referent);
+		vr.query();
+		var address = '';
+		var title ='';
+		var obj = {};
+		if(vr.next()){
+			
+			address = vr.address + ', ' + vr.city + ', ' + vr.getDisplayValue('state_code') + ', ' + vr.zip_code;
+			obj.address = address.toString();
+			title = vr.afi_user.title;
+			obj.title = title.toString();
+			obj.name = vr.full_name.toString();
+			obj.city = vr.city.toString();
+		}
+		return obj;
+	},
+	
+	getEventInfo: function(eventID){
+		
+		var er = new GlideRecord('x_amfai_cacmdba_case_event');
+		er.addQuery('sys_id', eventID);
+		er.query();
+		var obj ={};
+		if(er.next()){
+			var routing = '';
+			obj.date = er.event_date.toString();
+			routing = er.getDisplayValue('routing_identifier');
+			obj.routing = routing.toString();
+			obj.comments = er.event_comments.toString();
+		}
+		return obj;
+	},
+	
+	getPhoneInfo: function(comp){
+		
+		var pr = new GlideRecord('x_amfai_cacmdba_phone');
+		pr.addQuery('person_id', comp);
+		pr.query();
+		var obj ={	
+			work_phone:'', home_phone:'', cell_phone:'', fax_phone:'', work_phoneEXT:'', work_phoneAVB:'', home_phoneAVB:'', cell_phoneAVB:'', fax_phoneAVB:''
+		};
+		while(pr.next()){
+			if(pr.getValue('phone_type') == 'work'){
+				obj.work_phone = pr.phone_number.toString();
+				var work_phoneEXT = "(ext. " + pr.phone_extension + ")";
+				obj.work_phoneEXT = work_phoneEXT.toString();
+				obj.work_phoneAVB = pr.phone_availability.toString();
+			}
+			else if(pr.getValue('phone_type') == 'home'){
+				obj.home_phone = pr.phone_number.toString();
+				obj.home_phoneAVB = pr.phone_availability.toString();
+			}
+			else if(pr.getValue('phone_type') == 'cell'){
+				obj.cell_phone = pr.phone_number.toString();
+				obj.cell_phoneAVB = pr.phone_availability.toString();
+			}
+			else if(pr.getValue('phone_type') == 'fax'){
+				obj.fax_phone = pr.phone_number.toString();
+				obj.fax_phoneAVB = pr.phone_availability.toString();
+			}
+		}
+		return obj;
+	},
+	
+	
 	dateGenerator: function(){
 		//gs.addInfoMessage('date run');
 		var date = new GlideDate();
@@ -62,15 +179,20 @@ generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		var letter = '';
 		var returnedDate = this.dateGenerator();
 		var caseID = this.getParameter('sysparm_currentCaseID');
-		var EventID = this.getParameter('sysparm_currentEventID');
+		var eventID = this.getParameter('sysparm_currentEventID');
 		var executive = this.getParameter('sysparm_currentExecutive');
 		var template = this.getParameter('sysparm_currentTemplate');
+		var template_type = this.getParameter('sysparm_currentTemplateType');
 		var address = this.getParameter('sysparm_currentAddress');
-// 		gs.addInfoMessage('returnedDate = ' +returnedDate);
-// 		gs.addInfoMessage('caseID = ' +caseID);
-// 		gs.addInfoMessage('EventID = ' +EventID);
-// 		gs.addInfoMessage('executive = ' +executive);
-// 		gs.addInfoMessage('template = ' +template);
+		var clientName = this.getParameter('sysparm_currentClientName');
+		var receivedByName = this.getParameter('sysparm_currentReceivedByName');
+		var receivedByTitle = this.getParameter('sysparm_currentReceivedByTitle');
+		var referent = this.getParameter('sysparm_currentSelectReferent');
+		// 		gs.addInfoMessage('returnedDate = ' +returnedDate);
+		// 		gs.addInfoMessage('caseID = ' +caseID);
+		// 		gs.addInfoMessage('EventID = ' +EventID);
+		// 		gs.addInfoMessage('executive = ' +executive);
+		// 		gs.addInfoMessage('template = ' +template);
 		
 		var grCase = new GlideRecord('x_amfai_cacmdba_case');
 		grCase.get(caseID);
@@ -80,6 +202,13 @@ generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		var compTitle = grCase.case_name.title.getDisplayValue();
 		var compName = grCase.case_name.full_name;
 		
+		var companyArray = company.split(',');
+		var companyString = '';
+		for (i=0; i<companyArray.length; i++){
+			companyString += companyArray[i] + '<br>';
+			//gs.addInfoMessage(companyString);
+		}
+		//gs.addInfoMessage(companyArray[0]);
 		
 		var grPerson = new GlideRecord('x_amfai_cacmdba_address');
 		grPerson.get('person_id', comp);
@@ -102,82 +231,136 @@ generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		var advocateTitle = grAdvocate.title;
 		
 		
-		if (template == 'ADVOC2DP'){
+		if (template == 'ADVOC2DP' && template_type == 'L'){
 			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", has asked me to review your situation. I have asked the appropriate department to research your concerns. American Family's policy is to have a response to you within ten business days from the date of this letter. However, if our company receives a formal complaint from the Insurance Department, our response will be sent directly to the Department and you may not receive a reply from our company.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
-			
-		}
-		
-		
-		else if (template == 'ADVOCAT2'){
-			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", has asked me to review your situation.  I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", has asked me to review your situation. I have asked the appropriate department to research your concerns. American Family's policy is to have a response to you within ten business days from the date of this letter. However, if our company receives a formal complaint from the Insurance Department, our response will be sent directly to the Department and you may not receive a reply from our company.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
 			
 		}
 		
 		
-		else if (template == 'ADVOCATE'){
+		else if (template == 'ADVOCAT2' && template_type == 'L'){
 			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
-			
-		}
-		
-		
-		else if (template == 'ADVOCDPT'){
-			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.  However, if our company receives a formal complaint from the Insurance Department, our response will be sent directly to the Department and you may not receive a reply from our company.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>" + execName + ", " + execTitle +", has asked me to review your situation.  I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
 			
 		}
 		
 		
-		else if (template == 'ADVOCSPE'){
+		else if (template == 'ADVOCATE' && template_type == 'L'){
 			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey recently sent to you.  On the survey you expressed concerns that deserve our attention.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
-			
-		}
-		
-		
-		else if (template == 'ADVOCSUR'){
-			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey recently sent to you.  On the survey you expressed concerns that deserve our attention.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
 			
 		}
 		
 		
-		else if (template == 'ADVPRMCL'){
+		else if (template == 'ADVOCDPT' && template_type == 'L'){
 			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey sent to you.  On the survey you expressed concerns that deserve our attention. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>Under the 'Agent Notification' section of the survey, you did not grant permission to share your name or specific responses with your agent and/or claim adjuster.  In order to address your concerns properly, we need to contact your agent and/or claim adjuster regarding the situation.  May we have your permission to do so?<br/><br/>If we do not receive your permission to contact your agent and/or claim adjuster, we will not be able to investigate this matter and provide a response to your concerns.<br/><br/>Please indicate your choice below and return this letter in the enclosed postage paid envelope.<br/><br/>_______Yes, you have my permission to contact my agent and/or claim adjuster providing my name and specific concerns expressed on the enclosed survey.<br/><br/>_______No, do not share my name or specific concerns with my agent and/or claim adjuster.  I understand I will not receive a response to my comments on the attached survey.<br/><br/>Thank you for taking the time to respond to this request.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
-			
-		}
-		
-		
-		else if (template == 'ADVPRMFL'){
-			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>We received your response granting us permission to contact your agent and/or claim adjuster regarding your survey comments.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to assist you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.  However, if our company receives a formal complaint from the Insurance Department, our response will be sent directly to the Department and you may not receive a reply from our company.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
 			
 		}
 		
 		
-		else if (template == 'ADVPRMSL'){
+		else if (template == 'ADVOCSPE' && template_type == 'L'){
 			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey sent to you.  On the survey you expressed concerns that deserve our attention. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>Under the 'Agent Notification' section of the survey, you did not grant permission to share your name or specific responses with your agent.  In order to address your concerns properly, we need to contact your agent regarding the situation.  May we have your permission to do so?<br/><br/>If we do not receive your permission to contact your agent, we will not be able to investigate this matter and provide a response to your concerns.<br/><br/>Please indicate your choice below and return this letter in the enclosed postage paid envelope.<br/><br/>_______Yes, you have my permission to contact my agent providing my name and specific concerns expressed on the enclosed survey.<br/><br/>_______No, do not share my name or specific concerns with my agent.  I understand I will not receive a response to my comments on the attached survey.<br/><br/>Thank you for taking the time to respond to this request.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
-			
-		}
-		
-		
-		else if (template == 'ADVOPRIV'){
-			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + address + "<br/><br/><br/><br/>RE:	Complaint File Name: " + compTitle + " " + compName + ":<br/><br/>The attached complaint/inquiry was received today.  The privacy laws require us to protect the confidentiality of non-public information relating to our consumers and others who rely upon us.  Maintaining the confidentiality of this information is important to our company.  Therefore, we are unable to send our response directly to you.<br/><br/>It is a company goal to provide the best possible service to consumers.  Even though we are unable to reply directly to you, I have asked the appropriate department to research the concerns and respond directly to the complainant within ten business days from the date of this letter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey recently sent to you.  On the survey you expressed concerns that deserve our attention.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
 			
 		}
 		
 		
-		else if (template == 'ADVPRIQU'){
+		else if (template == 'ADVOCSUR' && template_type == 'L'){
 			
-			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + address + "<br/><br/><br/><br/>RE:	Complaint File Name: " + compTitle + " " + compName + ":<br/><br/>The attached complaint/inquiry was received today.  The privacy laws require us to protect the confidentiality of non-public information relating to our consumers and others who rely upon us.  Maintaining the confidentiality of this information is important to our company.  Therefore, we are unable to send our response directly to you.<br/><br/>It is a company goal to provide the best possible service to consumers.  Even though we are unable to reply directly to you, we would like to respond to the complainant.  Your request did not provide the address of the complainant.  Please forward the complete address of the complainant or ask the complainant to contact our company directly at:<br/><br/><div align='center'>Consumer Affairs Department</div><div align='center'>American Family Insurance</div><div align='center'>6000 American Parkway</div><div align='center'>Madison, WI 53783-0001</div><br/><div align='center'>Or</div><br/><div align='center'>www.amfam.com</div><br/><br/>I have enclosed a business reply envelope for you to use to return the requested information.  I am closing our file until the complainant's address is received or the complainant contacts us directly.  Thank you for your assistance in this matter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + company + "<br/>(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey recently sent to you.  On the survey you expressed concerns that deserve our attention.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
 			
 		}
 		
+		
+		else if (template == 'ADVPRMCL' && template_type == 'L'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey sent to you.  On the survey you expressed concerns that deserve our attention. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>Under the 'Agent Notification' section of the survey, you did not grant permission to share your name or specific responses with your agent and/or claim adjuster.  In order to address your concerns properly, we need to contact your agent and/or claim adjuster regarding the situation.  May we have your permission to do so?<br/><br/>If we do not receive your permission to contact your agent and/or claim adjuster, we will not be able to investigate this matter and provide a response to your concerns.<br/><br/>Please indicate your choice below and return this letter in the enclosed postage paid envelope.<br/><br/>_______Yes, you have my permission to contact my agent and/or claim adjuster providing my name and specific concerns expressed on the enclosed survey.<br/><br/>_______No, do not share my name or specific concerns with my agent and/or claim adjuster.  I understand I will not receive a response to my comments on the attached survey.<br/><br/>Thank you for taking the time to respond to this request.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ADVPRMFL' && template_type == 'L'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>We received your response granting us permission to contact your agent and/or claim adjuster regarding your survey comments.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to assist you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ADVPRMSL' && template_type == 'L'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for completing the survey sent to you.  On the survey you expressed concerns that deserve our attention. It is a company goal to provide the best possible service to our customers. One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>Under the 'Agent Notification' section of the survey, you did not grant permission to share your name or specific responses with your agent.  In order to address your concerns properly, we need to contact your agent regarding the situation.  May we have your permission to do so?<br/><br/>If we do not receive your permission to contact your agent, we will not be able to investigate this matter and provide a response to your concerns.<br/><br/>Please indicate your choice below and return this letter in the enclosed postage paid envelope.<br/><br/>_______Yes, you have my permission to contact my agent providing my name and specific concerns expressed on the enclosed survey.<br/><br/>_______No, do not share my name or specific concerns with my agent.  I understand I will not receive a response to my comments on the attached survey.<br/><br/>Thank you for taking the time to respond to this request.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ADVOPRIV' && template_type == 'L'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + address + "<br/><br/><br/><br/>RE:	Complaint File Name: " + compTitle + " " + compName + ":<br/><br/>The attached complaint/inquiry was received today.  The privacy laws require us to protect the confidentiality of non-public information relating to our consumers and others who rely upon us.  Maintaining the confidentiality of this information is important to our company.  Therefore, we are unable to send our response directly to you.<br/><br/>It is a company goal to provide the best possible service to consumers.  Even though we are unable to reply directly to you, I have asked the appropriate department to research the concerns and respond directly to the complainant within ten business days from the date of this letter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ADVPRIQU' && template_type == 'L'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + address + "<br/><br/><br/><br/>RE:	Complaint File Name: " + compTitle + " " + compName + ":<br/><br/>The attached complaint/inquiry was received today.  The privacy laws require us to protect the confidentiality of non-public information relating to our consumers and others who rely upon us.  Maintaining the confidentiality of this information is important to our company.  Therefore, we are unable to send our response directly to you.<br/><br/>It is a company goal to provide the best possible service to consumers.  Even though we are unable to reply directly to you, we would like to respond to the complainant.  Your request did not provide the address of the complainant.  Please forward the complete address of the complainant or ask the complainant to contact our company directly at:<br/><br/><div align='center'>Consumer Affairs Department</div><div align='center'>American Family Insurance</div><div align='center'>6000 American Parkway</div><div align='center'>Madison, WI 53783-0001</div><br/><div align='center'>Or</div><br/><div align='center'>www.amfam.com</div><br/><br/>I have enclosed a business reply envelope for you to use to return the requested information.  I am closing our file until the complainant's address is received or the complainant contacts us directly.  Thank you for your assistance in this matter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ADVOCATE' && template_type == 'I'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have asked the appropriate department to research your concerns.  American Family's policy is to have a response to you within ten business days from the date of this letter.<br/><br/>Thank you for the opportunity to be of service to you.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ADVOPRIV' && template_type == 'I'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + address + "<br/><br/><br/><br/>RE:	Complaint File Name: " + compTitle + " " + compName + ":<br/><br/>The attached complaint/inquiry was received today.  The privacy laws require us to protect the confidentiality of non-public information relating to our consumers and others who rely upon us.  Maintaining the confidentiality of this information is important to our company.  Therefore, we are unable to send our response directly to you.<br/><br/>It is a company goal to provide the best possible service to consumers.  Even though we are unable to reply directly to you, I have asked the appropriate department to research the concerns and respond directly to the complainant within ten business days from the date of this letter.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'SHAPPAREA' && template_type == 'I'){
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Thank you for contacting American Family Insurance with your concerns.  It is a Company goal to provide the best possible service to our customers.  One way to improve our service is by listening to our policyholders and others who rely upon us.<br/><br/>I have shared your concern with management in the appropriate area.  Again, thank you for bringing this matter to our attention.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "(800) 692-6326 X30799<br/>consumeraffairs@amfam.com";
+			
+		}
+		
+		
+		else if (template == 'ATTORNEY' && template_type == 'L'){
+			
+			var insuredList = this.getInsuredList(caseID);
+			var policyList = this.getPolicyList(caseID);
+			var claimList = this.getClaimList(caseID);
+			var refObj = this.getReferentData(referent);
+			
+			letter = "<br/><br/><br/><br/><br/><br/><br/><br/>Date: " + returnedDate + "<br/><br/><br/><br/>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip + "<br/><br/><br/><br/>Dear " + compTitle + " " + compName + ":<br/><br/>Re:<br/>Your Client: "+ clientName + "<br/>Insured: "+ insuredList +"<br/>Policy: "+ policyList + "<br/>Claim: "+ claimList +"<br/><br/>Your letter addressed to "+ receivedByName + ", "+ receivedByTitle + ", has been referred to me.  Our Company's claims are handled in our individual Branch Claim Offices, not here at our National Headquarters.  Therefore, I have referred your correspondence to our "+ refObj.address +" office. Any further correspondence you send should be directed to our "+ refObj.address +" office.<br/><br/>Our "+ refObj.title + ", "+ refObj.name + ", in " + refObj.city +", will be responsible for any replies to your correspondence.<br/><br/>Sincerely,<br/><br/><br/><br/>" + advocateName + "<br/>" + advocateTitle + "<br/>" + companyString + "<br/><br/><br/>Copy:<br/>"+ refObj.name +"<br/>"+ refObj.title;
+			
+		}
+		
+		
+		else if (template == 'PHONE' && template_type == 'L'){
+			
+			var insured_List = this.getInsuredList(caseID);
+			var policy_List = this.getPolicyList(caseID);
+			var claim_List = this.getClaimList(caseID);
+			var event_info = this.getEventInfo(eventID);
+			var comp_phone = this.getPhoneInfo(comp);
+			
+			letter = "<center><h2>PHONE COMPLAINT REPORT</h2></center><i>This Phone Complaint Report reflects the opinions of the person listed under the section labeled 'Complainant Information'.  This report in no way reflects the opinions of Consumer Affairs or any other Corporate staff members.</i><br/><br/><b>Date: </b>" + event_info.date + "<br/><br/><b>Re:</b><br/><b>Complainant: </b>" + compName + "<br/>Insured: "+ insured_List +"<br/>Policy: "+ policy_List + "<br/>Claim: "+ claim_List + "<br/><br/><b>COMPLAINANT PHONE NUMBERS:</b><br/><br/>Work: " + comp_phone.work_phone + comp_phone.work_phoneEXT + "<br/>Home: " + comp_phone.home_phone + "<br/>Cell: " + comp_phone.cell_phone + "<br/>fax: " + comp_phone.fax_phone + "<br/><br/><b>Times Available:</b><br/><br/>Work: " + comp_phone.work_phoneAVB + "<br/>Home: " + comp_phone.home_phoneAVB + "<br/>Cell: " + comp_phone.cell_phoneAVB + "<br/>fax: " + comp_phone.fax_phoneAVB + "<br/><br/><b>CALL DIRECTED TO CONSUMER AFFAIRS FROM: </b>" + event_info.routing + "<br/><br/><b>SITUATION:</b><br/><br/>" + event_info.comments + "<br/><br/><b>" +  advocateName + "</b><br/><b>" + advocateTitle;
+			
+		}
+		
+		
+		else if (template == 'ENVELOPE' && template_type == 'L'){
+			
+			letter = "<br/><br/><br/><br/><br/><div style='text-align: center;'><div style='display: inline-block; text-align: left;'>" + compTitle + " " + compName + "<br/>" + addr1 + addr2 + "<br/>" + city + ", " + state + ", " + zip+"</div></div>";
+			
+			
+			
+		}
 		
 		return letter;
 		
@@ -190,7 +373,7 @@ generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_on>2017-12-22 14:36:40</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>32f1f773dbcb8300bf14f9961d961959</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>98</sys_mod_count>
         <sys_name>generate_letter</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy>read</sys_policy>
@@ -198,6 +381,6 @@ generate_letter.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_script_include_32f1f773dbcb8300bf14f9961d961959</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-12-27 19:15:37</sys_updated_on>
+        <sys_updated_on>2018-02-16 21:37:47</sys_updated_on>
     </sys_script_include>
 </record_update>

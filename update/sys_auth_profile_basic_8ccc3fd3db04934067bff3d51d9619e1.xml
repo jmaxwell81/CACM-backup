@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>Basic-Auth-Sumukh</name>
+        <password>rItozqr9anDMKSIj1tng2w==</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+        <sys_created_on>2018-02-08 19:10:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8ccc3fd3db04934067bff3d51d9619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Basic-Auth-Sumukh</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_8ccc3fd3db04934067bff3d51d9619e1</sys_update_name>
+        <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+        <sys_updated_on>2018-02-08 19:10:24</sys_updated_on>
+        <username>sumukh.s@asolutionscorp.com</username>
+    </sys_auth_profile_basic>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>printPreview</action_name>
+        <active>true</active>
+        <client>true</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Print Preview</name>
+        <onclick>do_call_ui_page()</onclick>
+        <order>-1200</order>
+        <script><![CDATA[function do_call_ui_page(){
+	var a = g_form.getDisplayBox('select_template').value;
+	var v1 = g_form.getUniqueValue();
+	if(a == 'ENVELOPE'){
+		var url_env = '/cacm_cms/cacm_print_preview_envelope?sysparm_id='+v1;
+	    g_navigation.openPopup(url_env);
+	}
+	else{
+	var url = '/cacm_cms/cacm_print_preview?sysparm_id='+v1;
+	g_navigation.openPopup(url);
+	}
+}
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-02-14 20:05:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e9d20f1ddb545b4067bff3d51d96196f</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name>Print Preview</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_action_e9d20f1ddb545b4067bff3d51d96196f</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-02-19 16:12:22</sys_updated_on>
+        <table>x_amfai_cacmdba_document</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

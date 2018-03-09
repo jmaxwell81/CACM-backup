@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>int_position_type</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-03-07 15:07:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>88584e8cdb749fc0bf14f9961d96192b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>int_position_type</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_88584e8cdb749fc0bf14f9961d96192b</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-07 15:07:47</sys_updated_on>
+        <table>x_amfai_cacmdba_producer</table>
+        <ui_policy display_value="Make Fields Read only when data is prepopulated from Amfam database ">b6d80a35db09c7404d70734aaf961992</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

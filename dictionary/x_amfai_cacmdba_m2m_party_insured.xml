@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="[INT] Cacmdba M2m Party Insured" max_length="40" name="x_amfai_cacmdba_m2m_party_insured" type="collection">
+    <element label="[INT] CACM Case Insureds" max_length="40" name="x_amfai_cacmdba_m2m_party_insured" type="collection">
         <element label="Case" max_length="32" name="caseid" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="Insured" max_length="32" name="insured" reference="x_amfai_cacmdba_insd_cust" type="reference"/>
         <index name="index">

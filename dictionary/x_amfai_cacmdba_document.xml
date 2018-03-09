@@ -9,27 +9,48 @@
             </choice>
         </element>
         <element label="Case Id" max_length="32" name="case_id" read_only="true" reference="x_amfai_cacmdba_case" type="reference"/>
+        <element label="Client Name" max_length="200" name="client_name" type="string"/>
+        <element choice="1" label="Document Status" max_length="40" name="document_status" type="choice">
+            <choice>
+                <element label="Document Not Printed" sequence="0" value="not_printed"/>
+                <element label="Document Printed" sequence="1" value="printed"/>
+            </choice>
+        </element>
+        <element label="Email Sent" max_length="40" name="email_sent" read_only="true" type="boolean"/>
         <element label="Event Id" max_length="32" name="event_id" read_only="true" reference="x_amfai_cacmdba_case_event" type="reference"/>
         <element label="Header Image" max_length="40" name="header_image" type="user_image"/>
         <element label="Letter" max_length="10000" name="letter" type="string"/>
         <element label="Letter Text" max_length="8000" name="letter_text" type="html"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Received By Name" max_length="200" name="received_by_name" type="string"/>
+        <element label="Received By Title" max_length="200" name="received_by_title" type="string"/>
+        <element label="Referent" max_length="4000" name="referent" type="glide_list"/>
         <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Select Executive" max_length="32" name="select_executive" reference="x_amfai_cacmdba_executive" type="reference">
             <choice/>
         </element>
-        <element attributes="ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=100" choice="1" label="Select Template" max_length="32" name="select_template" reference="x_amfai_cacmdba_template" reference_qual="in_use=true^EQ" reference_qual_condition="in_use=true^EQ" type="reference">
+        <element attributes="ref_qual_elements=case_id" dependent="case_id" dependent_on_field="case_id" label="Select Referent" max_length="32" name="select_referent" reference="x_amfai_cacmdba_referent" reference_qual="javascript: 'sys_idIN' +new selectReferents().getReferents(current.case_id);" type="reference" use_dependent_field="true" use_reference_qualifier="advanced"/>
+        <element attributes="ref_qual_elements=template_type,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150&#13;&#10;" choice="1" dependent="template_type" dependent_on_field="template_type" label="Select Template" max_length="32" name="select_template" reference="x_amfai_cacmdba_template" reference_qual="javascript: 'template_type=' + current.template_type + '^in_use=true' + '^active=true';" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
             <choice/>
+        </element>
+        <element choice="1" label="Template Type" max_length="40" name="template_type" type="choice">
+            <choice>
+                <element label="Internet" sequence="0" value="I"/>
+                <element label="Letter" sequence="1" value="L"/>
+            </choice>
         </element>
         <index name="index">
             <element name="event_id"/>
         </index>
         <index name="index2">
-            <element name="case_id"/>
+            <element name="select_referent"/>
         </index>
         <index name="index3">
-            <element name="select_template"/>
+            <element name="case_id"/>
         </index>
         <index name="index4">
+            <element name="select_template"/>
+        </index>
+        <index name="index5">
             <element name="select_executive"/>
         </index>
     </element>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>cacm_generate_case_summary</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Generate Case Summary</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[/*var basicAuthProfileSysID = "8ccc3fd3db04934067bff3d51d9619e1";
+generateAndStoreAttachment('x_amfai_cacmdba_cacm_multifile_request', '9948bb1bdbc0934067bff3d51d9619f5', 'pdfview', current.sys_class_name, current.sys_id,'CACM Case Summary.pdf', basicAuthProfileSysID);
+
+function generateAndStoreAttachment( pdfTable, pdfSysID, pdfView1, attachToTable, attachToSysID, fileName, authProfileSysID ) {
+	var r = new sn_ws.RESTMessageV2();
+	r.setHttpMethod('get');
+	r.setEndpoint('https://'+gs.getProperty('instance_name')+'.service-now.com/' + pdfTable + '.do?PDF&sys_id=' + pdfSysID + '&sysparm_view=' + pdfView1);
+	r.setAuthenticationProfile('basic', authProfileSysID);
+	r.saveResponseBodyAsAttachment(attachToTable, attachToSysID, fileName);
+	var response = r.execute();
+	gs.addInfoMessage(response.getStatusCode());
+}*/
+var generatePDF = new global.AMFAMCustomPDF();
+generatePDF.attachPDFCaseSummary(current);
+action.setRedirectURL(current);]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+        <sys_created_on>2018-02-08 19:01:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1cc93b1fdbc0934067bff3d51d9619fb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Generate Case Summary</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_ui_action_1cc93b1fdbc0934067bff3d51d9619fb</sys_update_name>
+        <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+        <sys_updated_on>2018-02-27 14:36:25</sys_updated_on>
+        <table>x_amfai_cacmdba_cacm_multifile_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

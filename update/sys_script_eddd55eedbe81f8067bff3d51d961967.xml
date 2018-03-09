@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_amfai_cacmdba_case</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_amfai_cacmdba_case">case_agentsVALCHANGES^EQ<item endquery="false" field="case_agents" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Add Producer Child Records after UCL</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var caseId = current.sys_id;
+	var agentString = current.case_agents.toString();
+	var agentArray = agentString.split(',');
+	var obj={};
+	for(i=0; i < agentArray.length; i++){
+		var vr = new GlideRecord('x_amfai_cacmdba_producer_staging_table');
+		vr.addQuery('sys_id', agentArray[i]);
+		vr.query();
+		if(vr.next()){
+			obj.firstName = vr.producer_first_name;
+			obj.lastName = vr.producer_last_name;
+			obj.middleName = vr.producer_last_name;
+			obj.producerId = vr.producer_id;
+			obj.stateCode = vr.producer_state_code;
+		}
+		var gr = new GlideRecord('x_amfai_cacmdba_producer');
+		gr.initialize();
+		gr.case_id = caseId;
+		gr.int_first_name = obj.firstName;
+		gr.int_last_name = obj.lastName;
+		gr.int_middle_name = obj.middleName;
+		gr.int_state = obj.stateCode;
+		gr.producer_id = obj.producerId;
+		gr.insert();
+	}
+	// Add your code here
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-03-02 20:30:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eddd55eedbe81f8067bff3d51d961967</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Add Producer Child Records after UCL</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_eddd55eedbe81f8067bff3d51d961967</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-07 14:40:38</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=eddd55eedbe81f8067bff3d51d961967"/>
+</record_update>

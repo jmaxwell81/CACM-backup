@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Producer Staging Table" max_length="40" name="x_amfai_cacmdba_producer_staging_table" type="collection">
+        <element label="Case Sys Id" max_length="50" name="case_sys_id" type="string"/>
+        <element calculation="if (current.producer_first_name.nil() &amp;&amp; current.producer_last_name.nil() &amp;&amp; current.producer_middle_name.nil() &amp;&amp; !current.full_name.nil()) {&#13;&#10;&#9;var names = current.full_name.toString().split(&quot; &quot;);&#13;&#10;&#9;if (names.length &gt; 1) {&#13;&#10;&#9;&#9;current.producer_first_name = names[0];&#13;&#10;&#9;&#9;names.shift();&#13;&#10;&#9;&#9;current.producer_last_name = names.join(&quot; &quot;);&#13;&#10;&#9;} else&#13;&#10;&#9;current.producer_last_name = names[0];&#13;&#10;}&#13;&#10;&#13;&#10;if(current.producer_first_name.nil()) {&#13;&#10;&#9;current.producer_last_name;&#13;&#10;} else {&#13;&#10;&#9;current.producer_first_name + ' ' + current.producer_middle_name + ' '  + current.producer_last_name;&#13;&#10;}" display="true" label="Full Name" max_length="150" name="full_name" type="string" virtual="true"/>
+        <element label="Producer First Name" max_length="50" name="producer_first_name" type="string"/>
+        <element label="Producer Id" max_length="50" name="producer_id" type="string"/>
+        <element label="Producer Last Name" max_length="50" name="producer_last_name" type="string"/>
+        <element label="Producer Middle Name" max_length="50" name="producer_middle_name" type="string"/>
+        <element label="Producer State Code" max_length="10" name="producer_state_code" type="string"/>
+        <element label="Record Producer Id" max_length="20" name="record_producer_id" type="string"/>
+    </element>
+</database>

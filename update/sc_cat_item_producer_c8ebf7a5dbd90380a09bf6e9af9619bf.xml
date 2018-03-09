@@ -138,6 +138,7 @@ producer.redirect="/cacm?id=cacm_thank_you";
         <u_peoplesoft_stock/>
         <u_shipto_id/>
         <u_supplier_cost_center/>
+        <u_used>false</u_used>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
         <view/>

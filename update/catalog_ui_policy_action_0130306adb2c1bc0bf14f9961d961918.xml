@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Unified Complaint Log (UCL)">c8ebf7a5dbd90380a09bf6e9af9619bf</catalog_item>
+        <catalog_variable>IO:bf21ec2edbe81bc0bf14f9961d9619b0</catalog_variable>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-03-02 16:51:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0130306adb2c1bc0bf14f9961d961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>agent_search_rnd_num</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_0130306adb2c1bc0bf14f9961d961918</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-02 16:51:58</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Hide Agent Search Random Number">5410bc2adb2c1bc0bf14f9961d96193a</ui_policy>
+        <variable>agent_search_rnd_num</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

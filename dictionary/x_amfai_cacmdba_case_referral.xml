@@ -25,7 +25,8 @@
         <element label="Past Due Second Request" max_length="40" name="past_due_second_request" type="boolean"/>
         <element label="Past Due Third Request" max_length="40" name="past_due_third_request" type="boolean"/>
         <element label="Referent" mandatory="true" max_length="32" name="referent" reference="x_amfai_cacmdba_referent" type="reference"/>
-        <element label="Referent Email" max_length="150" name="referent_email" read_only="true" type="string"/>
+        <element label="Referent Comments Update" max_length="40" name="referent_comments_update" type="glide_date_time"/>
+        <element label="Referent Email" max_length="60" name="referent_email" read_only="true" type="string"/>
         <element label="Referent Type" max_length="1" name="referent_type" type="string"/>
         <element label="Referral Description" max_length="256" name="referral_description" type="string"/>
         <element choice="1" default="action required" label="Referral Type" max_length="40" name="referral_type" type="choice">
@@ -39,8 +40,8 @@
         </element>
         <element label="Referred Date" max_length="40" name="referred_date" read_only="true" type="glide_date"/>
         <element label="Referent DM Identifier" max_length="40" name="ref_dm_id" type="string"/>
-        <element label="Referent Department" max_length="40" name="ref_dpt_nm" type="string"/>
-        <element label="Referent Email Address" max_length="40" name="ref_email_addr" type="string"/>
+        <element label="Referent Department" max_length="100" name="ref_dpt_nm" type="string"/>
+        <element label="Referent Email Address" max_length="60" name="ref_email_addr" type="string"/>
         <element label="Referent Fax Number" max_length="40" name="ref_fax_num" type="string"/>
         <element label="Referent First Name" max_length="40" name="ref_first_nm" type="string"/>
         <element label="Referent Job Title" max_length="80" name="ref_job_title_nm" type="string"/>

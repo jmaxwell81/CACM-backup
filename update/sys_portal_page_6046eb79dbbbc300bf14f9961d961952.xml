@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_portal_page" unload_date="2018-01-29 14:48:08">
+<record_update node_type="sys_portal_page" unload_date="2018-03-09 13:41:05">
     <sys_portal_page action="INSERT_OR_UPDATE">
-        <layout display_value="layout_2_across">f6defafa0a0a0b12000d5016bd12ff06</layout>
+        <layout display_value="layout_2_across_knowledge">46978421370031002d2440ed9dbe5db7</layout>
         <order/>
         <read_roles>x_amfai_cacmdba.admin,x_amfai_cacmdba.advocate</read_roles>
         <roles/>
@@ -13,7 +13,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6046eb79dbbbc300bf14f9961d961952</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>CACM Advocate Home Page</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -22,99 +22,99 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_portal_page_6046eb79dbbbc300bf14f9961d961952</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2018-01-24 20:17:57</sys_updated_on>
+        <sys_updated_on>2018-01-31 14:54:26</sys_updated_on>
         <title>CACM Advocate Home Page</title>
         <user/>
         <view>cacm_advocate</view>
         <related_items_node>
             <sys_portal action="INSERT_OR_UPDATE">
                 <dropzone>dropzone2</dropzone>
-                <offset>0</offset>
+                <offset>2</offset>
                 <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
                 <summary/>
                 <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                <sys_id>1637fa6adbbb8700bf14f9961d9619fe</sys_id>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>08d5bd38db00df00bf14f9961d9619d7</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1237fa6adbbb8700bf14f9961d9619ff</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>00d5bd38db00df00bf14f9961d9619d8</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>com.glide.ui.portal.RenderReport</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1637fa6adbbb8700bf14f9961d9619ff</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>00d5bd38db00df00bf14f9961d9619d9</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>All Case Referrals</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>04d5bd38db00df00bf14f9961d9619d8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>08d5bd38db00df00bf14f9961d9619d8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>true</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1a37fa6adbbb8700bf14f9961d9619ff</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>0cd5bd38db00df00bf14f9961d9619d8</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>list</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1e37fa6adbbb8700bf14f9961d9619fe</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>report_widget_description</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1e37fa6adbbb8700bf14f9961d9619ff</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>CACM Case</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>current_page</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>92373e6adbbb8700bf14f9961d961900</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>84d5bd38db00df00bf14f9961d9619d9</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>6046eb79dbbbc300bf14f9961d961952</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">1637fa6adbbb8700bf14f9961d9619fe</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">08d5bd38db00df00bf14f9961d9619d7</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>9637fa6adbbb8700bf14f9961d9619fe</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>88d5bd38db00df00bf14f9961d9619d7</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>954b640adbbfc300bf14f9961d9619c1</value>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>b999c410db4c570067bff3d51d961960</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>
@@ -124,179 +124,88 @@
                 <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
                 <summary/>
                 <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                <sys_id>5237fa6adbbb8700bf14f9961d9619fc</sys_id>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>0cd5bd38db00df00bf14f9961d9619ce</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5237fa6adbbb8700bf14f9961d9619fd</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>true</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5637fa6adbbb8700bf14f9961d9619fd</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>00d5bd38db00df00bf14f9961d9619d0</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>list</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5a37fa6adbbb8700bf14f9961d9619fc</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>04d5bd38db00df00bf14f9961d9619cf</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>report_widget_description</value>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5a37fa6adbbb8700bf14f9961d9619fd</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>04d5bd38db00df00bf14f9961d9619d0</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>CACM Request Assigned to Me</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5e37fa6adbbb8700bf14f9961d9619fc</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>d237fa6adbbb8700bf14f9961d9619fc</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>44543226db7b8700bf14f9961d961978</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>current_page</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">5237fa6adbbb8700bf14f9961d9619fc</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>de37fa6adbbb8700bf14f9961d9619fd</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>6046eb79dbbbc300bf14f9961d961952</value>
-                    </sys_portal_preferences>
-                </related_items_node>
-            </sys_portal>
-            <sys_portal action="INSERT_OR_UPDATE">
-                <dropzone>dropzone1</dropzone>
-                <offset>0</offset>
-                <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
-                <summary/>
-                <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                <sys_id>9e37fa6adbbb8700bf14f9961d9619f9</sys_id>
-                <sys_mod_count>0</sys_mod_count>
-                <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                <related_items_node>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1237fa6adbbb8700bf14f9961d9619fa</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>1e966c82dbbfc300bf14f9961d9619b8</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>current_page</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>1e37fa6adbbb8700bf14f9961d9619fb</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>6046eb79dbbbc300bf14f9961d961952</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>9237fa6adbbb8700bf14f9961d9619fb</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>true</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>9637fa6adbbb8700bf14f9961d9619fa</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>9637fa6adbbb8700bf14f9961d9619fb</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>CACM Request</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>9a37fa6adbbb8700bf14f9961d9619fa</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>08d5bd38db00df00bf14f9961d9619cf</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>report_widget_description</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>report_type</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">9e37fa6adbbb8700bf14f9961d9619f9</portal_section>
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>9e37fa6adbbb8700bf14f9961d9619fa</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>0cd5bd38db00df00bf14f9961d9619cf</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>list</value>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>88d5bd38db00df00bf14f9961d9619d0</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>6046eb79dbbbc300bf14f9961d961952</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">0cd5bd38db00df00bf14f9961d9619ce</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>8cd5bd38db00df00bf14f9961d9619ce</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>44543226db7b8700bf14f9961d961978</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>
@@ -306,88 +215,452 @@
                 <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
                 <summary/>
                 <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                <sys_id>d6373e6adbbb8700bf14f9961d961900</sys_id>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>44d5bd38db00df00bf14f9961d9619d5</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>52373e6adbbb8700bf14f9961d96191a</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>40d5bd38db00df00bf14f9961d9619d6</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>report_widget_description</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>56373e6adbbb8700bf14f9961d96191a</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>44d5bd38db00df00bf14f9961d9619d6</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>true</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
-                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5a373e6adbbb8700bf14f9961d961900</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
-                        <value>e4267aeedb7b8700bf14f9961d961963</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5a373e6adbbb8700bf14f9961d96191a</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>48d5bd38db00df00bf14f9961d9619d6</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>list</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>5e373e6adbbb8700bf14f9961d96191a</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>4cd5bd38db00df00bf14f9961d9619d5</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>4cd5bd38db00df00bf14f9961d9619d6</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>CACM Case Asssigned to Me</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>current_page</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>d2373e6adbbb8700bf14f9961d96191b</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c0d5bd38db00df00bf14f9961d9619d7</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>6046eb79dbbbc300bf14f9961d961952</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2018-01-24 13:54:38">d6373e6adbbb8700bf14f9961d961900</portal_section>
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">44d5bd38db00df00bf14f9961d9619d5</portal_section>
                         <sys_created_by>pmadhika@amfam.com</sys_created_by>
-                        <sys_created_on>2018-01-24 19:54:38</sys_created_on>
-                        <sys_id>de373e6adbbb8700bf14f9961d961900</sys_id>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c4d5bd38db00df00bf14f9961d9619d5</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-                        <sys_updated_on>2018-01-24 19:54:38</sys_updated_on>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>e4267aeedb7b8700bf14f9961d961963</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone1</dropzone>
+                <offset>0</offset>
+                <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
+                <summary/>
+                <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>48d5bd38db00df00bf14f9961d9619cc</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>40d5bd38db00df00bf14f9961d9619cd</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
                         <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>40d5bd38db00df00bf14f9961d9619ce</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>CACM Request</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>44d5bd38db00df00bf14f9961d9619cd</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>48d5bd38db00df00bf14f9961d9619cd</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>4cd5bd38db00df00bf14f9961d9619cd</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>list</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c4d5bd38db00df00bf14f9961d9619ce</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>6046eb79dbbbc300bf14f9961d961952</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">48d5bd38db00df00bf14f9961d9619cc</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c8d5bd38db00df00bf14f9961d9619cc</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>1e966c82dbbfc300bf14f9961d9619b8</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone2</dropzone>
+                <offset>0</offset>
+                <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
+                <summary/>
+                <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>80d5bd38db00df00bf14f9961d9619d3</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>00d5bd38db00df00bf14f9961d9619d5</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>6046eb79dbbbc300bf14f9961d961952</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>04d5bd38db00df00bf14f9961d9619d3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>954b640adbbfc300bf14f9961d9619c1</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>80d5bd38db00df00bf14f9961d9619d4</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>84d5bd38db00df00bf14f9961d9619d4</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>list</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>88d5bd38db00df00bf14f9961d9619d3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>88d5bd38db00df00bf14f9961d9619d4</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>CACM Case</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">80d5bd38db00df00bf14f9961d9619d3</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>8cd5bd38db00df00bf14f9961d9619d3</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone999</dropzone>
+                <offset>0</offset>
+                <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
+                <summary/>
+                <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>c8d5bd38db00df00bf14f9961d9619d9</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>48d5bd38db00df00bf14f9961d9619db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>6046eb79dbbbc300bf14f9961d961952</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>4cd5bd38db00df00bf14f9961d9619d9</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>5c3ecee0db04d70067bff3d51d9619f7</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c0d5bd38db00df00bf14f9961d9619da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c0d5bd38db00df00bf14f9961d9619db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>Updated Referral Comments</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c4d5bd38db00df00bf14f9961d9619da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c8d5bd38db00df00bf14f9961d9619da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">c8d5bd38db00df00bf14f9961d9619d9</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>ccd5bd38db00df00bf14f9961d9619da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>list</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone1</dropzone>
+                <offset>2</offset>
+                <page display_value="CACM Advocate Home Page">6046eb79dbbbc300bf14f9961d961952</page>
+                <summary/>
+                <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                <sys_id>ccd5bd38db00df00bf14f9961d9619d0</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>40d5bd38db00df00bf14f9961d9619d1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>3ce20498db0c570067bff3d51d9619b1</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>4cd5bd38db00df00bf14f9961d9619d2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>6046eb79dbbbc300bf14f9961d961952</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c0d5bd38db00df00bf14f9961d9619d2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>list</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c4d5bd38db00df00bf14f9961d9619d1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c4d5bd38db00df00bf14f9961d9619d2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>All Case Events</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>c8d5bd38db00df00bf14f9961d9619d1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2018-01-31 08:55:11">ccd5bd38db00df00bf14f9961d9619d0</portal_section>
+                        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+                        <sys_created_on>2018-01-31 14:55:11</sys_created_on>
+                        <sys_id>ccd5bd38db00df00bf14f9961d9619d1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+                        <sys_updated_on>2018-01-31 14:55:11</sys_updated_on>
+                        <value>true</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>

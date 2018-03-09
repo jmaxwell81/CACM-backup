@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Relationship [ct]" max_length="40" name="x_amfai_cacmdba_relationship" type="collection">
-        <element display="true" label="Description" max_length="50" name="description" type="string"/>
-        <element label="Relationship ID" max_length="40" name="relationship_id" type="string"/>
+        <element label="Description" max_length="50" name="description" type="string"/>
+        <element display="true" label="Relationship ID" max_length="40" name="relationship_id" type="string"/>
         <index name="index">
             <element name="relationship_id"/>
         </index>

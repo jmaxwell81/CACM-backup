@@ -4,7 +4,7 @@
         <active>true</active>
         <category>credentials</category>
         <content><![CDATA[ <h1 class="title topictitle1">Credential affinity</h1>  <div class="body conbody">  <p class="p"><span class="ph">Credential affinity is an association between a set of   credentials and a device on your network. </span></p>  <p class="p">When <span class="ph">Discovery</span> or Orchestration first attempts to   access a device, they try all available credentials until they find the correct ones. <span class="ph" id="dscy_credentials_affinity-normal__d27235e62">After identifying the credentials for a device, <span class="ph">Discovery</span> and Orchestration create an    affinity between the credentials and the device using the Credential Affinity     [dscy_credentials_affinity] table. All subsequent discoveries or Orchestration    activities attempt to match the credentials in this table with a device for which an affinity    exists. If credentials for a device change, <span class="ph">Discovery</span> and Orchestration try all available    credentials again until they create a new affinity.</span></p> </div> <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:CredentialAffinity&amp;version&#61;jakarta" target="_blank" rel="nofollow">Credential affinity for Discovery and Orchestration</a></div></div></div></div>]]></content>
-        <last_sync>2018-01-27 20:00:05</last_sync>
+        <last_sync>2018-02-26 20:02:06</last_sync>
         <modifier>normal</modifier>
         <name>dscy_credentials_affinity-normal</name>
         <page>dscy_credentials_affinity</page>
@@ -18,7 +18,7 @@
         <sys_created_on>2017-12-28 19:59:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>1855bfbddb1b4b00bf14f9961d961963</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>dscy_credentials_affinity-normal</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -26,7 +26,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_embedded_help_content_1855bfbddb1b4b00bf14f9961d961963</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-01-27 20:00:05</sys_updated_on>
+        <sys_updated_on>2018-02-26 20:02:06</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
     <sys_translated_text action="delete_multiple" query="documentkey=1855bfbddb1b4b00bf14f9961d961963"/>

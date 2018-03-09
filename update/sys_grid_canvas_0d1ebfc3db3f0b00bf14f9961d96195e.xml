@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_grid_canvas" unload_date="2018-01-29 14:47:50">
+<record_update node_type="sys_grid_canvas" unload_date="2018-03-09 13:40:48">
     <sys_grid_canvas action="INSERT_OR_UPDATE">
-        <legacy_page display_value="PA New Tab 2">451ebfc3db3f0b00bf14f9961d96195e</legacy_page>
+        <legacy_page/>
         <name>PA New Tab 2</name>
         <sys_class_name>sys_grid_canvas</sys_class_name>
         <sys_created_by>pmadhika@amfam.com</sys_created_by>

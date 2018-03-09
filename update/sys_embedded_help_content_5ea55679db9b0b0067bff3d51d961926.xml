@@ -4,7 +4,7 @@
         <active>true</active>
         <category>service-catalog</category>
         <content><![CDATA[ <h1 class="title topictitle1">Service catalog categories</h1>  <div class="body conbody">  <p class="p"><span class="ph">Categories organize service catalog items into logical          groups.</span></p>  <p class="p">Categories can have a parent-child relationship, for example,          <span class="ph uicontrol">IT</span> and <span class="ph uicontrol">Laptops</span>. A child category is a        subcategory of its parent category. Each catalog item, order guide, record producer, content        item, and subcategory appears as a single item within the category. A catalog item can exist        in multiple categories, giving you the flexibility to offer the same service from multiple        places within your catalog.</p>  <div class="note note"><span class="notetitle">Note:</span> If there are no active items in a category&#39;s hierarchy, that        category does not appear in (and cannot be added to) the catalog.</div> </div> <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:Service-Catalog-Categories&amp;version&#61;jakarta" target="_blank" rel="nofollow">Service catalog categories</a></div></div></div></div>]]></content>
-        <last_sync>2018-01-27 13:03:06</last_sync>
+        <last_sync>2018-02-26 13:03:11</last_sync>
         <modifier>normal</modifier>
         <name>sc_category_list-normal</name>
         <page>sc_category_list</page>
@@ -18,7 +18,7 @@
         <sys_created_on>2017-12-28 13:01:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5ea55679db9b0b0067bff3d51d961926</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>sc_category_list-normal</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -26,7 +26,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_embedded_help_content_5ea55679db9b0b0067bff3d51d961926</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-01-27 13:03:06</sys_updated_on>
+        <sys_updated_on>2018-02-26 13:03:11</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
     <sys_translated_text action="delete_multiple" query="documentkey=5ea55679db9b0b0067bff3d51d961926"/>

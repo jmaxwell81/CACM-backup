@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.AMFAMCustomPDF</api_name>
+        <client_callable>false</client_callable>
+        <description>Generate PDF with HTML Input</description>
+        <name>AMFAMCustomPDF</name>
+        <script><![CDATA[var AMFAMCustomPDF = Class.create();  
+AMFAMCustomPDF.prototype = Object.extendsObject(AbstractAjaxProcessor, {  
+  
+  _document : null,  
+  
+  example : function (){  
+  this.createPDF('<h1>Testing Purpose</h1><h1>Testing Purpose</h1><h1>Testing Purpose</h1><p><font color="red"><b>Text in Red</b></font></p>',  //HTML to convert to PDF  
+   'x_amfai_cacmdba_case',  //Attach PDF to table  
+   'da108676db04df0067bff3d51d9619b7', //Attach PDF to record/sys_id  
+   'myFile.pdf');  //attachment filename  
+  },  
+  
+  createPDF : function(html, table, sys_id, filename) {  
+    var pdfDoc = new GeneralPDF.Document(null, null, null, null, null, null);  
+    this._document = new GeneralPDF(pdfDoc);  
+    this._document.startHTMLParser();  
+    this._document.addHTML(html);  
+    this._document.stopHTMLParser();  
+    this._saveAs(table, sys_id, filename);  
+  },  
+  
+  _saveAs : function (table, sys_id, filename){  
+    var att = new GeneralPDF.Attachment();  
+    att.setTableName(table);  
+    att.setTableId(sys_id);  
+    att.setName(filename);  
+    att.setType('application/pdf');  
+    att.setBody(this._document.get());  
+    GeneralPDF.attach(att);  
+  },  
+  
+    type: 'AMFAMCustomPDF'  
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+        <sys_created_on>2018-02-08 19:24:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4bcff397db005b40bf14f9961d9619bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AMFAMCustomPDF</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_4bcff397db005b40bf14f9961d9619bd</sys_update_name>
+        <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+        <sys_updated_on>2018-02-08 19:28:02</sys_updated_on>
+    </sys_script_include>
+</record_update>

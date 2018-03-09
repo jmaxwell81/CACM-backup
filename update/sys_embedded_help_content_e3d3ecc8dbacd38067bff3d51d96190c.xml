@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>assessment</category>
+        <content><![CDATA[    <h1 class="title topictitle1">Assessment Metric Result form</h1>        <div class="body taskbody">        <div class="section context" id="asmt_metric_result-normal__context_sgd_pgh_zz"><span class="ph">Metric results contain values that represent an            evaluated record&#39;s performance for a specific metric, based on a single evaluation from            one user or from the execution of a script. Metric results contain actual values as well            as calculated values. The system uses values from metric results to calculate category            results.</span><p class="p"><span class="ph">If there is an active scripted metric when the                assessment is generated, the system automatically produces a metric result for each                associated assessable record. The system produces an additional metric result for                each question a user answers on a completed assessment questionnaire. If multiple                users complete questionnaires with the same questions on the same assessable                records, the system produces metric results for each user&#39;s responses.</span></p><p class="p"><span class="ph">All fields on the form except                            <span class="ph uicontrol">Updated</span> and <span class="ph uicontrol">String value</span>                        are read-only.</span></p></div>        <div class="li step p">                <span class="ph cmd">Complete the <span class="ph uicontrol">Updated</span> and <span class="ph uicontrol">String                        value</span> fields in the form.</span>                <div class="itemgroup info">                    <div class="p">                        <div class="tablenoborder"><table id="asmt_metric_result-normal__table_vbw_wgh_zz" class="table"><thead class="thead"><tr class="row"><th class="entry" id="d393216e77">Field</th><th class="entry" id="d393216e80">Description</th></tr></thead><tbody class="tbody"><tr class="row"><td class="entry">Updated</td><td class="entry">Date and time the metric result was last                                            updated.</td></tr><tr class="row"><td class="entry">String value</td><td class="entry">Value that displays the response as it appears on a                                            questionnaire. In some cases this is the same as the                                                <span class="keyword parmname">Actual value</span>, such as when the                                            metric data type is <span class="ph uicontrol">Percentage</span>.                                            The string value is <span class="ph uicontrol">N/A</span> for                                            unanswered questions of certain data types. For the                                                <span class="ph uicontrol">Attachment</span> data type, the                                            names of the attached files are displayed as                                            comma-separated values. </td></tr></tbody></table></div>                    </div>                </div>            </div>    </div>    <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:MetricResults&amp;version&#61;jakarta" target="_blank" rel="nofollow">View a metric result</a></div></div></div></div>]]></content>
+        <last_sync>2018-02-22 21:33:07</last_sync>
+        <modifier>normal</modifier>
+        <name>asmt_metric_result-normal</name>
+        <page>asmt_metric_result</page>
+        <product>1</product>
+        <qualifier/>
+        <role/>
+        <role_order>1000</role_order>
+        <snc_created>true</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-02-22 21:33:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e3d3ecc8dbacd38067bff3d51d96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>asmt_metric_result-normal</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_embedded_help_content_e3d3ecc8dbacd38067bff3d51d96190c</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-02-22 21:33:07</sys_updated_on>
+        <version>j</version>
+    </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=e3d3ecc8dbacd38067bff3d51d96190c"/>
+</record_update>

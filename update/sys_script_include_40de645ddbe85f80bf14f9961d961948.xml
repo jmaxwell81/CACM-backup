@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_amfai_cacmdba.CACMWorkerServiceUtil</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CACMWorkerServiceUtil</name>
+        <script><![CDATA[var CACMWorkerServiceUtil = Class.create();
+CACMWorkerServiceUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	triggerWorkerServiceSOAPCall: function(sys_id, user_id){
+		//gs.addInfoMessage('SOAP SI');
+		//gs.addInfoMessage(sys_id);
+		//gs.addInfoMessage(user_id);
+		var aInsuredGR = {};
+			
+			aInsuredGR.user_id = user_id;
+			// 				aInsuredGR.last_name = this.getParameter('sysparm_ln_name');
+			// 				aInsuredGR.state = this.getParameter('sysparm_state');
+			aInsuredGR.root_cause_id = sys_id;
+			var workerObj = {};
+				//var randomNum = this.getRandomInt(1, 100000000);
+				workerObj.user_id = aInsuredGR.user_id;
+				workerObj.sys_id = aInsuredGR.root_cause_id;
+				workerObj.first_name = '';
+				workerObj.middle_initial = '';
+				workerObj.last_name = '';
+				workerObj.job_title = '';
+				workerObj.department = '';
+				workerObj.location = '';
+				workerObj.division = '';
+				workerObj.agent_id = '';
+				workerObj.agent_code = '';
+				workerObj.district_code = '';
+				workerObj.status = '';
+				
+				
+				try {
+					//gs.addInfoMessage('try');
+					var s = new sn_ws.SOAPMessageV2('x_amfai_cacmdba.WorkerServiceV3.0.3', 'retrieveWorker');
+					// s.setStringParameterNoEscape('UserId', 'crusrvt');
+					s.setStringParameterNoEscape('user_Id', aInsuredGR.user_id);
+					//s.setStringParameterNoEscape('CustomerIds', aPolicyGR.insured_id);
+					//s.setStringParameterNoEscape('ProductIds', aInsuredGR.root_cause_id);
+					//s.setStringParameterNoEscape('ProductExtractLevels', 'POLICIES');
+					//s.setEccCorrelator("CACM-"+aPolicyGR.policynumber);
+					
+					var response = s.execute();
+					var responseBody = response.getBody();
+					var status = response.getStatusCode();
+					
+					//gs.addInfoMessage(status);
+					gs.info("Node Name "+responseBody);
+					
+					
+					var workerSearchResponse = new XMLDocument2();
+					workerSearchResponse.parseXML(responseBody);
+					//gs.addInfoMessage(workerSearchResponse);
+					
+					var agentIdentifier = this.getResponseNodeText(workerSearchResponse, "user_Id");
+					
+					if(agentIdentifier != null){
+						//gs.addInfoMessage(agentIdentifier);
+						var requestNode = workerSearchResponse.getNode('//ns1:Worker');
+						
+						var requestIter = requestNode.getChildNodeIterator();
+						
+						while (requestIter.hasNext()) {
+							var entryNode = requestIter.next();
+							if(entryNode.getNodeName() == "ns3:Person"){
+								var person = entryNode.getChildNodeIterator();
+								while (person.hasNext()) {
+									var personNode = person.next();
+									if(personNode.getNodeName() == "ns5:Name"){
+										var NameInfo = personNode.getChildNodeIterator();
+										while (NameInfo.hasNext()){
+											var NameInfoNode = NameInfo.next();
+											if(NameInfoNode.getNodeName() == "ns5:firstName"){
+												workerObj.first_name = NameInfoNode.getTextContent();
+											}
+											else if(NameInfoNode.getNodeName() == "ns5:lastName"){
+												workerObj.last_name = NameInfoNode.getTextContent();
+											}
+											else if(NameInfoNode.getNodeName() == "ns5:middleName"){
+												workerObj.middle_initial = NameInfoNode.getTextContent();
+											}
+										}
+									}
+								}
+							}
+							else if(entryNode.getNodeName() == "ns3:WorkerDetail"){
+								var workerInfo = entryNode.getChildNodeIterator();
+								while (workerInfo.hasNext()) {
+									var workerInfoNode = workerInfo.next();
+									if(workerInfoNode.getNodeName() == "ns3:jobTitleShortDescription"){
+										workerObj.job_title = workerInfoNode.getTextContent();
+									}
+									else if(workerInfoNode.getNodeName() == "ns3:WorkerStatus"){
+										workerObj.status = workerInfoNode.getTextContent();
+									}
+									else if(workerInfoNode.getNodeName() == "ns3:HumanResourceOrganizationalInformation"){
+										var HRInfo = workerInfoNode.getChildNodeIterator();
+										while (HRInfo.hasNext()) {
+											var HRInfoNode = HRInfo.next();
+											if(HRInfoNode.getNodeName() == "ns7:HumanResourceDepartmentCode"){
+												var departmentNode = HRInfoNode.getChildNodeIterator();
+												while (departmentNode.hasNext()){
+													var departmentInfoNode = departmentNode.next();
+													if(departmentInfoNode.getNodeName() == "ns4:description"){
+														workerObj.department = departmentInfoNode.getTextContent();
+													}
+												}
+											}
+											else if(HRInfoNode.getNodeName() == "ns7:HumanResourceDivisionCode"){
+												var divisionNode = HRInfoNode.getChildNodeIterator();
+												while (divisionNode.hasNext()){
+													var divisionInfoNode = divisionNode.next();
+													if(divisionInfoNode.getNodeName() == "ns4:description"){
+														workerObj.division = divisionInfoNode.getTextContent();
+													}
+												}
+											}
+										}
+									}
+									else if(workerInfoNode.getNodeName() == "ns3:SalesOrganizationalInformation"){
+										var SalesInfo = workerInfoNode.getChildNodeIterator();
+										while (SalesInfo.hasNext()) {
+											var SalesInfoNode = SalesInfo.next();
+											if(SalesInfoNode.getNodeName() == "ns8:salesStateShortName"){
+												workerObj.location = SalesInfoNode.getTextContent(); 
+											}
+										}
+									}
+									else if(workerInfoNode.getNodeName() == "ns3:WorkSite"){
+										var worksiteNode = workerInfoNode.getChildNodeIterator();
+										while (worksiteNode.hasNext()) {
+											var worksiteInfoNode = worksiteNode.next();
+											if(worksiteInfoNode.getNodeName() == "ns3:WorkSiteBuildingCode"){
+												var buildingNode = worksiteInfoNode.getChildNodeIterator();
+												while (buildingNode.hasNext()){
+													var buildingInfoNode = buildingNode.next();
+													if(buildingInfoNode.getNodeName() == "ns4:description"){
+														workerObj.location = buildingInfoNode.getTextContent();
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							else if(entryNode.getNodeName() == "ns3:Agent"){
+								var agentInfo = entryNode.getChildNodeIterator();
+								while (agentInfo.hasNext()) {
+									var agentInfoNode = agentInfo.next();
+									if(agentInfoNode.getNodeName() == "ns10:agentIdentifier"){
+										workerObj.agent_id = agentInfoNode.getTextContent();
+									}
+									else if(agentInfoNode.getNodeName() == "ns10:AgentDistrictCode"){
+										var agentDistCodeNode =  agentInfoNode.getChildNodeIterator();
+										while (agentDistCodeNode.hasNext()){
+											var agentDistInfo = agentDistCodeNode.next();
+											if(agentDistInfo.getNodeName() == "ns10:agentCode"){
+												workerObj.agent_code = agentDistInfo.getTextContent();
+											}
+											else if(agentDistInfo.getNodeName() == "ns10:districtCode"){
+												workerObj.district_code = agentDistInfo.getTextContent();
+											}
+										}
+									}
+								}
+							}
+						}
+						this.insertCACMWorker(workerObj);
+						workerObj.first_name = '';
+						workerObj.middle_initial = '';
+						workerObj.last_name = '';
+						workerObj.job_title = '';
+						workerObj.department = '';
+						workerObj.location = '';
+						workerObj.division = '';
+						workerObj.agent_id = '';
+						workerObj.agent_code = '';
+						workerObj.district_code = '';
+						workerObj.status = '';
+						
+					}
+					else{
+						var message = this.getNSResponseNodeText(partySearchResponse, "errorMessage", "ns2:");
+						if(message == null || message == 'null' || message == ""){
+							message = this.getNSResponseNodeText(partySearchResponse, "message", "ns2:");
+						}
+						
+						var error_message = "[" + new GlideDateTime().getValue() + "] A issue was encountered while performing this search for these parameters: " + message;
+						gs.addErrorMessage(error_message);
+						aInsuredGR.update();
+					}
+					
+				}
+				catch(ex) {
+					
+					var message = ex.getMessage();
+					//gs.addInfoMessage(message);
+				}
+				
+				//return randomNum;
+				
+			},
+			
+			//Insert Policy Record in Staging Table
+			insertCACMWorker: function(workerObj){
+				//gs.addInfoMessage(workerObj.sys_id);
+				var sysID = workerObj.sys_id;
+				var rootCause = new GlideRecord('x_amfai_cacmdba_root_cause');
+				rootCause.addQuery('sys_id', sysID);
+				rootCause.query();
+				if(rootCause.next()){
+					//gs.addInfoMessage('GR');
+					rootCause.prty_user_id = workerObj.user_id;
+					rootCause.prty_first_nm = workerObj.first_name;
+					rootCause.prty_middle_initial = workerObj.middle_initial;
+					rootCause.prty_last_nm = workerObj.last_name;
+					rootCause.prty_job_title_desc = workerObj.job_title;
+					rootCause.prty_dept_nm = workerObj.department;
+					rootCause.prty_loc_desc = workerObj.location;
+					rootCause.prty_division_nm = workerObj.division;
+					rootCause.prty_agent_id = workerObj.agent_id;
+					rootCause.prty_agt_cd = workerObj.agent_code;
+					rootCause.prty_dst_cd = workerObj.district_code;
+					rootCause.prty_status_cd = workerObj.status;
+					rootCause.data_populated_from_integration = 'Yes';
+					rootCause.update();
+				}
+				//return rootCause.sys_id;
+			},
+			
+			getResponseNodeText: function(aXMLDoc, aNodeName){
+				
+				if(aNodeName == "")
+					return "";
+				
+				return aXMLDoc.getNodeText('//ns1:'+aNodeName);//this.namespace+
+				
+			},
+			type: 'CACMWorkerServiceUtil'
+		});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-02-26 19:34:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>40de645ddbe85f80bf14f9961d961948</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>CACMWorkerServiceUtil</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>sys_script_include_40de645ddbe85f80bf14f9961d961948</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-07 19:04:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

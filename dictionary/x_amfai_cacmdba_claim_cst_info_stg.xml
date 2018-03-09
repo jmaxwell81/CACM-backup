@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="[INT] Claim Cst Info Stg" max_length="40" name="x_amfai_cacmdba_claim_cst_info_stg" type="collection">
+    <element label="[INT] CACM Claim Search Results" max_length="40" name="x_amfai_cacmdba_claim_cst_info_stg" type="collection">
         <element label="Case id" max_length="40" name="case_id" reference="x_amfai_cacmdba_case" type="reference"/>
         <element label="Claim" max_length="32" name="claim" reference="x_amfai_cacmdba_claim" type="reference"/>
         <element label="Random number" max_length="40" name="random_number" type="string"/>

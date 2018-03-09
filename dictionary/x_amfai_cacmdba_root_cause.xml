@@ -15,6 +15,7 @@
         <element attributes="ref_qual_elements=case_root_cause_id,ref_auto_completer=AJAXReferenceChoice,max_ref_dropdown=150" choice="1" dependent="case_root_cause_id" dependent_on_field="case_root_cause_id" label="Sub Root Cause" mandatory="true" max_length="32" name="case_sub_root_cause_id" reference="x_amfai_cacmdba_case_sub_root_cause" reference_qual="javascript: 'case_root_cause_id=' + current.case_root_cause_id.case_root_cause_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
             <choice/>
         </element>
+        <element label="Data Populated from Integration" max_length="50" name="data_populated_from_integration" read_only="true" type="string"/>
         <element label="Party Instruction" max_length="500" name="party_instruction" type="string"/>
         <element label="Agent ID" max_length="40" name="prty_agent_id" type="string"/>
         <element label="Agent Code" max_length="40" name="prty_agt_cd" type="string"/>
@@ -24,7 +25,7 @@
         <element label="First Name" max_length="40" name="prty_first_nm" type="string"/>
         <element label="Job Title" max_length="40" name="prty_job_title_desc" type="string"/>
         <element label="Last Name" max_length="40" name="prty_last_nm" type="string"/>
-        <element label="Location" max_length="40" name="prty_loc_desc" type="string"/>
+        <element label="Location" max_length="60" name="prty_loc_desc" type="string"/>
         <element label="Middle Initial" max_length="40" name="prty_middle_initial" type="string"/>
         <element label="Status" max_length="40" name="prty_status_cd" type="string"/>
         <element label="User ID" max_length="40" name="prty_user_id" type="string"/>

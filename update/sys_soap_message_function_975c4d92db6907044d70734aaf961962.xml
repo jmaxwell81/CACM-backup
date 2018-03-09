@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_soap_message_function">
     <sys_soap_message_function action="INSERT_OR_UPDATE">
-        <authentication_type/>
+        <authentication_type>basic</authentication_type>
         <basic_auth_password/>
-        <basic_auth_profile/>
+        <basic_auth_profile display_value="Pre-Prod">aee4c876dbe336c44d70734aaf9619e1</basic_auth_profile>
         <basic_auth_user/>
         <certificate/>
         <enable_mutual_auth>false</enable_mutual_auth>
@@ -18,8 +18,8 @@
             <!--v1:empl_Id>?</v1:empl_Id-->
             <!--Zero or more repetitions:-->
             <v1:agt_Dst_Cd>
-               <v1:agt_Cd>${agt_Cd}</v1:agt_Cd>
-               <v1:dst_Cd>${dst_Cd}</v1:dst_Cd>
+               <!--v1:agt_Cd>${agt_Cd}</v1:agt_Cd-->
+               <!--v1:dst_Cd>${dst_Cd}</v1:dst_Cd-->
             </v1:agt_Dst_Cd>
             <!--Zero or more repetitions:-->
             <!--v1:agt_Id>?</v1:agt_Id-->
@@ -40,7 +40,7 @@
         <protocol_profile/>
         <qualified_name>WorkerServiceV3.0.3 [ retrieveWorker ]</qualified_name>
         <soap_action>http://www.amfam.com/wsdl/workerService/v3/retrieveWorker</soap_action>
-        <soap_endpoint>http://devbq25/worker3/services/worker</soap_endpoint>
+        <soap_endpoint>http://prdesb.amfam.com/ccx/cc-router/WorkerServiceV3</soap_endpoint>
         <soap_message display_value="WorkerServiceV3.0.3">7c2c4992db6907044d70734aaf96198c</soap_message>
         <strip_whitespace>false</strip_whitespace>
         <sys_class_name>sys_soap_message_function</sys_class_name>
@@ -48,7 +48,7 @@
         <sys_created_on>2017-10-03 21:46:01</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>975c4d92db6907044d70734aaf961962</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>retrieveWorker</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -56,7 +56,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_soap_message_function_975c4d92db6907044d70734aaf961962</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-12-12 20:46:38</sys_updated_on>
+        <sys_updated_on>2018-03-07 16:20:01</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
         <use_ws_security>false</use_ws_security>

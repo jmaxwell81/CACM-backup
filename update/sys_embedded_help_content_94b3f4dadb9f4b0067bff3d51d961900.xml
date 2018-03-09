@@ -4,7 +4,7 @@
         <active>true</active>
         <category>dashboards</category>
         <content><![CDATA[ <h1 class="title topictitle1">Edit a dashboard group</h1>  <div class="body taskbody"><div class="section prereq p">Role required: admin, pa_admin, or pa_power_user. <p class="p"><span class="ph">Organize dashboards into groups so users can easily find them.   Dashboard groups determine how dashboards appear in the dashboard picker when you navigate to    <span class="ph uicontrol">Dashboards</span>. You can add view permissions to dashboard  groups.</span></p></div>  <ol class="ol steps"><li class="li step">        <span class="ph cmd">Modify the following fields:</span>        <table class="simpletable choicetable choicetableborder" id="pa_dashboards_group-normal__choicetable_br3_gtq_dz"><thead><tr class="sthead chhead"><th id="d402705e39-option">Field</th><th id="d402705e39-desc">Description</th></tr></thead><tbody><tr class="strow chrow"><td id="d402705e52" class="stentry choption"><strong>Name</strong></td><td class="stentry chdesc">Name the dashboard group.</td></tr><tr class="strow chrow"><td id="d402705e61" class="stentry choption"><strong>Order</strong></td><td class="stentry chdesc">Enter an <span class="ph uicontrol">Order</span> number to indicate the order the dashboard              group appears on the dashboard picker. </td></tr><tr class="strow chrow"><td id="d402705e73" class="stentry choption"><strong>Visible to</strong></td><td class="stentry chdesc">Select <span class="ph uicontrol">Everyone</span> or <span class="ph uicontrol">Groups and                Users</span>. If the dashboard group is only visible to groups and users,              specify them.</td></tr><tr class="strow chrow"><td id="d402705e88" class="stentry choption"><strong>Groups</strong></td><td class="stentry chdesc">Select groups to add the dashboard to.</td></tr><tr class="strow chrow"><td id="d402705e98" class="stentry choption"><strong>Users</strong></td><td class="stentry chdesc">Select users to add the dashboard to.</td></tr><tr class="strow chrow"><td id="d402705e107" class="stentry choption"><strong>Requires roles</strong></td><td class="stentry chdesc">If the dashboard group is visible to <span class="ph uicontrol">Everyone</span>, click the              pencil icon to require the user have a specified role to view the dashboard              group.</td></tr></tbody></table>      </li><li class="li step">        <span class="ph cmd">Click <span class="ph uicontrol">Update</span>.</span>      </li></ol> </div>]]></content>
-        <last_sync>2018-01-28 19:11:06</last_sync>
+        <last_sync>2018-02-27 19:11:12</last_sync>
         <modifier>normal</modifier>
         <name>pa_dashboards_group-normal</name>
         <page>pa_dashboards_group</page>
@@ -18,7 +18,7 @@
         <sys_created_on>2017-12-29 19:10:05</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>94b3f4dadb9f4b0067bff3d51d961900</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>pa_dashboards_group-normal</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -26,7 +26,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_embedded_help_content_94b3f4dadb9f4b0067bff3d51d961900</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2018-01-28 19:11:06</sys_updated_on>
+        <sys_updated_on>2018-02-27 19:11:12</sys_updated_on>
         <version>j</version>
     </sys_embedded_help_content>
     <sys_translated_text action="delete_multiple" query="documentkey=94b3f4dadb9f4b0067bff3d51d961900"/>

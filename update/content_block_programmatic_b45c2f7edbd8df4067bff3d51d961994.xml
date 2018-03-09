@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_programmatic">
+    <content_block_programmatic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame display_value="frame_grey_border">cf52ad460a0a0b6300321234a7187571</frame>
+        <logged_on>false</logged_on>
+        <name>cacm_print_preview_envelope_cms</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate var="jvar_sysId">
+
+  var sysparm_sysId = RP.getParameterValue("sysparm_id");
+  sysparm_sysId;
+
+</g:evaluate> 
+	
+	
+	<g:evaluate var="jvar_id" object="true">
+
+  var sysparm_id = RP.getParameterValue("sysparm_id");
+  var gr = new GlideRecord('x_amfai_cacmdba_document');  
+  gr.addQuery('sys_id',sysparm_id);  
+  gr.query();  
+  gr;
+  
+
+</g:evaluate> 
+	<style>
+
+		img {
+		 -webkit-print-color-adjust: exact;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+	width: 15%;
+    height: 90px;
+}
+	
+</style>
+
+	
+	<input type="hidden" id='flag' name='flag' value="${jvar_sysId}" />
+    <j:if test="${jvar_id.next()}">
+		<input type="hidden" id='flag1' name='flag1' value="${gr.letter_text.getHTMLValue()}" />
+  <g:no_escape>${gr.letter_text.getHTMLValue()}</g:no_escape>  
+  </j:if> 
+	<Table>
+	<TR>
+	<TD align="right">
+	<button class="form_action_button  action_context btn btn-default" onclick="continueOK()"><span>Print</span></button>
+		<button class="form_action_button  action_context btn btn-default" onclick="continueCancel()"><span>Cancel</span></button>
+		</TD>
+		</TR>
+		</Table>
+	<script type="text/javascript">
+        function continueOK() {
+		var letter_text = document.getElementById('flag1').value
+            var prtContent = '<html>' +
+            '<head>' +
+            '<meta charset="utf-8" />' +
+            '<title>Inventory</title>' +
+            '<style type="text/css"> body {-webkit-print-color-adjust: exact; font-family: Arial; }</style>' +
+            '</head>' +
+            '<body><div><div>'+letter_text+'</div></div></body></html>';
+            var WinPrint =
+ window.open('', '', 'left=0,top=0,width=1000,height=1000,toolbar=0,scrollbars=0,status=0');
+            WinPrint.document.write(prtContent);
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+		    WinPrint.close();
+      if (window.onafterprint) { //check if browser supports window.onafterprint event handler (Firefox and IE)
+    printCompleteCallback();
+}
+else { //Use setTimeout solution if onafterprint is not supported (Chrome)
+    setTimeout(printCompleteCallback, 0);
+}    
+		
+		
+}
+		
+		
+		var printCompleteCallback = function () {
+	var sys_id = document.getElementById('flag').value;
+    var conf = confirm('Confirm printing as successfull and mark Document Status as Printed');
+    if (conf) {
+  // alert('hi');
+    var ajax = new GlideAjax('print_confirmation');
+	ajax.addParam('sysparm_name', 'printConfirmation');
+	ajax.addParam('sysparm_currentDocID', sys_id);
+	ajax.addParam('sysparm_currentConfirmation', 'Printed');
+	ajax.getXML(loadResponse);
+        
+    }
+		
+	else{
+	var ajax = new GlideAjax('print_confirmation');
+	ajax.addParam('sysparm_name', 'printConfirmation');
+	ajax.addParam('sysparm_currentDocID', sys_id);
+	ajax.addParam('sysparm_currentConfirmation', 'Canceled');
+	ajax.getXML(loadResponse);
+		}
+		
+		function loadResponse(response){
+	//Process the return XML document and add groups to the left select
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	if(answer == 'true'){
+		close();
+		}
+	}
+}
+		function continueCancel(){
+		var sys_id = document.getElementById('flag').value;
+		//alert(sys_id);
+	//Close the dialog window
+	if (confirm("Letter is not Printed, Are you sure to close the window?")) {
+	var ajax = new GlideAjax('print_confirmation');
+	ajax.addParam('sysparm_name', 'printConfirmation');
+	ajax.addParam('sysparm_currentDocID', sys_id);
+	ajax.addParam('sysparm_currentConfirmation', 'Canceled');
+	ajax.getXML(loadResponse);
+  }
+		function loadResponse(response){
+	//Process the return XML document and add groups to the left select
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	if(answer == 'true'){
+		close();
+		}
+	}
+}
+ </script>
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>pmadhika@amfam.com</sys_created_by>
+        <sys_created_on>2018-02-19 14:56:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b45c2f7edbd8df4067bff3d51d961994</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>cacm_print_preview_envelope_cms</sys_name>
+        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_update_name>content_block_programmatic_b45c2f7edbd8df4067bff3d51d961994</sys_update_name>
+        <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-02-19 14:58:12</sys_updated_on>
+        <two_phase>false</two_phase>
+    </content_block_programmatic>
+</record_update>

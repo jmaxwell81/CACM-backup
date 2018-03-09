@@ -21,9 +21,11 @@
         <element label="Integration Suite" max_length="40" name="integration_suite" type="string"/>
         <element label="Last Name" max_length="40" name="last_name" type="string"/>
         <element label="Middle Name" max_length="40" name="middle_name" type="string"/>
-        <element label="Party ID" max_length="40" name="party_id" type="string"/>
         <element label="Person ID" max_length="40" name="person_id" type="string"/>
+        <element label="Policy Type Code" max_length="40" name="policy_type_code" type="string"/>
+        <element label="Policy Type Description" max_length="40" name="policy_type_desc" type="string"/>
         <element label="Preferred Contact Method" max_length="40" name="preferred_contact_method" type="string"/>
+        <element label="Product Code" max_length="40" name="product_code" type="string"/>
         <element label="State" max_length="50" name="state" type="string"/>
         <index name="index">
             <element name="person_id"/>

@@ -46,7 +46,7 @@
         <sys_created_on>2017-09-06 20:59:39</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>b5e642e1db8d8f00a09bf6e9af9619fd</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>RetrieveProductPortfolioRequest</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -54,7 +54,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_soap_message_function_b5e642e1db8d8f00a09bf6e9af9619fd</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2017-12-12 20:45:13</sys_updated_on>
+        <sys_updated_on>2018-03-08 20:43:28</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</use_mid_server>
         <use_ws_security>false</use_ws_security>

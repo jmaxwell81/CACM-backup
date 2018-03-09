@@ -17,13 +17,13 @@
         <import_set_table_label>Producer Migration</import_set_table_label>
         <import_set_table_name>u_producer_migration</import_set_table_name>
         <instance_name/>
-        <jdbc_password>IN17gIEyxLN7MaSa+EyjGA==</jdbc_password>
+        <jdbc_password>GTd+7lQfg217MaSa+EyjGA==</jdbc_password>
         <jdbc_server>ORAP0103</jdbc_server>
-        <jdbc_user_name>DIRECTDATA_AMITFORMS1_RO</jdbc_user_name>
+        <jdbc_user_name>DLF004</jdbc_user_name>
         <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
-        <last_run_database_field/>
-        <last_run_datetime/>
+        <last_run_database_field>p.update_date</last_run_database_field>
+        <last_run_datetime>to_date('2018-02-07','yyyy-mm-dd')</last_run_datetime>
         <ldap_target/>
         <maximum_rows/>
         <mid_server display_value="mid_sb_1">4ac0a372db3c3600b061fb16bf961980</mid_server>
@@ -45,7 +45,6 @@ pa.DISTRICT_CODE,&#13;
 pa.AGENT_CODE,&#13;
 pa.AGENT_ID,&#13;
 pa.PERSON_ID,&#13;
-ca.complaint_id,&#13;
 a.af_state_code,&#13;
 a.agent_type,&#13;
 a.first_name,&#13;
@@ -54,31 +53,30 @@ a.middle_initial,&#13;
 a.new_agt_code,&#13;
 a.new_dst_code,&#13;
 a.status,&#13;
+p.update_date as create_date,&#13;
+p.update_user_id as create_user_id,&#13;
 'No' as integration&#13;
 from CACMDBA.POLICY_AGT pa&#13;
 left join CACMDBA.AGENT a&#13;
 on pa.agent_code = a.agent_code&#13;
 and pa.district_code = a.district_code&#13;
 and pa.agent_id = a.agent_id&#13;
-left join CACMDBA.COMPLAINT_AGT ca&#13;
-on ca.agent_code = a.agent_code&#13;
-and ca.district_code = a.district_code&#13;
-and ca.agent_id = a.agent_id</sql_statement>
+inner join CACMDBA.POLICY p on pa.policy_number = p.policy_number</sql_statement>
         <ssh_keyfile_path/>
         <sys_class_name>sys_data_source</sys_class_name>
         <sys_created_by>jeremy.wedekind</sys_created_by>
         <sys_created_on>2017-11-09 17:50:12</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>9e81c306db124b40a09bf6e9af96198b</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>07.7 - Producer Migration</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_9e81c306db124b40a09bf6e9af96198b</sys_update_name>
-        <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-01-17 14:37:28</sys_updated_on>
+        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-08 18:26:10</sys_updated_on>
         <table_name/>
         <type>JDBC</type>
         <use_integrated_authentication>false</use_integrated_authentication>
