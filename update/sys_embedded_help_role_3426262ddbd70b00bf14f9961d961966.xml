@@ -2,7 +2,7 @@
 <record_update table="sys_embedded_help_role">
     <sys_embedded_help_role action="INSERT_OR_UPDATE">
         <order>1000</order>
-        <role display_value="x_amfai_cacmdba.bkp_bd_complaint_agent_user" name="x_amfai_cacmdba.bkp_bd_complaint_agent_user">f42626e9dbd70b00bf14f9961d9619d8</role>
+        <role/>
         <sys_class_name>sys_embedded_help_role</sys_class_name>
         <sys_created_by>dfoss@amfam.com</sys_created_by>
         <sys_created_on>2017-12-27 19:34:39</sys_created_on>

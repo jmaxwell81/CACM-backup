@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>cacm_generate_case_summary</action_name>
+        <action_name>cacm_multifile_remove_attachments</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <comments/>
-        <condition/>
+        <condition>current.status == "Processed" &amp;&amp; current.files_cleaned_up == ""</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -20,24 +20,26 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Generate Case Summary</name>
-        <onclick/>
+        <name>Remove All Files</name>
+        <onclick>confirmFileRemoval()</onclick>
         <order>100</order>
-        <script><![CDATA[/*var basicAuthProfileSysID = "8ccc3fd3db04934067bff3d51d9619e1";
-generateAndStoreAttachment('x_amfai_cacmdba_cacm_multifile_request', '9948bb1bdbc0934067bff3d51d9619f5', 'pdfview', current.sys_class_name, current.sys_id,'CACM Case Summary.pdf', basicAuthProfileSysID);
+        <script><![CDATA[function confirmFileRemoval(){
+	
+	var isDeleteFiles = confirm("This action will remove all files generated for this multifile request. Do you want to continue?");
+	
+	if(isDeleteFiles){
+		gsftSubmit(null, g_form.getFormElement(), "cacm_multifile_remove_attachments");
+	}
+}
 
-function generateAndStoreAttachment( pdfTable, pdfSysID, pdfView1, attachToTable, attachToSysID, fileName, authProfileSysID ) {
-	var r = new sn_ws.RESTMessageV2();
-	r.setHttpMethod('get');
-	r.setEndpoint('https://'+gs.getProperty('instance_name')+'.service-now.com/' + pdfTable + '.do?PDF&sys_id=' + pdfSysID + '&sysparm_view=' + pdfView1);
-	r.setAuthenticationProfile('basic', authProfileSysID);
-	r.saveResponseBodyAsAttachment(attachToTable, attachToSysID, fileName);
-	var response = r.execute();
-	gs.addInfoMessage(response.getStatusCode());
-}*/
-var generatePDF = new global.AMFAMCustomPDF();
-generatePDF.attachPDFCaseSummary(current);
-action.setRedirectURL(current);]]></script>
+if (typeof window == 'undefined')
+	triggerFileRemoval();
+
+function triggerFileRemoval() {
+	gs.eventQueue("x_amfai_cacmdba.multifile.remove.files", current, "", "");
+	gs.addInfoMessage("Files for "+current.number+" have been queued for deletion.");
+	action.setRedirectURL(current);
+}]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -49,8 +51,8 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1cc93b1fdbc0934067bff3d51d9619fb</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Generate Case Summary</sys_name>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Remove All Files</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -58,7 +60,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_ui_action_1cc93b1fdbc0934067bff3d51d9619fb</sys_update_name>
         <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
-        <sys_updated_on>2018-02-27 14:36:25</sys_updated_on>
+        <sys_updated_on>2018-03-14 15:45:52</sys_updated_on>
         <table>x_amfai_cacmdba_cacm_multifile_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

@@ -35,7 +35,7 @@
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
         <sys_updated_on>2017-12-18 18:23:36</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_amfai_cacmdba.address_user" name="x_amfai_cacmdba.address_user">c89f3f2adb074700bf14f9961d96199f</user_role>
+        <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

@@ -35,7 +35,7 @@
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
         <sys_updated_on>2018-01-03 14:18:17</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="x_amfai_cacmdba.bkp_bd_policy_complaint_user" name="x_amfai_cacmdba.bkp_bd_policy_complaint_user">ba482261db1b0b00bf14f9961d96194d</user_role>
+        <user_role/>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

@@ -4,167 +4,167 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>af_reason_code</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>f99fbcaedbba070067bff3d51d961974</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>99a1c6cadbfc1704bf14f9961d9619ba</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>complaint_state</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>719fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>11a1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>reason_desc</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>f19fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>91a1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>reason_function_desc</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>759fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>15a1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_on</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>f59fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>95a1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_by</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>799fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>19a1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_updated_on</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>f99fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>99a1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_updated_by</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>7d9fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>1da1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>begin_eff_date</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>fd9fbcaedbba070067bff3d51d961975</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>9da1c6cadbfc1704bf14f9961d9619bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>end_eff_date</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>719fbcaedbba070067bff3d51d961976</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>11a1c6cadbfc1704bf14f9961d9619bc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>active</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">719fbcaedbba070067bff3d51d961974</list_id>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">11a1c6cadbfc1704bf14f9961d9619ba</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
             <sum>false</sum>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 18:09:09</sys_created_on>
-            <sys_id>f19fbcaedbba070067bff3d51d961976</sys_id>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_id>91a1c6cadbfc1704bf14f9961d9619bc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 18:09:09</sys_updated_on>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -178,11 +178,11 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>jeremy.wedekind</sys_created_by>
-            <sys_created_on>2017-12-05 21:45:25</sys_created_on>
-            <sys_customer_update>true</sys_customer_update>
+            <sys_created_on>2018-03-13 19:46:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>fd11f926db7e070067bff3d51d961961</sys_id>
+            <sys_id>11a1c6cadbfc1704bf14f9961d9619ba</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_amfai_cacmdba_reason</sys_name>
             <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -191,8 +191,8 @@
             <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
             <sys_update_name>sys_ui_list_x_amfai_cacmdba_reason_null</sys_update_name>
             <sys_updated_by>jeremy.wedekind</sys_updated_by>
-            <sys_updated_on>2017-12-05 21:45:25</sys_updated_on>
-            <sys_user display_value="Jeremy Wedekind">37db2a47db6cf200f827fb16bf961945</sys_user>
+            <sys_updated_on>2018-03-13 19:46:22</sys_updated_on>
+            <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
         </sys_ui_list>

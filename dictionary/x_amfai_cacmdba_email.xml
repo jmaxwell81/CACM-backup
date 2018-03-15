@@ -13,6 +13,12 @@
                 <element label="Work" value="work"/>
             </choice>
         </element>
+        <element choice="3" default="primary" label="Email Identifier" max_length="40" name="email_identifier" type="choice">
+            <choice>
+                <element label="Primary" sequence="0" value="primary"/>
+                <element label="Other" sequence="1" value="other"/>
+            </choice>
+        </element>
         <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_customer" type="reference"/>
         <index name="index">
             <element name="case_id"/>

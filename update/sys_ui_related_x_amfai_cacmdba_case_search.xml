@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="x_amfai_cacmdba_case" version="2" view="Search">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_amfai_cacmdba_case_details.cacm_case</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c5bab84adbb81704bf14f9961d9619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_amfai_cacmdba_case_link.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>cdbab84adbb81704bf14f9961d9619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>x_amfai_cacmdba_case_event.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c1bab84adbb81704bf14f9961d9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>3</position>
+            <related_list>x_amfai_cacmdba_case_referral.cacm_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c5bab84adbb81704bf14f9961d9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>4</position>
+            <related_list>x_amfai_cacmdba_cacm_attachments.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c9bab84adbb81704bf14f9961d9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>5</position>
+            <related_list>x_amfai_cacmdba_root_cause.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>cdbab84adbb81704bf14f9961d9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>6</position>
+            <related_list>x_amfai_cacmdba_document.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c1bab84adbb81704bf14f9961d9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>7</position>
+            <related_list>x_amfai_cacmdba_insured_relationship.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c5bab84adbb81704bf14f9961d9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>8</position>
+            <related_list>x_amfai_cacmdba_insured_address.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c9bab84adbb81704bf14f9961d9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>9</position>
+            <related_list>x_amfai_cacmdba_insured_email.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>cdbab84adbb81704bf14f9961d9619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>10</position>
+            <related_list>x_amfai_cacmdba_insured_phone.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c1bab84adbb81704bf14f9961d9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>11</position>
+            <related_list>x_amfai_cacmdba_producer.case_id</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c5bab84adbb81704bf14f9961d9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>12</position>
+            <related_list>x_amfai_cacmdba_m2m_claims_cases.caseid</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>c9bab84adbb81704bf14f9961d9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Case - Search" name="x_amfai_cacmdba_case" related_list="NULL" sys_domain="global" view="0ba77046dbb81704bf14f9961d9619ae">0dbab84adbb81704bf14f9961d9619e7</list_id>
+            <order_by/>
+            <position>13</position>
+            <related_list>x_amfai_cacmdba_m2m_party_insured.caseid</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_id>cdbab84adbb81704bf14f9961d9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Case - Search</calculated_name>
+            <filter/>
+            <name>x_amfai_cacmdba_case</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 14:36:25</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0dbab84adbb81704bf14f9961d9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Case - Search</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_ui_related_x_amfai_cacmdba_case_Search</sys_update_name>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 14:36:25</sys_updated_on>
+            <sys_user/>
+            <view display_value="Search" name="Search">0ba77046dbb81704bf14f9961d9619ae</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

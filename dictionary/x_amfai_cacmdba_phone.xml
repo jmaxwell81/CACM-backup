@@ -4,6 +4,12 @@
         <element label="Person ID" max_length="32" name="person_id" reference="x_amfai_cacmdba_customer" type="reference"/>
         <element label="Phone Availability" max_length="80" name="phone_availability" type="string"/>
         <element label="Phone Extension" max_length="10" name="phone_extension" type="string"/>
+        <element choice="3" default="primary" label="Phone Identifier" max_length="40" name="phone_identifier" type="choice">
+            <choice>
+                <element label="Primary" sequence="0" value="primary"/>
+                <element label="Other" sequence="1" value="other"/>
+            </choice>
+        </element>
         <element display="true" label="Phone Number" max_length="15" name="phone_number" type="string"/>
         <element choice="1" label="Phone Type" max_length="40" name="phone_type" type="choice">
             <choice>

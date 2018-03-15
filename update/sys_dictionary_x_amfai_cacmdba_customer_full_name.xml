@@ -19,7 +19,7 @@
 if(current.first_name.nil()) {
 	current.last_name;
 } else {
-	current.first_name + ' ' + current.middle_initial + ' '  + current.last_name;
+	current.last_name + ' ' + current.middle_initial + ' '  + current.first_name;
 }]]></calculation>
         <choice/>
         <choice_field/>
@@ -63,7 +63,7 @@ if(current.first_name.nil()) {
         <sys_created_on>2017-12-18 15:44:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bb89dfa6db434700bf14f9961d96198e</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Full Name</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -71,7 +71,7 @@ if(current.first_name.nil()) {
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_customer_full_name</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2018-02-09 15:42:39</sys_updated_on>
+        <sys_updated_on>2018-03-13 16:05:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

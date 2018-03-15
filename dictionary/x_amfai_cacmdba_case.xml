@@ -2,7 +2,6 @@
 <database>
     <element audit="true" label="Case" max_length="40" name="x_amfai_cacmdba_case" sizeclass="52709" type="collection">
         <element label="Advocate" max_length="32" name="advocate" reference="x_amfai_cacmdba_advocate" reference_qual="javascript: USER_ID= + current.x_amfai_cacmdba_case.advocate_user_id;" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Case Actual Delete Date" max_length="40" name="case_actual_delete_date" type="glide_date"/>
         <element attributes="ref_qual_elements=case_name,max_ref_dropdown=50" choice="1" dependent="case_name" dependent_on_field="case_name" label="Customer Address" max_length="32" name="case_address" reference="x_amfai_cacmdba_address" reference_qual="javascript: 'person_id=' + current.person_id.person_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
             <choice/>
         </element>
@@ -57,7 +56,7 @@
         <element label="Insured Same as Complainant" max_length="40" name="case_insured_same_as_complainant" read_only="true" type="boolean"/>
         <element label="Line" max_length="32" name="case_line" reference="x_amfai_cacmdba_line_type" type="reference"/>
         <element label="NAIC #" max_length="100" name="case_naic_number" read_only="true" type="string"/>
-        <element label="Customer Name" max_length="32" name="case_name" reference="x_amfai_cacmdba_customer" type="reference"/>
+        <element attributes="ref_auto_completer=AJAXTableCompleter,ref_ac_columns=last_name;first_name;current_address;current_email;current_phone,ref_ac_columns_search=true,ref_ac_display_value=false" label="Customer Name" max_length="32" name="case_name" reference="x_amfai_cacmdba_customer" type="reference"/>
         <element label="Case Opened Date" max_length="40" name="case_open_timestamp" type="glide_date"/>
         <element label="Policy Number" max_length="32" name="case_policy_number" reference="x_amfai_cacmdba_policy" type="reference"/>
         <element choice="1" label="Privacy" max_length="40" name="case_privacy" type="choice">
@@ -99,8 +98,7 @@
                 <element dependent_value="request" hint="Request Status" label="Purge" sequence="5" value="12"/>
             </choice>
         </element>
-        <element label="Case Ten Years Purge Date" max_length="40" name="case_ten_years_purge_date" type="glide_date"/>
-        <element choice="1" label="Case Type" max_length="40" name="case_type" type="choice">
+        <element choice="3" default="complaint" label="Case Type" max_length="40" name="case_type" type="choice">
             <choice>
                 <element label="Inquiry" sequence="0" value="inquiry"/>
                 <element label="Regulator Inquiry" sequence="1" value="regulator_inquiry"/>
@@ -112,6 +110,14 @@
         <element attributes="ref_qual_elements=case_name,max_ref_dropdown=50" dependent="case_name" dependent_on_field="case_name" label="Customer Phone" max_length="32" name="customer_phone" reference="x_amfai_cacmdba_phone" reference_qual="javascript: 'person_id=' + current.person_id.person_id;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced"/>
         <element label="Latest Closed Date" max_length="40" name="latest_closed_date" type="glide_date"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="CACM ID" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Select Case" max_length="32" name="select_case" reference="x_amfai_cacmdba_case" reference_qual="case_identifier=case^EQ" reference_qual_condition="case_identifier=case^EQ" type="reference"/>
+        <element choice="3" default="existing_customer" label="UCL Process" max_length="40" name="ucl_process" type="choice">
+            <choice>
+                <element label="New Complaint with Existing Customer" sequence="0" value="existing_customer"/>
+                <element label="New Event on Existing Complaint" sequence="1" value="event"/>
+                <element label="New Complaint with New Customer" sequence="2" value="new_customer"/>
+            </choice>
+        </element>
         <index name="index">
             <element name="case_name"/>
         </index>
@@ -164,6 +170,9 @@
             <element name="case_req_sub_disposition"/>
         </index>
         <index name="index18">
+            <element name="select_case"/>
+        </index>
+        <index name="index19">
             <element name="case_line"/>
         </index>
     </element>

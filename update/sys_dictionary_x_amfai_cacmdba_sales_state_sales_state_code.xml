@@ -54,15 +54,15 @@
         <sys_created_on>2017-08-09 18:24:36</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>76679160db284700a09bf6e9af9619e3</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Sales State Code</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_sales_state_sales_state_code</sys_update_name>
-        <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-03-07 16:50:32</sys_updated_on>
+        <sys_updated_by>dfoss@amfam.com</sys_updated_by>
+        <sys_updated_on>2018-03-13 17:34:47</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

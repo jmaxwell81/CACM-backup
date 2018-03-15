@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <application display_value="CACM">c39e662ddb8336804d70734aaf9619d4</application>
         <assessment/>
         <content_page/>
@@ -10,12 +10,12 @@
         <hint/>
         <homepage/>
         <image/>
-        <link_type>LIST</link_type>
+        <link_type>SEARCH</link_type>
         <map_page/>
         <mobile_title>Events</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_amfai_cacmdba_case_event</name>
-        <order>150</order>
+        <order>202</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f5ee7170db80df00bf14f9961d96193e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Events</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -38,11 +38,11 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_app_module_f5ee7170db80df00bf14f9961d96193e</sys_update_name>
         <sys_updated_by>jeremy.wedekind</sys_updated_by>
-        <sys_updated_on>2018-01-31 21:55:47</sys_updated_on>
+        <sys_updated_on>2018-03-13 19:13:41</sys_updated_on>
         <timeline_page/>
         <title>Events</title>
         <uncancelable>false</uncancelable>
-        <view_name/>
+        <view_name>Search</view_name>
         <window_name/>
     </sys_app_module>
 </record_update>

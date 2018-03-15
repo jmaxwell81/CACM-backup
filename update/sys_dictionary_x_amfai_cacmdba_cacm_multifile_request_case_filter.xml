@@ -4,7 +4,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>staticDependent=x_amfai_cacmdba_policy</attributes>
+        <attributes>staticDependent=x_amfai_cacmdba_case</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -54,7 +54,7 @@
         <sys_created_on>2018-02-08 18:44:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6476f793dbc0934067bff3d51d961949</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Case Filter</sys_name>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
@@ -62,7 +62,7 @@
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_cacm_multifile_request_case_filter</sys_update_name>
         <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
-        <sys_updated_on>2018-02-08 19:44:17</sys_updated_on>
+        <sys_updated_on>2018-03-14 21:24:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

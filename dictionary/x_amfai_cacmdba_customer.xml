@@ -2,6 +2,9 @@
 <database>
     <element label="Customer" max_length="40" name="x_amfai_cacmdba_customer" sizeclass="51971" type="collection">
         <element label="Business Name" max_length="40" name="business_name" type="string"/>
+        <element label="Current Address" max_length="32" name="current_address" reference="x_amfai_cacmdba_address" type="reference"/>
+        <element label="Current Email" max_length="32" name="current_email" reference="x_amfai_cacmdba_email" type="reference"/>
+        <element label="Current Phone" max_length="32" name="current_phone" reference="x_amfai_cacmdba_phone" type="reference"/>
         <element choice="1" label="Customer Type" max_length="40" name="customer_type" type="choice">
             <choice>
                 <element label="Business" value="business"/>
@@ -9,7 +12,7 @@
             </choice>
         </element>
         <element label="First Name" max_length="40" name="first_name" type="string"/>
-        <element calculation="if (current.first_name.nil() &amp;&amp; current.last_name.nil() &amp;&amp; current.middle_initial.nil() &amp;&amp; !current.full_name.nil()) {&#13;&#10;&#9;var names = current.full_name.toString().split(&quot; &quot;);&#13;&#10;&#9;if (names.length &gt; 1) {&#13;&#10;&#9;&#9;current.first_name = names[0];&#13;&#10;&#9;&#9;names.shift();&#13;&#10;&#9;&#9;current.last_name = names.join(&quot; &quot;);&#13;&#10;&#9;} else&#13;&#10;&#9;current.last_name = names[0];&#13;&#10;}&#13;&#10;&#13;&#10;if(current.first_name.nil()) {&#13;&#10;&#9;current.last_name;&#13;&#10;} else {&#13;&#10;&#9;current.first_name + ' ' + current.middle_initial + ' '  + current.last_name;&#13;&#10;}" display="true" label="Full Name" max_length="150" name="full_name" type="string" virtual="true"/>
+        <element calculation="if (current.first_name.nil() &amp;&amp; current.last_name.nil() &amp;&amp; current.middle_initial.nil() &amp;&amp; !current.full_name.nil()) {&#13;&#10;&#9;var names = current.full_name.toString().split(&quot; &quot;);&#13;&#10;&#9;if (names.length &gt; 1) {&#13;&#10;&#9;&#9;current.first_name = names[0];&#13;&#10;&#9;&#9;names.shift();&#13;&#10;&#9;&#9;current.last_name = names.join(&quot; &quot;);&#13;&#10;&#9;} else&#13;&#10;&#9;current.last_name = names[0];&#13;&#10;}&#13;&#10;&#13;&#10;if(current.first_name.nil()) {&#13;&#10;&#9;current.last_name;&#13;&#10;} else {&#13;&#10;&#9;current.last_name + ' ' + current.middle_initial + ' '  + current.first_name;&#13;&#10;}" display="true" label="Full Name" max_length="150" name="full_name" type="string" virtual="true"/>
         <element choice="1" label="Gender" max_length="40" name="gender" type="choice">
             <choice>
                 <element label="Female" value="F"/>
@@ -32,11 +35,21 @@
                 <element label="Phone" value="P"/>
             </choice>
         </element>
+        <element label="Temp Case Id Holder" max_length="50" name="temp_case_id_holder" read_only="true" type="string"/>
         <element label="Title" max_length="32" name="title" reference="x_amfai_cacmdba_title_prefix" type="reference"/>
         <index name="index">
-            <element name="title"/>
+            <element name="current_address"/>
         </index>
         <index name="index2">
+            <element name="current_phone"/>
+        </index>
+        <index name="index3">
+            <element name="current_email"/>
+        </index>
+        <index name="index4">
+            <element name="title"/>
+        </index>
+        <index name="index5">
             <element name="person_id"/>
         </index>
     </element>

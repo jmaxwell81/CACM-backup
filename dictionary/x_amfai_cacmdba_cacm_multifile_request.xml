@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="CACM Multifile Request" max_length="40" name="x_amfai_cacmdba_cacm_multifile_request" type="collection">
-        <element attributes="staticDependent=x_amfai_cacmdba_policy" label="Case Filter" max_length="4000" name="case_filter" type="conditions"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_case_event" label="Case Event Filter" max_length="4000" name="case_event_filter" type="conditions"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_case" label="Case Filter" max_length="4000" name="case_filter" type="conditions"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_case_referral" label="Case Referral Filter" max_length="4000" name="case_referral_filter" type="conditions"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_case_sub_root_cause" label="Case Sub Root Cause Filter" max_length="4000" name="case_sub_root_cause_filter" type="conditions"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_claim" label="Claim Filter" max_length="4000" name="claim_filter" type="conditions"/>
+        <element label="Files cleaned up on" max_length="40" name="files_cleaned_up" type="glide_date_time"/>
         <element label="Target Path" max_length="40" name="file_target_path" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Filter on" max_length="40" name="filter_on" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="x_amfai_cacmdba_case" label="Filter through" max_length="40" name="filter_through" type="string">
+            <choice>
+                <element label="Cases" sequence="0" value="x_amfai_cacmdba_case"/>
+                <element label="Policies" sequence="1" value="x_amfai_cacmdba_policy"/>
+                <element label="Claims" sequence="2" value="x_amfai_cacmdba_claim"/>
+                <element label="Case Events" sequence="3" value="x_amfai_cacmdba_case_event"/>
+                <element label="Case Referrals" sequence="4" value="x_amfai_cacmdba_case_referral"/>
+                <element label="Root Causes" sequence="5" value="x_amfai_cacmdba_case_sub_root_cause"/>
+                <element label="Producers" sequence="6" value="x_amfai_cacmdba_producer"/>
+                <element label="Insured Relationships" sequence="7" value="x_amfai_cacmdba_insured_relationship"/>
+            </choice>
+        </element>
+        <element attributes="staticDependent=x_amfai_cacmdba_insured_relationship" label="Insured Relationship Filter" max_length="4000" name="insured_relationship_filter" type="conditions"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_policy" label="Policy Filter" max_length="4000" name="policy_filter" type="conditions"/>
+        <element attributes="staticDependent=x_amfai_cacmdba_producer" label="Producer Filter" max_length="4000" name="producer_filter" type="conditions"/>
         <element choice="1" default="New" label="Status" max_length="40" name="status" type="choice">
             <choice>
                 <element label="New" sequence="0" value="New"/>
                 <element label="Submitted" sequence="1" value="Submitted"/>
                 <element label="Processing" sequence="2" value="Processing"/>
                 <element label="Processed" sequence="3" value="Processed"/>
+                <element label="Files Cleaned Up" sequence="4" value="Files Cleaned Up"/>
             </choice>
         </element>
+        <element label="Submitted on" max_length="40" name="submitted" type="glide_date_time"/>
     </element>
 </database>

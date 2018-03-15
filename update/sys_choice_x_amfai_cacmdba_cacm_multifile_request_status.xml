@@ -77,6 +77,25 @@
             <sys_updated_on>2018-02-08 18:46:38</sys_updated_on>
             <value>Processed</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Files Cleaned Up</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>4</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 16:01:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c0c79ad2db749bc067bff3d51d96198f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 16:01:26</sys_updated_on>
+            <value>Files Cleaned Up</value>
+        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>status</element>
             <name>x_amfai_cacmdba_cacm_multifile_request</name>

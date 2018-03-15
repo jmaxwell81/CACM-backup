@@ -3,18 +3,18 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_amfai_cacmdba_reason" version="2" view="sys_ref_list">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>reason_description</element>
-            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="a9703573db103200f827fb16bf961934">0392c54adb918f804d70734aaf9619e3</list_id>
+            <element>reason_desc</element>
+            <list_id display_value="x_amfai_cacmdba_reason" element="NULL" name="x_amfai_cacmdba_reason" parent="NULL" relationship="NULL" sys_domain="global" view="a9703573db103200f827fb16bf961934">1544ca4edbfc1704bf14f9961d9619b5</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-09-20 15:31:12</sys_created_on>
-            <sys_id>8792c54adb918f804d70734aaf9619e3</sys_id>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 19:57:51</sys_created_on>
+            <sys_id>9944ca4edbfc1704bf14f9961d9619b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-09-20 15:31:12</sys_updated_on>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 19:57:51</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -27,12 +27,12 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>pmadhika@amfam.com</sys_created_by>
-            <sys_created_on>2017-12-12 14:23:59</sys_created_on>
+            <sys_created_by>jeremy.wedekind</sys_created_by>
+            <sys_created_on>2018-03-13 19:57:51</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>b32f0c30db078300bf14f9961d9619c7</sys_id>
+            <sys_id>1544ca4edbfc1704bf14f9961d9619b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_amfai_cacmdba_reason</sys_name>
             <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -40,8 +40,8 @@
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
             <sys_update_name>sys_ui_list_x_amfai_cacmdba_reason_sys_ref_list</sys_update_name>
-            <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-            <sys_updated_on>2017-12-12 14:23:59</sys_updated_on>
+            <sys_updated_by>jeremy.wedekind</sys_updated_by>
+            <sys_updated_on>2018-03-13 19:57:51</sys_updated_on>
             <sys_user/>
             <view display_value="Reference List" name="sys_ref_list">a9703573db103200f827fb16bf961934</view>
             <view_name/>

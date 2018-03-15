@@ -7,9 +7,9 @@
         <comments/>
         <condition>current.case_status == 1 || current.case_status == 2 || current.case_status == 11</condition>
         <form_action>true</form_action>
-        <form_button>true</form_button>
+        <form_button>false</form_button>
         <form_context_menu>false</form_context_menu>
-        <form_link>false</form_link>
+        <form_link>true</form_link>
         <form_style/>
         <hint/>
         <list_action>false</list_action>
@@ -22,7 +22,7 @@
         <list_style/>
         <name>Cancel Updates</name>
         <onclick>cancel_changes()</onclick>
-        <order>-1100</order>
+        <order>500</order>
         <script><![CDATA[function cancel_changes(){
 	var cancel = confirm('You are about to cancel the updates to form, please confirm the same by clicking "Yes"');
 	
@@ -52,7 +52,7 @@ if(typeof window == 'undefined')
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>12f8b731dbad87c0a09bf6e9af96190b</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Cancel Updates</sys_name>
         <sys_overrides/>
         <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
@@ -61,7 +61,7 @@ if(typeof window == 'undefined')
         <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_ui_action_12f8b731dbad87c0a09bf6e9af96190b</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
-        <sys_updated_on>2017-10-30 20:30:02</sys_updated_on>
+        <sys_updated_on>2018-03-09 21:39:56</sys_updated_on>
         <table>x_amfai_cacmdba_case</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

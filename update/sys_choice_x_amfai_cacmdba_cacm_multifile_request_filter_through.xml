@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="filter_through" table="x_amfai_cacmdba_cacm_multifile_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cases</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8d1e135adbb09704bf14f9961d9619b6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:09:38</sys_updated_on>
+            <value>x_amfai_cacmdba_case</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Policies</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>1</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619b8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:10:44</sys_updated_on>
+            <value>x_amfai_cacmdba_policy</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Claims</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>2</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619b9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:11:29</sys_updated_on>
+            <value>x_amfai_cacmdba_claim</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Case Events</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>3</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619ba</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:12:09</sys_updated_on>
+            <value>x_amfai_cacmdba_case_event</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Case Referrals</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>4</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619bb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:13:01</sys_updated_on>
+            <value>x_amfai_cacmdba_case_referral</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Root Causes</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>5</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619bc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:13:56</sys_updated_on>
+            <value>x_amfai_cacmdba_case_sub_root_cause</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Producers</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>6</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619bd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:14:28</sys_updated_on>
+            <value>x_amfai_cacmdba_producer</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>filter_through</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Insured Relationships</label>
+            <language>en</language>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sequence>7</sequence>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11e135adbb09704bf14f9961d9619be</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:15:04</sys_updated_on>
+            <value>x_amfai_cacmdba_insured_relationship</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>filter_through</element>
+            <name>x_amfai_cacmdba_cacm_multifile_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>sumukh.s@asolutionscorp.com</sys_created_by>
+            <sys_created_on>2018-03-14 21:08:42</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>4d1e135adbb09704bf14f9961d9619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>filter_through</sys_name>
+            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_update_name>sys_choice_x_amfai_cacmdba_cacm_multifile_request_filter_through</sys_update_name>
+            <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
+            <sys_updated_on>2018-03-14 21:08:42</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
