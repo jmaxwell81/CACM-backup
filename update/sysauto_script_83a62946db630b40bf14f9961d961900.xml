@@ -81,10 +81,10 @@ while(gr2.next()){
         <sys_id>83a62946db630b40bf14f9961d961900</sys_id>
         <sys_mod_count>18</sys_mod_count>
         <sys_name>Add New CACM Template</sys_name>
-        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sysauto_script_83a62946db630b40bf14f9961d961900</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
         <sys_updated_on>2018-01-15 19:46:11</sys_updated_on>

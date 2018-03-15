@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_grid_canvas" unload_date="2018-03-15 13:55:33">
+<record_update node_type="sys_grid_canvas" unload_date="2018-03-15 15:14:16">
     <sys_grid_canvas action="INSERT_OR_UPDATE">
         <legacy_page/>
         <name>PA New Tab</name>
@@ -10,10 +10,10 @@
         <sys_id>a44d24cadbbfc300bf14f9961d9619d4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>PA New Tab</sys_name>
-        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_grid_canvas_a44d24cadbbfc300bf14f9961d9619d4</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
         <sys_updated_on>2018-01-22 20:34:54</sys_updated_on>
@@ -31,10 +31,10 @@
                 <sys_id>b04d24cadbbfc300bf14f9961d9619ed</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_name>a44d24cadbbfc300bf14f9961d9619d4</sys_name>
-                <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+                <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
                 <sys_policy/>
                 <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-                <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+                <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
                 <sys_update_name>sys_grid_canvas_pane_b04d24cadbbfc300bf14f9961d9619ed</sys_update_name>
                 <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
                 <sys_updated_on>2018-01-22 20:34:54</sys_updated_on>
@@ -53,10 +53,10 @@
                 <sys_id>f04d24cadbbfc300bf14f9961d9619ef</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_name>a44d24cadbbfc300bf14f9961d9619d4</sys_name>
-                <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+                <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
                 <sys_policy/>
                 <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-                <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+                <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
                 <sys_update_name>sys_grid_canvas_pane_f04d24cadbbfc300bf14f9961d9619ef</sys_update_name>
                 <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
                 <sys_updated_on>2018-01-22 20:34:54</sys_updated_on>

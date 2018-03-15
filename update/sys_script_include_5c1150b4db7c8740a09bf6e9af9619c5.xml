@@ -36,10 +36,10 @@ fetch_customer_details.prototype = Object.extendsObject(global.AbstractAjaxProce
         <sys_id>5c1150b4db7c8740a09bf6e9af9619c5</sys_id>
         <sys_mod_count>19</sys_mod_count>
         <sys_name>fetch_customer_details</sys_name>
-        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_script_include_5c1150b4db7c8740a09bf6e9af9619c5</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
         <sys_updated_on>2018-03-14 19:58:14</sys_updated_on>

@@ -17,10 +17,10 @@
         <sys_id>bbcc3899db8f870067bff3d51d961998</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>MaxOrchCoreTransactionLast12Month</sys_name>
-        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_gauge_counts_bbcc3899db8f870067bff3d51d961998</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2017-12-14 07:00:17</sys_updated_on>

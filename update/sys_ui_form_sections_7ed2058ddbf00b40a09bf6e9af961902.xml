@@ -98,10 +98,10 @@
             <sys_mod_count>27</sys_mod_count>
             <sys_name>x_amfai_cacmdba_case</sys_name>
             <sys_overrides/>
-            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
             <sys_update_name>sys_ui_form_sections_7ed2058ddbf00b40a09bf6e9af961902</sys_update_name>
             <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
             <sys_updated_on>2017-11-16 20:51:51</sys_updated_on>

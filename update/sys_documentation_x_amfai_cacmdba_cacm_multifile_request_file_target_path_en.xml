@@ -16,10 +16,10 @@
             <sys_id>f1077797dbc0934067bff3d51d96190b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Target Path</sys_name>
-            <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+            <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+            <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
             <sys_update_name>sys_documentation_x_amfai_cacmdba_cacm_multifile_request_file_target_path_en</sys_update_name>
             <sys_updated_by>sumukh.s@asolutionscorp.com</sys_updated_by>
             <sys_updated_on>2018-02-08 18:44:32</sys_updated_on>

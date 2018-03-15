@@ -62,10 +62,10 @@ inner join CACMDBA.POLICY p on cp.policy_number = p.policy_number</sql_statement
         <sys_id>7090563ddb1ac740a09bf6e9af96195c</sys_id>
         <sys_mod_count>42</sys_mod_count>
         <sys_name>07.5 - Policy Migration</sys_name>
-        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_data_source_7090563ddb1ac740a09bf6e9af96195c</sys_update_name>
         <sys_updated_by>dfoss@amfam.com</sys_updated_by>
         <sys_updated_on>2018-03-08 18:24:36</sys_updated_on>

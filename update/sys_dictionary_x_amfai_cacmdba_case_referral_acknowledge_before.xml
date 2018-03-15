@@ -56,10 +56,10 @@
         <sys_id>1f98e173dbda43804d70734aaf961917</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Acknowledge Before</sys_name>
-        <sys_package display_value="CACM" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
+        <sys_package display_value="Consumer Affairs Complaint Management" source="x_amfai_cacmdba">84693e7bdb0a72004d70734aaf96194e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="CACM">84693e7bdb0a72004d70734aaf96194e</sys_scope>
+        <sys_scope display_value="Consumer Affairs Complaint Management">84693e7bdb0a72004d70734aaf96194e</sys_scope>
         <sys_update_name>sys_dictionary_x_amfai_cacmdba_case_referral_acknowledge_before</sys_update_name>
         <sys_updated_by>pmadhika@amfam.com</sys_updated_by>
         <sys_updated_on>2018-01-18 15:33:44</sys_updated_on>
